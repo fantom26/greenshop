@@ -13,7 +13,7 @@ export const en: DeepPartial<ITranslation> = {
     },
   },
   navigation: {
-    home: "Home",
+    "": "Home",
     shop: "Shop",
     care: "Plant Care",
     blogs: "Blogs",
@@ -48,9 +48,31 @@ export const en: DeepPartial<ITranslation> = {
     account: "My Account",
     help: "Help & Guide",
     categories: "Help & Guide",
+    newsLetters: "Would you like to join newsletters?",
+    newsLettersDesc:
+      "We usually post offers and challenges in newsletter. We’re your online houseplant destination. We offer a wide range of houseplants and accessories shipped directly from our (green)house to yours!",
     social: "Social Media",
     accept: "We accept",
     copyright: "© 2023 GreenShop. All Rights Reserved.",
+    pros: {
+      garden: {
+        title: "Garden Care",
+        desc: "We are an online plant shop offering a wide range of cheap and trendy plants.",
+      },
+      plant: {
+        title: "Plant Renovation",
+        desc: "We are an online plant shop offering a wide range of cheap and trendy plants.",
+      },
+      watering: {
+        title: "Watering Graden",
+        desc: "We are an online plant shop offering a wide range of cheap and trendy plants.",
+      },
+    },
+  },
+  contacts: {
+    site: "70 West Buckingham Ave. Farmingdale, NY 11735",
+    email: "contact@greenshop.com",
+    phone: "+88 01911 717 490",
   },
   forms: {
     username: {

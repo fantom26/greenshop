@@ -1,0 +1,296 @@
+{
+  "products": [
+    {
+      "_id": "1",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/1/poster@1x.jpg",
+        "meta": {
+          "name": "Barberton Daisy",
+          "type": "image",
+          "alt": "Barberton Daisy",
+          "title": "Barberton Daisy"
+        }
+      },
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 13,
+      "price": 119,
+      "name": "Barberton Daisy",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "size": "S",
+      "category": "Potter Plants",
+      "tags": ["Home", "Garden", "Plants"],
+      "stars": 4,
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
+    },
+    {
+      "_id": "2",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/1/poster@1x.jpg",
+        "meta": {
+          "name": "Barberton Daisy",
+          "type": "image",
+          "alt": "Barberton Daisy",
+          "title": "Barberton Daisy"
+        }
+      },
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 13,
+      "price": 119,
+      "name": "Barberton Daisy",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "size": "S",
+      "category": "Potter Plants",
+      "tags": ["Home", "Garden", "Plants"],
+      "stars": 4,
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
+    },
+    {
+      "_id": "3",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/1/poster@1x.jpg",
+        "meta": {
+          "name": "Barberton Daisy",
+          "type": "image",
+          "alt": "Barberton Daisy",
+          "title": "Barberton Daisy"
+        }
+      },
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 13,
+      "price": 119,
+      "name": "Barberton Daisy",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "size": "S",
+      "category": "Potter Plants",
+      "tags": ["Home", "Garden", "Plants"],
+      "stars": 4,
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
+    },
+    {
+      "_id": "4",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/1/poster@1x.jpg",
+        "meta": {
+          "name": "Barberton Daisy",
+          "type": "image",
+          "alt": "Barberton Daisy",
+          "title": "Barberton Daisy"
+        }
+      },
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 13,
+      "price": 119,
+      "name": "Barberton Daisy",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "size": "S",
+      "category": "Potter Plants",
+      "tags": ["Home", "Garden", "Plants"],
+      "stars": 4,
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
+    },
+    {
+      "_id": "5",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/1/poster@1x.jpg",
+        "meta": {
+          "name": "Barberton Daisy",
+          "type": "image",
+          "alt": "Barberton Daisy",
+          "title": "Barberton Daisy"
+        }
+      },
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 13,
+      "price": 119,
+      "name": "Barberton Daisy",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "size": "S",
+      "category": "Potter Plants",
+      "tags": ["Home", "Garden", "Plants"],
+      "stars": 4,
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
+    },
+    {
+      "_id": "6",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/1/poster@1x.jpg",
+        "meta": {
+          "name": "Barberton Daisy",
+          "type": "image",
+          "alt": "Barberton Daisy",
+          "title": "Barberton Daisy"
+        }
+      },
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 13,
+      "price": 119,
+      "name": "Barberton Daisy",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "size": "S",
+      "category": "Potter Plants",
+      "tags": ["Home", "Garden", "Plants"],
+      "stars": 4,
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
+    },
+    {
+      "_id": "7",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/1/poster@1x.jpg",
+        "meta": {
+          "name": "Barberton Daisy",
+          "type": "image",
+          "alt": "Barberton Daisy",
+          "title": "Barberton Daisy"
+        }
+      },
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 13,
+      "price": 119,
+      "name": "Barberton Daisy",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "size": "S",
+      "category": "Potter Plants",
+      "tags": ["Home", "Garden", "Plants"],
+      "stars": 4,
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
+    },
+    {
+      "_id": "8",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/1/poster@1x.jpg",
+        "meta": {
+          "name": "Barberton Daisy",
+          "type": "image",
+          "alt": "Barberton Daisy",
+          "title": "Barberton Daisy"
+        }
+      },
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 13,
+      "price": 119,
+      "name": "Barberton Daisy",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "size": "S",
+      "category": "Potter Plants",
+      "tags": ["Home", "Garden", "Plants"],
+      "stars": 4,
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
+    },
+    {
+      "_id": "9",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/1/poster@1x.jpg",
+        "meta": {
+          "name": "Barberton Daisy",
+          "type": "image",
+          "alt": "Barberton Daisy",
+          "title": "Barberton Daisy"
+        }
+      },
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 13,
+      "price": 119,
+      "name": "Barberton Daisy",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "size": "S",
+      "category": "Potter Plants",
+      "tags": ["Home", "Garden", "Plants"],
+      "stars": 4,
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
+    },
+    {
+      "_id": "10",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/1/poster@1x.jpg",
+        "meta": {
+          "name": "Barberton Daisy",
+          "type": "image",
+          "alt": "Barberton Daisy",
+          "title": "Barberton Daisy"
+        }
+      },
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 13,
+      "price": 119,
+      "name": "Barberton Daisy",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "size": "S",
+      "category": "Potter Plants",
+      "tags": ["Home", "Garden", "Plants"],
+      "stars": 4,
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
+    }
+  ],
+  "size": ["S", "M", "L", "XL"],
+  "categories": [
+    "House Plants",
+    "Potter Plants",
+    "Seeds",
+    "Small Plants",
+    "Big Plants",
+    "Succulents",
+    "Trerrariums",
+    "Gardening",
+    "Accessories"
+  ]
+}

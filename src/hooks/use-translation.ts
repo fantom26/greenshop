@@ -10,11 +10,11 @@ export const useTranslation = () => {
   // **Props
   const { locale } = useRouter();
 
-  const defaultT = translations["ua"];
+  const defaultT = translations["en"];
   const currentT =
     locale && translations?.hasOwnProperty(locale)
       ? translations[locale]
-      : translations["ua"];
+      : translations["en"];
 
   return mergeDeep({}, defaultT, currentT) as ITranslation;
 };

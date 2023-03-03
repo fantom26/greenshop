@@ -4,6 +4,10 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  images: {
+    formats: ["image/jpg", "image/png"],
+    domains: ["localhost"],
+  },
 };
 
 module.exports = nextConfig;
