@@ -8,16 +8,16 @@ export const Navigation = () => {
   const { pathname } = useRouter();
 
   return (
-    <nav>
-      <S.NavigationList>
+    <S.Nav>
+      <S.List>
         {Object.entries(t.navigation).map(([key, name]) => (
-          <li key={key}>
+          <S.Li key={key}>
             <Link href={key} passHref legacyBehavior>
-              <S.LinkText pathname={pathname}>{name}</S.LinkText>
+              <S.Link pathname={pathname}>{name}</S.Link>
             </Link>
-          </li>
+          </S.Li>
         ))}
-      </S.NavigationList>
-    </nav>
+      </S.List>
+    </S.Nav>
   );
 };

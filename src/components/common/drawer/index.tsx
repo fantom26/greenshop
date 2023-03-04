@@ -1,16 +1,17 @@
-import { FC, ReactNode, useEffect, useState } from "react";
+import { ElementType, FC, ReactNode, useEffect, useState } from "react";
 
 import { createPortal } from "react-dom";
 
+import * as S from "./drawer.styled";
 interface DrawerProps {
   visible: boolean;
+  tag: ElementType;
   children: ReactNode;
-  className?: string;
 }
 
 export const Drawer: FC<DrawerProps> = (props) => {
   // **Props
-  const { visible, children, className } = props;
+  const { visible, tag: Tag, children } = props;
 
   // **Local state
   const [isBrowser, setIsBrowser] = useState<boolean>(false);
@@ -24,13 +25,11 @@ export const Drawer: FC<DrawerProps> = (props) => {
   }
 
   return createPortal(
-    <div className={visible ? "drawer open" : "drawer"}>
-      <div
-        className={className ? `drawer-content ${className}` : "drawer-content"}
-      >
-        {children}
-      </div>
-    </div>,
+    <S.Drawer visible>
+      <S.Content>
+        <Tag>{children}</Tag>
+      </S.Content>
+    </S.Drawer>,
     document?.body
   );
 };

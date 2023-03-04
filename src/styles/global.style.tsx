@@ -19,6 +19,7 @@ export const GlobalStyles = createGlobalStyle`
     --radius: 0.5rem;
     --clr-default-200: #ddddde;
     --clr-default-900: #0a0a0a;
+    --shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
 
     --clr-accent: #46a358;
     --clr-light: #ffffff;

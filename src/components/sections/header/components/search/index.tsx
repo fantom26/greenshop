@@ -1,15 +1,10 @@
 import { ICONS, NEXT_PUBLIC_APP_URL } from "@constants";
-import { IProductSearchOption, IProductBase, IProduct } from "@declarations";
+import { IProductSearchOption, IProduct } from "@declarations";
 import { ProductService } from "@services";
 import debounce from "lodash.debounce";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef, useState, useId } from "react";
 import Select, { components, InputActionMeta } from "react-select";
-import styled from "styled-components";
-
-const Wrapper = styled.div`
-  flex: 0 0 25%;
-`;
 
 export const Search = () => {
   const [inputText, setInputText] = useState<string>("");
@@ -61,25 +56,24 @@ export const Search = () => {
   };
 
   return (
-    <Wrapper>
-      <Select
-        inputValue={inputText}
-        isClearable={true}
-        components={{
-          IndicatorSeparator: () => null,
-          DropdownIndicator,
-        }}
-        placeholder="Search plant..."
-        isSearchable={true}
-        styles={customStyles}
-        formatOptionLabel={formatOptionLabel}
-        options={plants}
-        onInputChange={handleInputChange}
-        isLoading={isLoading}
-        filterOption={null}
-        noOptionsMessage={noOptionsMessage}
-      />
-    </Wrapper>
+    <Select
+      inputValue={inputText}
+      isClearable={true}
+      components={{
+        IndicatorSeparator: () => null,
+        DropdownIndicator,
+      }}
+      instanceId={useId()}
+      placeholder="Search plant..."
+      isSearchable={true}
+      styles={customStyles}
+      formatOptionLabel={formatOptionLabel}
+      options={plants}
+      onInputChange={handleInputChange}
+      isLoading={isLoading}
+      filterOption={null}
+      noOptionsMessage={noOptionsMessage}
+    />
   );
 };
 

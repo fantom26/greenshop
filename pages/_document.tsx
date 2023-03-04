@@ -65,7 +65,6 @@ const Document = () => (
       <link rel="manifest" href="/favicon/site.webmanifest" />
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
     <body>
       <Main />

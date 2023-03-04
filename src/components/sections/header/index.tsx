@@ -1,34 +1,52 @@
-import { FC, ReactNode, useState } from "react";
+import { FC, ReactNode, useEffect, useState } from "react";
 
 import { Drawer } from "@components/common";
-import { Logo } from "@components/ui";
+import { Button, Logo } from "@components/ui";
 
-import { useScrollLock } from "@hooks";
+import { useScrollLock, useTranslation } from "@hooks";
 import * as S from "./header.styled";
-import { Navigation } from "./components/navigation";
-import { Search } from "./components/search";
+import { Navigation, Search, Cart, Burger } from "./components";
+import { ICONS } from "@constants";
+import { MobileNav } from "./components/mobile-nav";
 
 export const Header: FC = () => {
+  const t = useTranslation();
   const { lockScroll, unlockScroll } = useScrollLock();
 
-  const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-  const toggleDrawer = (state: boolean) => {
-    setDrawerIsOpen(state);
+  const toggleMenu = () => {
+    setMenuIsOpen((prev) => !prev);
   };
+
+  useEffect(() => {
+    if (menuIsOpen) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [menuIsOpen]);
 
   return (
     <>
-      {/* <Drawer visible={drawerIsOpen}>
-        <Logo />
-      </Drawer> */}
-      <S.Header>
+      <MobileNav open={menuIsOpen} />
+      <S.Header menuIsOpen>
         <S.HeaderContainer>
           <S.HeaderWrapper>
             <Logo />
             <Navigation />
-            <Search />
-            {/* <Cart /> */}
+            <S.SearchWrapper>
+              <Search />
+            </S.SearchWrapper>
+            <Cart />
+            <S.ButtonWrapper>
+              <Button path="/login" startIcon={ICONS.login}>
+                {t.btn.login}
+              </Button>
+            </S.ButtonWrapper>
+            <Burger toggler={toggleMenu} active={menuIsOpen} />
           </S.HeaderWrapper>
         </S.HeaderContainer>
       </S.Header>

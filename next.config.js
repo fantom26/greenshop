@@ -5,7 +5,7 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    formats: ["image/jpg", "image/png"],
+    // formats: ["image/jpg", "image/png"],
     domains: ["localhost"],
   },
 };
