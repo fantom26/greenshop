@@ -2,26 +2,26 @@ export const MESSANGERS = [
   {
     id: 1,
     name: "Facebook",
-    slug: "facebook",
+    slug: "facebook"
   },
   {
     id: 2,
     name: "Instagram",
-    slug: "instagram",
+    slug: "instagram"
   },
   {
     id: 3,
     name: "Twitter",
-    slug: "twitter",
+    slug: "twitter"
   },
   {
     id: 4,
     name: "Linkedin",
-    slug: "linkedin",
+    slug: "linkedin"
   },
   {
     id: 5,
     name: "YouTube",
-    slug: "youtube",
-  },
+    slug: "youtube"
+  }
 ];

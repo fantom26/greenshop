@@ -11,8 +11,8 @@ export const Wrapper = styled.div`
 
 export const Quantity = styled.span<{ shown: boolean }>`
   position: absolute;
-  top: 0;
   right: 0;
+  top: 0;
   border: 0.2rem solid var(--clr-light);
   border-radius: 50%;
   font-weight: 500;

@@ -1,10 +1,116 @@
-import { ICONS, NEXT_PUBLIC_APP_URL } from "@constants";
-import { IProductSearchOption, IProduct } from "@declarations";
-import { ProductService } from "@services";
+import { useId, useRef, useState } from "react";
+
 import debounce from "lodash.debounce";
-import Image from "next/image";
-import { useRef, useState, useId } from "react";
-import Select, { components, InputActionMeta } from "react-select";
+import Select, { InputActionMeta, components } from "react-select";
+
+import { ICONS, NEXT_PUBLIC_APP_URL } from "@constants";
+import { IProduct, IProductSearchOption } from "@declarations";
+import { ProductService } from "@services";
+
+const DropdownIndicator = (props: any) =>
+  components.DropdownIndicator && <components.DropdownIndicator {...props}>{ICONS.search}</components.DropdownIndicator>;
+
+const formatOptionLabel = (option: IProductSearchOption, restFields: any) => {
+  const { poster, name, value: optionValue } = option;
+  const { selectValue } = restFields;
+  if (selectValue?.[0]?.value === optionValue) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between"
+        }}
+      >
+        <div
+          style={{
+            flexGrow: "1",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+            overflow: "hidden"
+          }}
+        >
+          {name}
+        </div>
+      </div>
+    );
+  }
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between"
+      }}
+    >
+      <div>
+        {/* TODO Replace in next/Image */}
+        <img src={`${NEXT_PUBLIC_APP_URL}${poster.url}`} alt={poster.meta.alt} width={40} height={40} loading="lazy" />
+      </div>
+      <div
+        style={{
+          flexGrow: "1",
+          textOverflow: "ellipsis",
+          whiteSpace: "nowrap",
+          overflow: "hidden"
+        }}
+      >
+        {name}
+      </div>
+    </div>
+  );
+};
+
+const customStyles = {
+  control: (baseStyles: any, state: any) => ({
+    ...baseStyles,
+    flexDirection: "row-reverse",
+    boxShadow: state.isFocused ? "0 0 0 1px #46a358" : "0px 0px 20px rgba(0, 0, 0, 0.06)",
+    borderColor: state.isFocused ? "#46a358" : "#d1cfcf",
+    borderRadius: "6px",
+
+    "&:hover": {
+      cursor: "pointer"
+    }
+  }),
+  option: (baseStyles: any, state: any) => ({
+    ...baseStyles,
+    color: state.isFocused ? "#72bb80" : "",
+    backgroundColor: "transparent",
+    transition: "color 0.3s",
+    "&:hover": {
+      color: "#b1e6bc",
+      cursor: "pointer",
+      transition: "color 0.3s"
+    }
+  }),
+  menuList: (baseStyles: any) => ({
+    ...baseStyles,
+
+    "::-webkit-scrollbar": {
+      width: "4px",
+      height: "0px"
+    },
+    "::-webkit-scrollbar-track": {
+      background: "#cdf0d4"
+    },
+    "::-webkit-scrollbar-thumb": {
+      background: "#46a358"
+    },
+    "::-webkit-scrollbar-thumb:hover": {
+      background: "#38944a"
+    }
+  }),
+  clearIndicator: (baseStyles: any) => ({
+    ...baseStyles,
+    position: "absolute",
+    right: 0
+  }),
+  valueContainer: (baseStyles: any) => ({
+    ...baseStyles,
+    paddingRight: "2.3rem"
+  })
+};
 
 export const Search = () => {
   const [inputText, setInputText] = useState<string>("");
@@ -29,16 +135,14 @@ export const Search = () => {
         plants.map((plant) => ({
           ...plant,
           label: plant.name,
-          value: plant.name,
+          value: plant.name
         }))
       );
       setIsLoading(false);
     }
   };
 
-  const handleSearchDebounced = useRef(
-    debounce((searchText) => handleSearch(searchText), 300)
-  ).current;
+  const handleSearchDebounced = useRef(debounce((searchText) => handleSearch(searchText), 300)).current;
 
   const noOptionsMessage = (obj: { inputValue: string }) => {
     if (obj.inputValue.trim().length === 0) {
@@ -61,7 +165,7 @@ export const Search = () => {
       isClearable={true}
       components={{
         IndicatorSeparator: () => null,
-        DropdownIndicator,
+        DropdownIndicator
       }}
       instanceId={useId()}
       placeholder="Search plant..."
@@ -75,124 +179,4 @@ export const Search = () => {
       noOptionsMessage={noOptionsMessage}
     />
   );
-};
-
-const DropdownIndicator = (props: any) => {
-  return (
-    components.DropdownIndicator && (
-      <components.DropdownIndicator {...props}>
-        {ICONS.search}
-      </components.DropdownIndicator>
-    )
-  );
-};
-
-const formatOptionLabel = (option: IProductSearchOption, restFields: any) => {
-  const { poster, name, value: optionValue } = option;
-  const { selectValue } = restFields;
-  if (selectValue?.[0]?.value === optionValue) {
-    return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-        }}
-      >
-        <div
-          style={{
-            flexGrow: "1",
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap",
-            overflow: "hidden",
-          }}
-        >
-          {name}
-        </div>
-      </div>
-    );
-  }
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-      }}
-    >
-      <div>
-        {/* TODO Replace in next/Image */}
-        <img
-          src={`${NEXT_PUBLIC_APP_URL}${poster.url}`}
-          alt={poster.meta.alt}
-          width={40}
-          height={40}
-          loading="lazy"
-        />
-      </div>
-      <div
-        style={{
-          flexGrow: "1",
-          textOverflow: "ellipsis",
-          whiteSpace: "nowrap",
-          overflow: "hidden",
-        }}
-      >
-        {name}
-      </div>
-    </div>
-  );
-};
-
-const customStyles = {
-  control: (baseStyles: any, state: any) => ({
-    ...baseStyles,
-    flexDirection: "row-reverse",
-    boxShadow: state.isFocused
-      ? "0 0 0 1px #46a358"
-      : "0px 0px 20px rgba(0, 0, 0, 0.06)",
-    borderColor: state.isFocused ? "#46a358" : "#d1cfcf",
-    borderRadius: "6px",
-
-    "&:hover": {
-      cursor: "pointer",
-    },
-  }),
-  option: (baseStyles: any, state: any) => ({
-    ...baseStyles,
-    color: state.isFocused ? "#72bb80" : "",
-    backgroundColor: "transparent",
-    transition: "color 0.3s",
-    "&:hover": {
-      color: "#b1e6bc",
-      cursor: "pointer",
-      transition: "color 0.3s",
-    },
-  }),
-  menuList: (baseStyles: any) => ({
-    ...baseStyles,
-
-    "::-webkit-scrollbar": {
-      width: "4px",
-      height: "0px",
-    },
-    "::-webkit-scrollbar-track": {
-      background: "#cdf0d4",
-    },
-    "::-webkit-scrollbar-thumb": {
-      background: "#46a358",
-    },
-    "::-webkit-scrollbar-thumb:hover": {
-      background: "#38944a",
-    },
-  }),
-  clearIndicator: (baseStyles: any) => ({
-    ...baseStyles,
-    position: "absolute",
-    right: 0,
-  }),
-  valueContainer: (baseStyles: any) => ({
-    ...baseStyles,
-    paddingRight: "2.3rem",
-  }),
 };

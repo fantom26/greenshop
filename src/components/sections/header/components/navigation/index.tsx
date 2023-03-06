@@ -1,6 +1,8 @@
-import { useTranslation } from "@hooks";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
+import { useTranslation } from "@hooks";
+
 import * as S from "./navigation.styled";
 
 export const Navigation = () => {

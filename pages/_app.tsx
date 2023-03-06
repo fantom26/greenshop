@@ -1,10 +1,12 @@
-import { ICartItem, NextPageWithLayout } from "@declarations";
-import { GlobalStyles } from "@styles";
 import NextApp, { AppContext } from "next/app";
 import type { AppProps as NextAppProps } from "next/app";
-import styled from "styled-components";
-import { CartProvider } from "@contexts";
 import Head from "next/head";
+
+import styled from "styled-components";
+
+import { CartProvider } from "@contexts";
+import { ICartItem, NextPageWithLayout } from "@declarations";
+import { GlobalStyles } from "@styles";
 
 interface AppProps extends NextAppProps {
   Component: NextPageWithLayout;
@@ -42,15 +44,13 @@ App.getInitialProps = async (ctx: AppContext) => {
 
     const defaultCart = localStorage.getItem("cart-list");
 
-    console.log(defaultCart);
-
     return {
       ...appProps,
-      defaultCart,
+      defaultCart
     };
   } catch (e) {
     return {
-      notFound: true,
+      notFound: true
     };
   }
 };

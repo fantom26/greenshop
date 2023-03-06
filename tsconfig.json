@@ -67,11 +67,6 @@
       "@*": ["src/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "src/components/common/index.ts"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/common/index.ts"],
   "exclude": ["node_modules"]
 }

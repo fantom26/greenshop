@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 import { ICONS } from "@constants";
 import { useCart } from "@hooks";
-import Link from "next/link";
+
 import * as S from "./cart.styled";
 
 export const Cart = () => {

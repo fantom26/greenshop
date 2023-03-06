@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const Content = styled.div`
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100%;
+`;
+
 export const Drawer = styled.div<{ visible: boolean }>`
   position: fixed;
   left: 0;
@@ -22,11 +29,4 @@ export const Drawer = styled.div<{ visible: boolean }>`
       transition: transform var(--transition) var(--transition);
     }
   `}
-`;
-
-export const Content = styled.div`
-  display: flex;
-  overflow-x: hidden;
-  overflow-y: auto;
-  min-height: 100%;
 `;

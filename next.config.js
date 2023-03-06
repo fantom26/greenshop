@@ -2,12 +2,12 @@
 const nextConfig = {
   reactStrictMode: false,
   compiler: {
-    styledComponents: true,
+    styledComponents: true
   },
   images: {
     // formats: ["image/jpg", "image/png"],
-    domains: ["localhost"],
-  },
+    domains: ["localhost"]
+  }
 };
 
 module.exports = nextConfig;

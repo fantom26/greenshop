@@ -1,13 +1,12 @@
-import { FC, ReactNode, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
-import { Drawer } from "@components/common";
 import { Button, Logo } from "@components/ui";
-
-import { useScrollLock, useTranslation } from "@hooks";
-import * as S from "./header.styled";
-import { Navigation, Search, Cart, Burger } from "./components";
 import { ICONS } from "@constants";
+import { useScrollLock, useTranslation } from "@hooks";
+
+import { Burger, Cart, Navigation, Search } from "./components";
 import { MobileNav } from "./components/mobile-nav";
+import * as S from "./header.styled";
 
 export const Header: FC = () => {
   const t = useTranslation();

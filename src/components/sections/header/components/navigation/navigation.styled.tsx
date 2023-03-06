@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Nav = styled.nav`
   display: flex;
@@ -28,22 +28,21 @@ export const Li = styled.li`
 `;
 
 export const Link = styled.a<{ pathname: string }>`
-  font-weight: ${({ href, pathname }) => (href === pathname ? 700 : 400)};
   position: relative;
   display: flex;
   align-items: center;
   align-self: stretch;
+  font-weight: ${({ href, pathname }) => (href === pathname ? 700 : 400)};
 
   &::before {
-    position: absolute;
     content: "";
+    position: absolute;
     left: 0;
     bottom: -2.5rem;
     width: 100%;
     height: 0.3rem;
     background-color: var(--clr-accent);
     opacity: ${({ href, pathname }) => (href === pathname ? 1 : 0)};
-    visibility: ${({ href, pathname }) =>
-      href === pathname ? "visible" : "hidden"};
+    visibility: ${({ href, pathname }) => (href === pathname ? "visible" : "hidden")};
   }
 `;

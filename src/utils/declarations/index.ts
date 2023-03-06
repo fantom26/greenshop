@@ -8,3 +8,4 @@ export * from "./size.types";
 export * from "./product.types";
 export * from "./cart.types";
 export * from "./styled.types";
+export * from "./page.types";

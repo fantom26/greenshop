@@ -1,6 +1,8 @@
+import { FC } from "react";
+
 import { IMAGES } from "@constants";
 import { useTranslation } from "@hooks";
-import { FC } from "react";
+
 import * as S from "./logo.styled";
 
 export const Logo: FC = () => {

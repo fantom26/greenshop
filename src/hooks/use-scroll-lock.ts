@@ -10,9 +10,7 @@ export const useScrollLock = (options?: Options) => {
 
   const lockScroll = useCallback(() => {
     const scrollBarWidth = window.innerWidth - document.body.offsetWidth;
-    const isIOS =
-      /^iP/.test(navigator.platform) ||
-      (/^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4);
+    const isIOS = /^iP/.test(navigator.platform) || (/^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4);
 
     document.body.style.setProperty("--scrollbar-width", `${scrollBarWidth}px`);
     document.body.style.overflow = "hidden";
@@ -29,9 +27,7 @@ export const useScrollLock = (options?: Options) => {
 
   const unlockScroll = useCallback(() => {
     setTimeout(() => {
-      const isIOS =
-        /^iP/.test(navigator.platform) ||
-        (/^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4);
+      const isIOS = /^iP/.test(navigator.platform) || (/^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4);
 
       document.body.style.setProperty("--scrollbar-width", null);
       document.body.style.overflow = "";

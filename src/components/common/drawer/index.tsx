@@ -3,6 +3,7 @@ import { ElementType, FC, ReactNode, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
 import * as S from "./drawer.styled";
+
 interface DrawerProps {
   visible: boolean;
   tag: ElementType;
@@ -25,7 +26,7 @@ export const Drawer: FC<DrawerProps> = (props) => {
   }
 
   return createPortal(
-    <S.Drawer visible>
+    <S.Drawer visible={visible}>
       <S.Content>
         <Tag>{children}</Tag>
       </S.Content>

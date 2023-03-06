@@ -1,9 +1,8 @@
 import { useRouter } from "next/router";
 
-import { ITranslation } from "@declarations";
-
 import { mergeDeep } from "@helpers";
 
+import { ITranslation } from "@declarations";
 import { translations } from "@utils/translations";
 
 export const useTranslation = () => {
@@ -11,10 +10,7 @@ export const useTranslation = () => {
   const { locale } = useRouter();
 
   const defaultT = translations["en"];
-  const currentT =
-    locale && translations?.hasOwnProperty(locale)
-      ? translations[locale]
-      : translations["en"];
+  const currentT = locale && translations?.hasOwnProperty(locale) ? translations[locale] : translations["en"];
 
   return mergeDeep({}, defaultT, currentT) as ITranslation;
 };

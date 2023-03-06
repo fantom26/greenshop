@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  max-width: 25rem;
   width: 100%;
+  max-width: 25rem;
 
   @media (max-width: 992px) {
     margin-left: auto;
