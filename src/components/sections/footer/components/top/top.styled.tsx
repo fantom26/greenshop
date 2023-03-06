@@ -10,6 +10,15 @@ export const Top = styled.div`
   padding-top: 3rem;
   padding-bottom: 3rem;
   padding-left: 2.5rem;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    align-items: initial;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: initial;
+  }
 `;
 
 export const Advantages = styled.ul`
@@ -17,6 +26,20 @@ export const Advantages = styled.ul`
   align-items: center;
   justify-content: space-between;
   gap: 6rem;
+
+  @media (max-width: 1200px) {
+    gap: 3rem;
+  }
+
+  @media (max-width: 767px) {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 460px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const Advantage = styled.li`
@@ -31,6 +54,14 @@ export const Advantage = styled.li`
       width: 0.1rem;
       height: 100%;
       background-color: rgba(70, 163, 88, 0.1);
+
+      @media (max-width: 1200px) {
+        left: -1.5rem;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
     }
   }
 `;

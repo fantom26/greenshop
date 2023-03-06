@@ -28,7 +28,7 @@ export const Button = styled.button<ButtonProps>`
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   width: 100%;
-  min-height: 3.8rem;
+  min-height: 4rem;
   font-weight: 700;
 
   ${({ variant }) => variants[variant]}

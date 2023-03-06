@@ -19,6 +19,7 @@ export const en: DeepPartial<ITranslation> = {
     blogs: "Blogs"
   },
   btn: {
+    join: "Join",
     apply: "Apply",
     login: "Login",
     register: "Register",

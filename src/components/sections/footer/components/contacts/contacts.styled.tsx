@@ -31,6 +31,10 @@ export const List = styled.ul`
   display: flex;
   align-items: center;
   gap: 6rem;
+
+  @media (max-width: 992px) {
+    gap: 2rem;
+  }
 `;
 
 export const Item = styled.li`

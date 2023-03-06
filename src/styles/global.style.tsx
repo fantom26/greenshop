@@ -18,7 +18,7 @@ export const GlobalStyles = createGlobalStyle`
     --transition: 0.3s;
 
     --radius: 0.5rem;
-    --clr-default-200: #ddddde;
+    --clr-default-200: #eaeaea;
     --clr-default-900: #0a0a0a;
     --shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
 

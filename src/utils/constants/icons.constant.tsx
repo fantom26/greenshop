@@ -55,7 +55,7 @@ export const ICONS: Record<string, ReactNode> = {
 
   phone: (
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_104_870)">
+      <g clipPath="url(#clip0_104_870)">
         <path d="M11.2938 1C14.3779 1.3425 16.8146 3.77583 17.1613 6.86" stroke="#46A358" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         <path
           d="M11.2938 3.95239C12.7696 4.23906 13.9229 5.39323 14.2104 6.86906"
