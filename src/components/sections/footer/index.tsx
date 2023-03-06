@@ -1,10 +1,17 @@
-// import { Socials } from "@components/common";
-import { Container, Logo } from "@components/ui";
+import { Container } from "@components/ui";
 
-export const Footer = () => (
-  <footer className="footer">
-    <Container>
-      <Logo />
-    </Container>
-  </footer>
-);
+import { Bottom } from "./components/bottom";
+import { Contacts } from "./components/contacts";
+import { Top } from "./components/top/index";
+
+export const Footer = () => {
+  return (
+    <footer>
+      <Container>
+        <Top />
+        <Contacts />
+        <Bottom />
+      </Container>
+    </footer>
+  );
+};

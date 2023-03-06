@@ -13,8 +13,9 @@ export interface ITranslation {
   btn: Record<string, string>;
   alts: Record<string, string>;
   ariaLabels: Record<string, string>;
-  socials: Record<string, string>;
+  socials: Record<string, Record<string, string>>;
   footer?: Record<string, string | Record<string, Record<string, string>>>;
+  footerLinks: Record<string, string | Record<string, string>[]>[];
   contacts: Record<string, string>;
   forms: Record<string, Record<string, string>>;
   validation: Record<string, string>;
