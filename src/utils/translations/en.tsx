@@ -9,6 +9,10 @@ export const en: DeepPartial<ITranslation> = {
         title: "Let’s Make a Better Planet",
         description:
           "We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!"
+      },
+      blog: {
+        title: "Our Blog Posts",
+        description: "We are an online plant shop offering a wide range of cheap and trendy plants. "
       }
     }
   },
@@ -22,6 +26,7 @@ export const en: DeepPartial<ITranslation> = {
     join: "Join",
     apply: "Apply",
     login: "Login",
+    readMore: "Read More",
     register: "Register",
     googleContinue: "Continue with Google",
     facebookContinue: "Continue with Facebook",

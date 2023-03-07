@@ -1,5 +1,7 @@
 import { useId, useRef, useState } from "react";
 
+import Image from "next/image";
+
 import debounce from "lodash.debounce";
 import Select, { InputActionMeta, components } from "react-select";
 
@@ -12,6 +14,7 @@ const DropdownIndicator = (props: any) =>
 
 const formatOptionLabel = (option: IProductSearchOption, restFields: any) => {
   const { poster, name, value: optionValue } = option;
+  const { url, meta } = poster;
   const { selectValue } = restFields;
   if (selectValue?.[0]?.value === optionValue) {
     return (
@@ -44,8 +47,7 @@ const formatOptionLabel = (option: IProductSearchOption, restFields: any) => {
       }}
     >
       <div>
-        {/* TODO Replace in next/Image */}
-        <img src={`${NEXT_PUBLIC_APP_URL}${poster.url}`} alt={poster.meta.alt} width={40} height={40} loading="lazy" />
+        <Image src={`${NEXT_PUBLIC_APP_URL}${url}`} alt={meta.alt} width={40} height={40} loading="lazy" />
       </div>
       <div
         style={{

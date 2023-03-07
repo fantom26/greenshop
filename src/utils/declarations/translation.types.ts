@@ -7,6 +7,7 @@ export interface ITranslation {
   pages: {
     home: {
       hero: Record<string, string>;
+      blog: Record<string, string>;
     };
   };
   navigation: Record<string, string>;

@@ -1,5 +1,9 @@
 import { FC } from "react";
 
-const Home: FC = () => <></>;
+import { Blog } from "./components/blog";
+
+const Home: FC = () => {
+  return <Blog />;
+};
 
 export default Home;

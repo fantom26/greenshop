@@ -1,4 +1,4 @@
-import { ElementType, FC, HTMLAttributes, ReactNode } from "react";
+import { ElementType, FC, HTMLAttributes } from "react";
 
 import { ColorVariant, TagVariant } from "@utils/enums/components";
 
