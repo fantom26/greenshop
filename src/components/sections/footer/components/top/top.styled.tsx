@@ -7,13 +7,13 @@ export const Top = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 2.5rem;
+  padding: 3rem 2.5rem;
 
   @media (max-width: 992px) {
     flex-direction: column;
     align-items: initial;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   @media (max-width: 767px) {
