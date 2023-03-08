@@ -23,7 +23,7 @@ export const en: DeepPartial<ITranslation> = {
         },
         {
           supTitle: "Welcome to GreenShop",
-          title: "Let’s Make a Better Planet",
+          title: "Let’s Make a Better <span>Planet</span></>",
           description:
             "We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!",
           poster: {
@@ -39,7 +39,7 @@ export const en: DeepPartial<ITranslation> = {
         },
         {
           supTitle: "Welcome to GreenShop",
-          title: "Let’s Make a Better Planet",
+          title: "Let’s Make a Better <span>Planet</span></>",
           description:
             "We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!",
           poster: {
@@ -57,6 +57,16 @@ export const en: DeepPartial<ITranslation> = {
       blog: {
         title: "Our Blog Posts",
         description: "We are an online plant shop offering a wide range of cheap and trendy plants. "
+      },
+      products: {
+        categoryTitle: "Categories",
+        priceTitle: "Price Range",
+        sizeTitle: "Size",
+        tabs: [
+          { id: "1", title: "All Plants" },
+          { id: "2", title: "New Arrivals" },
+          { id: "3", title: "Sale" }
+        ]
       }
     }
   },
@@ -69,6 +79,7 @@ export const en: DeepPartial<ITranslation> = {
   btn: {
     join: "Join",
     apply: "Apply",
+    filter: "Filter",
     login: "Login",
     readMore: "Read More",
     shopNow: "Shop now",
@@ -179,5 +190,8 @@ export const en: DeepPartial<ITranslation> = {
     required: "Required field",
     email: "Invalid email",
     phone: "Invalid phone"
+  },
+  sort: {
+    default: "Default sorting"
   }
 };

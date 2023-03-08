@@ -9,6 +9,7 @@ export interface ITranslation {
   pages: {
     home: {
       hero: Record<string, string | IFile>[];
+      products: Record<string, string | Record<string, string>[]>;
       blog: Record<string, string>;
     };
   };
@@ -22,4 +23,5 @@ export interface ITranslation {
   contacts: Record<string, string>;
   forms: Record<string, Record<string, string>>;
   validation: Record<string, string>;
+  sort: Record<string, string>;
 }

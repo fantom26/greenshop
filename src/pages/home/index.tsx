@@ -1,11 +1,12 @@
 import { FC } from "react";
 
-import { Blog, Hero } from "./components";
+import { Blog, Hero, Products } from "./components";
 
 const Home: FC = () => {
   return (
     <>
       <Hero />
+      <Products />
       <Blog />
     </>
   );

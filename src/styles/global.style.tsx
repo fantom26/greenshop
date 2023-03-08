@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import { SwiperStyles } from "./libs";
+import { NoUiSliderStyles, SwiperStyles } from "./libs";
 import { Fonts, StyledNormalize } from "./settings";
 
 export const GlobalStyles = createGlobalStyle`
@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
   ${Fonts}
   // libs
   ${SwiperStyles}
+  ${NoUiSliderStyles}
 
   $containerWidth: 123rem;
 

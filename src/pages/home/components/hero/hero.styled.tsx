@@ -13,6 +13,11 @@ export const HeroWrapper = styled.div`
 
 export const Info = styled.div`
   max-width: 58rem;
+  width: 100%;
+
+  @media (max-width: 992px) {
+    max-width: initial;
+  }
 `;
 
 export const Suptitle = styled.p`
@@ -39,6 +44,15 @@ export const Slide = styled.div`
   justify-content: space-between;
   gap: 3rem;
   padding-left: 4rem;
+
+  @media (max-width: 1200px) {
+    padding-left: initial;
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -49,4 +63,8 @@ export const ImageWrapper = styled.div`
 export const ButtonWrapper = styled.div`
   margin-top: 4.5rem;
   max-width: 14rem;
+
+  @media (max-width: 992px) {
+    margin-top: 1.5rem;
+  }
 `;

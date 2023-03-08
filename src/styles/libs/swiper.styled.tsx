@@ -21,7 +21,7 @@ export const SwiperStyles = css`
     z-index: 1;
     display: flex;
     transition-property: transform;
-    transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+    transition-timing-function: initial;
     box-sizing: content-box;
   }
   .swiper-android .swiper-slide,
@@ -99,8 +99,8 @@ export const SwiperStyles = css`
   .swiper-pagination-custom,
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: var(--swiper-pagination-bottom, 8px);
-    top: var(--swiper-pagination-top, auto);
+    bottom: 0;
+    top: auto;
     left: 0;
     width: 100%;
   }
