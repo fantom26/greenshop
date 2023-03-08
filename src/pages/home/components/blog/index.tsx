@@ -4,7 +4,7 @@ import { useArticlesQuery } from "@store/api";
 import { ColorVariant, TagVariant } from "@utils/enums/components";
 
 import * as S from "./blog.styled";
-import { ArticleCard } from "./blog/components";
+import { ArticleCard } from "./components";
 
 export const Blog = () => {
   const t = useTranslation();

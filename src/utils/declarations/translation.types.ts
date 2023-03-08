@@ -1,3 +1,5 @@
+import { IFile } from "./file.types";
+
 export type DeepPartial<T> = {
   [P in keyof T]: DeepPartial<T[P]>;
 };
@@ -6,7 +8,7 @@ export interface ITranslation {
   common?: Record<string, string>;
   pages: {
     home: {
-      hero: Record<string, string>;
+      hero: Record<string, string | IFile>[];
       blog: Record<string, string>;
     };
   };

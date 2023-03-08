@@ -1,9 +1,14 @@
 import { FC } from "react";
 
-import { Blog } from "./components/blog";
+import { Blog, Hero } from "./components";
 
 const Home: FC = () => {
-  return <Blog />;
+  return (
+    <>
+      <Hero />
+      <Blog />
+    </>
+  );
 };
 
 export default Home;

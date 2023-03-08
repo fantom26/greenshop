@@ -1,2 +1,2 @@
-export * from "./normalize.style";
+export * from "./settings/normalize.style";
 export * from "./global.style";

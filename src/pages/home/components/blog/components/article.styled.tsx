@@ -31,7 +31,7 @@ export const Image = styled.div`
 
 export const Info = styled.p`
   margin-bottom: 0.5rem;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.4rem;
   line-height: 115%;
   color: var(--clr-accent);
@@ -47,7 +47,7 @@ export const Button = styled(Link)`
   gap: 0.5rem;
   margin-top: 1rem;
 
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.4rem;
   line-height: 115%;
   transition: color var(--transition);

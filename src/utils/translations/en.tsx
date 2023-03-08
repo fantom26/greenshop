@@ -4,12 +4,56 @@ export const en: DeepPartial<ITranslation> = {
   common: {},
   pages: {
     home: {
-      hero: {
-        supTitle: "Welcome to GreenShop",
-        title: "Let’s Make a Better Planet",
-        description:
-          "We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!"
-      },
+      hero: [
+        {
+          supTitle: "Welcome to GreenShop",
+          title: "Let’s Make a Better <span>Planet</span></>",
+          description:
+            "We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!",
+          poster: {
+            _id: "1",
+            url: "/images/banner/1/img@1x.png",
+            meta: {
+              name: "Beach Spider Lily",
+              type: "image",
+              alt: "Beach Spider Lily",
+              title: "Beach Spider Lily"
+            }
+          }
+        },
+        {
+          supTitle: "Welcome to GreenShop",
+          title: "Let’s Make a Better Planet",
+          description:
+            "We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!",
+          poster: {
+            _id: "1",
+            url: "/images/banner/1/img@1x.png",
+            meta: {
+              name: "Beach Spider Lily",
+              type: "image",
+              alt: "Beach Spider Lily",
+              title: "Beach Spider Lily"
+            }
+          }
+        },
+        {
+          supTitle: "Welcome to GreenShop",
+          title: "Let’s Make a Better Planet",
+          description:
+            "We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!",
+          poster: {
+            _id: "1",
+            url: "/images/banner/1/img@1x.png",
+            meta: {
+              name: "Beach Spider Lily",
+              type: "image",
+              alt: "Beach Spider Lily",
+              title: "Beach Spider Lily"
+            }
+          }
+        }
+      ],
       blog: {
         title: "Our Blog Posts",
         description: "We are an online plant shop offering a wide range of cheap and trendy plants. "
@@ -27,6 +71,7 @@ export const en: DeepPartial<ITranslation> = {
     apply: "Apply",
     login: "Login",
     readMore: "Read More",
+    shopNow: "Shop now",
     register: "Register",
     googleContinue: "Continue with Google",
     facebookContinue: "Continue with Facebook",

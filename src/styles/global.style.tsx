@@ -1,9 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
-import { StyledNormalize } from "./normalize.style";
+import { SwiperStyles } from "./libs";
+import { Fonts, StyledNormalize } from "./settings";
 
 export const GlobalStyles = createGlobalStyle`
+  // settings
   ${StyledNormalize}
+  ${Fonts}
+  // libs
+  ${SwiperStyles}
 
   $containerWidth: 123rem;
 
