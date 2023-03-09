@@ -13,15 +13,16 @@ export const Link = styled.a`
   border-radius: 0.5rem;
   padding: 0.5rem;
   transition: background-color var(--transition);
+  @media (hover) {
+    &:hover {
+      background-color: var(--clr-accent);
+      transition: background-color var(--transition);
 
-  &:hover {
-    background-color: var(--clr-accent);
-    transition: background-color var(--transition);
-
-    svg {
-      fill: var(--clr-light);
-      fill-opacity: 1;
-      transition: fill var(--transition), fill-opacity var(--transition);
+      svg {
+        fill: var(--clr-light);
+        fill-opacity: 1;
+        transition: fill var(--transition), fill-opacity var(--transition);
+      }
     }
   }
 

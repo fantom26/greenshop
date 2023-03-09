@@ -24,15 +24,15 @@ export const CartProvider: FC<CartProviderProps> = (props) => {
 
   const sumOfOrder = cartItems.reduce((sum, item) => +item.price * item.quantity + sum, 0);
 
-  const getProductQuantity = (id: string) => cartItems.find((item) => item.vendor === id)?.quantity || 0;
+  const getProductQuantity = (id: string) => cartItems.find((item) => item._id === id)?.quantity || 0;
 
   const increaseCartQuantity = (product: ICartItem) => {
     setCartItems((currItems) => {
-      if (!currItems.find((item) => item.vendor === product.vendor)) {
+      if (!currItems.find((item) => item._id === product._id)) {
         return [...currItems, product];
       } else {
         return currItems.map((item) => {
-          if (item.vendor === product.vendor) {
+          if (item._id === product._id) {
             return { ...item, quantity: item.quantity + 1 };
           } else {
             return item;
@@ -44,11 +44,11 @@ export const CartProvider: FC<CartProviderProps> = (props) => {
 
   const decreaseCartQuantity = (product: ICartItem) => {
     setCartItems((currItems) => {
-      if (currItems.find((item) => item.vendor === product.vendor)?.quantity === 1) {
-        return currItems.filter((item) => item.vendor !== product.vendor);
+      if (currItems.find((item) => item._id === product._id)?.quantity === 1) {
+        return currItems.filter((item) => item._id !== product._id);
       } else {
         return currItems.map((item) => {
-          if (item.vendor === product.vendor) {
+          if (item._id === product._id) {
             return { ...item, quantity: item.quantity - 1 };
           } else {
             return item;
@@ -58,7 +58,7 @@ export const CartProvider: FC<CartProviderProps> = (props) => {
     });
   };
 
-  const removeFromCart = (id: string) => setCartItems((currItems) => currItems.filter((item) => item.vendor !== id));
+  const removeFromCart = (id: string) => setCartItems((currItems) => currItems.filter((item) => item._id !== id));
 
   const resetCart = () => setCartItems([]);
 

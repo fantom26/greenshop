@@ -15,7 +15,7 @@ const variants: StyledVariants<TagVariant> = {
   h2: css`
     font-weight: 700;
     ${AdaptiveFont({ pcSize: 30, mobSize: 24 })};
-    line-height: 55%;
+    line-height: 85%;
   `,
   h3: css`
     font-weight: 700;

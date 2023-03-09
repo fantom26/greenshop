@@ -7,18 +7,37 @@ export const Wrapper = styled.div`
   @media (max-width: 576px) {
     margin-left: auto;
   }
+
+  svg {
+    fill: var(--clr-dark);
+    transition: fill var(--transition);
+  }
+
+  @media (hover) {
+    &:hover {
+      svg {
+        fill: var(--clr-accent);
+        transition: fill var(--transition);
+      }
+    }
+  }
 `;
 
 export const Quantity = styled.span<{ shown: boolean }>`
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -1.3rem;
+  top: -0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
   border: 0.2rem solid var(--clr-light);
   border-radius: 50%;
   font-weight: 500;
   font-size: 1rem;
-  line-height: 130%;
   color: var(--clr-light);
+  background-color: var(--clr-accent);
   opacity: ${(props) => (props.shown ? 1 : 0)};
   visibility: ${(props) => (props.shown ? "visible" : "hidden")};
 `;

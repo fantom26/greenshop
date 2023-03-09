@@ -12,3 +12,11 @@ export const Wrapper = styled.div`
     display: none;
   }
 `;
+
+export const Icon = styled.div`
+  display: flex;
+
+  svg {
+    fill: var(--clr-dark);
+  }
+`;

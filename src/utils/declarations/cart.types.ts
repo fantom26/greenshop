@@ -1,11 +1,12 @@
 import { ReactNode } from "react";
 
+import { IFile } from "./file.types";
+
 export interface ICartItem {
-  shortDescription: string;
-  poster: string;
-  price: string;
-  vendor: string;
+  poster: IFile;
+  price: number;
   sku: string;
+  _id: string;
   quantity?: number;
 }
 

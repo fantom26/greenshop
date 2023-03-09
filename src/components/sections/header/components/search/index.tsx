@@ -9,8 +9,14 @@ import { ICONS, NEXT_PUBLIC_APP_URL } from "@constants";
 import { IProduct, IProductSearchOption } from "@declarations";
 import { ProductService } from "@services";
 
+import * as S from "./search.styled";
+
 const DropdownIndicator = (props: any) =>
-  components.DropdownIndicator && <components.DropdownIndicator {...props}>{ICONS.search}</components.DropdownIndicator>;
+  components.DropdownIndicator && (
+    <components.DropdownIndicator {...props}>
+      <S.Icon>{ICONS.search}</S.Icon>
+    </components.DropdownIndicator>
+  );
 
 const formatOptionLabel = (option: IProductSearchOption, restFields: any) => {
   const { poster, name, value: optionValue } = option;

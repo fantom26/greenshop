@@ -102,7 +102,7 @@ export const NoUiSliderStyles = css`
  * Giving the connect element a border radius causes issues with using transform: scale
  */
   .noUi-target {
-    background: rgba(70, 163, 88, 0.2);
+    background-color: rgba(70, 163, 88, 0.2);
     border-radius: 4px;
   }
   .noUi-connects {
@@ -126,7 +126,7 @@ export const NoUiSliderStyles = css`
   /* Disabled state;
  */
   [disabled] .noUi-connect {
-    background: #b8b8b8;
+    background-color: #b8b8b8;
   }
   [disabled].noUi-target,
   [disabled].noUi-handle,
@@ -162,13 +162,13 @@ export const NoUiSliderStyles = css`
  */
   .noUi-marker {
     position: absolute;
-    background: #ccc;
+    background-color: #ccc;
   }
   .noUi-marker-sub {
-    background: #aaa;
+    background-color: #aaa;
   }
   .noUi-marker-large {
-    background: #aaa;
+    background-color: #aaa;
   }
   /* Horizontal layout;
  *
@@ -205,7 +205,7 @@ export const NoUiSliderStyles = css`
     position: absolute;
     border: 1px solid #d9d9d9;
     border-radius: 3px;
-    background: #fff;
+    background-color: #fff;
     color: #000;
     padding: 5px;
     text-align: center;

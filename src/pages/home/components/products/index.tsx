@@ -1,12 +1,16 @@
 import { Container } from "@components/ui";
 
-import { Sidebar } from "./components/sidebar/index";
+import { Main } from "./components/main";
+import { Sidebar } from "./components/sidebar";
 import * as S from "./products.styled";
 
 export const Products = () => (
   <S.Products>
     <Container>
-      <Sidebar />
+      <S.ProductsWrapper>
+        <Sidebar />
+        <Main />
+      </S.ProductsWrapper>
     </Container>
   </S.Products>
 );

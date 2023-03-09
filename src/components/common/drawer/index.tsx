@@ -11,10 +11,8 @@ interface DrawerProps {
 }
 
 export const Drawer: FC<DrawerProps> = (props) => {
-  // **Props
   const { visible, tag: Tag, children } = props;
 
-  // **Local state
   const [isBrowser, setIsBrowser] = useState<boolean>(false);
 
   useEffect(() => {

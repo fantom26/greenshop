@@ -9,7 +9,7 @@ export interface ITranslation {
   pages: {
     home: {
       hero: Record<string, string | IFile>[];
-      products: Record<string, string | Record<string, string>[]>;
+      products: Record<string, string>;
       blog: Record<string, string>;
     };
   };

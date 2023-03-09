@@ -1,4 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+
+import { useRouter } from "next/router";
 
 import Nouislider from "nouislider-react";
 
@@ -12,7 +14,9 @@ import * as S from "./price-range.styled";
 export const PriceRange = () => {
   const t = useTranslation();
   const [prices, setPrices] = useState([]);
+  const { push, query } = useRouter();
   const { data: products } = useProductsQuery();
+  const rangeRef = useRef(null);
 
   const boundaryValues = useMemo(() => {
     const prices = products?.map((product) => product.price);
@@ -29,6 +33,18 @@ export const PriceRange = () => {
     setPrices(data);
   };
 
+  const onFilter = () => {
+    const [min, max] = prices;
+    push(
+      {
+        // eslint-disable-next-line camelcase
+        query: { ...query, price_gte: min, price_lte: max }
+      },
+      "",
+      { scroll: false }
+    );
+  };
+
   useEffect(() => {
     if (!prices.length || !prices[1]) {
       if (boundaryValues?.min) {
@@ -40,6 +56,18 @@ export const PriceRange = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [boundaryValues]);
 
+  useEffect(() => {
+    if (!query.hasOwnProperty("price_gte")) {
+      if (rangeRef.current) {
+        rangeRef.current.noUiSlider.reset();
+        if (boundaryValues?.min) {
+          setPrices([`${boundaryValues?.min}.00`, `${boundaryValues?.max}.00`]);
+        }
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query]);
+
   return (
     <S.PriceRange>
       <Typography tag="h3" variant={TagVariant.h4}>
@@ -47,6 +75,11 @@ export const PriceRange = () => {
       </Typography>
       <S.SliderWrapper>
         <Nouislider
+          instanceRef={(instance) => {
+            if (instance && !rangeRef.current) {
+              rangeRef.current = instance;
+            }
+          }}
           onSlide={onChangeSlide}
           range={{ min: boundaryValues?.min || 0, max: boundaryValues?.max || 1000 }}
           start={[boundaryValues?.min || 0, boundaryValues?.max || 1000]}
@@ -60,7 +93,9 @@ export const PriceRange = () => {
         </span>
       </S.SelectedPrice>
       <S.ButtonWrapper>
-        <Button variant={ButtonVariant.solid}>{t.btn.filter}</Button>
+        <Button onClick={onFilter} variant={ButtonVariant.solid}>
+          {t.btn.filter}
+        </Button>
       </S.ButtonWrapper>
     </S.PriceRange>
   );

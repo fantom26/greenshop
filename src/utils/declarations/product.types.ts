@@ -3,11 +3,12 @@ import { IReview } from "./review.types";
 import { TSize } from "./size.types";
 
 export interface IProductBase {
-  _id: number;
+  _id: string;
   poster: IFile;
   price: number;
   name: string;
   discountPercentage: number;
+  sku: string;
 }
 
 export interface IProduct extends IProductBase {

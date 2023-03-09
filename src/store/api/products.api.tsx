@@ -10,7 +10,11 @@ export const productsApi = createApi({
   }),
   endpoints: (builder) => ({
     products: builder.query<IProduct[], void>({
-      query: () => "/products"
+      // TODO replace type "any"
+      query: (arg: any) => ({
+        url: "/products",
+        params: { ...arg }
+      })
     })
   })
 });

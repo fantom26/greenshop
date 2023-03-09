@@ -689,6 +689,13 @@
     javascript-natural-sort "0.7.1"
     lodash "^4.17.21"
 
+"@types/fslightbox-react@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@types/fslightbox-react/-/fslightbox-react-1.7.0.tgz#4a485ba4037dda19c557dbbe22f95f1043f1b59a"
+  integrity sha512-1PzXEYKtQDMZfE9v8C8mk+sSY+7B7UK8ibjPzCGwJCnGDr/DoIOZ93ytUjBls6LwmJ2/GcIcmw2mm7tjf8CTzw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/hoist-non-react-statics@*", "@types/hoist-non-react-statics@^3.3.1":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
@@ -2156,6 +2163,11 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
   integrity sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==
+
+fslightbox-react@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/fslightbox-react/-/fslightbox-react-1.7.2.tgz#a7dc25f23439a1b522a7844c4064f1db825c4569"
+  integrity sha512-al1WiKKZVlk+9hP3I++GWgAka4mUKS6A/PpaCGTC2U0EN3g52q/CelwTjMhmFjHTxU8mSTKGEorClDMT9/O4yw==
 
 function-bind@^1.1.1:
   version "1.1.1"

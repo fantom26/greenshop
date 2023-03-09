@@ -23,7 +23,6 @@ export const Groups = styled.ul`
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
   }
-
 `;
 
 export const Links = styled.ul`
@@ -40,9 +39,11 @@ export const NextLink = styled(Link)`
   box-shadow: inset 0 0 0 0 var(--clr-accent);
   transition: color var(--transition) ease-in-out, box-shadow var(--transition) ease-in-out;
 
-  &:hover {
-    box-shadow: inset 200px 0 0 0 var(--clr-accent);
-    color: var(--clr-light);
-    transition: color var(--transition) ease-in-out, box-shadow var(--transition) ease-in-out;
+  @media (hover) {
+    &:hover {
+      box-shadow: inset 200px 0 0 0 var(--clr-accent);
+      color: var(--clr-light);
+      transition: color var(--transition) ease-in-out, box-shadow var(--transition) ease-in-out;
+    }
   }
 `;

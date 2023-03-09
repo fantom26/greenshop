@@ -56,15 +56,16 @@ export const Button = styled(Link)`
     fill: var(--clr-dark);
     transition: fill var(--transition), transform var(--transition);
   }
+  @media (hover) {
+    &:hover {
+      color: var(--clr-accent);
+      transition: color var(--transition);
 
-  &:hover {
-    color: var(--clr-accent);
-    transition: color var(--transition);
-
-    svg {
-      fill: var(--clr-accent);
-      transform: translateX(0.5rem);
-      transition: fill var(--transition), transform var(--transition);
+      svg {
+        fill: var(--clr-accent);
+        transform: translateX(0.5rem);
+        transition: fill var(--transition), transform var(--transition);
+      }
     }
   }
 `;

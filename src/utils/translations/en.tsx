@@ -62,11 +62,10 @@ export const en: DeepPartial<ITranslation> = {
         categoryTitle: "Categories",
         priceTitle: "Price Range",
         sizeTitle: "Size",
-        tabs: [
-          { id: "1", title: "All Plants" },
-          { id: "2", title: "New Arrivals" },
-          { id: "3", title: "Sale" }
-        ]
+        tab1: "All Plants",
+        tab2: "New Arrivals",
+        tab3: "Sale",
+        empty: "Unfortunately, we don't have products with that filter"
       }
     }
   },
