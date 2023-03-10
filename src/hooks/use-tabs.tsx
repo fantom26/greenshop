@@ -1,6 +1,6 @@
 import { ReactNode, useState } from "react";
 
-export type Tab = { label: string; id: string; children: ReactNode };
+export type Tab = { label: string; id: string; children?: ReactNode };
 
 export const useTabs = ({ tabs, initialTabId, onChange }: { tabs: Tab[]; initialTabId: string; onChange?: (id: string) => void }) => {
   const [[selectedTabIndex, direction], setSelectedTab] = useState(() => {

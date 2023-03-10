@@ -8,6 +8,7 @@ import { useTranslation } from "@hooks";
 import { useProductsQuery } from "@store/api";
 import { TagVariant } from "@utils/enums/components";
 
+import { Filter } from "./components/filter";
 import { Pagination } from "./components/pagination";
 import { Sort } from "./components/sort";
 import * as S from "./main.styled";
@@ -25,7 +26,7 @@ export const Main = () => {
   return (
     <S.Main>
       <S.Top>
-        <span>Last</span>
+        <Filter />
         <Sort />
       </S.Top>
       <S.Content>

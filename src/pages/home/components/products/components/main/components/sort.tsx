@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useRouter } from "next/router";
 
 import { Typography } from "@components/ui";
-import { ICONS, SORT_KEYS } from "@constants";
+import { FILTER_KEYS, ICONS, SORT_KEYS } from "@constants";
 import { useTranslation } from "@hooks";
 
 import * as S from "./sort.styled";
@@ -12,7 +12,7 @@ export const Sort = () => {
   const t = useTranslation();
   const [current, setCurrent] = useState(t.sort.default);
 
-  const { query, push } = useRouter();
+  const { query, push, asPath } = useRouter();
 
   const onClick = (filterOption: string) => {
     setCurrent(t.sort[filterOption]);
@@ -22,7 +22,7 @@ export const Sort = () => {
         push(
           {
             query: {
-              ...Object.fromEntries(Object.entries(query).filter(([key]) => SORT_KEYS.includes(key)))
+              ...Object.fromEntries(Object.entries(query).filter(([key]) => [...SORT_KEYS, ...FILTER_KEYS].includes(key)))
             }
           },
           "",
@@ -60,6 +60,17 @@ export const Sort = () => {
         break;
     }
   };
+
+  useEffect(() => {
+    if (asPath.includes("_sort") && asPath.includes("_order")) {
+      if (query._order === "asc") {
+        setCurrent(t.sort.priceAsc);
+      } else {
+        setCurrent(t.sort.priceDesc);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query]);
 
   return (
     <S.Sort>

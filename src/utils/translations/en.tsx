@@ -64,9 +64,9 @@ export const en: DeepPartial<ITranslation> = {
         sizeTitle: "Size",
         resetAll: "Reset all",
         sortBy: "Sort by:",
-        tab1: "All Plants",
-        tab2: "New Arrivals",
-        tab3: "Sale",
+        all: "All Plants",
+        new: "New Arrivals",
+        sale: "Sale",
         empty: "Unfortunately, we don't have products with that filter"
       }
     }

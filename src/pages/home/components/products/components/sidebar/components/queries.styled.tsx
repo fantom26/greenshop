@@ -8,15 +8,6 @@ export const FilterParams = styled.ul`
   margin-bottom: 2rem;
 `;
 
-export const FilterParam = styled.li`
-  position: relative;
-  border-radius: 0.5rem;
-  padding: 0.5rem 2rem 0.5rem 0.5rem;
-  font-weight: 500;
-  color: var(--clr-light);
-  background-color: var(--clr-accent);
-`;
-
 export const FilterParamButton = styled.button`
   position: absolute;
   right: 0.5rem;
@@ -45,4 +36,26 @@ export const FilterParamButton = styled.button`
   &::after {
     transform: rotate(-45deg) translateY(-50%);
   }
+`;
+
+export const FilterParam = styled.li<{ reset?: boolean }>`
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  font-weight: 500;
+  color: ${({ reset }) => (reset ? "var(--clr-accent)" : "var(--clr-light)")};
+  background-color: ${({ reset }) => (reset ? "var(--clr-light)" : " var(--clr-accent)")};
+
+  ${({ reset }) =>
+    reset &&
+    `
+    border: 0.1rem solid var(--clr-accent);
+
+    ${FilterParamButton} {
+      &::before,
+      &::after {
+        background-color: var(--clr-accent);
+      }
+    }
+  `}
 `;

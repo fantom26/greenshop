@@ -63,7 +63,7 @@ export const Queries = () => {
               <S.FilterParamButton onClick={() => deleteParam(param as string)} />
             </S.FilterParam>
           ))}
-          <S.FilterParam>
+          <S.FilterParam reset>
             <span>{t.pages.home.products.resetAll}</span>
             <S.FilterParamButton onClick={() => deleteParam("ALL")} />
           </S.FilterParam>

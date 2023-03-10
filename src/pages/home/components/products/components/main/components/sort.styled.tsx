@@ -19,6 +19,9 @@ export const Dropdown = styled.ul`
   top: 100%;
   z-index: 2;
   margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   background-color: var(--clr-light);
   opacity: 0;
   visibility: hidden;
