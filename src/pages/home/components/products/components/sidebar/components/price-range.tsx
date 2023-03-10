@@ -15,11 +15,11 @@ export const PriceRange = () => {
   const t = useTranslation();
   const [prices, setPrices] = useState([]);
   const { push, query } = useRouter();
-  const { data: products } = useProductsQuery();
+  const { data } = useProductsQuery();
   const rangeRef = useRef(null);
 
   const boundaryValues = useMemo(() => {
-    const prices = products?.map((product) => product.price);
+    const prices = data?.products.map((product) => product.price);
 
     if (prices) {
       const max = Math.max(...prices);
@@ -27,7 +27,7 @@ export const PriceRange = () => {
 
       return { min, max };
     }
-  }, [products]);
+  }, [data?.products]);
 
   const onChangeSlide = (data: string[]) => {
     setPrices(data);

@@ -9,11 +9,16 @@ export const productsApi = createApi({
     baseUrl: NEXT_PUBLIC_API_URL
   }),
   endpoints: (builder) => ({
-    products: builder.query<IProduct[], void>({
+    products: builder.query<{ products: IProduct[]; links: string; totalCount: number }, void>({
       // TODO replace type "any"
       query: (arg: any) => ({
         url: "/products",
         params: { ...arg }
+      }),
+      transformResponse: (products: IProduct[], meta) => ({
+        products,
+        links: meta.response.headers.get("Link"),
+        totalCount: Number(meta.response.headers.get("X-Total-Count"))
       })
     })
   })

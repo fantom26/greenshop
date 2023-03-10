@@ -33,3 +33,10 @@ export const List = styled.ul`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 4rem;
 `;
+
+export const Bottom = styled.div`
+  margin-top: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;

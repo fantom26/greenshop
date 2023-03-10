@@ -3,50 +3,31 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 
 import { ProductCard } from "@components/cards";
-import { Spring, Typography } from "@components/ui";
-import { useTabs, useTranslation } from "@hooks";
+import { Typography } from "@components/ui";
+import { useTranslation } from "@hooks";
 import { useProductsQuery } from "@store/api";
 import { TagVariant } from "@utils/enums/components";
 
+import { Pagination } from "./components/pagination";
 import * as S from "./main.styled";
-import { Circle, Square, Triangle } from "./shapes";
 
 export const Main = () => {
   const t = useTranslation();
-  const [hookProps] = useState({
-    tabs: [
-      {
-        label: t.pages.home.products.tab1,
-        children: <Circle />,
-        id: t.pages.home.products.tab1
-      },
-      {
-        label: t.pages.home.products.tab2,
-        children: <Triangle />,
-        id: t.pages.home.products.tab2
-      },
-      {
-        label: t.pages.home.products.tab3,
-        children: <Square />,
-        id: t.pages.home.products.tab3
-      }
-    ],
-    initialTabId: t.pages.home.products.tab1
-  });
+
+  const LIMIT = 3;
+  const [page, setPage] = useState(1);
+
   const { query } = useRouter();
 
-  const spring = useTabs(hookProps);
-
-  const { data: products } = useProductsQuery(query);
+  const { data } = useProductsQuery({ ...query, _page: page, _limit: LIMIT });
 
   return (
     <S.Main>
-      <S.Top>{/* <Spring.Tabs {...spring.tabProps} /> */}</S.Top>
+      <S.Top>Controls</S.Top>
       <S.Content>
-        {/* <Spring.Content {...spring.contentProps} /> */}
-        {products?.length > 0 ? (
+        {data?.products?.length > 0 ? (
           <S.List>
-            {products?.map((product) => (
+            {data?.products?.map((product) => (
               <ProductCard key={product._id} {...product} />
             ))}
           </S.List>
@@ -56,6 +37,17 @@ export const Main = () => {
           </Typography>
         )}
       </S.Content>
+      {data.links && (
+        <S.Bottom>
+          <Pagination
+            currentPage={page}
+            totalPages={Math.ceil(data?.totalCount / LIMIT)}
+            handleChangePage={(page: number) => {
+              setPage(page);
+            }}
+          />
+        </S.Bottom>
+      )}
     </S.Main>
   );
 };
