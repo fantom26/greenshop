@@ -62,6 +62,7 @@ export const en: DeepPartial<ITranslation> = {
         categoryTitle: "Categories",
         priceTitle: "Price Range",
         sizeTitle: "Size",
+        sortBy: "Sort by:",
         tab1: "All Plants",
         tab2: "New Arrivals",
         tab3: "Sale",
@@ -191,6 +192,8 @@ export const en: DeepPartial<ITranslation> = {
     phone: "Invalid phone"
   },
   sort: {
-    default: "Default sorting"
+    default: "Default sorting",
+    priceDesc: "From expensive",
+    priceAsc: "From cheapest"
   }
 };

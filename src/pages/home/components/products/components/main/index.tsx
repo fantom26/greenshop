@@ -9,12 +9,13 @@ import { useProductsQuery } from "@store/api";
 import { TagVariant } from "@utils/enums/components";
 
 import { Pagination } from "./components/pagination";
+import { Sort } from "./components/sort";
 import * as S from "./main.styled";
 
 export const Main = () => {
   const t = useTranslation();
 
-  const LIMIT = 3;
+  const LIMIT = 5;
   const [page, setPage] = useState(1);
 
   const { query } = useRouter();
@@ -23,7 +24,10 @@ export const Main = () => {
 
   return (
     <S.Main>
-      <S.Top>Controls</S.Top>
+      <S.Top>
+        <span>Last</span>
+        <Sort />
+      </S.Top>
       <S.Content>
         {data?.products?.length > 0 ? (
           <S.List>
@@ -37,7 +41,7 @@ export const Main = () => {
           </Typography>
         )}
       </S.Content>
-      {data.links && (
+      {data?.links && (
         <S.Bottom>
           <Pagination
             currentPage={page}
