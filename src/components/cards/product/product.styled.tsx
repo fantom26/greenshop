@@ -89,16 +89,28 @@ export const Control = styled.button`
   display: flex;
   max-width: 2.5rem;
 
+  &:nth-child(2) {
+    svg {
+      stroke: var(--clr-dark);
+    }
+  }
+
   svg {
     fill: var(--clr-dark);
-    transition: fill var(--transition);
+    transition: fill var(--transition), stroke var(--transition);
   }
 
   @media (hover) {
     &:hover {
+      &:nth-child(2) {
+        svg {
+          stroke: var(--clr-accent);
+        }
+      }
+
       svg {
         fill: var(--clr-accent);
-        transition: fill var(--transition);
+        transition: fill var(--transition), stroke var(--transition);
       }
     }
   }

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 
 import { Typography } from "@components/ui";
-import { ICONS, SORT_IGNORED_KEYS } from "@constants";
+import { ICONS, SORT_KEYS } from "@constants";
 import { useTranslation } from "@hooks";
 
 import * as S from "./sort.styled";
@@ -22,7 +22,7 @@ export const Sort = () => {
         push(
           {
             query: {
-              ...Object.fromEntries(Object.entries(query).filter(([key]) => !SORT_IGNORED_KEYS.includes(key)))
+              ...Object.fromEntries(Object.entries(query).filter(([key]) => SORT_KEYS.includes(key)))
             }
           },
           "",

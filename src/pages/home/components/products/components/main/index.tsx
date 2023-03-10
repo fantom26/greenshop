@@ -15,7 +15,7 @@ import * as S from "./main.styled";
 export const Main = () => {
   const t = useTranslation();
 
-  const LIMIT = 5;
+  const LIMIT = 9;
   const [page, setPage] = useState(1);
 
   const { query } = useRouter();

@@ -62,6 +62,7 @@ export const en: DeepPartial<ITranslation> = {
         categoryTitle: "Categories",
         priceTitle: "Price Range",
         sizeTitle: "Size",
+        resetAll: "Reset all",
         sortBy: "Sort by:",
         tab1: "All Plants",
         tab2: "New Arrivals",

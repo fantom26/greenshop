@@ -21,6 +21,7 @@ export const ProductCard: FC<IProduct> = (props) => {
   const oldPrice = useMemo(() => Math.ceil(price + (price * discountPercentage) / 100).toFixed(2), [price, discountPercentage]);
 
   const { getProductQuantity, increaseCartQuantity } = useCart();
+
   return (
     <>
       <S.Product>
