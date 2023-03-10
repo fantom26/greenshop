@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 
 import { ProductCard } from "@components/cards";
-import { Typography } from "@components/ui";
+import { Loader, Typography } from "@components/ui";
 import { useTranslation } from "@hooks";
 import { useProductsQuery } from "@store/api";
 import { TagVariant } from "@utils/enums/components";
@@ -21,7 +21,7 @@ export const Main = () => {
 
   const { query } = useRouter();
 
-  const { data } = useProductsQuery({ ...query, _page: page, _limit: LIMIT });
+  const { data, isFetching } = useProductsQuery({ ...query, _page: page, _limit: LIMIT });
 
   return (
     <S.Main>
@@ -30,16 +30,22 @@ export const Main = () => {
         <Sort />
       </S.Top>
       <S.Content>
-        {data?.products?.length > 0 ? (
-          <S.List>
-            {data?.products?.map((product) => (
-              <ProductCard key={product._id} {...product} />
-            ))}
-          </S.List>
+        {isFetching ? (
+          <Loader />
         ) : (
-          <Typography tag="h2" variant={TagVariant.h2}>
-            {t.pages.home.products.empty}
-          </Typography>
+          <>
+            {data?.products?.length > 0 ? (
+              <S.List>
+                {data?.products?.map((product) => (
+                  <ProductCard key={product._id} {...product} />
+                ))}
+              </S.List>
+            ) : (
+              <Typography tag="h2" variant={TagVariant.h2}>
+                {t.pages.home.products.empty}
+              </Typography>
+            )}
+          </>
         )}
       </S.Content>
       {data?.links && (
