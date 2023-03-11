@@ -1,8 +1,10 @@
-import { FC } from "react";
+import { FC, useMemo } from "react";
 
 import { useRouter } from "next/router";
 
 import { Typography } from "@components/ui";
+import { IProduct } from "@declarations";
+import { useProductsQuery } from "@store/api";
 import { TagVariant } from "@utils/enums/components";
 
 import * as S from "./filter-list.styled";
@@ -13,15 +15,35 @@ interface FilterProps {
   queryName: string;
 }
 
+const getSizeLetter = (name: string) =>
+  name
+    .match(/\((\w+)\)/g)
+    .map((match) => match.substring(1, match.length - 1))
+    .join("");
+
 export const Filter: FC<FilterProps> = ({ title, items, queryName }) => {
   const router = useRouter();
+
+  const { data } = useProductsQuery();
+
+  const optionsWithCount = useMemo(
+    () =>
+      items?.reduce((options, item) => {
+        const count = data?.products.filter((product) =>
+          queryName === "size" ? product[queryName].includes(getSizeLetter(item)) : product[queryName as keyof IProduct] === item
+        ).length;
+        return [...options, { name: item, count }];
+      }, []),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [data?.products, items]
+  );
 
   const onClick = (filterOption: string) => {
     router.push(
       {
         query: {
           ...router.query,
-          [queryName]: queryName === "size" ? filterOption.match(/\((\w+)\)/g).map((match) => match.substring(1, match.length - 1)) : filterOption
+          [queryName]: queryName === "size" ? getSizeLetter(filterOption) : filterOption
         }
       },
       "",
@@ -35,13 +57,14 @@ export const Filter: FC<FilterProps> = ({ title, items, queryName }) => {
         {title}
       </Typography>
       <S.List>
-        {items?.map((item, index) => (
+        {optionsWithCount?.map(({ name, count }, index) => (
           <S.Item
             key={index}
-            selected={queryName === "size" ? item.includes(`(${router.query[queryName]})`) : router.query[queryName] === item}
-            onClick={() => onClick(item)}
+            selected={queryName === "size" ? name.includes(`(${router.query[queryName]})`) : router.query[queryName] === name}
+            onClick={() => onClick(name)}
           >
-            {item}
+            <span>{name}</span>
+            <span>({count})</span>
           </S.Item>
         ))}
       </S.List>

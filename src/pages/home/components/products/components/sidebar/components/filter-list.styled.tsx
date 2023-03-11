@@ -10,7 +10,10 @@ export const List = styled.ul`
 
 // TODO hover like links in footer Duplicated
 export const Item = styled.li<{ selected: boolean }>`
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   margin: 0 -0.25rem;
   padding: 0 0.25rem;
   cursor: pointer;
