@@ -276,13 +276,13 @@ export const AnimationSettings = css`
 
 export const Spinner = styled.div`
   position: relative;
-  width: 20rem;
-  height: 20rem;
+  width: 13rem;
+  height: 13rem;
 `;
 
 export const Circle = styled.div`
   position: absolute;
-  width: 4.6rem;
+  width: 3rem;
   height: 100%;
   left: 50%;
 
@@ -350,8 +350,8 @@ export const LoaderWrapper = styled.div`
 `;
 
 export const Leaft = styled.div`
-  width: 4rem;
-  height: 6rem;
+  width: 3rem;
+  height: 4.5rem;
   background-color: var(--clr-accent);
   border-radius: 1px 30px;
 `;
