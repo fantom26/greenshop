@@ -81,7 +81,7 @@
       ],
       "new": true,
       "sale": true,
-      "size": ["S", "XL"],
+      "size": ["S"],
       "category": "Seeds",
       "tags": ["Seeds", "Plants"],
       "stars": 4,
@@ -139,7 +139,7 @@
       ],
       "new": true,
       "sale": false,
-      "size": ["S", "L", "XL"],
+      "size": ["S", "L"],
       "category": "Big Plants",
       "tags": ["Big", "Garden", "Plants"],
       "stars": 4,
@@ -262,7 +262,7 @@
       "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
     }
   ],
-  "size": ["Small (S)", "Medium (M)", "Large (L)", "Extra Large (XL)"],
+  "size": ["Small (S)", "Medium (M)", "Large (L)"],
   "categories": ["House Plants", "Potter Plants", "Seeds", "Small Plants", "Big Plants", "Succulents", "Trerrariums", "Gardening", "Accessories"],
   "articles": [
     {

@@ -23,12 +23,12 @@ export const Item = styled.li<{ selected: boolean }>`
   ${({ selected }) =>
     selected &&
     `
-     box-shadow: inset 200px 0 0 0 var(--clr-accent);
+    box-shadow: inset 300px 0 0 0 var(--clr-accent);
     color: var(--clr-light);
   `}
   @media (hover) {
     &:hover {
-      box-shadow: inset 200px 0 0 0 var(--clr-accent);
+      box-shadow: inset 300px 0 0 0 var(--clr-accent);
       color: var(--clr-light);
       transition: color var(--transition) ease-in-out, box-shadow var(--transition) ease-in-out;
     }

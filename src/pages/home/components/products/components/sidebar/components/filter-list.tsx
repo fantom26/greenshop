@@ -39,16 +39,30 @@ export const Filter: FC<FilterProps> = ({ title, items, queryName }) => {
   );
 
   const onClick = (filterOption: string) => {
-    router.push(
-      {
-        query: {
-          ...router.query,
-          [queryName]: queryName === "size" ? getSizeLetter(filterOption) : filterOption
-        }
-      },
-      "",
-      { scroll: false }
-    );
+    if (queryName === "size") {
+      router.push(
+        {
+          query: {
+            ...router.query,
+            // eslint-disable-next-line camelcase
+            size_like: getSizeLetter(filterOption)
+          }
+        },
+        "",
+        { scroll: false }
+      );
+    } else {
+      router.push(
+        {
+          query: {
+            ...router.query,
+            [queryName]: filterOption
+          }
+        },
+        "",
+        { scroll: false }
+      );
+    }
   };
 
   return (
@@ -60,7 +74,7 @@ export const Filter: FC<FilterProps> = ({ title, items, queryName }) => {
         {optionsWithCount?.map(({ name, count }, index) => (
           <S.Item
             key={index}
-            selected={queryName === "size" ? name.includes(`(${router.query[queryName]})`) : router.query[queryName] === name}
+            selected={queryName === "size" ? name.includes(`(${router.query.size_like})`) : router.query[queryName] === name}
             onClick={() => onClick(name)}
           >
             <span>{name}</span>
