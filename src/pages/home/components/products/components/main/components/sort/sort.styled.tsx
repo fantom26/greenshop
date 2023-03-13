@@ -18,10 +18,10 @@ export const Dropdown = styled.ul`
   left: 0;
   top: 100%;
   z-index: 2;
-  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-top: 0.5rem;
   background-color: var(--clr-light);
   opacity: 0;
   visibility: hidden;
@@ -30,7 +30,7 @@ export const Dropdown = styled.ul`
 
 export const Sort = styled.div`
   display: flex;
-  align-items: 1rem;
+  align-items: center;
   gap: 0.5rem;
 `;
 

@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { Typography } from "@components/ui";
 import { FILTER_KEYS, ICONS, SORT_KEYS } from "@constants";
 import { useTranslation } from "@hooks";
+import { TagVariant } from "@utils/enums/components";
 
 import * as S from "./sort.styled";
 
@@ -74,7 +75,9 @@ export const Sort = () => {
 
   return (
     <S.Sort>
-      <Typography tag="p">{t.pages.home.products.sortBy}</Typography>
+      <Typography tag="h3" variant={TagVariant.h4}>
+        {t.pages.home.products.sortBy}
+      </Typography>
       <S.Wrapper>
         <S.Current>
           <span>{current}</span>

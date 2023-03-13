@@ -5,17 +5,17 @@ import { ButtonVariant } from "@utils/enums/components";
 import * as S from "./button.styled";
 
 export interface ButtonProps extends HTMLAttributes<HTMLElement> {
-  variant?: ButtonVariant;
-  path?: string;
-  uppercase?: boolean;
-  isLoading?: boolean;
-  endIcon?: ReactNode;
-  startIcon?: ReactNode;
+  variant: ButtonVariant;
+  path: string;
+  uppercase: boolean;
+  isLoading: boolean;
+  endIcon: ReactNode;
+  startIcon: ReactNode;
   children: ReactNode;
-  target?: string;
+  target: string;
 }
 
-export const Button: FC<ButtonProps> = (props) => {
+export const Button: FC<Partial<ButtonProps>> = (props) => {
   const { variant = ButtonVariant.solid, endIcon = null, startIcon = null, isLoading, path, children, ...rest } = props;
 
   if (path && endIcon) {
@@ -41,6 +41,14 @@ export const Button: FC<ButtonProps> = (props) => {
       <S.Hyperlink variant={variant} href={path} {...rest}>
         <span>{children}</span>
       </S.Hyperlink>
+    );
+  }
+
+  if (startIcon) {
+    return (
+      <S.Button variant={variant} startIcon disabled={isLoading} {...rest}>
+        <span>{startIcon}</span>
+      </S.Button>
     );
   }
 

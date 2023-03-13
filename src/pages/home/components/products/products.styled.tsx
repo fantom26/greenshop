@@ -9,4 +9,8 @@ export const ProductsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 5rem;
+
+  @media (max-width: 1200px) {
+    grid-gap: 2rem;
+  }
 `;

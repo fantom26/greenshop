@@ -20,8 +20,8 @@ export const Groups = styled.ul`
 
   @media (max-width: 520px) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 

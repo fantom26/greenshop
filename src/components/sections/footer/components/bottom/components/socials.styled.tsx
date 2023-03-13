@@ -13,6 +13,12 @@ export const Link = styled.a`
   border-radius: 0.5rem;
   padding: 0.5rem;
   transition: background-color var(--transition);
+
+  svg {
+    fill: var(--clr-accent);
+    fill-opacity: 0.6;
+    transition: fill var(--transition), fill-opacity var(--transition);
+  }
   @media (hover) {
     &:hover {
       background-color: var(--clr-accent);
@@ -24,11 +30,5 @@ export const Link = styled.a`
         transition: fill var(--transition), fill-opacity var(--transition);
       }
     }
-  }
-
-  svg {
-    fill: var(--clr-accent);
-    fill-opacity: 0.6;
-    transition: fill var(--transition), fill-opacity var(--transition);
   }
 `;

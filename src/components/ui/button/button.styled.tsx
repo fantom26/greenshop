@@ -19,8 +19,7 @@ const variants: StyledVariants<ButtonVariant> = {
   `
 };
 
-// TODO dublicated styles. Search solution
-export const Button = styled.button<ButtonProps>`
+const CommonStyles = css`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,6 +29,11 @@ export const Button = styled.button<ButtonProps>`
   width: 100%;
   min-height: 4rem;
   font-weight: 700;
+`;
+
+// TODO dublicated styles. Search solution
+export const Button = styled.button<Partial<ButtonProps>>`
+  ${CommonStyles}
 
   ${({ variant }) => variants[variant]}
 
@@ -53,16 +57,8 @@ export const Button = styled.button<ButtonProps>`
   `}
 `;
 
-export const Hyperlink = styled(Link)<ButtonProps>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.6rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  width: 100%;
-  min-height: 3.8rem;
-  font-weight: 700;
+export const Hyperlink = styled(Link)<Partial<ButtonProps>>`
+  ${CommonStyles}
 
   ${({ variant }) => variants[variant]}
 

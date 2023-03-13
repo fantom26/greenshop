@@ -11,18 +11,18 @@ export const Tab = styled.button<{ selected: boolean }>`
   position: relative;
   display: flex;
   align-items: center;
-  cursor: pointer;
-  user-select: none;
   font-size: 1.8rem;
   color: ${({ selected }) => (selected ? "var(--clr-accent)" : "var(--clr-dark)")};
+  cursor: pointer;
+  user-select: none;
 
   &::before {
-    position: absolute;
     content: "";
-    bottom: -0.5rem;
+    position: absolute;
     left: 0;
-    height: 0.2rem;
+    bottom: -0.5rem;
     width: 100%;
+    height: 0.2rem;
     background-color: var(--clr-accent);
     opacity: ${({ selected }) => (selected ? "1" : "0")};
     visibility: ${({ selected }) => (selected ? "visible" : "hidden")};

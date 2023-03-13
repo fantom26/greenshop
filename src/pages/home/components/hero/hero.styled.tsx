@@ -12,8 +12,8 @@ export const HeroWrapper = styled.div`
 `;
 
 export const Info = styled.div`
-  max-width: 58rem;
   width: 100%;
+  max-width: 58rem;
 
   @media (max-width: 992px) {
     max-width: initial;

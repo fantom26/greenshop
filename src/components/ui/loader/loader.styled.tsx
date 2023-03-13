@@ -270,8 +270,8 @@ export const Spin8 = keyframes`
 }`;
 
 export const AnimationSettings = css`
-  animation-fill-mode: forwards;
   animation-timing-function: steps(8, end);
+  animation-fill-mode: forwards;
 `;
 
 export const Spinner = styled.div`
@@ -282,62 +282,62 @@ export const Spinner = styled.div`
 
 export const Circle = styled.div`
   position: absolute;
+  left: 50%;
   width: 3rem;
   height: 100%;
-  left: 50%;
 
   &:nth-child(1) {
-    transform: rotate(-45deg);
     opacity: 0;
+    transform: rotate(-45deg);
     animation: ${Spin1} 1s infinite;
     ${AnimationSettings}
   }
 
   &:nth-child(2) {
-    transform: rotate(-90deg);
     opacity: 0.14286;
+    transform: rotate(-90deg);
     animation: ${Spin2} 1s infinite;
     ${AnimationSettings}
   }
 
   &:nth-child(3) {
-    transform: rotate(-135deg);
     opacity: 0.28571;
+    transform: rotate(-135deg);
     animation: ${Spin3} 1s infinite;
     ${AnimationSettings}
   }
 
   &:nth-child(4) {
-    transform: rotate(-180deg);
     opacity: 0.42857;
+    transform: rotate(-180deg);
     animation: ${Spin4} 1s infinite;
     ${AnimationSettings}
   }
 
   &:nth-child(5) {
-    transform: rotate(-225deg);
     opacity: 0.57143;
+    transform: rotate(-225deg);
     animation: ${Spin5} 1s infinite;
     ${AnimationSettings}
   }
 
   &:nth-child(6) {
-    transform: rotate(-270deg);
     opacity: 0.71429;
+    transform: rotate(-270deg);
     animation: ${Spin6} 1s infinite;
     ${AnimationSettings}
   }
 
   &:nth-child(7) {
-    transform: rotate(-315deg);
     opacity: 0.85714;
+    transform: rotate(-315deg);
     animation: ${Spin7} 1s infinite;
     ${AnimationSettings}
   }
 
   &:nth-child(8) {
-    transform: rotate(-360deg);
     opacity: 1;
+    transform: rotate(-360deg);
     animation: ${Spin8} 1s infinite;
     ${AnimationSettings}
   }
@@ -350,8 +350,8 @@ export const LoaderWrapper = styled.div`
 `;
 
 export const Leaft = styled.div`
+  border-radius: 1px 30px;
   width: 3rem;
   height: 4.5rem;
   background-color: var(--clr-accent);
-  border-radius: 1px 30px;
 `;

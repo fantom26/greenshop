@@ -6,20 +6,20 @@ export const Blog = styled.section`
   padding-top: 14rem;
   padding-bottom: 11rem;
 
+  ${Typography}:first-child {
+    margin-bottom: 1.5rem;
+  }
+
   @media (max-width: 767px) {
     padding-top: 7rem;
     padding-bottom: 5.5rem;
-  }
-
-  ${Typography}:first-child {
-    margin-bottom: 1.5rem;
   }
 `;
 
 export const Articles = styled.ul`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   grid-gap: 4.5rem;
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 3.5rem;
 
   @media (max-width: 1200px) {

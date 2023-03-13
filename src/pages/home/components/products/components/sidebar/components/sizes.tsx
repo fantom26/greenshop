@@ -1,7 +1,6 @@
+import { Filter } from "@components/common";
 import { useTranslation } from "@hooks";
 import { useSizeQuery } from "@store/api";
-
-import { Filter } from "./filter-list";
 
 export const Sizes = () => {
   const t = useTranslation();

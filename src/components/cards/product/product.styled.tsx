@@ -2,17 +2,17 @@ import styled from "styled-components";
 
 export const Controls = styled.div`
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   display: flex;
-  padding: 1rem;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+  padding: 1rem;
   background-color: #dee9da;
-  transform: translate(-50%, -50%);
   opacity: 0;
   visibility: hidden;
+  transform: translate(-50%, -50%);
   transition: opacity var(--transition), visibility var(--transition);
 `;
 
@@ -24,11 +24,16 @@ export const ImageWrapper = styled.div`
   &::before {
     content: "";
     position: absolute;
-    inset: 0;
     background-color: rgba(226, 231, 225, 0.5);
     opacity: 0;
     visibility: hidden;
     transition: opacity var(--transition), visibility var(--transition);
+    inset: 0;
+  }
+
+  @media (max-width: 992px) {
+    margin-right: auto;
+    margin-left: auto;
   }
 `;
 
@@ -52,17 +57,17 @@ export const Name = styled.h3`
 `;
 
 export const Prices = styled.div`
-  margin-top: 0.5rem;
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  margin-top: 0.5rem;
 `;
 
 export const Price = styled.p`
-  color: var(--clr-accent);
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 90%;
+  color: var(--clr-accent);
 `;
 
 export const OldPrice = styled.p`
@@ -75,10 +80,10 @@ export const OldPrice = styled.p`
 
 export const Sale = styled.div`
   position: absolute;
-  top: 0;
   left: 0;
-  padding: 0.8rem;
+  top: 0;
   z-index: 2;
+  padding: 0.8rem;
   font-weight: 500;
   color: var(--clr-light);
   background-color: var(--clr-accent);
@@ -123,9 +128,9 @@ export const Quantity = styled.span<{ shown: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
   width: 1.8rem;
   height: 1.8rem;
-  border-radius: 50%;
   font-weight: 500;
   font-size: 1rem;
   color: var(--clr-light);

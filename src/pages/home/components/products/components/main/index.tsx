@@ -8,7 +8,9 @@ import { useTranslation } from "@hooks";
 import { useProductsQuery } from "@store/api";
 import { TagVariant } from "@utils/enums/components";
 
+import { Queries } from "../sidebar/components";
 import { Filter } from "./components/filter";
+import { MobileFilter } from "./components/mobile-filter";
 import { Pagination } from "./components/pagination";
 import { Sort } from "./components/sort";
 import * as S from "./main.styled";
@@ -28,7 +30,11 @@ export const Main = () => {
       <S.Top>
         <Filter />
         <Sort />
+        <MobileFilter />
       </S.Top>
+      <S.WrapperQueries>
+        <Queries />
+      </S.WrapperQueries>
       <S.Content>
         {isFetching ? (
           <Loader />

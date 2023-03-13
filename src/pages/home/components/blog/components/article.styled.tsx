@@ -8,24 +8,24 @@ export const ArticleWrapper = styled.div`
   padding: 1rem 1.5rem;
 
   @media (max-width: 767px) {
-    padding-left: initial;
     padding-right: initial;
+    padding-left: initial;
   }
 `;
 
 export const Image = styled.div`
   display: flex;
-  max-width: 27rem;
   width: 100%;
-
-  @media (max-width: 767px) {
-    max-width: initial;
-  }
+  max-width: 27rem;
 
   img {
     @media (max-width: 767px) {
       width: 100%;
     }
+  }
+
+  @media (max-width: 767px) {
+    max-width: initial;
   }
 `;
 

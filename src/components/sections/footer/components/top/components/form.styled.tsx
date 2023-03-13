@@ -8,6 +8,6 @@ export const FormWrapper = styled.div`
 `;
 
 export const Button = styled(StyledButton)`
-  max-width: 8.5rem;
   border-radius: 0 0.6rem 0.6rem 0;
+  max-width: 8.5rem;
 `;

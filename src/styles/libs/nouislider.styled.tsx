@@ -3,53 +3,53 @@ import { css } from "styled-components";
 export const NoUiSliderStyles = css`
   .noUi-target,
   .noUi-target * {
-    -webkit-touch-callout: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-user-select: none;
     -ms-touch-action: none;
     touch-action: none;
+    -webkit-user-select: none;
     -ms-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    -webkit-touch-callout: none;
   }
   .noUi-target {
     position: relative;
   }
   .noUi-base,
   .noUi-connects {
-    width: 100%;
-    height: 100%;
     position: relative;
     z-index: 1;
+    width: 100%;
+    height: 100%;
   }
   /* Wrapper for all connect elements.
  */
   .noUi-connects {
-    overflow: hidden;
     z-index: 0;
+    overflow: hidden;
   }
   .noUi-connect,
   .noUi-origin {
-    will-change: transform;
     position: absolute;
-    z-index: 1;
-    top: 0;
     right: 0;
+    top: 0;
+    z-index: 1;
     -ms-transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
-    -webkit-transform-style: preserve-3d;
     transform-origin: 0 0;
+    -webkit-transform-style: preserve-3d;
     transform-style: flat;
+    will-change: transform;
   }
   .noUi-connect {
-    height: 100%;
     width: 100%;
+    height: 100%;
   }
   .noUi-origin {
-    height: 10%;
     width: 10%;
+    height: 10%;
   }
   /* Offset direction
  */
@@ -65,13 +65,13 @@ export const NoUiSliderStyles = css`
     height: 0;
   }
   .noUi-handle {
+    position: absolute;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    position: absolute;
   }
   .noUi-touch-area {
-    height: 100%;
     width: 100%;
+    height: 100%;
   }
   .noUi-state-tap .noUi-connect,
   .noUi-state-tap .noUi-origin {
@@ -87,11 +87,11 @@ export const NoUiSliderStyles = css`
     height: 0.4rem;
   }
   .noUi-horizontal .noUi-handle {
-    width: 2.1rem;
-    height: 2.1rem;
     right: -17px;
     top: -0.85rem;
     border: 0.3rem solid var(--clr-light);
+    width: 2.1rem;
+    height: 2.1rem;
   }
 
   .noUi-txt-dir-rtl.noUi-horizontal .noUi-handle {
@@ -102,8 +102,8 @@ export const NoUiSliderStyles = css`
  * Giving the connect element a border radius causes issues with using transform: scale
  */
   .noUi-target {
-    background-color: rgba(70, 163, 88, 0.2);
     border-radius: 4px;
+    background-color: rgba(70, 163, 88, 0.2);
   }
   .noUi-connects {
     border-radius: 0.4rem;
@@ -154,8 +154,8 @@ export const NoUiSliderStyles = css`
     text-align: center;
   }
   .noUi-value-sub {
-    color: #ccc;
     font-size: 10px;
+    color: #ccc;
   }
   /* Markings;
  *
@@ -174,11 +174,11 @@ export const NoUiSliderStyles = css`
  *
  */
   .noUi-pips-horizontal {
-    padding: 10px 0;
-    height: 80px;
-    top: 100%;
     left: 0;
+    top: 100%;
+    padding: 10px 0;
     width: 100%;
+    height: 80px;
   }
   .noUi-value-horizontal {
     -webkit-transform: translate(-50%, 50%);
@@ -201,26 +201,26 @@ export const NoUiSliderStyles = css`
   }
 
   .noUi-tooltip {
-    display: block;
     position: absolute;
+    display: block;
     border: 1px solid #d9d9d9;
     border-radius: 3px;
-    background-color: #fff;
-    color: #000;
     padding: 5px;
-    text-align: center;
     white-space: nowrap;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
   }
   .noUi-horizontal .noUi-tooltip {
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
     left: 50%;
     bottom: 120%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
   }
   .noUi-horizontal .noUi-origin > .noUi-tooltip {
-    -webkit-transform: translate(50%, 0);
-    transform: translate(50%, 0);
     left: auto;
     bottom: 10px;
+    -webkit-transform: translate(50%, 0);
+    transform: translate(50%, 0);
   }
 `;

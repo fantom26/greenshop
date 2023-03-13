@@ -29,14 +29,14 @@ export const Input = styled.input<{ borderRadius: string }>`
   color: var(--clr-black);
   background-color: none;
 
-  &:focus {
-    outline: none;
-  }
-
   &::placeholder {
     font-size: 1.4rem;
     line-height: 115%;
     color: #acacac;
+  }
+
+  &:focus {
+    outline: none;
   }
 `;
 
@@ -49,7 +49,7 @@ export const InputTextHelper = styled.span<{ error: boolean }>`
   display: block;
   margin-top: 0.4rem;
   font-size: 1.2rem;
-  transform: translateX(1.7rem);
 
   color: ${({ error }) => (error ? "var(--clr-ui-error)" : "var(--clr-grey)")};
+  transform: translateX(1.7rem);
 `;

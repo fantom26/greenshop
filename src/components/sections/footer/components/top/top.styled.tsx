@@ -12,8 +12,8 @@ export const Top = styled.div`
   @media (max-width: 992px) {
     flex-direction: column;
     align-items: initial;
-    padding-left: 1.5rem;
     padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 
   @media (max-width: 767px) {

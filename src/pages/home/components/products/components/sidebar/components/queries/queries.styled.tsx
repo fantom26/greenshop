@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const FilterParams = styled.ul`
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
 `;
@@ -18,15 +18,15 @@ export const FilterParamButton = styled.button`
 
   &::before,
   &::after {
-    position: absolute;
     content: "";
-    display: block;
-    top: 50%;
+    position: absolute;
     left: 0;
+    top: 50%;
+    display: block;
     width: 1.2rem;
     height: 0.1rem;
-    transform: translateY(-50%);
     background-color: var(--clr-light);
+    transform: translateY(-50%);
   }
 
   &::before {
