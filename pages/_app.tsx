@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 import { CartProvider } from "@contexts";
 import { ICartItem, NextPageWithLayout } from "@declarations";
-import { store } from "@store";
+import { makeStore } from "@store";
 import { GlobalStyles } from "@styles";
 
 interface AppProps extends NextAppProps {
@@ -32,7 +32,7 @@ const App = ({ Component, pageProps, defaultCart = [] }: AppProps) => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Provider store={store}>
+      <Provider store={makeStore()}>
         <CartProvider defaultCart={defaultCart}>
           <GlobalStyles />
           <Wrapper>{getLayout(<Component {...pageProps} />)}</Wrapper>

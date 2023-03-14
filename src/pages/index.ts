@@ -1,1 +1,2 @@
-export { default } from "./home";
+export { default as Home } from "./home";
+export { default as Cart } from "./cart";

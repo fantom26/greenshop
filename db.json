@@ -596,5 +596,10 @@
       "title": "Best Houseplants Room by Room",
       "desc": "The benefits of houseplants are endless. In addition to. "
     }
+  ],
+  "pages": [
+    { "title": "Home", "description": "description", "noIndex": false, "breadcrumb": "Home" },
+    { "title": "Cart", "description": "description", "noIndex": false, "breadcrumb": "Cart" },
+    { "title": "Product", "description": "description", "noIndex": false, "breadcrumb": "Product" }
   ]
 }
