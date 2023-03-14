@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { FC, SetStateAction, useEffect, useMemo, useRef, useState } from "react";
 
 import { useRouter } from "next/router";
 
@@ -11,7 +11,7 @@ import { ButtonVariant, TagVariant } from "@utils/enums/components";
 
 import * as S from "./price-range.styled";
 
-export const PriceRange = () => {
+export const PriceRange: FC<{ mobileHandler?: () => void }> = ({ mobileHandler }) => {
   const t = useTranslation();
   const [prices, setPrices] = useState([]);
   const { push, query } = useRouter();
@@ -43,6 +43,10 @@ export const PriceRange = () => {
       "",
       { scroll: false }
     );
+
+    if (mobileHandler) {
+      mobileHandler();
+    }
   };
 
   useEffect(() => {

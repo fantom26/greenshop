@@ -5,6 +5,10 @@ export const Tabs = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
+
+  @media (max-width: 992px) {
+    gap: 1rem;
+  }
 `;
 
 export const Tab = styled.button<{ selected: boolean }>`

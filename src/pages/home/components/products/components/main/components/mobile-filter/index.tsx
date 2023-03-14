@@ -5,7 +5,7 @@ import { animated, useTransition } from "react-spring";
 import { Drawer } from "@components/common";
 import { Button } from "@components/ui";
 import { ICONS } from "@constants";
-import { useScrollLock, useTranslation } from "@hooks";
+import { useScrollLock } from "@hooks";
 import { ButtonVariant } from "@utils/enums/components";
 
 import { Categories, PriceRange, Sizes } from "../../../sidebar/components";
@@ -13,7 +13,6 @@ import { Sort } from "../sort";
 import * as S from "./mobile-filtration.styled";
 
 export const MobileFilter = () => {
-  const t = useTranslation();
   const { lockScroll, unlockScroll } = useScrollLock();
 
   const [filtersIsOpen, setFiltersIsOpen] = useState(false);
@@ -63,10 +62,10 @@ export const MobileFilter = () => {
               <Sort />
             </animated.div>
             <animated.div style={{ opacity }}>
-              <PriceRange />
+              <Sizes />
             </animated.div>
             <animated.div style={{ opacity }}>
-              <Sizes />
+              <PriceRange mobileHandler={toggleFilters} />
             </animated.div>
           </Drawer>
         ) : null

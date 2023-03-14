@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const PriceRange = styled.div`
   margin-top: 3.5rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 767px) {
+    margin-block: initial;
+  }
 `;
 
 export const SliderWrapper = styled.div`
