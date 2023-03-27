@@ -1,5 +1,9 @@
 import { FC, createContext, useEffect, useState } from "react";
 
+import { generateDays } from "@helpers";
+import { setCookie } from "cookies-next";
+
+import { CART_LIST } from "@constants";
 import { CartContextProps, CartProviderProps, ICartItem } from "@declarations";
 
 const initialState: CartContextProps = {
@@ -63,7 +67,11 @@ export const CartProvider: FC<CartProviderProps> = (props) => {
   const resetCart = () => setCartItems([]);
 
   useEffect(() => {
-    localStorage.setItem("cart-list", JSON.stringify(cartItems));
+    if (!setCookie) return;
+
+    setCookie(CART_LIST, JSON.stringify(cartItems), {
+      expires: generateDays(7)
+    });
   }, [cartItems]);
 
   return (

@@ -2,9 +2,11 @@ import NextApp, { AppContext } from "next/app";
 import type { AppProps as NextAppProps } from "next/app";
 import Head from "next/head";
 
+import { getCookie } from "cookies-next";
 import { Provider } from "react-redux";
 import styled from "styled-components";
 
+import { CART_LIST } from "@constants";
 import { CartProvider } from "@contexts";
 import { ICartItem, NextPageWithLayout } from "@declarations";
 import { makeStore } from "@store";
@@ -46,7 +48,7 @@ App.getInitialProps = async (ctx: AppContext) => {
   try {
     const appProps = await NextApp.getInitialProps(ctx);
 
-    const defaultCart = localStorage.getItem("cart-list");
+    const defaultCart = JSON.parse(getCookie(CART_LIST, { req: ctx.ctx.req, res: ctx.ctx.res }) as string);
 
     return {
       ...appProps,

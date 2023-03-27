@@ -69,6 +69,9 @@ export const en: DeepPartial<ITranslation> = {
         sale: "Sale",
         empty: "Unfortunately, we don't have products with that filter"
       }
+    },
+    cart: {
+      headers: ["Products", "Price", "Quantity", "Total"]
     }
   },
   navigation: {

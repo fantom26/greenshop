@@ -12,6 +12,9 @@ export interface ITranslation {
       products: Record<string, string>;
       blog: Record<string, string>;
     };
+    cart: {
+      headers: string[];
+    };
   };
   navigation: Record<string, string>;
   btn: Record<string, string>;

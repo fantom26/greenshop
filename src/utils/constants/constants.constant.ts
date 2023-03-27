@@ -4,3 +4,6 @@ export const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const SORT_KEYS = ["price_gte", "price_lte", "category", "size_like"];
 export const FILTER_KEYS = ["sale", "new"];
+
+// localStorage
+export const CART_LIST = "cart-list";

@@ -5,6 +5,7 @@ import { IFile } from "./file.types";
 export interface ICartItem {
   poster: IFile;
   price: number;
+  name: string;
   sku: string;
   _id: string;
   quantity?: number;
