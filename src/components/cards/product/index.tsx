@@ -34,7 +34,7 @@ export const ProductCard: FC<IProduct> = (props) => {
               {ICONS.cart}
               <S.Quantity shown={getProductQuantity(id) > 0}>{getProductQuantity(id)}</S.Quantity>
             </S.Control>
-            <S.Control>{ICONS.like}</S.Control>
+            {/* <S.Control>{ICONS.like}</S.Control> */}
             <S.Control onClick={() => setToggler(!toggler)} title={t.common.scale}>
               {ICONS.search}
             </S.Control>

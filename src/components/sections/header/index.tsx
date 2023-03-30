@@ -40,11 +40,11 @@ export const Header: FC = () => {
               <Search />
             </S.SearchWrapper>
             <Cart />
-            <S.ButtonWrapper>
+            {/* <S.ButtonWrapper>
               <Button path="/login" startIcon={ICONS.login}>
                 {t.btn.login}
               </Button>
-            </S.ButtonWrapper>
+            </S.ButtonWrapper> */}
             <Burger toggler={toggleMenu} active={menuIsOpen} />
           </S.HeaderWrapper>
         </S.HeaderContainer>
