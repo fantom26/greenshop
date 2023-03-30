@@ -1,8 +1,15 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ disabled: boolean }>`
   position: relative;
   display: flex;
+
+  ${({ disabled }) =>
+    disabled &&
+    `
+    opacity: 0.5;
+    pointer-events: none;
+  `}
 
   svg {
     fill: var(--clr-dark);
@@ -38,6 +45,6 @@ export const Quantity = styled.span<{ shown: boolean }>`
   font-size: 1rem;
   color: var(--clr-light);
   background-color: var(--clr-accent);
-  opacity: ${(props) => (props.shown ? 1 : 0)};
-  visibility: ${(props) => (props.shown ? "visible" : "hidden")};
+  opacity: ${({ shown }) => (shown ? 1 : 0)};
+  visibility: ${({ shown }) => (shown ? "visible" : "hidden")};
 `;

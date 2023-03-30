@@ -9,7 +9,7 @@ export const Cart = () => {
   const { cartQuantity } = useCart();
 
   return (
-    <S.Wrapper>
+    <S.Wrapper disabled={cartQuantity === 0}>
       <Link href="/cart">{ICONS.cart}</Link>
       <S.Quantity shown={cartQuantity > 0}>{cartQuantity}</S.Quantity>
     </S.Wrapper>

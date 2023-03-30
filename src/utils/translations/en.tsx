@@ -1,7 +1,9 @@
 import { DeepPartial, ITranslation } from "@declarations";
 
 export const en: DeepPartial<ITranslation> = {
-  common: {},
+  common: {
+    scale: "Scale image"
+  },
   pages: {
     home: {
       hero: [
@@ -71,7 +73,7 @@ export const en: DeepPartial<ITranslation> = {
       }
     },
     cart: {
-      headers: ["Products", "Price", "Quantity", "Total"]
+      headers: ["Products", "Price", "Total"]
     }
   },
   navigation: {

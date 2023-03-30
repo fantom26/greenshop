@@ -8,13 +8,14 @@ import FsLightbox from "fslightbox-react";
 
 import { ICONS, NEXT_PUBLIC_APP_URL } from "@constants";
 import { IProduct } from "@declarations";
-import { useCart } from "@hooks";
+import { useCart, useTranslation } from "@hooks";
 
 import * as S from "./product.styled";
 
 export const ProductCard: FC<IProduct> = (props) => {
   const { _id: id, poster, name, price, discountPercentage } = props;
   const { url, meta } = poster;
+  const t = useTranslation();
 
   const [toggler, setToggler] = useState(false);
 
@@ -34,7 +35,9 @@ export const ProductCard: FC<IProduct> = (props) => {
               <S.Quantity shown={getProductQuantity(id) > 0}>{getProductQuantity(id)}</S.Quantity>
             </S.Control>
             <S.Control>{ICONS.like}</S.Control>
-            <S.Control onClick={() => setToggler(!toggler)}>{ICONS.search}</S.Control>
+            <S.Control onClick={() => setToggler(!toggler)} title={t.common.scale}>
+              {ICONS.search}
+            </S.Control>
           </S.Controls>
         </S.ImageWrapper>
         <S.Name>

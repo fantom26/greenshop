@@ -14,6 +14,7 @@ const initialState: CartContextProps = {
   increaseCartQuantity: () => {},
   decreaseCartQuantity: () => {},
   removeFromCart: () => {},
+  countPriceByQuantity: () => {},
   resetCart: () => {}
 };
 
@@ -62,13 +63,18 @@ export const CartProvider: FC<CartProviderProps> = (props) => {
     });
   };
 
+  const countPriceByQuantity = (id: string) => {
+    const currentItem = cartItems.find((item) => item._id === id);
+
+    return currentItem.price * currentItem.quantity;
+  };
+
   const removeFromCart = (id: string) => setCartItems((currItems) => currItems.filter((item) => item._id !== id));
 
   const resetCart = () => setCartItems([]);
 
   useEffect(() => {
     if (!setCookie) return;
-
     setCookie(CART_LIST, JSON.stringify(cartItems), {
       expires: generateDays(7)
     });
@@ -84,6 +90,7 @@ export const CartProvider: FC<CartProviderProps> = (props) => {
         increaseCartQuantity,
         decreaseCartQuantity,
         removeFromCart,
+        countPriceByQuantity,
         resetCart
       }}
     >
