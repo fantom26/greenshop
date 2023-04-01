@@ -21,7 +21,6 @@ export const Hero = () => {
           <Swiper
             modules={[Pagination]}
             pagination={{
-              // el: ".swiper-pagination",
               type: "bullets",
               clickable: true
             }}

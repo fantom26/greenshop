@@ -14,6 +14,10 @@ export interface ITranslation {
     };
     cart: {
       headers: string[];
+      cartTotal: string;
+      total: string;
+      shipping: string;
+      subtotal: string;
     };
   };
   navigation: Record<string, string>;

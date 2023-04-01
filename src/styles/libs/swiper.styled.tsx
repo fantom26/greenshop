@@ -81,7 +81,7 @@ export const SwiperStyles = css`
   }
 
   .swiper-pagination {
-    position: absolute;
+    margin-top: 1rem;
     text-align: center;
     transition: 300ms opacity;
     transform: translate3d(0, 0, 0);
@@ -99,9 +99,6 @@ export const SwiperStyles = css`
   .swiper-pagination-custom,
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 0;
-    top: auto;
-    left: 0;
     width: 100%;
   }
   /* Bullets */

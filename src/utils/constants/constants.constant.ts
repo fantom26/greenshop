@@ -7,3 +7,5 @@ export const FILTER_KEYS = ["sale", "new"];
 
 // localStorage
 export const CART_LIST = "cart-list";
+
+export const SHIPPING_PRICE = 16;

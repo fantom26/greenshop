@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { Typography } from "@components/ui";
 import { useTranslation } from "@hooks";
 import { TagVariant } from "@utils/enums/components";

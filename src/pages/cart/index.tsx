@@ -1,12 +1,16 @@
-import { Container } from "@components/ui";
-import { Products } from "@pages/cart/components/products";
+import { InterestedIn } from "@components/sections";
+import { useTranslation } from "@hooks";
 
-const Cart = () => (
-  <section>
-    <Container>
-      <Products />
-    </Container>
-  </section>
-);
+import { Info } from "./components/info";
+
+const Cart = () => {
+  const t = useTranslation();
+  return (
+    <>
+      <Info />
+      <InterestedIn title={t.common.interestedIn} />
+    </>
+  );
+};
 
 export default Cart;

@@ -601,5 +601,240 @@
     { "title": "Home", "description": "description", "noIndex": false, "breadcrumb": "Home" },
     { "title": "Cart", "description": "description", "noIndex": false, "breadcrumb": "Cart" },
     { "title": "Product", "description": "description", "noIndex": false, "breadcrumb": "Product" }
+  ],
+
+  "interestedIn": [
+    {
+      "_id": "1",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/1/poster@1x.jpg",
+        "meta": {
+          "name": "Barberton Daisy",
+          "type": "image",
+          "alt": "Barberton Daisy",
+          "title": "Barberton Daisy"
+        }
+      },
+      "sku": "1995751877966",
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 13,
+      "price": 119.0,
+      "name": "Barberton Daisy",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "new": false,
+      "sale": true,
+      "size": ["S"],
+      "category": "Potter Plants",
+      "tags": ["Home", "Garden", "Plants"],
+      "stars": 4,
+      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+    },
+    {
+      "_id": "2",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/2/poster@1x.jpg",
+        "meta": {
+          "name": "Angel Wing Begonia",
+          "type": "image",
+          "alt": "Angel Wing Begonia",
+          "title": "Angel Wing Begonia"
+        }
+      },
+      "sku": "1995751877966",
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 0,
+      "price": 169.0,
+      "name": "Angel Wing Begonia",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "new": true,
+      "sale": false,
+      "size": ["S", "M"],
+      "category": "House Plants",
+      "tags": ["House", "Garden", "Plants"],
+      "stars": 5,
+      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+    },
+    {
+      "_id": "3",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/3/poster@1x.jpg",
+        "meta": {
+          "name": "African Violet",
+          "type": "image",
+          "alt": "African Violet",
+          "title": "African Violet"
+        }
+      },
+      "sku": "1995751877966",
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 13,
+      "price": 199.0,
+      "name": "African Violet",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "new": true,
+      "sale": true,
+      "size": ["S"],
+      "category": "Seeds",
+      "tags": ["Seeds", "Plants"],
+      "stars": 4,
+      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+    },
+    {
+      "_id": "4",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/4/poster@1x.jpg",
+        "meta": {
+          "name": "Beach Spider Lily",
+          "type": "image",
+          "alt": "Beach Spider Lily",
+          "title": "Beach Spider Lily"
+        }
+      },
+      "sku": "1995751877966",
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 13,
+      "price": 129.0,
+      "name": "Beach Spider Lily",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "new": true,
+      "sale": true,
+      "size": ["S", "M", "L"],
+      "category": "Small Plants",
+      "tags": ["Small", "Plants"],
+      "stars": 4,
+      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+    },
+    {
+      "_id": "5",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/5/poster@1x.jpg",
+        "meta": {
+          "name": "Blushing Bromeliad",
+          "type": "image",
+          "alt": "Blushing Bromeliad",
+          "title": "Blushing Bromeliad"
+        }
+      },
+      "sku": "1995751877966",
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 0,
+      "price": 139.0,
+      "name": "Blushing Bromeliad",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "new": true,
+      "sale": false,
+      "size": ["S", "L"],
+      "category": "Big Plants",
+      "tags": ["Big", "Garden", "Plants"],
+      "stars": 4,
+      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+    },
+    {
+      "_id": "6",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/6/poster@1x.jpg",
+        "meta": {
+          "name": "Aluminum Plant",
+          "type": "image",
+          "alt": "Aluminum Plant",
+          "title": "Aluminum Plant"
+        }
+      },
+      "sku": "1995751877966",
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 13,
+      "price": 179.0,
+      "name": "Aluminum Plant",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "new": false,
+      "sale": true,
+      "size": ["S"],
+      "category": "Succulents",
+      "tags": ["Succulents", "Garden", "Plants"],
+      "stars": 4,
+      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+    },
+    {
+      "_id": "7",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/7/poster@1x.jpg",
+        "meta": {
+          "name": "Bird's Nest Fern",
+          "type": "image",
+          "alt": "Bird's Nest Fern",
+          "title": "Bird's Nest Fern"
+        }
+      },
+      "sku": "1995751877966",
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 0,
+      "price": 98.0,
+      "name": "Bird's Nest Fern",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "new": false,
+      "sale": false,
+      "size": ["S", "M", "L"],
+      "category": "Trerrariums",
+      "tags": ["Trerrariums", "Garden", "Plants"],
+      "stars": 4,
+      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+    },
+    {
+      "_id": "8",
+      "poster": {
+        "_id": "1",
+        "url": "/images/products/8/poster@1x.jpg",
+        "meta": {
+          "name": "Broadleaf Lady Palm",
+          "type": "image",
+          "alt": "Broadleaf Lady Palm",
+          "title": "Broadleaf Lady Palm"
+        }
+      },
+      "sku": "1995751877966",
+      "relatedImages": [{ "_id": "1", "url": "/images/products/1/1.png" }],
+      "discountPercentage": 0,
+      "price": 59.0,
+      "name": "Broadleaf Lady Palm",
+      "desc": [
+        "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.",
+        "Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. "
+      ],
+      "new": false,
+      "sale": false,
+      "size": ["S"],
+      "category": "Gardening",
+      "tags": ["Gardening", "Plants"],
+      "stars": 4,
+      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+    }
   ]
 }

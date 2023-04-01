@@ -6,49 +6,19 @@ export const Header = styled.li`
   padding-block: 1rem;
   text-align: left;
   font-weight: 500;
+  line-height: 100%;
   color: var(--clr-dark);
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-
   gap: 1rem;
-`;
-
-export const Products = styled.div`
-  width: 100%;
-  max-width: 78.2rem;
-
-  ${Header}, ${Wrapper} {
-    width: 100%;
-  }
-
-  ${Header}:first-child,
-  ${Wrapper}:first-child {
-    max-width: 32rem;
-  }
-
-  ${Header}:nth-child(2),
-  ${Wrapper}:nth-child(2) {
-    max-width: 24.2rem;
-  }
-
-  ${Header}:last-child,
-  ${Wrapper}:last-child {
-    max-width: 16rem;
-  }
-
-  ${Wrapper}:not(:first-child) {
-    justify-content: space-between;
-  }
 `;
 
 export const Headers = styled.ul`
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: 6rem;
+
   margin-bottom: 1rem;
 
   &::before {
@@ -63,10 +33,59 @@ export const Headers = styled.ul`
 `;
 
 export const Item = styled.li`
-  display: flex;
-  align-items: center;
-  gap: 6rem;
   width: 100%;
+`;
+
+export const Products = styled.div`
+  width: 100%;
+  max-width: 78.2rem;
+
+  ${Header}, ${Wrapper} {
+    width: 100%;
+  }
+
+  ${Header}:first-child,
+  ${Wrapper}:first-child {
+    min-width: 22rem;
+    max-width: 32rem;
+  }
+
+  ${Header}:nth-child(2),
+  ${Wrapper}:nth-child(2) {
+    min-width: 14rem;
+    max-width: 24.2rem;
+  }
+
+  ${Header}:last-child,
+  ${Wrapper}:last-child {
+    max-width: 16rem;
+  }
+
+  ${Wrapper}:not(:first-child) {
+    justify-content: space-between;
+  }
+
+  ${Headers}, ${Item} {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+
+    @media (max-width: 767px) {
+      gap: 3rem;
+    }
+
+    @media (max-width: 576px) {
+      min-width: 50rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    max-width: initial;
+  }
+
+  @media (max-width: 576px) {
+    overflow-x: auto;
+  }
 `;
 
 export const List = styled.ul`

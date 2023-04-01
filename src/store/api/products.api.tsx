@@ -20,8 +20,13 @@ export const productsApi = createApi({
         links: meta.response.headers.get("Link"),
         totalCount: Number(meta.response.headers.get("X-Total-Count"))
       })
+    }),
+    interestedIn: builder.query<IProduct[], void>({
+      query: () => ({
+        url: "/interestedIn"
+      })
     })
   })
 });
 
-export const { useProductsQuery } = productsApi;
+export const { useProductsQuery, useInterestedInQuery } = productsApi;

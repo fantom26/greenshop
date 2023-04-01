@@ -2,7 +2,8 @@ import { DeepPartial, ITranslation } from "@declarations";
 
 export const en: DeepPartial<ITranslation> = {
   common: {
-    scale: "Scale image"
+    scale: "Scale image",
+    interestedIn: "You may be interested in"
   },
   pages: {
     home: {
@@ -73,7 +74,11 @@ export const en: DeepPartial<ITranslation> = {
       }
     },
     cart: {
-      headers: ["Products", "Price", "Total"]
+      headers: ["Products", "Price", "Total"],
+      cartTotal: "Cart Totals",
+      total: "Total",
+      shipping: "Shiping",
+      subtotal: "Subtotal"
     }
   },
   navigation: {
@@ -90,6 +95,8 @@ export const en: DeepPartial<ITranslation> = {
     readMore: "Read More",
     shopNow: "Shop now",
     register: "Register",
+    toCheckout: "Proceed To Checkout",
+    сontinueShopping: "Continue Shopping",
     googleContinue: "Continue with Google",
     facebookContinue: "Continue with Facebook",
     address: "Save Address"

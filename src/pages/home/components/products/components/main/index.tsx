@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 
 import { ProductCard } from "@components/cards";
+import { Pagination } from "@components/common/pagination";
 import { Loader, Typography } from "@components/ui";
 import { useTranslation } from "@hooks";
 import { useProductsQuery } from "@store/api";
@@ -11,7 +12,6 @@ import { TagVariant } from "@utils/enums/components";
 import { Queries } from "../sidebar/components";
 import { Filter } from "./components/filter";
 import { MobileFilter } from "./components/mobile-filter";
-import { Pagination } from "./components/pagination";
 import { Sort } from "./components/sort";
 import * as S from "./main.styled";
 
