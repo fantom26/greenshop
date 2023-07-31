@@ -1,11 +1,17 @@
+import { useEffect, useState } from "react";
+
 import NextApp, { AppContext } from "next/app";
 import type { AppProps as NextAppProps } from "next/app";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 import { getCookie } from "cookies-next";
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
 import { Provider } from "react-redux";
 import styled from "styled-components";
 
+import { GlobalLoader } from "@components/ui";
 import { CART_LIST } from "@constants";
 import { CartProvider } from "@contexts";
 import { ICartItem, NextPageWithLayout } from "@declarations";
@@ -28,6 +34,28 @@ const Wrapper = styled.div`
 
 const App = ({ Component, pageProps, defaultCart = [] }: AppProps) => {
   const getLayout = Component.getLayout || ((page) => page);
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleStart = (url: string) => {
+      console.log(`Loading: ${url}`);
+      NProgress.start();
+    };
+
+    const handleStop = () => {
+      NProgress.done();
+    };
+
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleStop);
+    router.events.on("routeChangeError", handleStop);
+
+    return () => {
+      router.events.off("routeChangeStart", handleStart);
+      router.events.off("routeChangeComplete", handleStop);
+      router.events.off("routeChangeError", handleStop);
+    };
+  }, [router]);
 
   return (
     <>

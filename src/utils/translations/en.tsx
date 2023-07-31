@@ -82,7 +82,7 @@ export const en: DeepPartial<ITranslation> = {
     }
   },
   navigation: {
-    "": "Home",
+    "/": "Home",
     shop: "Shop",
     care: "Plant Care",
     blogs: "Blogs"
