@@ -1,5 +1,8 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
+import { GlobalLoader } from "@components/ui";
+import { loaderStyles } from "@components/ui/global-loader/global-loader.styled";
+
 const Document = () => (
   <Html lang="en">
     <Head>
@@ -15,8 +18,10 @@ const Document = () => (
       <link rel="manifest" href="/favicon/site.webmanifest" />
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
+      <style>{loaderStyles}</style>
     </Head>
     <body>
+      <GlobalLoader />
       <Main />
       <NextScript />
     </body>

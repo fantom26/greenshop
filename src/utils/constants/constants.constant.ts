@@ -9,3 +9,5 @@ export const FILTER_KEYS = ["sale", "new"];
 export const CART_LIST = "cart-list";
 
 export const SHIPPING_PRICE = 16;
+
+export const LOADER_CLASSNAME = "global-loader";

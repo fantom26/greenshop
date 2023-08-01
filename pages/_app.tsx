@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import NextApp, { AppContext } from "next/app";
 import type { AppProps as NextAppProps } from "next/app";
@@ -6,13 +6,10 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 import { getCookie } from "cookies-next";
-import NProgress from "nprogress";
-import "nprogress/nprogress.css";
 import { Provider } from "react-redux";
 import styled from "styled-components";
 
-import { GlobalLoader } from "@components/ui";
-import { CART_LIST } from "@constants";
+import { CART_LIST, LOADER_CLASSNAME } from "@constants";
 import { CartProvider } from "@contexts";
 import { ICartItem, NextPageWithLayout } from "@declarations";
 import { makeStore } from "@store";
@@ -37,25 +34,36 @@ const App = ({ Component, pageProps, defaultCart = [] }: AppProps) => {
   const router = useRouter();
 
   useEffect(() => {
-    const handleStart = (url: string) => {
-      console.log(`Loading: ${url}`);
-      NProgress.start();
-    };
+    if (typeof window !== "undefined") {
+      const loader = document.getElementById(LOADER_CLASSNAME);
 
-    const handleStop = () => {
-      NProgress.done();
-    };
+      const handleStart = () => {
+        if (loader) loader.style.display = "flex";
+      };
 
-    router.events.on("routeChangeStart", handleStart);
-    router.events.on("routeChangeComplete", handleStop);
-    router.events.on("routeChangeError", handleStop);
+      const handleStop = () => {
+        if (loader) loader.style.display = "none";
+      };
 
-    return () => {
-      router.events.off("routeChangeStart", handleStart);
-      router.events.off("routeChangeComplete", handleStop);
-      router.events.off("routeChangeError", handleStop);
-    };
+      router.events.on("routeChangeStart", handleStart);
+      router.events.on("routeChangeComplete", handleStop);
+      router.events.on("routeChangeError", handleStop);
+
+      return () => {
+        router.events.off("routeChangeStart", handleStart);
+        router.events.off("routeChangeComplete", handleStop);
+        router.events.off("routeChangeError", handleStop);
+      };
+    }
   }, [router]);
+
+  // Hide splash screen shen we are server side
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const loader = document.getElementById(LOADER_CLASSNAME);
+      if (loader) loader.style.display = "none";
+    }
+  }, []);
 
   return (
     <>
