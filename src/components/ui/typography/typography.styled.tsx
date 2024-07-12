@@ -1,7 +1,7 @@
-import { AdaptiveFont } from "@helpers";
+import { AdaptiveFont } from "@/utils/helpers";
 import styled, { css } from "styled-components";
 
-import { StyledVariants } from "@declarations";
+import { StyledVariants } from "@/utils/declarations";
 import { ColorVariant, TagVariant } from "@utils/enums/components";
 
 import { TypographyProps } from ".";
@@ -10,21 +10,25 @@ const variants: StyledVariants<TagVariant> = {
   h1: css`
     font-weight: 900;
     ${AdaptiveFont({ pcSize: 70, mobSize: 40 })};
+
     line-height: 100%;
   `,
   h2: css`
     font-weight: 700;
     ${AdaptiveFont({ pcSize: 30, mobSize: 24 })};
+
     line-height: 85%;
   `,
   h3: css`
     font-weight: 700;
     ${AdaptiveFont({ pcSize: 20, mobSize: 18 })};
+
     line-height: 130%;
   `,
   h4: css`
     font-weight: 700;
     ${AdaptiveFont({ pcSize: 18, mobSize: 16 })};
+
     line-height: 90%;
   `,
   paragraph1: css`

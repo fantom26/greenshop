@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-import { NEXT_PUBLIC_API_URL } from "@constants";
+import { NEXT_PUBLIC_API_URL } from "@/utils/constants";
 
 export const categoriesApi = createApi({
   reducerPath: "categoriesApi",

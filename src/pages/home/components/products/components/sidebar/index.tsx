@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { NEXT_PUBLIC_APP_URL } from "@constants";
+import { NEXT_PUBLIC_APP_URL } from "@/utils/constants";
 
 import { Categories, PriceRange, Queries, Sizes } from "./components";
 import * as S from "./sidebar.styled";

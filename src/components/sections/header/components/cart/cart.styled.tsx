@@ -12,8 +12,8 @@ export const Wrapper = styled.div<{ disabled: boolean }>`
   `}
 
   svg {
-    fill: var(--clr-dark);
     transition: fill var(--transition);
+    fill: var(--clr-dark);
   }
 
   @media (max-width: 576px) {
@@ -23,8 +23,8 @@ export const Wrapper = styled.div<{ disabled: boolean }>`
   @media (hover) {
     &:hover {
       svg {
-        fill: var(--clr-accent);
         transition: fill var(--transition);
+        fill: var(--clr-accent);
       }
     }
   }
@@ -32,19 +32,19 @@ export const Wrapper = styled.div<{ disabled: boolean }>`
 
 export const Quantity = styled.span<{ shown: boolean }>`
   position: absolute;
-  right: -1.3rem;
   top: -0.4rem;
+  right: -1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 0.2rem solid var(--clr-light);
-  border-radius: 50%;
   width: 2rem;
   height: 2rem;
+  border: 0.2rem solid var(--clr-light);
+  border-radius: 50%;
+  color: var(--clr-light);
   font-weight: 500;
   font-size: 1rem;
-  color: var(--clr-light);
   background-color: var(--clr-accent);
-  opacity: ${({ shown }) => (shown ? 1 : 0)};
   visibility: ${({ shown }) => (shown ? "visible" : "hidden")};
+  opacity: ${({ shown }) => (shown ? 1 : 0)};
 `;

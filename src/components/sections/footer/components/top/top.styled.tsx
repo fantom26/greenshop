@@ -4,9 +4,9 @@ import { Typography } from "@components/ui/typography/typography.styled";
 
 export const Top = styled.div`
   display: flex;
+  gap: 4rem;
   align-items: center;
   justify-content: space-between;
-  gap: 4rem;
   padding: 3rem 2.5rem;
 
   @media (max-width: 992px) {
@@ -23,9 +23,9 @@ export const Top = styled.div`
 
 export const Advantages = styled.ul`
   display: flex;
+  gap: 6rem;
   align-items: center;
   justify-content: space-between;
-  gap: 6rem;
 
   @media (max-width: 1200px) {
     gap: 3rem;
@@ -47,13 +47,13 @@ export const Advantage = styled.li`
     position: relative;
 
     &::before {
-      content: "";
       position: absolute;
-      left: -3rem;
       top: 0;
+      left: -3rem;
       width: 0.1rem;
       height: 100%;
-      background-color: rgba(70, 163, 88, 0.1);
+      background-color: rgb(70 163 88 / 10%);
+      content: "";
 
       @media (max-width: 1200px) {
         left: -1.5rem;
@@ -68,8 +68,8 @@ export const Advantage = styled.li`
 
 export const AdvatageImage = styled.div`
   display: flex;
-  margin-bottom: 1.5rem;
   max-width: 9rem;
+  margin-bottom: 1.5rem;
 
   & + ${Typography} {
     margin-bottom: 1rem;

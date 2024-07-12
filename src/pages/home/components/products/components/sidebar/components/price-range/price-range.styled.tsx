@@ -10,13 +10,13 @@ export const PriceRange = styled.div`
 `;
 
 export const SliderWrapper = styled.div`
+  max-width: 21rem;
   margin-top: 2rem;
   padding-left: 1.5rem;
-  max-width: 21rem;
 
   @media (max-width: 767px) {
-    padding-left: initial;
     max-width: calc(100% - 1rem);
+    padding-left: initial;
   }
 `;
 
@@ -29,18 +29,18 @@ export const SelectedPrice = styled.p`
   span {
     display: inline-block;
     margin-left: 0.5rem;
-    font-weight: 700;
     color: var(--clr-accent);
+    font-weight: 700;
   }
 `;
 
 export const ButtonWrapper = styled.div`
+  max-width: 9rem;
   margin-top: 1.5rem;
   padding-left: 1.5rem;
-  max-width: 9rem;
 
   @media (max-width: 767px) {
-    padding-left: initial;
     max-width: initial;
+    padding-left: initial;
   }
 `;

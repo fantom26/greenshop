@@ -1,4 +1,4 @@
-import { ICartItem, IProduct } from "@declarations";
+import { ICartItem, IProduct } from "@/utils/declarations";
 
 export const transformProduct = (product: IProduct): ICartItem => ({
   poster: product?.poster,

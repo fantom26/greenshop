@@ -8,7 +8,7 @@ export const Hero = styled.section`
 `;
 
 export const HeroWrapper = styled.div`
-  background-image: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
+  background-image: linear-gradient(97.77deg, rgb(245 245 245 / 50%) -23.46%, rgb(245 245 245 / 50%) 107.51%);
 `;
 
 export const Info = styled.div`
@@ -25,7 +25,6 @@ export const Suptitle = styled.p`
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 115%;
-
   letter-spacing: 0.1em;
   text-transform: uppercase;
 `;
@@ -40,9 +39,9 @@ export const Title = styled(Typography)`
 
 export const Slide = styled.div`
   display: flex;
+  gap: 3rem;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
   padding-left: 4rem;
 
   @media (max-width: 1200px) {
@@ -61,8 +60,8 @@ export const ImageWrapper = styled.div`
 `;
 
 export const ButtonWrapper = styled.div`
-  margin-top: 4.5rem;
   max-width: 14rem;
+  margin-top: 4.5rem;
 
   @media (max-width: 992px) {
     margin-top: 1.5rem;

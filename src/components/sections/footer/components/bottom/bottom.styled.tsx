@@ -16,8 +16,8 @@ export const BottomWrapper = styled.div`
   }
 
   @media (max-width: 992px) {
-    justify-content: space-between;
     gap: 5rem;
+    justify-content: space-between;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
   }

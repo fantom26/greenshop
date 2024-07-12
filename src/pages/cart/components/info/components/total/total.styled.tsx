@@ -20,12 +20,12 @@ export const Header = styled.div`
 
   &::before {
     position: absolute;
-    content: "";
-    left: 0;
     bottom: 0;
+    left: 0;
     width: 100%;
     height: 0.1rem;
-    background-color: rgba(70, 163, 88, 0.5);
+    background-color: rgb(70 163 88 / 50%);
+    content: "";
   }
 `;
 
@@ -72,8 +72,8 @@ export const NextLink = styled(Link)`
 
   @media (hover) {
     &:hover {
-      box-shadow: inset 200px 0 0 0 var(--clr-accent);
       color: var(--clr-light);
+      box-shadow: inset 200px 0 0 0 var(--clr-accent);
       transition: color var(--transition) ease-in-out, box-shadow var(--transition) ease-in-out;
     }
   }

@@ -350,8 +350,8 @@ export const LoaderWrapper = styled.div`
 `;
 
 export const Leaft = styled.div`
-  border-radius: 1px 30px;
   width: 3rem;
   height: 4.5rem;
+  border-radius: 1px 30px;
   background-color: var(--clr-accent);
 `;

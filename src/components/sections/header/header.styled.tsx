@@ -10,22 +10,22 @@ export const Header = styled.header<{ menuIsOpen: boolean }>`
 
 export const HeaderWrapper = styled.div`
   display: flex;
+  gap: 1.5rem;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
 `;
 
 export const HeaderContainer = styled(Container)`
   position: relative;
 
   &::before {
-    content: "";
     position: absolute;
-    left: 1.5rem;
     bottom: -2.5rem;
+    left: 1.5rem;
     width: calc(100% - 3rem);
     height: 0.03rem;
     background-color: rgb(70 163 88 / 50%);
+    content: "";
   }
 `;
 

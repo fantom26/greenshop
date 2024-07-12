@@ -17,7 +17,7 @@ const CartPage: NextPageWithLayout<PageProps> = ({ meta, breadcrumbs }) => (
 
 CartPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 
-export const getServerSideProps = wrapper.getServerSideProps((store) => async (ctx) => {
+export const getServerSideProps = wrapper.getServerSideProps((store) => async () => {
   store.dispatch(getPageInfo.initiate("Home"));
   store.dispatch(getPageInfo.initiate("Cart"));
 

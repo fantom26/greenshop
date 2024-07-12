@@ -1,5 +1,5 @@
 import { Typography } from "@components/ui";
-import { IMAGES } from "@constants";
+import { IMAGES } from "@/utils/constants";
 import { useTranslation } from "@hooks";
 import { ColorVariant, TagVariant } from "@utils/enums/components";
 

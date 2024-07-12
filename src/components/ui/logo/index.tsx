@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { IMAGES } from "@constants";
+import { IMAGES } from "@/utils/constants";
 import { useTranslation } from "@hooks";
 
 import * as S from "./logo.styled";

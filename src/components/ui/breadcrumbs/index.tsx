@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { IBreadcrumb } from "@declarations";
+import { IBreadcrumb } from "@/utils/declarations";
 
 import { Container } from "../container";
 import * as S from "./breadcrumbs.styled";

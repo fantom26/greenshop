@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { Logo, Typography } from "@components/ui";
-import { ICONS } from "@constants";
+import { ICONS } from "@/utils/constants";
 import { useTranslation } from "@hooks";
 import { TagVariant } from "@utils/enums/components";
 

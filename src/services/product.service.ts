@@ -1,4 +1,4 @@
-import { IProduct } from "@declarations";
+import { IProduct } from "@/utils/declarations";
 
 import { $api } from "./axios.service";
 

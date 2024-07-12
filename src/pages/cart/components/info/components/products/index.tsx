@@ -3,9 +3,8 @@ import { useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import { Pagination } from "@components/common";
 import { Typography } from "@components/ui";
-import { ICONS, NEXT_PUBLIC_APP_URL } from "@constants";
+import { ICONS, NEXT_PUBLIC_APP_URL } from "@/utils/constants";
 import { useCart, useTranslation } from "@hooks";
 import { ColorVariant, TagVariant } from "@utils/enums/components";
 

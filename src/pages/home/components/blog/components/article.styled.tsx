@@ -31,10 +31,10 @@ export const Image = styled.div`
 
 export const Info = styled.p`
   margin-bottom: 0.5rem;
+  color: var(--clr-accent);
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 115%;
-  color: var(--clr-accent);
 
   & + ${Typography} {
     margin-bottom: 1rem;
@@ -43,28 +43,28 @@ export const Info = styled.p`
 
 export const Button = styled(Link)`
   display: flex;
-  align-items: center;
   gap: 0.5rem;
+  align-items: center;
   margin-top: 1rem;
-
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 115%;
   transition: color var(--transition);
 
   svg {
-    fill: var(--clr-dark);
     transition: fill var(--transition), transform var(--transition);
+    fill: var(--clr-dark);
   }
+
   @media (hover) {
     &:hover {
       color: var(--clr-accent);
       transition: color var(--transition);
 
       svg {
-        fill: var(--clr-accent);
         transform: translateX(0.5rem);
         transition: fill var(--transition), transform var(--transition);
+        fill: var(--clr-accent);
       }
     }
   }

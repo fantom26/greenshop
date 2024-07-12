@@ -4,7 +4,7 @@ import { animated, useTransition } from "react-spring";
 
 import { Drawer } from "@components/common";
 import { Button } from "@components/ui";
-import { ICONS } from "@constants";
+import { ICONS } from "@/utils/constants";
 import { useScrollLock } from "@hooks";
 import { ButtonVariant } from "@utils/enums/components";
 

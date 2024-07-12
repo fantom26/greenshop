@@ -5,13 +5,13 @@ export const Wrapper = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 4.5rem;
-  padding: 18rem 1.5rem 7rem;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
-  box-shadow: var(--shadow);
+  padding: 18rem 1.5rem 7rem;
   background-color: var(--clr-light);
+  box-shadow: var(--shadow);
 
   @media (max-width: 576px) {
     padding-top: 12rem;
@@ -29,8 +29,8 @@ export const SearchWrapper = styled(animated.div)`
 export const List = styled(animated.ul)`
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 3rem;
+  align-items: center;
   margin-bottom: auto;
 `;
 

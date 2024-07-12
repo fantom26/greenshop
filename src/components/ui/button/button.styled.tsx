@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import styled, { css } from "styled-components";
 
-import { StyledVariants } from "@declarations";
+import { StyledVariants } from "@/utils/declarations";
 import { ButtonVariant } from "@utils/enums/components";
 
 import { ButtonProps } from ".";
@@ -23,11 +23,11 @@ const CommonStyles = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.6rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
   width: 100%;
   min-height: 4rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  border-radius: 0.6rem;
   font-weight: 700;
 `;
 

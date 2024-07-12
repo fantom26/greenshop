@@ -9,9 +9,9 @@ import { getCookie } from "cookies-next";
 import { Provider } from "react-redux";
 import styled from "styled-components";
 
-import { CART_LIST, LOADER_CLASSNAME } from "@constants";
-import { CartProvider } from "@contexts";
-import { ICartItem, NextPageWithLayout } from "@declarations";
+import { CART_LIST, LOADER_CLASSNAME } from "@/utils/constants";
+import { CartProvider } from "@/utils/contexts";
+import { ICartItem, NextPageWithLayout } from "@/utils/declarations";
 import { makeStore } from "@store";
 import { GlobalStyles } from "@styles";
 

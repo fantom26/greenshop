@@ -1,4 +1,4 @@
-import { DeepPartial, ITranslation } from "@declarations";
+import { DeepPartial, ITranslation } from "@/utils/declarations";
 
 export const en: DeepPartial<ITranslation> = {
   common: {

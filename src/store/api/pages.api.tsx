@@ -1,8 +1,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { HYDRATE } from "next-redux-wrapper";
 
-import { NEXT_PUBLIC_API_URL } from "@constants";
-import { IPage } from "@declarations";
+import { NEXT_PUBLIC_API_URL } from "@/utils/constants";
+import { IPage } from "@/utils/declarations";
 
 export const pagesApi = createApi({
   reducerPath: "pagesApi",

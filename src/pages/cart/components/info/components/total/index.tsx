@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 
 import { Button, Typography } from "@components/ui";
-import { SHIPPING_PRICE } from "@constants";
+import { SHIPPING_PRICE } from "@/utils/constants";
 import { useCart, useTranslation } from "@hooks";
 import { TagVariant } from "@utils/enums/components";
 

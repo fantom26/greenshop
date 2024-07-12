@@ -10,8 +10,8 @@ export const Section = styled.section`
 
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
   gap: 8.5rem;
+  justify-content: space-between;
 
   @media (max-width: 1200px) {
     gap: 3rem;

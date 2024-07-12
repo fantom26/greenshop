@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Current = styled.div`
   position: relative;
   display: flex;
-  align-items: center;
   gap: 0.5rem;
+  align-items: center;
 
   span:last-child {
     display: flex;
@@ -15,23 +15,23 @@ export const Current = styled.div`
 
 export const Dropdown = styled.ul`
   position: absolute;
-  left: 0;
   top: 100%;
+  left: 0;
   z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 0.5rem;
   background-color: var(--clr-light);
-  opacity: 0;
   visibility: hidden;
+  opacity: 0;
   transition: opacity var(--transition), visibility var(--transition);
 `;
 
 export const Sort = styled.div`
   display: flex;
-  align-items: center;
   gap: 0.5rem;
+  align-items: center;
 `;
 
 export const Item = styled.li`
@@ -50,8 +50,8 @@ export const Wrapper = styled.div`
   cursor: pointer;
 
   &:focus ${Dropdown}, &:hover ${Dropdown} {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
     transition: opacity var(--transition), visibility var(--transition);
   }
 

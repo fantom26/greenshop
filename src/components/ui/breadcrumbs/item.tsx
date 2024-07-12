@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import Link from "next/link";
 
-import { IBreadcrumb } from "@declarations";
+import { IBreadcrumb } from "@/utils/declarations";
 
 import * as S from "./breadcrumbs.styled";
 

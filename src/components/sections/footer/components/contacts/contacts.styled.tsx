@@ -3,19 +3,19 @@ import styled from "styled-components";
 export const Contacts = styled.div`
   position: relative;
   display: flex;
-  align-items: center;
   gap: 6rem;
+  align-items: center;
   padding: 3rem 2.5rem;
-  background-color: rgba(70, 163, 88, 0.1);
+  background-color: rgb(70 163 88 / 10%);
 
   &::after,
   &::before {
-    content: "";
     position: absolute;
     left: 0;
     width: 100%;
     height: 0.1rem;
     background-color: var(--clr-accent);
+    content: "";
   }
 
   &::before {
@@ -27,8 +27,8 @@ export const Contacts = styled.div`
   }
 
   @media (max-width: 992px) {
-    justify-content: space-between;
     gap: 2rem;
+    justify-content: space-between;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
   }
@@ -40,8 +40,8 @@ export const Contacts = styled.div`
 
 export const List = styled.ul`
   display: flex;
-  align-items: center;
   gap: 6rem;
+  align-items: center;
 
   @media (max-width: 992px) {
     gap: 2rem;
@@ -54,8 +54,8 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   display: flex;
-  align-items: center;
   gap: 1rem;
+  align-items: center;
   max-width: 19.5rem;
 `;
 

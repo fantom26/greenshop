@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 
-import { mergeDeep } from "@helpers";
+import { mergeDeep } from "@/utils/helpers";
 
-import { ITranslation } from "@declarations";
+import { ITranslation } from "@/utils/declarations";
 import { translations } from "@utils/translations";
 
 export const useTranslation = () => {

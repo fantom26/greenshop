@@ -3,32 +3,31 @@ import Link from "next/link";
 import styled from "styled-components";
 
 export const Header = styled.li`
-  padding-block: 1rem;
-  text-align: left;
+  color: var(--clr-dark);
   font-weight: 500;
   line-height: 100%;
-  color: var(--clr-dark);
+  text-align: left;
+  padding-block: 1rem;
 `;
 
 export const Wrapper = styled.div`
   display: flex;
-  align-items: center;
   gap: 1rem;
+  align-items: center;
 `;
 
 export const Headers = styled.ul`
   position: relative;
-
   margin-bottom: 1rem;
 
   &::before {
     position: absolute;
-    content: "";
-    left: 0;
     bottom: 0;
+    left: 0;
     width: 100%;
     height: 0.1rem;
-    background-color: rgba(70, 163, 88, 0.5);
+    background-color: rgb(70 163 88 / 50%);
+    content: "";
   }
 `;
 
@@ -67,8 +66,8 @@ export const Products = styled.div`
 
   ${Headers}, ${Item} {
     display: flex;
-    align-items: center;
     gap: 6rem;
+    align-items: center;
 
     @media (max-width: 767px) {
       gap: 3rem;
@@ -101,8 +100,9 @@ export const Poster = styled(Link)`
 
 export const SKU = styled.p`
   margin-top: 0.6rem;
-  font-size: 1.4rem;
   color: #a5a5a5;
+  font-size: 1.4rem;
+
   span {
     color: var(--clr-grey);
   }
@@ -110,8 +110,8 @@ export const SKU = styled.p`
 
 export const Controls = styled.div`
   display: flex;
-  align-items: center;
   gap: 1rem;
+  align-items: center;
 `;
 
 export const Control = styled.button`
@@ -133,8 +133,8 @@ export const Control = styled.button`
 `;
 
 export const Price = styled.p`
-  font-weight: 500;
   color: var(--clr-grey);
+  font-weight: 500;
 `;
 
 export const Count = styled.p`
@@ -143,9 +143,9 @@ export const Count = styled.p`
 `;
 
 export const Name = styled(Link)`
+  color: var(--clr-dark);
   font-weight: 500;
   font-size: 1.6rem;
-  color: var(--clr-dark);
   word-wrap: break-all;
 `;
 
@@ -155,15 +155,15 @@ export const Delete = styled.button`
 
   svg {
     path {
-      stroke: var(--clr-grey);
       transition: stroke var(--transition);
+      stroke: var(--clr-grey);
     }
 
     @media (hover) {
       &:hover {
         path {
-          stroke: var(--clr-dark);
           transition: stroke var(--transition);
+          stroke: var(--clr-dark);
         }
       }
     }

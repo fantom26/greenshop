@@ -1,6 +1,6 @@
 import { FC, MouseEvent } from "react";
 
-import { ICONS } from "@constants";
+import { ICONS } from "@/utils/constants";
 import { usePagination } from "@hooks";
 
 import * as S from "./pagination.styled";

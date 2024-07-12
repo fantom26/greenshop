@@ -20,8 +20,8 @@ export const Groups = styled.ul`
 
   @media (max-width: 520px) {
     display: grid;
-    gap: 3rem;
     grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
   }
 `;
 
@@ -41,8 +41,8 @@ export const NextLink = styled(Link)`
 
   @media (hover) {
     &:hover {
-      box-shadow: inset 200px 0 0 0 var(--clr-accent);
       color: var(--clr-light);
+      box-shadow: inset 200px 0 0 0 var(--clr-accent);
       transition: color var(--transition) ease-in-out, box-shadow var(--transition) ease-in-out;
     }
   }

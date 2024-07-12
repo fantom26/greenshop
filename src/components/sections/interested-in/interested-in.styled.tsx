@@ -15,11 +15,11 @@ export const Top = styled.div`
 
   &::before {
     position: absolute;
-    content: "";
-    left: 0;
     bottom: 0;
+    left: 0;
     width: 100%;
     height: 0.1rem;
-    background-color: rgba(70, 163, 88, 0.5);
+    background-color: rgb(70 163 88 / 50%);
+    content: "";
   }
 `;

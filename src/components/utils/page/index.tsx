@@ -3,8 +3,8 @@ import { FC, ReactNode } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import { NEXT_PUBLIC_APP_URL } from "@constants";
-import { IPage } from "@declarations";
+import { NEXT_PUBLIC_APP_URL } from "@/utils/constants";
+import { IPage } from "@/utils/declarations";
 
 interface PageProps {
   meta: IPage;

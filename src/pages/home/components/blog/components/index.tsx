@@ -3,8 +3,8 @@ import { FC } from "react";
 import Image from "next/image";
 
 import { Typography } from "@components/ui";
-import { ICONS, NEXT_PUBLIC_APP_URL } from "@constants";
-import { IArticle } from "@declarations";
+import { ICONS, NEXT_PUBLIC_APP_URL } from "@/utils/constants";
+import { IArticle } from "@/utils/declarations";
 import { useTranslation } from "@hooks";
 import { TagVariant } from "@utils/enums/components";
 

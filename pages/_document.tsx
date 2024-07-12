@@ -1,7 +1,7 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
-import { GlobalLoader } from "@components/ui";
-import { loaderStyles } from "@components/ui/global-loader/global-loader.styled";
+import { GlobalLoader } from "@/components/ui";
+import { loaderStyles } from "@/components/ui/global-loader/global-loader.styled";
 
 const Document = () => (
   <Html lang="en">

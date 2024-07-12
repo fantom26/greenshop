@@ -3,7 +3,7 @@ import { FC, useMemo } from "react";
 import { useRouter } from "next/router";
 
 import { Typography } from "@components/ui";
-import { IProduct } from "@declarations";
+import { IProduct } from "@/utils/declarations";
 import { useProductsQuery } from "@store/api";
 import { TagVariant } from "@utils/enums/components";
 

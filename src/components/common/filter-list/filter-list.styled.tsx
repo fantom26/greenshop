@@ -14,14 +14,14 @@ export const List = styled.ul`
 // TODO hover like links in footer Duplicated
 export const Item = styled.li<{ selected: boolean }>`
   display: inline-flex;
+  gap: 1rem;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
   margin: 0 -0.25rem;
   padding: 0 0.25rem;
   box-shadow: inset 0 0 0 0 var(--clr-accent);
-  transition: color var(--transition) ease-in-out, box-shadow var(--transition) ease-in-out;
   cursor: pointer;
+  transition: color var(--transition) ease-in-out, box-shadow var(--transition) ease-in-out;
 
   ${({ selected }) =>
     selected &&
@@ -31,8 +31,8 @@ export const Item = styled.li<{ selected: boolean }>`
   `}
   @media (hover) {
     &:hover {
-      box-shadow: inset 800px 0 0 0 var(--clr-accent);
       color: var(--clr-light);
+      box-shadow: inset 800px 0 0 0 var(--clr-accent);
       transition: color var(--transition) ease-in-out, box-shadow var(--transition) ease-in-out;
     }
   }

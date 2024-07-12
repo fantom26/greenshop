@@ -15,8 +15,8 @@ export const Breadcrumbs = styled.div`
 export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   gap: 1.5rem;
+  align-items: center;
 
   ${Item}:first-child a {
     font-weight: 700;

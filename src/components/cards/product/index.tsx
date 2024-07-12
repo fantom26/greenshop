@@ -3,11 +3,11 @@ import { FC, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { transformProduct } from "@helpers";
+import { transformProduct } from "@/utils/helpers";
 import FsLightbox from "fslightbox-react";
 
-import { ICONS, NEXT_PUBLIC_APP_URL } from "@constants";
-import { IProduct } from "@declarations";
+import { ICONS, NEXT_PUBLIC_APP_URL } from "@/utils/constants";
+import { IProduct } from "@/utils/declarations";
 import { useCart, useTranslation } from "@hooks";
 
 import * as S from "./product.styled";

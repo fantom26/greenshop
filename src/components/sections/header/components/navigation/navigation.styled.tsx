@@ -8,9 +8,9 @@ export const Nav = styled.nav`
 
 export const List = styled.ul`
   display: flex;
+  gap: 5rem;
   align-items: center;
   align-self: stretch;
-  gap: 5rem;
 
   @media (max-width: 1200px) {
     gap: 2rem;
@@ -35,14 +35,14 @@ export const Link = styled.a<{ pathname: string }>`
   font-weight: ${({ href, pathname }) => (href === pathname ? 700 : 400)};
 
   &::before {
-    content: "";
     position: absolute;
-    left: 0;
     bottom: -2.5rem;
+    left: 0;
     width: 100%;
     height: 0.3rem;
     background-color: var(--clr-accent);
-    opacity: ${({ href, pathname }) => (href === pathname ? 1 : 0)};
     visibility: ${({ href, pathname }) => (href === pathname ? "visible" : "hidden")};
+    opacity: ${({ href, pathname }) => (href === pathname ? 1 : 0)};
+    content: "";
   }
 `;

@@ -4,8 +4,8 @@ import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Button, Container, Typography } from "@components/ui";
-import { NEXT_PUBLIC_APP_URL } from "@constants";
-import { IFile } from "@declarations";
+import { NEXT_PUBLIC_APP_URL } from "@/utils/constants";
+import { IFile } from "@/utils/declarations";
 import { useTranslation } from "@hooks";
 import { ColorVariant, TagVariant } from "@utils/enums/components";
 

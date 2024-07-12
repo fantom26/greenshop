@@ -1,13 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "noEmit": true,
-    "module": "esnext",
+    "target": "ES2020",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    /* Bundler mode */
     "moduleResolution": "node",
     "isolatedModules": true,
+    "noEmit": true,
     "jsx": "preserve",
+    /* Linting */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": false,
     "strictPropertyInitialization": false,
     "allowSyntheticDefaultImports": true,
@@ -15,58 +23,82 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "strictBindCallApply": false,
+    "strictNullChecks": true,
     "resolveJsonModule": true,
-    "strictNullChecks": false,
     "esModuleInterop": true,
     "removeComments": true,
     "noImplicitAny": true,
     "skipLibCheck": true,
-    "declaration": true,
     "sourceMap": true,
     "strict": true,
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@assets/*": ["src/assets/*"],
-
-      "@layouts": ["src/layouts/index"],
-      "@layouts/*": ["src/layouts/*"],
-
-      "@components/*": ["src/components/*", "src/components/*/index"],
-
-      "@hooks": ["src/hooks/index"],
-      "@hooks/*": ["src/hooks/*"],
-
-      "@pages": ["src/pages/index"],
-      "@pages/*": ["src/pages/*"],
-
-      "@services": ["src/services/index"],
-      "@services/*": ["src/services/*"],
-
-      "@store": ["src/store/index"],
-      "@store/*": ["src/store/*"],
-
-      "@styles": ["src/styles/index"],
-      "@styles/*": ["src/styles/*"],
-
-      "@constants": ["src/utils/constants/index"],
-      "@constants/*": ["src/utils/constants/*"],
-
-      "@contexts": ["src/utils/contexts/index"],
-      "@contexts/*": ["src/utils/contexts/*"],
-
-      "@declarations": ["src/utils/declarations/index"],
-      "@declarations/*": ["src/utils/declarations/*"],
-
-      "@helpers": ["src/utils/helpers/index"],
-      "@helpers/*": ["src/utils/helpers/*"],
-
-      "@utils": ["src/utils/index"],
-      "@utils/*": ["src/utils/*"],
-
-      "@*": ["src/*"]
-    }
+      "@api/*": [
+        "src/api/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@layouts": [
+        "src/layouts/index"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@components/*": [
+        "src/components/*",
+        "src/components/*/index"
+      ],
+      "@hooks": [
+        "src/hooks/index"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@pages": [
+        "src/pages/index"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@services": [
+        "src/services/index"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@store": [
+        "src/store/index"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@lib/*": [
+        "src/lib/*"
+      ],
+      "@styles": [
+        "src/styles/index"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@utils": [
+        "src/utils/index"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "allowJs": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/common/index.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

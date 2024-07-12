@@ -1,4 +1,4 @@
-import { LOADER_CLASSNAME } from "@constants";
+import { LOADER_CLASSNAME } from "@/utils/constants";
 
 const ANIMATION_CONFIG = "3s infinite cubic-bezier(0.785, 0.135, 0.150, 0.860)";
 

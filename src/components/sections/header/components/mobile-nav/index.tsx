@@ -7,7 +7,7 @@ import { animated, useTransition } from "@react-spring/web";
 
 import { Drawer } from "@components/common";
 import { Button } from "@components/ui";
-import { ICONS } from "@constants";
+import { ICONS } from "@/utils/constants";
 import { useTranslation } from "@hooks";
 
 import { Search } from "../search";

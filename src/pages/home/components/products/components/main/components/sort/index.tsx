@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import { Typography } from "@components/ui";
-import { FILTER_KEYS, ICONS, SORT_KEYS } from "@constants";
+import { FILTER_KEYS, ICONS, SORT_KEYS } from "@/utils/constants";
 import { useTranslation } from "@hooks";
 import { TagVariant } from "@utils/enums/components";
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { ICONS } from "@constants";
+import { ICONS } from "@/utils/constants";
 import { useCart } from "@hooks";
 
 import * as S from "./cart.styled";

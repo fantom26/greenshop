@@ -1,4 +1,4 @@
-import { LOADER_CLASSNAME } from "@constants";
+import { LOADER_CLASSNAME } from "@/utils/constants";
 import { FC } from "react";
 
 export const GlobalLoader: FC = () => (

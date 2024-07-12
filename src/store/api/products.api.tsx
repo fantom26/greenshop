@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-import { NEXT_PUBLIC_API_URL } from "@constants";
-import { IProduct } from "@declarations";
+import { NEXT_PUBLIC_API_URL } from "@/utils/constants";
+import { IProduct } from "@/utils/declarations";
 
 export const productsApi = createApi({
   reducerPath: "productsApi",

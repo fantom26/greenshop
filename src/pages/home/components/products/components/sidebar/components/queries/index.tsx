@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-import { SORT_KEYS } from "@constants";
+import { SORT_KEYS } from "@/utils/constants";
 import { useTranslation } from "@hooks";
 
 import * as S from "./queries.styled";
@@ -45,7 +45,7 @@ export const Queries = () => {
     push(
       {
         query: {
-          ...Object.fromEntries(entries.filter(([key, queryParam]) => !param.includes(queryParam as string)))
+          ...Object.fromEntries(entries.filter(([_, queryParam]) => !param.includes(queryParam as string)))
         }
       },
       "",

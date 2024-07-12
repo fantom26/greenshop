@@ -5,8 +5,8 @@ import Image from "next/image";
 import debounce from "lodash.debounce";
 import Select, { InputActionMeta, components } from "react-select";
 
-import { ICONS, NEXT_PUBLIC_APP_URL } from "@constants";
-import { IProduct, IProductSearchOption } from "@declarations";
+import { ICONS, NEXT_PUBLIC_APP_URL } from "@/utils/constants";
+import { IProduct, IProductSearchOption } from "@/utils/declarations";
 import { ProductService } from "@services";
 
 import * as S from "./search.styled";

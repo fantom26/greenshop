@@ -7,8 +7,8 @@ export const Products = styled.section`
 
 export const ProductsWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
   gap: 5rem;
+  justify-content: space-between;
 
   @media (max-width: 1200px) {
     grid-gap: 2rem;

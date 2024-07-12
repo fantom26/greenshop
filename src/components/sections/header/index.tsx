@@ -1,15 +1,13 @@
 import { FC, useEffect, useState } from "react";
 
-import { Button, Logo } from "@components/ui";
-import { ICONS } from "@constants";
-import { useScrollLock, useTranslation } from "@hooks";
+import { Logo } from "@components/ui";
+import { useScrollLock } from "@hooks";
 
 import { Burger, Cart, Navigation, Search } from "./components";
 import { MobileNav } from "./components/mobile-nav";
 import * as S from "./header.styled";
 
 export const Header: FC = () => {
-  const t = useTranslation();
   const { lockScroll, unlockScroll } = useScrollLock();
 
   const [menuIsOpen, setMenuIsOpen] = useState(false);

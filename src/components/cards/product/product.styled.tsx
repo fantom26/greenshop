@@ -2,17 +2,17 @@ import styled from "styled-components";
 
 export const Controls = styled.div`
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   display: flex;
+  gap: 1.5rem;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
   padding: 1rem;
   background-color: #dee9da;
-  opacity: 0;
-  visibility: hidden;
   transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
   transition: opacity var(--transition), visibility var(--transition);
 `;
 
@@ -22,12 +22,12 @@ export const ImageWrapper = styled.div`
   max-width: 25rem;
 
   &::before {
-    content: "";
     position: absolute;
-    background-color: rgba(226, 231, 225, 0.5);
-    opacity: 0;
+    background-color: rgb(226 231 225 / 50%);
     visibility: hidden;
+    opacity: 0;
     transition: opacity var(--transition), visibility var(--transition);
+    content: "";
     inset: 0;
   }
 
@@ -43,8 +43,8 @@ export const Product = styled.li`
   @media (hover) {
     &:hover {
       ${Controls}, ${ImageWrapper}::before {
-        opacity: 1;
         visibility: visible;
+        opacity: 1;
         transition: opacity var(--transition), visibility var(--transition);
       }
     }
@@ -58,34 +58,34 @@ export const Name = styled.h3`
 
 export const Prices = styled.div`
   display: flex;
-  align-items: center;
   gap: 1.5rem;
+  align-items: center;
   margin-top: 0.5rem;
 `;
 
 export const Price = styled.p`
+  color: var(--clr-accent);
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 90%;
-  color: var(--clr-accent);
 `;
 
 export const OldPrice = styled.p`
+
+  color: #a5a5a5;
   font-size: 1.8rem;
   line-height: 90%;
   text-decoration: line-through;
-
-  color: #a5a5a5;
 `;
 
 export const Sale = styled.div`
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   z-index: 2;
   padding: 0.8rem;
-  font-weight: 500;
   color: var(--clr-light);
+  font-weight: 500;
   background-color: var(--clr-accent);
 `;
 
@@ -101,8 +101,8 @@ export const Control = styled.button`
   }
 
   svg {
-    fill: var(--clr-dark);
     transition: fill var(--transition), stroke var(--transition);
+    fill: var(--clr-dark);
   }
 
   @media (hover) {
@@ -114,8 +114,8 @@ export const Control = styled.button`
       }
 
       svg {
-        fill: var(--clr-accent);
         transition: fill var(--transition), stroke var(--transition);
+        fill: var(--clr-accent);
       }
     }
   }
@@ -123,18 +123,18 @@ export const Control = styled.button`
 
 export const Quantity = styled.span<{ shown: boolean }>`
   position: absolute;
-  right: -1.3rem;
   top: -0.4rem;
+  right: -1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
   width: 1.8rem;
   height: 1.8rem;
+  border-radius: 50%;
+  color: var(--clr-light);
   font-weight: 500;
   font-size: 1rem;
-  color: var(--clr-light);
   background-color: var(--clr-accent);
-  opacity: ${(props) => (props.shown ? 1 : 0)};
   visibility: ${(props) => (props.shown ? "visible" : "hidden")};
+  opacity: ${(props) => (props.shown ? 1 : 0)};
 `;

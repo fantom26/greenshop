@@ -8,9 +8,9 @@ export const Main = styled.div`
 `;
 export const Top = styled.div`
   display: flex;
+  gap: 1.5rem;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
   margin-bottom: 3rem;
 
   ${Sort} {
@@ -35,14 +35,14 @@ export const Content = styled.div`
   padding-top: 2.5rem;
 
   &::before {
-    content: "";
     position: absolute;
-    left: 50%;
     top: 0;
+    left: 50%;
     width: 26rem;
     height: 0.1rem;
     background-color: var(--clr-accent);
     transform: translateX(-50%);
+    content: "";
   }
 `;
 

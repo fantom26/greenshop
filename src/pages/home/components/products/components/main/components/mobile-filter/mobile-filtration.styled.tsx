@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const WrapperBtn = styled.div`
   width: 100%;
   max-width: 4rem;
+
   path {
     fill: var(--clr-accent);
   }
@@ -16,34 +17,34 @@ export const WrapperMenu = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 2rem;
-  overflow-y: auto;
-  padding: 4rem 1.5rem;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
-  box-shadow: var(--shadow);
+  padding: 4rem 1.5rem;
+  overflow-y: auto;
   background-color: var(--clr-light);
+  box-shadow: var(--shadow);
 `;
 
 export const CloseButton = styled.button`
   position: absolute;
-  right: 1.5rem;
   top: 2.5rem;
+  right: 1.5rem;
   width: 3rem;
   height: 3rem;
 
   &::before,
   &::after {
-    content: "";
     position: absolute;
-    left: 0;
     top: 50%;
+    left: 0;
     display: block;
     width: 3rem;
     height: 0.2rem;
     background-color: var(--clr-accent);
     transform: translateY(-50%);
+    content: "";
   }
 
   &::before {

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { Dispatch, FC, InputHTMLAttributes, SetStateAction, useEffect, useState } from "react";
+import { FC, InputHTMLAttributes, useState } from "react";
 
-import { Controller, useFormContext, useWatch } from "react-hook-form";
+import { Controller, useFormContext } from "react-hook-form";
 import PhoneInput from "react-phone-input-2";
 
 import { useTranslation } from "@hooks";
