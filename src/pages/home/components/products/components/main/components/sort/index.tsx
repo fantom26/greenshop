@@ -9,7 +9,7 @@ import { Typography } from "@components/ui";
 import * as S from "./sort.styled";
 
 export const Sort = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(["common", "home"]);
   const [current, setCurrent] = useState(t("sort.default"));
 
   const { query, push, asPath } = useRouter();
@@ -77,7 +77,7 @@ export const Sort = () => {
   return (
     <S.Sort>
       <Typography tag="h3" variant="h4">
-        {t("pages.home.products.sortBy")}
+        {t("home:products.sortBy")}
       </Typography>
       <S.Wrapper>
         <S.Current>

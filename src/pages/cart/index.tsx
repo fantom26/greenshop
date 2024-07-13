@@ -5,11 +5,11 @@ import { InterestedIn } from "@components/sections";
 import { Info } from "./components/info";
 
 const Cart = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
   return (
     <>
       <Info />
-      <InterestedIn title={t("common.interestedIn")} />
+      <InterestedIn title={t("interestedIn")} />
     </>
   );
 };

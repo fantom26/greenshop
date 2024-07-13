@@ -1,236 +1,55 @@
 {
-  "common": {
-    "scale": "Escalar imagen",
-    "interestedIn": "Te puede interesar"
-  },
-  "pages": {
-    "home": {
-      "hero": [
-        {
-          "supTitle": "Bienvenido a GreenShop",
-          "title": "Hagamos un <span>Planeta</span> Mejor",
-          "description": "Somos una tienda de plantas en línea que ofrece una amplia gama de plantas baratas y de moda. Usa nuestras plantas para crear una Jungla Urbana única. ¡Ordena tus plantas favoritas!",
-          "poster": {
-            "_id": "1",
-            "url": "/images/banner/1/img@1x.png",
-            "meta": {
-              "name": "Lirio Araña de Playa",
-              "type": "imagen",
-              "alt": "Lirio Araña de Playa",
-              "title": "Lirio Araña de Playa"
-            }
-          }
-        }
-      ],
-      "blog": {
-        "title": "Nuestros Posts del Blog",
-        "description": "Somos una tienda de plantas en línea que ofrece una amplia gama de plantas baratas y de moda."
-      },
-      "products": {
-        "categoryTitle": "Categorías",
-        "priceTitle": "Rango de Precios",
-        "sizeTitle": "Tamaño",
-        "resetAll": "Restablecer todo",
-        "sortBy": "Ordenar por:",
-        "all": "Todas las Plantas",
-        "new": "Nuevas Llegadas",
-        "sale": "Oferta",
-        "empty": "Desafortunadamente, no tenemos productos con ese filtro"
-      }
-    },
-    "cart": {
-      "headers": ["Productos", "Precio", "Total"],
-      "cartTotal": "Total del Carrito",
-      "total": "Total",
-      "shipping": "Envío",
-      "subtotal": "Subtotal"
-    }
-  },
+  "scale": "Escalar imagen",
+  "interestedIn": "Te puede interesar",
   "navigation": {
     "/": "Inicio",
     "shop": "Tienda",
     "care": "Cuidado de Plantas",
     "blogs": "Blogs"
   },
-  "btn": {
-    "join": "Unirse",
-    "apply": "Aplicar",
-    "filter": "Filtrar",
-    "login": "Iniciar sesión",
-    "readMore": "Leer más",
-    "shopNow": "Comprar ahora",
-    "register": "Registrarse",
-    "toCheckout": "Proceder al Pago",
-    "continueShopping": "Continuar Comprando",
-    "googleContinue": "Continuar con Google",
-    "facebookContinue": "Continuar con Facebook",
-    "address": "Guardar Dirección"
+  "sort": {
+    "default": "Orden predeterminado",
+    "priceDesc": "De caro a barato",
+    "priceAsc": "De barato a caro"
   },
-  "alts": {
-    "closeModal": "Cerrar ventana modal",
-    "instagram": "Ir a Instagram",
-    "youtube": "Ir a Youtube",
-    "linkedin": "Ir a Linkedin",
-    "twitter": "Ir a Twitter",
-    "facebook": "Ir a Facebook",
-    "goToMain": "Ir a la página principal",
-    "openMenu": "Abrir menú de navegación",
-    "closeMenu": "Cerrar menú de navegación"
-  },
-  "ariaLabels": {
-    "drawerOpen": "Abrir menú móvil",
-    "drawerClose": "Cerrar menú móvil"
-  },
-  "socials": {
-    "instagram": {
-      "label": "Instagram",
-      "link": "https://www.instagram.com/"
-    },
-    "linkedin": {
-      "label": "Linkedin",
-      "link": "https://www.linkedin.com/"
-    },
-    "twitter": {
-      "label": "Twitter",
-      "link": "https://twitter.com/?lang=es"
-    },
-    "youtube": {
-      "label": "Youtube",
-      "link": "https://www.youtube.com/"
-    },
-    "facebook": {
-      "label": "Facebook",
-      "link": "https://www.facebook.com/"
-    }
-  },
-  "footer": {
-    "newsLetters": "¿Te gustaría unirte a los boletines?",
-    "newsLettersDesc": "Generalmente publicamos ofertas y desafíos en el boletín. Somos tu destino en línea para plantas de interior. Ofrecemos una amplia gama de plantas de interior y accesorios enviados directamente de nuestra (verde) casa a la tuya!",
-    "social": "Redes Sociales",
-    "accept": "Aceptamos",
-    "copyright": "© {{year}} GreenShop. Todos los Derechos Reservados.",
-    "advantages": {
-      "garden": {
-        "title": "Cuidado del Jardín",
-        "desc": "Somos una tienda de plantas en línea que ofrece una amplia gama de plantas baratas y de moda."
-      },
-      "plant": {
-        "title": "Renovación de Plantas",
-        "desc": "Somos una tienda de plantas en línea que ofrece una amplia gama de plantas baratas y de moda."
-      },
-      "watering": {
-        "title": "Riego del Jardín",
-        "desc": "Somos una tienda de plantas en línea que ofrece una amplia gama de plantas baratas y de moda."
-      }
-    }
-  },
-  "footerLinks": [
-    {
-      "title": "Mi Cuenta",
-      "list": [
-        {
-          "label": "Mi Cuenta",
-          "link": "/account"
-        },
-        {
-          "label": "Nuestras historias",
-          "link": "/stories"
-        },
-        {
-          "label": "Contáctanos",
-          "link": "/contact"
-        },
-        {
-          "label": "Carrera",
-          "link": "/career"
-        },
-        {
-          "label": "Especiales",
-          "link": "/specials"
-        }
-      ]
-    },
-    {
-      "title": "Ayuda y Guía",
-      "list": [
-        {
-          "label": "Centro de Ayuda",
-          "link": "/help-center"
-        },
-        {
-          "label": "Cómo Comprar",
-          "link": "/how-to-buy"
-        },
-        {
-          "label": "Envío y Entrega",
-          "link": "/shipping"
-        },
-        {
-          "label": "Política de Producto",
-          "link": "/policy"
-        },
-        {
-          "label": "Cómo Devolver",
-          "link": "/how-to-return"
-        }
-      ]
-    },
-    {
-      "title": "Categorías",
-      "list": [
-        {
-          "label": "Plantas de Interior",
-          "link": "/products/house-plants"
-        },
-        {
-          "label": "Plantas en Maceta",
-          "link": "/products/potter-plants"
-        },
-        {
-          "label": "Semillas",
-          "link": "/products/seeds"
-        },
-        {
-          "label": "Plantas Pequeñas",
-          "link": "/products/small-plants"
-        },
-        {
-          "label": "Accesorios",
-          "link": "/products/accessories"
-        }
-      ]
-    }
-  ],
   "contacts": {
     "site": "70 West Buckingham Ave. Farmingdale, NY 11735",
     "email": "contact@greenshop.com",
     "phone": "+88 01911 717 490"
   },
-  "forms": {
-    "username": {
-      "placeholder": "Nombre de usuario"
+  "socials": {
+    "instagram": {
+      "label": "Instagram",
+      "alts": "Ir a Instagram",
+      "link": "https://www.instagram.com/"
     },
-    "password": {
-      "placeholder": "Contraseña"
+    "linkedin": {
+      "label": "Linkedin",
+      "alts": "Ir a Linkedin",
+      "link": "https://www.linkedin.com/"
     },
-    "confirmPassword": {
-      "placeholder": "Confirmar Contraseña"
+    "twitter": {
+      "label": "Twitter",
+      "alts": "Ir a Twitter",
+      "link": "https://twitter.com/?lang=en"
     },
-    "email": {
-      "placeholder": "Ingresa tu dirección de correo electrónico"
+    "youtube": {
+      "label": "Youtube",
+      "alts": "Ir a Youtube",
+      "link": "https://www.youtube.com/"
     },
-    "coupon": {
-      "placeholder": "Ingresa el código de cupón aquí..."
+    "facebook": {
+      "label": "Facebook",
+      "alts": "Ir a Facebook",
+      "link": "https://www.facebook.com/"
     }
   },
-  "validation": {
-    "required": "Campo requerido",
-    "email": "Correo electrónico inválido",
-    "phone": "Teléfono inválido"
+  "forms": {
+    "email": {
+      "placeholder": "Ingresa tu dirección de correo electrónico"
+    }
   },
-  "sort": {
-    "default": "Orden predeterminado",
-    "priceDesc": "De más caro",
-    "priceAsc": "De más barato"
+  "btn": {
+    "join": "Unirse"
   }
 }

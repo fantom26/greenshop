@@ -1,0 +1,5 @@
+{
+  "required": "Required field",
+  "email": "Invalid email",
+  "phone": "Invalid phone"
+}

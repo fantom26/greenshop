@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 
-import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 import * as S from "./filter.styled";
 
@@ -9,22 +9,22 @@ export const Filter = () => {
   const {
     t,
     i18n: { language }
-  } = useTranslation();
+  } = useTranslation("home");
   const [selectedTab, setSelectedTab] = useState("all");
   const { query, push, asPath } = useRouter();
 
   const tabs = useMemo(
     () => [
       {
-        label: t("pages.home.products.all"),
+        label: t("products.all"),
         id: "all"
       },
       {
-        label: t("pages.home.products.new"),
+        label: t("products.new"),
         id: "new"
       },
       {
-        label: t("pages.home.products.sale"),
+        label: t("products.sale"),
         id: "sale"
       }
     ],
@@ -76,14 +76,15 @@ export const Filter = () => {
     }
   };
 
+  // TODO fix bug in setSelectedTab. The correct way is to store id, not translations
   useEffect(() => {
     if (asPath.includes("sale") || asPath.includes("new")) {
       if (query.sale) {
-        setSelectedTab(t("pages.home.products.sale"));
+        setSelectedTab(t("products.sale"));
       }
 
       if (query.new) {
-        setSelectedTab(t("pages.home.products.new"));
+        setSelectedTab(t("products.new"));
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

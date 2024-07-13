@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { FC, InputHTMLAttributes, useState } from "react";
 
-import { Controller, useFormContext } from "react-hook-form";
 import { useTranslation } from "next-i18next";
+import { Controller, useFormContext } from "react-hook-form";
 import PhoneInput from "react-phone-input-2";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -71,7 +71,7 @@ export const ControlledPhone: FC<{
   // **Props
   const { name, setCountryCode } = props;
 
-  const { t } = useTranslation();
+  const { t } = useTranslation("validation");
 
   // **Form
   const formCtx = useFormContext();
@@ -86,7 +86,7 @@ export const ControlledPhone: FC<{
           onChange={onChange}
           error={!!error}
           placeholder={t("forms.phone.placeholder")}
-          helperText={t("validation.phone")}
+          helperText={t("phone")}
           setCountryCode={setCountryCode}
         />
       )}

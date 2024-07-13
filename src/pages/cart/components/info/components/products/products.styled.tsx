@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import styled from "styled-components";
 
 export const Header = styled.li`
@@ -122,7 +121,7 @@ export const Control = styled.button`
   width: 2.5rem;
   height: 2.5rem;
   color: var(--clr-light);
-  background-color: var(--clr-accent-400);
+  background-color: var(--clr-accent);
 
   ${({ disabled }) =>
     disabled &&

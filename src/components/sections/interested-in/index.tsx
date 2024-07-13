@@ -53,13 +53,12 @@ export const InterestedIn: FC<{ title: string }> = ({ title }) => {
             type: "bullets",
             clickable: true
           }}
-          wrapperTag="ul"
           slidesPerView={5}
           spaceBetween={30}
           breakpoints={breakpoints}
         >
           {products?.map((product) => (
-            <SwiperSlide key={product._id} tag="li">
+            <SwiperSlide key={product._id}>
               <ProductCard {...product} />
             </SwiperSlide>
           ))}

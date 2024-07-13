@@ -2,8 +2,8 @@ import { FC } from "react";
 
 import { ICONS, NEXT_PUBLIC_APP_URL } from "@/utils/constants";
 import { IArticle } from "@/utils/declarations";
-import Image from "next/image";
 import { useTranslation } from "next-i18next";
+import Image from "next/image";
 
 import { Typography } from "@components/ui";
 
@@ -13,7 +13,7 @@ export const ArticleCard: FC<IArticle> = (props) => {
   const { _id: id, createdAt, poster, minutesForReading, title, desc } = props;
   const { url, meta } = poster;
 
-  const { t } = useTranslation();
+  const { t } = useTranslation("home");
   return (
     <li>
       <S.Image>

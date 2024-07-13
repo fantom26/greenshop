@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 
 import { ICONS, NEXT_PUBLIC_APP_URL } from "@/utils/constants";
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
 
 import { Typography } from "@components/ui";
 import { useCart } from "@hooks";
@@ -11,11 +11,11 @@ import { useCart } from "@hooks";
 import * as S from "./products.styled";
 
 export const Products = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("cart");
   const { push } = useRouter();
   const { cartItems, getProductQuantity, decreaseCartQuantity, countPriceByQuantity, increaseCartQuantity, removeFromCart, cartQuantity } = useCart();
 
-  const headers = t("pages.cart.headers", { returnObjects: true }) as string[];
+  const headers = t("headers", { returnObjects: true }) as string[];
 
   useEffect(() => {
     if (!cartQuantity) {

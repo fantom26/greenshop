@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { FC, InputHTMLAttributes } from "react";
 
-import { Controller, useFormContext } from "react-hook-form";
 import { useTranslation } from "next-i18next";
+import { Controller, useFormContext } from "react-hook-form";
 
 interface TextareaProps extends InputHTMLAttributes<HTMLTextAreaElement> {
   error?: boolean;
@@ -42,7 +42,7 @@ export const TextArea: FC<TextareaProps> = (props) => {
 };
 
 export const ControlledTextarea: FC<ControlledTextareaProps> = ({ name, defaultValue, ...rest }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("validation");
 
   const { control } = useFormContext();
 
@@ -52,7 +52,7 @@ export const ControlledTextarea: FC<ControlledTextareaProps> = ({ name, defaultV
       control={control}
       defaultValue={defaultValue}
       render={({ field, fieldState: { error } }) => (
-        <TextArea value={field.value || ""} onChange={field.onChange} error={!!error} helperText={t(`validation.${error?.message}`)} {...rest} />
+        <TextArea value={field.value || ""} onChange={field.onChange} error={!!error} helperText={t(error?.message || "")} {...rest} />
       )}
     />
   );

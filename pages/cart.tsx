@@ -19,7 +19,7 @@ const CartPage: NextPageWithLayout<PageProps> = ({ meta, breadcrumbs }) => (
 
 CartPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 
-export const getServerSideProps = wrapper.getServerSideProps((store) => async ({locale}) => {
+export const getServerSideProps = wrapper.getServerSideProps((store) => async ({ locale }) => {
   store.dispatch(getPageInfo.initiate("Home"));
   store.dispatch(getPageInfo.initiate("Cart"));
 
@@ -27,7 +27,7 @@ export const getServerSideProps = wrapper.getServerSideProps((store) => async ({
   const [homeData] = home.data as any;
   const [cartData] = cart.data as any;
 
-  const translations = await serverSideTranslations(locale);
+  const translations = await serverSideTranslations(locale, ["common", "footer", "cart", "validation"]);
 
   return {
     props: {

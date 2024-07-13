@@ -17,7 +17,7 @@ const HomePage: NextPageWithLayout<Omit<PageProps, "breadcrumbs">> = ({ meta }) 
 HomePage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 
 export const getServerSideProps = wrapper.getServerSideProps(() => async ({ locale }) => {
-  const translations = await serverSideTranslations(locale);
+  const translations = await serverSideTranslations(locale, ["common", "footer", "home", "validation"]);
 
   return {
     props: {

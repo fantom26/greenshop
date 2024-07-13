@@ -8,7 +8,7 @@ import { NewslettersObject, NewslettersSchema } from "@utils/schemas";
 import * as S from "./form.styled";
 
 export const EmailForm = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
 
   const methods = useForm<NewslettersSchema>({
     resolver: yupResolver(NewslettersObject)
@@ -37,7 +37,7 @@ export const EmailForm = () => {
           name="email"
           withLabel={false}
           borderRadius="0.6rem 0 0 0.6rem"
-          placeholder={t("forms.email.placeholder")}
+          placeholder={t("common:forms.email.placeholder")}
           widthBtn={
             <S.Button variant="solid" isLoading={isSubmitting}>
               {t("btn.join")}

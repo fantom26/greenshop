@@ -1,0 +1,98 @@
+{
+  "newsLetters": "¿Te gustaría unirte a nuestros boletines?",
+  "newsLettersDesc": "Solemos publicar ofertas y desafíos en el boletín. Somos tu destino en línea para plantas de interior. Ofrecemos una amplia gama de plantas y accesorios enviados directamente desde nuestro invernadero hasta tu hogar.",
+  "social": "Redes Sociales",
+  "accept": "Aceptamos",
+  "copyright": "© {{year}} GreenShop. Todos los derechos reservados.",
+  "advantages": {
+    "garden": {
+      "title": "Cuidado del Jardín",
+      "desc": "Somos una tienda de plantas en línea que ofrece una amplia gama de plantas económicas y modernas."
+    },
+    "plant": {
+      "title": "Renovación de Plantas",
+      "desc": "Somos una tienda de plantas en línea que ofrece una amplia gama de plantas económicas y modernas."
+    },
+    "watering": {
+      "title": "Riego del Jardín",
+      "desc": "Somos una tienda de plantas en línea que ofrece una amplia gama de plantas económicas y modernas."
+    }
+  },
+  "links": [
+    {
+      "title": "Mi Cuenta",
+      "list": [
+        {
+          "label": "Mi Cuenta",
+          "link": "/account"
+        },
+        {
+          "label": "Nuestras historias",
+          "link": "/stories"
+        },
+        {
+          "label": "Contáctanos",
+          "link": "/contact"
+        },
+        {
+          "label": "Carrera",
+          "link": "/career"
+        },
+        {
+          "label": "Ofertas especiales",
+          "link": "/specials"
+        }
+      ]
+    },
+    {
+      "title": "Ayuda y Guía",
+      "list": [
+        {
+          "label": "Centro de Ayuda",
+          "link": "/help-center"
+        },
+        {
+          "label": "Cómo Comprar",
+          "link": "/how-to-buy"
+        },
+        {
+          "label": "Envío y Entrega",
+          "link": "/shipping"
+        },
+        {
+          "label": "Política de Productos",
+          "link": "/policy"
+        },
+        {
+          "label": "Cómo Devolver",
+          "link": "/how-to-return"
+        }
+      ]
+    },
+    {
+      "title": "Categorías",
+      "list": [
+        {
+          "label": "Plantas de Interior",
+          "link": "/products/house-plants"
+        },
+        {
+          "label": "Plantas en Macetas",
+          "link": "/products/potter-plants"
+        },
+        {
+          "label": "Semillas",
+          "link": "/products/seeds"
+        },
+        {
+          "label": "Plantas Pequeñas",
+          "link": "/products/small-plants"
+        },
+        {
+          "label": "Accesorios",
+          "link": "/products/accessories"
+        }
+      ]
+    }
+  ]
+}

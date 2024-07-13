@@ -1,0 +1,98 @@
+{
+  "newsLetters": "Would you like to join newsletters?",
+  "newsLettersDesc": "We usually post offers and challenges in newsletter. We’re your online houseplant destination. We offer a wide range of houseplants and accessories shipped directly from our (green)house to yours!",
+  "social": "Social Media",
+  "accept": "We accept",
+  "copyright": "© {{year}} GreenShop. All Rights Reserved.",
+  "advantages": {
+    "garden": {
+      "title": "Garden Care",
+      "desc": "We are an online plant shop offering a wide range of cheap and trendy plants."
+    },
+    "plant": {
+      "title": "Plant Renovation",
+      "desc": "We are an online plant shop offering a wide range of cheap and trendy plants."
+    },
+    "watering": {
+      "title": "Watering Graden",
+      "desc": "We are an online plant shop offering a wide range of cheap and trendy plants."
+    }
+  },
+  "links": [
+    {
+      "title": "My Account",
+      "list": [
+        {
+          "label": "My Account",
+          "link": "/account"
+        },
+        {
+          "label": "Our stories",
+          "link": "/stories"
+        },
+        {
+          "label": "Contact us",
+          "link": "/contact"
+        },
+        {
+          "label": "Career",
+          "link": "/career"
+        },
+        {
+          "label": "Specials",
+          "link": "/specials"
+        }
+      ]
+    },
+    {
+      "title": "Help & Guide",
+      "list": [
+        {
+          "label": "Help Center",
+          "link": "/help-center"
+        },
+        {
+          "label": "How to Buy",
+          "link": "/how-to-buy"
+        },
+        {
+          "label": "Shipping & Delivery",
+          "link": "/shipping"
+        },
+        {
+          "label": "Product Policy",
+          "link": "/policy"
+        },
+        {
+          "label": "How to Return",
+          "link": "/how-to-return"
+        }
+      ]
+    },
+    {
+      "title": "Categories",
+      "list": [
+        {
+          "label": "House Plants",
+          "link": "/products/house-plants"
+        },
+        {
+          "label": "Potter Plants",
+          "link": "/products/potter-plants"
+        },
+        {
+          "label": "Seeds",
+          "link": "/products/seeds"
+        },
+        {
+          "label": "Small Plants",
+          "link": "/products/small-plants"
+        },
+        {
+          "label": "Accessories",
+          "link": "/products/accessories"
+        }
+      ]
+    }
+  ]
+}

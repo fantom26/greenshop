@@ -1,0 +1,25 @@
+{
+  "headers": ["Products", "Price", "Total"],
+  "cartTotal": "Cart Totals",
+  "total": "Total",
+  "shipping": "Shipping",
+  "subtotal": "Subtotal",
+  "forms": {
+    "username": {
+      "placeholder": "Username"
+    },
+    "password": {
+      "placeholder": "Password"
+    },
+    "confirmPassword": {
+      "placeholder": "Confirm Password"
+    },
+    "coupon": {
+      "placeholder": "Enter coupon code here..."
+    }
+  },
+  "btn": {
+    "toCheckout": "Proceed To Checkout",
+    "continueShopping": "Continue Shopping"
+  }
+}

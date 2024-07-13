@@ -8,20 +8,19 @@ import { Typography } from "@components/ui";
 import * as S from "./socials.styled";
 
 export const Socials: FC = () => {
-  const { t } = useTranslation();
-  const socials = t("socials", { returnObjects: true });
+  const { t } = useTranslation(["footer", "common"]);
+  const socials = t("common:socials", { returnObjects: true });
+
   return (
     <div>
       <Typography tag="h2" variant="h4">
-        {t("footer.social")}
+        {t("social")}
       </Typography>
       <S.List>
         {Object.entries(socials).map(([key, network]) => (
-          <li key={key}>
-            <S.Link target="_blank" rel="noreferrer" href={network.link} aria-label={t(`alts.${key}`)}>
-              {ICONS[key]}
-            </S.Link>
-          </li>
+          <S.Link key={key} target="_blank" rel="noreferrer" href={network.link} aria-label={network.alts}>
+            {ICONS[key]}
+          </S.Link>
         ))}
       </S.List>
     </div>

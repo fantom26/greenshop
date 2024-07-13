@@ -6,17 +6,17 @@ import * as S from "./email.styled";
 import { EmailForm } from "./form";
 
 export const Email = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("footer");
 
   return (
     <S.EmailWrapper>
       <Typography tag="h2" variant="h3">
-        {t("footer.newsLetters")}
+        {t("newsLetters")}
       </Typography>
 
       <EmailForm />
       <Typography tag="p" variant="paragraph1" color="grey">
-        {t("footer.newsLettersDesc")}
+        {t("newsLettersDesc")}
       </Typography>
     </S.EmailWrapper>
   );

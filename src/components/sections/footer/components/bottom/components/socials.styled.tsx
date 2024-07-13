@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const List = styled.ul`
+export const List = styled.div`
   display: flex;
   gap: 1rem;
   align-items: center;

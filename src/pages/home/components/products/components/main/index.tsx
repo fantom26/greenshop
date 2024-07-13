@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 
 import { ProductCard } from "@components/cards";
@@ -12,10 +13,9 @@ import { Filter } from "./components/filter";
 import { MobileFilter } from "./components/mobile-filter";
 import { Sort } from "./components/sort";
 import * as S from "./main.styled";
-import { useTranslation } from "next-i18next";
 
 export const Main = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("home");
 
   const LIMIT = 9;
   const [page, setPage] = useState(1);
@@ -47,7 +47,7 @@ export const Main = () => {
               </S.List>
             ) : (
               <Typography tag="h2" variant="h2">
-                {t("pages.home.products.empty")}
+                {t("products.empty")}
               </Typography>
             )}
           </>

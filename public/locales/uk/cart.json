@@ -1,0 +1,25 @@
+{
+  "headers": ["Продукти", "Ціна", "Загальна сума"],
+  "cartTotal": "Загальна сума кошика",
+  "total": "Загальна сума",
+  "shipping": "Доставка",
+  "subtotal": "Проміжна сума",
+  "forms": {
+    "username": {
+      "placeholder": "Ім'я користувача"
+    },
+    "password": {
+      "placeholder": "Пароль"
+    },
+    "confirmPassword": {
+      "placeholder": "Підтвердити пароль"
+    },
+    "coupon": {
+      "placeholder": "Введіть код купона тут..."
+    }
+  },
+  "btn": {
+    "toCheckout": "Перейти до оформлення",
+    "continueShopping": "Продовжити покупки"
+  }
+}

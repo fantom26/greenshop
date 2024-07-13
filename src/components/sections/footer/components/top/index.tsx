@@ -7,9 +7,9 @@ import { Email } from "./components/email";
 import * as S from "./top.styled";
 
 export const Top = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("footer");
 
-  const advantages = t("footer.advantages", { returnObjects: true });
+  const advantages = t("advantages", { returnObjects: true });
 
   return (
     <S.Top>

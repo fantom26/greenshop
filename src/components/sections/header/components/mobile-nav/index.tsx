@@ -13,7 +13,7 @@ import { Search } from "../search";
 import * as S from "./mobile-nav.styled";
 
 export const MobileNav: FC<{ open: boolean }> = ({ open }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
   const { pathname } = useRouter();
 
   const navigation = t("navigation", { returnObjects: true });

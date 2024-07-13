@@ -1,0 +1,39 @@
+{
+  "hero": [
+    {
+      "supTitle": "Bienvenido a GreenShop",
+      "title": "Hagamos un <span>Planeta</span> Mejor</>",
+      "description": "Somos una tienda de plantas en línea que ofrece una amplia gama de plantas económicas y modernas. Usa nuestras plantas para crear una Jungla Urbana única. ¡Ordena tus plantas favoritas!",
+      "poster": {
+        "_id": "1",
+        "url": "/images/banner/1/img@1x.png",
+        "meta": {
+          "name": "Lirio Araña de Playa",
+          "type": "image",
+          "alt": "Lirio Araña de Playa",
+          "title": "Lirio Araña de Playa"
+        }
+      }
+    }
+  ],
+  "blog": {
+    "title": "Nuestras Publicaciones en el Blog",
+    "description": "Somos una tienda de plantas en línea que ofrece una amplia gama de plantas económicas y modernas."
+  },
+  "products": {
+    "categoryTitle": "Categorías",
+    "priceTitle": "Rango de Precios",
+    "sizeTitle": "Tamaño",
+    "resetAll": "Restablecer todo",
+    "sortBy": "Ordenar por:",
+    "all": "Todas las Plantas",
+    "new": "Nuevas Llegadas",
+    "sale": "Venta",
+    "empty": "Desafortunadamente, no tenemos productos con ese filtro"
+  },
+  "btn": {
+    "filter": "Filtrar",
+    "readMore": "Leer Más",
+    "shopNow": "Comprar ahora"
+  }
+}

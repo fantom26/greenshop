@@ -1,13 +1,13 @@
 import { ICONS } from "@/utils/constants";
-import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
 
 import { Logo, Typography } from "@components/ui";
 
 import * as S from "./contacts.styled";
 
 export const Contacts = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
 
   return (
     <S.Contacts>

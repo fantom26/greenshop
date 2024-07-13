@@ -5,7 +5,7 @@ import { useTranslation } from "next-i18next";
 import * as S from "./navigation.styled";
 
 export const Navigation = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
   const { pathname } = useRouter();
   const navigation = t("navigation", { returnObjects: true });
 

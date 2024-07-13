@@ -6,12 +6,12 @@ import { Typography } from "@components/ui";
 import * as S from "./copyright.styled";
 
 export const Copyright = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("footer");
 
   return (
     <S.Copyright>
       <Typography tag="p" variant="paragraph1" center>
-        {t("footer.copyright", { year: DateManager.getCurrentDate() })}
+        {t("copyright", { year: DateManager.getCurrentDate() })}
       </Typography>
     </S.Copyright>
   );

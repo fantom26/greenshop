@@ -10,7 +10,7 @@ import { useProductsQuery } from "@store/api";
 import * as S from "./price-range.styled";
 
 export const PriceRange: FC<{ mobileHandler?: () => void }> = ({ mobileHandler }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("home");
   const [prices, setPrices] = useState([]);
   const { push, query } = useRouter();
   const { data } = useProductsQuery();
@@ -73,7 +73,7 @@ export const PriceRange: FC<{ mobileHandler?: () => void }> = ({ mobileHandler }
   return (
     <S.PriceRange>
       <Typography tag="h3" variant="h4">
-        {t("pages.home.products.priceTitle")}
+        {t("products.priceTitle")}
       </Typography>
       <S.SliderWrapper>
         <Nouislider
