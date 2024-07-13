@@ -1,0 +1,236 @@
+{
+  "common": {
+    "scale": "Масштабувати зображення",
+    "interestedIn": "Вас може зацікавити"
+  },
+  "pages": {
+    "home": {
+      "hero": [
+        {
+          "supTitle": "Ласкаво просимо до GreenShop",
+          "title": "Зробимо кращу <span>Планету</span></>",
+          "description": "Ми онлайн-магазин рослин, який пропонує широкий асортимент недорогих і модних рослин. Використовуйте наші рослини, щоб створити унікальну Урбан Джунглі. Замовте свої улюблені рослини!",
+          "poster": {
+            "_id": "1",
+            "url": "/images/banner/1/img@1x.png",
+            "meta": {
+              "name": "Павукоподібна лілія",
+              "type": "зображення",
+              "alt": "Павукоподібна лілія",
+              "title": "Павукоподібна лілія"
+            }
+          }
+        }
+      ],
+      "blog": {
+        "title": "Наші дописи в блозі",
+        "description": "Ми онлайн-магазин рослин, який пропонує широкий асортимент недорогих і модних рослин."
+      },
+      "products": {
+        "categoryTitle": "Категорії",
+        "priceTitle": "Діапазон цін",
+        "sizeTitle": "Розмір",
+        "resetAll": "Скинути все",
+        "sortBy": "Сортувати за:",
+        "all": "Всі рослини",
+        "new": "Нові надходження",
+        "sale": "Розпродаж",
+        "empty": "На жаль, ми не маємо продуктів з таким фільтром"
+      }
+    },
+    "cart": {
+      "headers": ["Продукти", "Ціна", "Загалом"],
+      "cartTotal": "Загальна сума",
+      "total": "Загалом",
+      "shipping": "Доставка",
+      "subtotal": "Проміжна сума"
+    }
+  },
+  "navigation": {
+    "/": "Головна",
+    "shop": "Магазин",
+    "care": "Догляд за рослинами",
+    "blogs": "Блоги"
+  },
+  "btn": {
+    "join": "Приєднатися",
+    "apply": "Застосувати",
+    "filter": "Фільтр",
+    "login": "Увійти",
+    "readMore": "Читати далі",
+    "shopNow": "Купити зараз",
+    "register": "Реєстрація",
+    "toCheckout": "Перейти до оформлення",
+    "continueShopping": "Продовжити покупки",
+    "googleContinue": "Продовжити з Google",
+    "facebookContinue": "Продовжити з Facebook",
+    "address": "Зберегти адресу"
+  },
+  "alts": {
+    "closeModal": "Закрити модальне вікно",
+    "instagram": "Перейти до Instagram",
+    "youtube": "Перейти до Youtube",
+    "linkedin": "Перейти до Linkedin",
+    "twitter": "Перейти до Twitter",
+    "facebook": "Перейти до Facebook",
+    "goToMain": "Перейти на головну сторінку",
+    "openMenu": "Відкрити навігаційне меню",
+    "closeMenu": "Закрити навігаційне меню"
+  },
+  "ariaLabels": {
+    "drawerOpen": "Відкрити мобільне меню",
+    "drawerClose": "Закрити мобільне меню"
+  },
+  "socials": {
+    "instagram": {
+      "label": "Instagram",
+      "link": "https://www.instagram.com/"
+    },
+    "linkedin": {
+      "label": "Linkedin",
+      "link": "https://www.linkedin.com/"
+    },
+    "twitter": {
+      "label": "Twitter",
+      "link": "https://twitter.com/?lang=uk"
+    },
+    "youtube": {
+      "label": "Youtube",
+      "link": "https://www.youtube.com/"
+    },
+    "facebook": {
+      "label": "Facebook",
+      "link": "https://www.facebook.com/"
+    }
+  },
+  "footer": {
+    "newsLetters": "Хочете приєднатися до розсилки?",
+    "newsLettersDesc": "Ми зазвичай публікуємо пропозиції та виклики в розсилці. Ми ваш онлайн-пункт призначення для кімнатних рослин. Ми пропонуємо широкий асортимент кімнатних рослин та аксесуарів, які доставляються безпосередньо з нашої (зелені) оселі до вашої!",
+    "social": "Соціальні мережі",
+    "accept": "Ми приймаємо",
+    "copyright": "© 2023 GreenShop. Усі права захищено.",
+    "advantages": {
+      "garden": {
+        "title": "Догляд за садом",
+        "desc": "Ми онлайн-магазин рослин, який пропонує широкий асортимент недорогих і модних рослин."
+      },
+      "plant": {
+        "title": "Оновлення рослин",
+        "desc": "Ми онлайн-магазин рослин, який пропонує широкий асортимент недорогих і модних рослин."
+      },
+      "watering": {
+        "title": "Полив саду",
+        "desc": "Ми онлайн-магазин рослин, який пропонує широкий асортимент недорогих і модних рослин."
+      }
+    }
+  },
+  "footerLinks": [
+    {
+      "title": "Мій обліковий запис",
+      "list": [
+        {
+          "label": "Мій обліковий запис",
+          "link": "/account"
+        },
+        {
+          "label": "Наші історії",
+          "link": "/stories"
+        },
+        {
+          "label": "Зв'яжіться з нами",
+          "link": "/contact"
+        },
+        {
+          "label": "Кар'єра",
+          "link": "/career"
+        },
+        {
+          "label": "Спеціальні пропозиції",
+          "link": "/specials"
+        }
+      ]
+    },
+    {
+      "title": "Допомога та керівництво",
+      "list": [
+        {
+          "label": "Центр допомоги",
+          "link": "/help-center"
+        },
+        {
+          "label": "Як купити",
+          "link": "/how-to-buy"
+        },
+        {
+          "label": "Доставка та доставка",
+          "link": "/shipping"
+        },
+        {
+          "label": "Політика продукту",
+          "link": "/policy"
+        },
+        {
+          "label": "Як повернути",
+          "link": "/how-to-return"
+        }
+      ]
+    },
+    {
+      "title": "Категорії",
+      "list": [
+        {
+          "label": "Кімнатні рослини",
+          "link": "/products/house-plants"
+        },
+        {
+          "label": "Квіткові рослини",
+          "link": "/products/potter-plants"
+        },
+        {
+          "label": "Насіння",
+          "link": "/products/seeds"
+        },
+        {
+          "label": "Малі рослини",
+          "link": "/products/small-plants"
+        },
+        {
+          "label": "Аксесуари",
+          "link": "/products/accessories"
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "site": "70 West Buckingham Ave. Farmingdale, NY 11735",
+    "email": "contact@greenshop.com",
+    "phone": "+88 01911 717 490"
+  },
+  "forms": {
+    "username": {
+      "placeholder": "Ім'я користувача"
+    },
+    "password": {
+      "placeholder": "Пароль"
+    },
+    "confirmPassword": {
+      "placeholder": "Підтвердити пароль"
+    },
+    "email": {
+      "placeholder": "Введіть свою електронну адресу"
+    },
+    "coupon": {
+      "placeholder": "Введіть код купона тут..."
+    }
+  },
+  "validation": {
+    "required": "Обов'язкове поле",
+    "email": "Неправильна електронна пошта",
+    "phone": "Неправильний телефон"
+  },
+  "sort": {
+    "default": "За замовчуванням",
+    "priceDesc": "Від дорогих до дешевих",
+    "priceAsc": "Від дешевих до дорогих"
+  }
+}
