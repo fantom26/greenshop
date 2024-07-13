@@ -39,7 +39,7 @@ export const Item = styled.li`
 
   @media (hover) {
     &:hover {
-      color: var(--clr-accent);
+      color: var(--clr-accent-400);
       transition: color var(--transition);
     }
   }

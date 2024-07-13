@@ -43,18 +43,18 @@ export const FilterParam = styled.li<{ reset?: boolean }>`
   border-radius: 0.5rem;
   padding: 0.5rem 2rem 0.5rem 0.5rem;
   font-weight: 500;
-  color: ${({ reset }) => (reset ? "var(--clr-accent)" : "var(--clr-light)")};
-  background-color: ${({ reset }) => (reset ? "var(--clr-light)" : " var(--clr-accent)")};
+  color: ${({ reset }) => (reset ? "var(--clr-accent-400)" : "var(--clr-light)")};
+  background-color: ${({ reset }) => (reset ? "var(--clr-light)" : " var(--clr-accent-400)")};
 
   ${({ reset }) =>
     reset &&
     `
-    border: 0.1rem solid var(--clr-accent);
+    border: 0.1rem solid var(--clr-accent-400);
 
     ${FilterParamButton} {
       &::before,
       &::after {
-        background-color: var(--clr-accent);
+        background-color: var(--clr-accent-400);
       }
     }
   `}

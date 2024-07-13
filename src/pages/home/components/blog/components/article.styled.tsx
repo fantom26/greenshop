@@ -31,7 +31,7 @@ export const Image = styled.div`
 
 export const Info = styled.p`
   margin-bottom: 0.5rem;
-  color: var(--clr-accent);
+  color: var(--clr-accent-400);
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 115%;
@@ -58,13 +58,13 @@ export const Button = styled(Link)`
 
   @media (hover) {
     &:hover {
-      color: var(--clr-accent);
+      color: var(--clr-accent-400);
       transition: color var(--transition);
 
       svg {
         transform: translateX(0.5rem);
         transition: fill var(--transition), transform var(--transition);
-        fill: var(--clr-accent);
+        fill: var(--clr-accent-400);
       }
     }
   }

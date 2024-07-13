@@ -14,7 +14,7 @@ export const Contacts = styled.div`
     left: 0;
     width: 100%;
     height: 0.1rem;
-    background-color: var(--clr-accent);
+    background-color: var(--clr-accent-400);
     content: "";
   }
 

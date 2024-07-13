@@ -23,7 +23,7 @@ export const Button = styled.button<{ actived?: boolean; withDots?: boolean }>`
     actived &&
     `
     color: var(--clr-light);
-    background-color: var(--clr-accent);
+    background-color: var(--clr-accent-400);
     font-weight: 700;
     transition: font-weight var(--transition), color var(--transition), background-color var(--transition);
   `};

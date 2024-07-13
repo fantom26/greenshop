@@ -5,7 +5,7 @@ export const WrapperBtn = styled.div`
   max-width: 4rem;
 
   path {
-    fill: var(--clr-accent);
+    fill: var(--clr-accent-400);
   }
 
   @media (min-width: 768px) {
@@ -42,7 +42,7 @@ export const CloseButton = styled.button`
     display: block;
     width: 3rem;
     height: 0.2rem;
-    background-color: var(--clr-accent);
+    background-color: var(--clr-accent-400);
     transform: translateY(-50%);
     content: "";
   }

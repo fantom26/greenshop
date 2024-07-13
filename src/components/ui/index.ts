@@ -6,3 +6,4 @@ export * from "./tabs";
 export * from "./loader";
 export * from "./breadcrumbs";
 export * from "./global-loader";
+export * from "./lang";

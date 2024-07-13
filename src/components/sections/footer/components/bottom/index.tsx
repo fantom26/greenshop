@@ -1,3 +1,5 @@
+import { Langs } from "@components/ui";
+
 import * as S from "./bottom.styled";
 import { Copyright } from "./components/copyright";
 import { Links } from "./components/links";
@@ -8,6 +10,7 @@ export const Bottom = () => (
     <S.BottomWrapper>
       <Links />
       <Socials />
+      <Langs />
     </S.BottomWrapper>
     <Copyright />
   </S.Bottom>

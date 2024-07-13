@@ -33,7 +33,7 @@ export const Title = styled(Typography)`
   margin-bottom: 0.5rem;
 
   span {
-    color: var(--clr-accent);
+    color: var(--clr-accent-400);
   }
 `;
 

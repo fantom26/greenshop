@@ -46,7 +46,7 @@ const colors: StyledVariants<ColorVariant> = {
     color: var(--clr-grey);
   `,
   green: css`
-    color: var(--clr-accent);
+    color: var(--clr-accent-400);
   `
 };
 

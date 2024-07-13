@@ -24,7 +24,7 @@ export const Wrapper = styled.div<{ disabled: boolean }>`
     &:hover {
       svg {
         transition: fill var(--transition);
-        fill: var(--clr-accent);
+        fill: var(--clr-accent-400);
       }
     }
   }
@@ -44,7 +44,7 @@ export const Quantity = styled.span<{ shown: boolean }>`
   color: var(--clr-light);
   font-weight: 500;
   font-size: 1rem;
-  background-color: var(--clr-accent);
+  background-color: var(--clr-accent-400);
   visibility: ${({ shown }) => (shown ? "visible" : "hidden")};
   opacity: ${({ shown }) => (shown ? 1 : 0)};
 `;

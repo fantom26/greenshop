@@ -40,7 +40,7 @@ export const Content = styled.div`
     left: 50%;
     width: 26rem;
     height: 0.1rem;
-    background-color: var(--clr-accent);
+    background-color: var(--clr-accent-400);
     transform: translateX(-50%);
     content: "";
   }

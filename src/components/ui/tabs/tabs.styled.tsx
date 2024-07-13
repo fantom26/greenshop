@@ -18,7 +18,7 @@ export const Tab = styled.button<{ selected: boolean; hovered: boolean }>`
   height: 2rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  color: ${({ selected }) => (selected ? "var(--clr-accent)" : "var(--clr-dark)")};
+  color: ${({ selected }) => (selected ? "var(--clr-accent-400)" : "var(--clr-dark)")};
   font-weight: ${({ selected }) => (selected ? "700" : "400")};
   font-size: 1.8rem;
   background-color: transparent;
@@ -45,5 +45,5 @@ export const Underline = styled(animated.div)`
   z-index: 10;
   width: 100%;
   height: 0.2rem;
-  background-color: var(--clr-accent);
+  background-color: var(--clr-accent-400);
 `;

@@ -126,7 +126,7 @@ export const NoUiSliderStyles = css`
   }
 
   .noUi-connect {
-    background-color: var(--clr-accent);
+    background-color: var(--clr-accent-400);
   }
 
   /* Handles and cursors;
@@ -137,7 +137,7 @@ export const NoUiSliderStyles = css`
 
   .noUi-handle {
     border-radius: 50%;
-    background-color: var(--clr-accent);
+    background-color: var(--clr-accent-400);
     cursor: default;
   }
 

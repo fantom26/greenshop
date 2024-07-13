@@ -16,13 +16,13 @@ export const Link = styled.a`
 
   svg {
     transition: fill var(--transition), fill-opacity var(--transition);
-    fill: var(--clr-accent);
+    fill: var(--clr-accent-400);
     fill-opacity: 0.6;
   }
 
   @media (hover) {
     &:hover {
-      background-color: var(--clr-accent);
+      background-color: var(--clr-accent-400);
       transition: background-color var(--transition);
 
       svg {

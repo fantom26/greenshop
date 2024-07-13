@@ -40,7 +40,7 @@ export const Link = styled.a<{ pathname: string }>`
     left: 0;
     width: 100%;
     height: 0.3rem;
-    background-color: var(--clr-accent);
+    background-color: var(--clr-accent-400);
     visibility: ${({ href, pathname }) => (href === pathname ? "visible" : "hidden")};
     opacity: ${({ href, pathname }) => (href === pathname ? 1 : 0)};
     content: "";

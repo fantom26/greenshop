@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 
-import { Logo } from "@components/ui";
+import { Langs, Logo } from "@components/ui";
 import { useScrollLock } from "@hooks";
 
 import { Burger, Cart, Navigation, Search } from "./components";

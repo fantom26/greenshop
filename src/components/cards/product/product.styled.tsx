@@ -64,7 +64,7 @@ export const Prices = styled.div`
 `;
 
 export const Price = styled.p`
-  color: var(--clr-accent);
+  color: var(--clr-accent-400);
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 90%;
@@ -86,7 +86,7 @@ export const Sale = styled.div`
   padding: 0.8rem;
   color: var(--clr-light);
   font-weight: 500;
-  background-color: var(--clr-accent);
+  background-color: var(--clr-accent-400);
 `;
 
 export const Control = styled.button`
@@ -109,13 +109,13 @@ export const Control = styled.button`
     &:hover {
       &:nth-child(2) {
         svg {
-          stroke: var(--clr-accent);
+          stroke: var(--clr-accent-400);
         }
       }
 
       svg {
         transition: fill var(--transition), stroke var(--transition);
-        fill: var(--clr-accent);
+        fill: var(--clr-accent-400);
       }
     }
   }
@@ -134,7 +134,7 @@ export const Quantity = styled.span<{ shown: boolean }>`
   color: var(--clr-light);
   font-weight: 500;
   font-size: 1rem;
-  background-color: var(--clr-accent);
+  background-color: var(--clr-accent-400);
   visibility: ${(props) => (props.shown ? "visible" : "hidden")};
   opacity: ${(props) => (props.shown ? 1 : 0)};
 `;

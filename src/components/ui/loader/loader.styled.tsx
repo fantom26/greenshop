@@ -353,5 +353,5 @@ export const Leaft = styled.div`
   width: 3rem;
   height: 4.5rem;
   border-radius: 1px 30px;
-  background-color: var(--clr-accent);
+  background-color: var(--clr-accent-400);
 `;

@@ -122,7 +122,7 @@ export const Control = styled.button`
   width: 2.5rem;
   height: 2.5rem;
   color: var(--clr-light);
-  background-color: var(--clr-accent);
+  background-color: var(--clr-accent-400);
 
   ${({ disabled }) =>
     disabled &&

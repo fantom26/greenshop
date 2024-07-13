@@ -29,7 +29,7 @@ export const SelectedPrice = styled.p`
   span {
     display: inline-block;
     margin-left: 0.5rem;
-    color: var(--clr-accent);
+    color: var(--clr-accent-400);
     font-weight: 700;
   }
 `;

@@ -10,11 +10,11 @@ import { ButtonProps } from ".";
 const variants: StyledVariants<ButtonVariant> = {
   solid: css`
     color: var(--clr-light);
-    background-color: var(--clr-accent);
+    background-color: var(--clr-accent-400);
   `,
   outline: css`
-    border: 0.1rem solid var(--clr-accent);
-    color: var(--clr-accent);
+    border: 0.1rem solid var(--clr-accent-400);
+    color: var(--clr-accent-400);
     background-color: var(--clr-light);
   `
 };
