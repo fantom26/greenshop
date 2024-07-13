@@ -1,13 +1,12 @@
-import { useRouter } from "next/router";
-
 import { SORT_KEYS } from "@/utils/constants";
-import { useTranslation } from "@hooks";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 import * as S from "./queries.styled";
 
 export const Queries = () => {
   const { query, push, asPath } = useRouter();
-  const t = useTranslation();
+  const { t } = useTranslation();
   const entries = Object.entries(query);
 
   const formatQueries = () => {
@@ -65,7 +64,7 @@ export const Queries = () => {
           ))}
           {formatQueries().length > 1 && (
             <S.FilterParam reset>
-              <span>{t.pages.home.products.resetAll}</span>
+              <span>{t("pages.home.products.resetAll")}</span>
               <S.FilterParamButton onClick={() => deleteParam("ALL")} />
             </S.FilterParam>
           )}

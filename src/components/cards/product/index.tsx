@@ -1,21 +1,21 @@
 import { FC, useMemo, useState } from "react";
 
-import Image from "next/image";
-import Link from "next/link";
-
-import { transformProduct } from "@/utils/helpers";
-import FsLightbox from "fslightbox-react";
-
 import { ICONS, NEXT_PUBLIC_APP_URL } from "@/utils/constants";
 import { IProduct } from "@/utils/declarations";
-import { useCart, useTranslation } from "@hooks";
+import { transformProduct } from "@/utils/helpers";
+import FsLightbox from "fslightbox-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
+
+import { useCart } from "@hooks";
 
 import * as S from "./product.styled";
 
 export const ProductCard: FC<IProduct> = (props) => {
   const { _id: id, poster, name, price, discountPercentage } = props;
   const { url, meta } = poster;
-  const t = useTranslation();
+  const { t } = useTranslation();
 
   const [toggler, setToggler] = useState(false);
 
@@ -35,7 +35,7 @@ export const ProductCard: FC<IProduct> = (props) => {
               <S.Quantity shown={getProductQuantity(id) > 0}>{getProductQuantity(id)}</S.Quantity>
             </S.Control>
             {/* <S.Control>{ICONS.like}</S.Control> */}
-            <S.Control onClick={() => setToggler(!toggler)} title={t.common.scale}>
+            <S.Control onClick={() => setToggler(!toggler)} title={t("common.scale")}>
               {ICONS.search}
             </S.Control>
           </S.Controls>

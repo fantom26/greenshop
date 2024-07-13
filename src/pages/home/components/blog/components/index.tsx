@@ -1,11 +1,11 @@
 import { FC } from "react";
 
-import Image from "next/image";
-
-import { Typography } from "@components/ui";
 import { ICONS, NEXT_PUBLIC_APP_URL } from "@/utils/constants";
 import { IArticle } from "@/utils/declarations";
-import { useTranslation } from "@hooks";
+import Image from "next/image";
+import { useTranslation } from "next-i18next";
+
+import { Typography } from "@components/ui";
 import { TagVariant } from "@utils/enums/components";
 
 import * as S from "./article.styled";
@@ -14,7 +14,7 @@ export const ArticleCard: FC<IArticle> = (props) => {
   const { _id: id, createdAt, poster, minutesForReading, title, desc } = props;
   const { url, meta } = poster;
 
-  const t = useTranslation();
+  const { t } = useTranslation();
   return (
     <li>
       <S.Image>
@@ -31,7 +31,7 @@ export const ArticleCard: FC<IArticle> = (props) => {
           {desc}
         </Typography>
         <S.Button href={`/articles/${id}`}>
-          {t.btn.readMore}
+          {t("btn.readMore")}
           {ICONS.btnArrow}
         </S.Button>
       </S.ArticleWrapper>

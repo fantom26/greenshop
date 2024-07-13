@@ -1,18 +1,26 @@
+import { NEXT_PUBLIC_APP_URL } from "@/utils/constants";
+import { IFile } from "@/utils/declarations";
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
-
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Button, Container, Typography } from "@components/ui";
-import { NEXT_PUBLIC_APP_URL } from "@/utils/constants";
-import { IFile } from "@/utils/declarations";
-import { useTranslation } from "@hooks";
 import { ColorVariant, TagVariant } from "@utils/enums/components";
 
 import * as S from "./hero.styled";
 
+interface ISlide {
+  supTitle: string;
+  title: string;
+  description: string;
+  poster: IFile;
+}
+
 export const Hero = () => {
-  const t = useTranslation();
+  const { t } = useTranslation();
+
+  const slides = t("pages.home.hero", { returnObjects: true }) as Array<ISlide>;
 
   return (
     <S.Hero>
@@ -27,21 +35,21 @@ export const Hero = () => {
             wrapperTag="ul"
             slidesPerView={1}
           >
-            {t.pages.home.hero.map(({ supTitle, title, description, poster }, index) => (
+            {slides.map(({ supTitle, title, description, poster }, index) => (
               <SwiperSlide key={index} tag="li">
                 <S.Slide>
                   <S.Info>
-                    <S.Suptitle>{supTitle as string}</S.Suptitle>
-                    <S.Title tag="h1" variant={TagVariant.h1} dangerouslySetInnerHTML={{ __html: title as string }} uppercase />
+                    <S.Suptitle>{supTitle}</S.Suptitle>
+                    <S.Title tag="h1" variant={TagVariant.h1} dangerouslySetInnerHTML={{ __html: title }} uppercase />
                     <Typography tag="p" variant={TagVariant.paragraph1} color={ColorVariant.grey}>
-                      {description as string}
+                      {description}
                     </Typography>
                     <S.ButtonWrapper>
-                      <Button uppercase>{t.btn.shopNow}</Button>
+                      <Button uppercase>{t("btn.shopNow")}</Button>
                     </S.ButtonWrapper>
                   </S.Info>
                   <S.ImageWrapper>
-                    <Image src={`${NEXT_PUBLIC_APP_URL}${(poster as IFile).url}`} width="518" height="518" alt={(poster as IFile).meta.alt} />
+                    <Image src={`${NEXT_PUBLIC_APP_URL}${poster.url}`} width="518" height="518" alt={poster.meta.alt} />
                   </S.ImageWrapper>
                 </S.Slide>
               </SwiperSlide>

@@ -1,21 +1,22 @@
 import { FC } from "react";
 
+import { ICONS } from "@/utils/constants";
+import { animated, useTransition } from "@react-spring/web";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
-import { animated, useTransition } from "@react-spring/web";
+import { useTranslation } from "next-i18next";
 
 import { Drawer } from "@components/common";
 import { Button } from "@components/ui";
-import { ICONS } from "@/utils/constants";
-import { useTranslation } from "@hooks";
 
 import { Search } from "../search";
 import * as S from "./mobile-nav.styled";
 
 export const MobileNav: FC<{ open: boolean }> = ({ open }) => {
-  const t = useTranslation();
+  const { t } = useTranslation();
   const { pathname } = useRouter();
+
+  const navigation = t("navigation", { returnObjects: true });
 
   const transition = useTransition(open, {
     from: {
@@ -43,7 +44,7 @@ export const MobileNav: FC<{ open: boolean }> = ({ open }) => {
         </S.SearchWrapper>
         <S.Nav style={{ opacity }}>
           <S.List style={{ transform: transformMain }}>
-            {Object.entries(t.navigation).map(([key, name]) => (
+            {Object.entries(navigation).map(([key, name]) => (
               <li key={key}>
                 <Link href={key} passHref legacyBehavior>
                   <S.Link pathname={pathname}>{name}</S.Link>
@@ -54,7 +55,7 @@ export const MobileNav: FC<{ open: boolean }> = ({ open }) => {
         </S.Nav>
         <animated.div style={{ transform: transformFoot }}>
           <Button path="/login" startIcon={ICONS.login}>
-            {t.btn.login}
+            {t("btn.login")}
           </Button>
         </animated.div>
       </Drawer>

@@ -1,14 +1,15 @@
+import { useTranslation } from "next-i18next";
+
 import { InterestedIn } from "@components/sections";
-import { useTranslation } from "@hooks";
 
 import { Info } from "./components/info";
 
 const Cart = () => {
-  const t = useTranslation();
+  const { t } = useTranslation();
   return (
     <>
       <Info />
-      <InterestedIn title={t.common.interestedIn} />
+      <InterestedIn title={t("common.interestedIn")} />
     </>
   );
 };

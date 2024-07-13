@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import { ProductCard } from "@components/cards";
 import { Pagination } from "@components/common/pagination";
 import { Loader, Typography } from "@components/ui";
-import { useTranslation } from "@hooks";
 import { useProductsQuery } from "@store/api";
 import { TagVariant } from "@utils/enums/components";
 
@@ -14,9 +13,10 @@ import { Filter } from "./components/filter";
 import { MobileFilter } from "./components/mobile-filter";
 import { Sort } from "./components/sort";
 import * as S from "./main.styled";
+import { useTranslation } from "next-i18next";
 
 export const Main = () => {
-  const t = useTranslation();
+  const { t } = useTranslation();
 
   const LIMIT = 9;
   const [page, setPage] = useState(1);
@@ -48,7 +48,7 @@ export const Main = () => {
               </S.List>
             ) : (
               <Typography tag="h2" variant={TagVariant.h2}>
-                {t.pages.home.products.empty}
+                {t("pages.home.products.empty")}
               </Typography>
             )}
           </>

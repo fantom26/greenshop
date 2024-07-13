@@ -2,9 +2,8 @@
 import { FC, InputHTMLAttributes, useState } from "react";
 
 import { Controller, useFormContext } from "react-hook-form";
+import { useTranslation } from "next-i18next";
 import PhoneInput from "react-phone-input-2";
-
-import { useTranslation } from "@hooks";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   error?: boolean;
@@ -72,7 +71,7 @@ export const ControlledPhone: FC<{
   // **Props
   const { name, setCountryCode } = props;
 
-  const t = useTranslation();
+  const { t } = useTranslation();
 
   // **Form
   const formCtx = useFormContext();
@@ -86,8 +85,8 @@ export const ControlledPhone: FC<{
           value={value || ""}
           onChange={onChange}
           error={!!error}
-          placeholder={t.forms.phone.placeholder}
-          helperText={t.validation.phone}
+          placeholder={t("forms.phone.placeholder")}
+          helperText={t("validation.phone")}
           setCountryCode={setCountryCode}
         />
       )}

@@ -1,18 +1,21 @@
-import { Typography } from "@components/ui";
 import { IMAGES } from "@/utils/constants";
-import { useTranslation } from "@hooks";
+import { useTranslation } from "next-i18next";
+
+import { Typography } from "@components/ui";
 import { ColorVariant, TagVariant } from "@utils/enums/components";
 
 import { Email } from "./components/email";
 import * as S from "./top.styled";
 
 export const Top = () => {
-  const t = useTranslation();
+  const { t } = useTranslation();
+
+  const advantages = t("footer.advantages", { returnObjects: true });
 
   return (
     <S.Top>
       <S.Advantages>
-        {Object.entries(t.footer.advantages).map(([key, advantage]) => (
+        {Object.entries(advantages).map(([key, advantage]) => (
           <S.Advantage key={key}>
             <S.AdvatageImage>{IMAGES[key]}</S.AdvatageImage>
             <Typography tag="h2" variant={TagVariant.h4}>

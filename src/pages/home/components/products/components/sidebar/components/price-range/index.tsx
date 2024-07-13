@@ -1,18 +1,17 @@
 import { FC, useEffect, useMemo, useRef, useState } from "react";
 
 import { useRouter } from "next/router";
-
 import Nouislider from "nouislider-react";
+import { useTranslation } from "next-i18next";
 
 import { Button, Typography } from "@components/ui";
-import { useTranslation } from "@hooks";
 import { useProductsQuery } from "@store/api";
 import { ButtonVariant, TagVariant } from "@utils/enums/components";
 
 import * as S from "./price-range.styled";
 
 export const PriceRange: FC<{ mobileHandler?: () => void }> = ({ mobileHandler }) => {
-  const t = useTranslation();
+  const { t } = useTranslation();
   const [prices, setPrices] = useState([]);
   const { push, query } = useRouter();
   const { data } = useProductsQuery();
@@ -75,7 +74,7 @@ export const PriceRange: FC<{ mobileHandler?: () => void }> = ({ mobileHandler }
   return (
     <S.PriceRange>
       <Typography tag="h3" variant={TagVariant.h4}>
-        {t.pages.home.products.priceTitle as string}
+        {t("pages.home.products.priceTitle")}
       </Typography>
       <S.SliderWrapper>
         <Nouislider
@@ -98,7 +97,7 @@ export const PriceRange: FC<{ mobileHandler?: () => void }> = ({ mobileHandler }
       </S.SelectedPrice>
       <S.ButtonWrapper>
         <Button onClick={onFilter} variant={ButtonVariant.solid}>
-          {t.btn.filter}
+          {t("btn.filter")}
         </Button>
       </S.ButtonWrapper>
     </S.PriceRange>

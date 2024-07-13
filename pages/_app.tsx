@@ -1,17 +1,17 @@
 import { useEffect } from "react";
 
+import { CART_LIST, LOADER_CLASSNAME } from "@/utils/constants";
+import { CartProvider } from "@/utils/contexts";
+import { ICartItem, NextPageWithLayout } from "@/utils/declarations";
+import { getCookie } from "cookies-next";
+import { appWithTranslation } from "next-i18next";
 import NextApp, { AppContext } from "next/app";
 import type { AppProps as NextAppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
-
-import { getCookie } from "cookies-next";
 import { Provider } from "react-redux";
 import styled from "styled-components";
 
-import { CART_LIST, LOADER_CLASSNAME } from "@/utils/constants";
-import { CartProvider } from "@/utils/contexts";
-import { ICartItem, NextPageWithLayout } from "@/utils/declarations";
 import { makeStore } from "@store";
 import { GlobalStyles } from "@styles";
 
@@ -97,4 +97,4 @@ App.getInitialProps = async (ctx: AppContext) => {
   }
 };
 
-export default App;
+export default appWithTranslation(App);

@@ -12,6 +12,7 @@ export const makeStore = () =>
       [sizeApi.reducerPath]: sizeApi.reducer,
       [pagesApi.reducerPath]: pagesApi.reducer
     },
+    devTools: process.env.NODE_ENV !== "production",
     middleware: (gDM) => gDM().concat(articlesApi.middleware, categoriesApi.middleware, productsApi.middleware, sizeApi.middleware, pagesApi.middleware)
   });
 

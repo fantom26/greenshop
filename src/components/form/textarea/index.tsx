@@ -2,8 +2,7 @@
 import { FC, InputHTMLAttributes } from "react";
 
 import { Controller, useFormContext } from "react-hook-form";
-
-import { useTranslation } from "@hooks";
+import { useTranslation } from "next-i18next";
 
 interface TextareaProps extends InputHTMLAttributes<HTMLTextAreaElement> {
   error?: boolean;
@@ -42,12 +41,9 @@ export const TextArea: FC<TextareaProps> = (props) => {
   );
 };
 
-export const ControlledTextarea: FC<ControlledTextareaProps> = (props) => {
-  // **Props
-  const { name, defaultValue, ...rest } = props;
-  const t = useTranslation();
+export const ControlledTextarea: FC<ControlledTextareaProps> = ({ name, defaultValue, ...rest }) => {
+  const { t } = useTranslation();
 
-  // **Form
   const { control } = useFormContext();
 
   return (
@@ -56,7 +52,7 @@ export const ControlledTextarea: FC<ControlledTextareaProps> = (props) => {
       control={control}
       defaultValue={defaultValue}
       render={({ field, fieldState: { error } }) => (
-        <TextArea value={field.value || ""} onChange={field.onChange} error={!!error} helperText={t.validation[error?.message]} {...rest} />
+        <TextArea value={field.value || ""} onChange={field.onChange} error={!!error} helperText={t(`validation.${error?.message}`)} {...rest} />
       )}
     />
   );

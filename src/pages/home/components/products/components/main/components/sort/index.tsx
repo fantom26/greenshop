@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 
+import { FILTER_KEYS, ICONS, SORT_KEYS } from "@/utils/constants";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 import { Typography } from "@components/ui";
-import { FILTER_KEYS, ICONS, SORT_KEYS } from "@/utils/constants";
-import { useTranslation } from "@hooks";
 import { TagVariant } from "@utils/enums/components";
 
 import * as S from "./sort.styled";
 
 export const Sort = () => {
-  const t = useTranslation();
-  const [current, setCurrent] = useState(t.sort.default);
+  const { t } = useTranslation();
+  const [current, setCurrent] = useState(t("sort.default"));
 
   const { query, push, asPath } = useRouter();
 
   const onClick = (filterOption: string) => {
-    setCurrent(t.sort[filterOption]);
+    setCurrent(t(`sort.${filterOption}`));
 
     switch (filterOption) {
       case "default":
@@ -62,12 +62,14 @@ export const Sort = () => {
     }
   };
 
+  const sort = t("sort", { returnObjects: true });
+
   useEffect(() => {
     if (asPath.includes("_sort") && asPath.includes("_order")) {
       if (query._order === "asc") {
-        setCurrent(t.sort.priceAsc);
+        setCurrent(t("sort.priceAsc"));
       } else {
-        setCurrent(t.sort.priceDesc);
+        setCurrent(t("sort.priceDesc"));
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -76,7 +78,7 @@ export const Sort = () => {
   return (
     <S.Sort>
       <Typography tag="h3" variant={TagVariant.h4}>
-        {t.pages.home.products.sortBy}
+        {t("pages.home.products.sortBy")}
       </Typography>
       <S.Wrapper>
         <S.Current>
@@ -84,7 +86,7 @@ export const Sort = () => {
           <span>{ICONS.dropdownArrow}</span>
         </S.Current>
         <S.Dropdown>
-          {Object.entries(t.sort)
+          {Object.entries(sort)
             .filter(([_, sortBy]) => sortBy !== current)
             .map(([key, sortBy]) => (
               <S.Item key={key} onClick={() => onClick(key)}>

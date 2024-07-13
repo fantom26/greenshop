@@ -97,7 +97,7 @@
   },
   "include": [
     "src"
-  ],
+, "public/locales/en/en.tsx"  ],
   "exclude": [
     "node_modules"
   ]
