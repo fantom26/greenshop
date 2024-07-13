@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import { Typography } from "@components/ui";
 import { IProduct } from "@/utils/declarations";
 import { useProductsQuery } from "@store/api";
-import { TagVariant } from "@utils/enums/components";
 
 import * as S from "./filter-list.styled";
 
@@ -67,7 +66,7 @@ export const Filter: FC<FilterProps> = ({ title, items, queryName }) => {
 
   return (
     <>
-      <Typography tag="h3" variant={TagVariant.h4}>
+      <Typography tag="h3" variant="h4">
         {title}
       </Typography>
       <S.List>

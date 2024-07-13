@@ -7,7 +7,6 @@ import { useTranslation } from "next-i18next";
 
 import { Typography } from "@components/ui";
 import { useCart } from "@hooks";
-import { ColorVariant, TagVariant } from "@utils/enums/components";
 
 import * as S from "./products.styled";
 
@@ -59,7 +58,7 @@ export const Products = () => {
               </S.Controls>
             </S.Wrapper>
             <S.Wrapper>
-              <Typography variant={TagVariant.h4} color={ColorVariant.green}>
+              <Typography variant="h4" color="green">
                 {`$${countPriceByQuantity(item._id)}`}
               </Typography>
               <S.Delete type="button" onClick={() => removeFromCart(item._id)}>

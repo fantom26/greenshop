@@ -4,7 +4,6 @@ import { ICONS } from "@/utils/constants";
 import { useTranslation } from "next-i18next";
 
 import { Typography } from "@components/ui";
-import { TagVariant } from "@utils/enums/components";
 
 import * as S from "./socials.styled";
 
@@ -13,7 +12,7 @@ export const Socials: FC = () => {
   const socials = t("socials", { returnObjects: true });
   return (
     <div>
-      <Typography tag="h2" variant={TagVariant.h4}>
+      <Typography tag="h2" variant="h4">
         {t("footer.social")}
       </Typography>
       <S.List>

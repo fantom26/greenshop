@@ -1,9 +1,8 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm } from "react-hook-form";
 import { useTranslation } from "next-i18next";
+import { useForm } from "react-hook-form";
 
 import { Form } from "@components/form";
-import { ButtonVariant } from "@utils/enums/components";
 import { NewslettersObject, NewslettersSchema } from "@utils/schemas";
 
 import * as S from "./form.styled";
@@ -40,7 +39,7 @@ export const EmailForm = () => {
           borderRadius="0.6rem 0 0 0.6rem"
           placeholder={t("forms.email.placeholder")}
           widthBtn={
-            <S.Button variant={ButtonVariant.solid} isLoading={isSubmitting}>
+            <S.Button variant="solid" isLoading={isSubmitting}>
               {t("btn.join")}
             </S.Button>
           }

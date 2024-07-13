@@ -6,7 +6,6 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 
 import { Typography } from "@components/ui";
-import { TagVariant } from "@utils/enums/components";
 
 import * as S from "./article.styled";
 
@@ -24,10 +23,10 @@ export const ArticleCard: FC<IArticle> = (props) => {
         <S.Info>
           {createdAt} | {minutesForReading}
         </S.Info>
-        <Typography tag="h3" variant={TagVariant.h3}>
+        <Typography tag="h3" variant="h3">
           {title}
         </Typography>
-        <Typography tag="p" variant={TagVariant.paragraph1}>
+        <Typography tag="p" variant="paragraph1">
           {desc}
         </Typography>
         <S.Button href={`/articles/${id}`}>

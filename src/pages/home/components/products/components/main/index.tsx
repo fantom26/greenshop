@@ -6,7 +6,6 @@ import { ProductCard } from "@components/cards";
 import { Pagination } from "@components/common/pagination";
 import { Loader, Typography } from "@components/ui";
 import { useProductsQuery } from "@store/api";
-import { TagVariant } from "@utils/enums/components";
 
 import { Queries } from "../sidebar/components";
 import { Filter } from "./components/filter";
@@ -47,7 +46,7 @@ export const Main = () => {
                 ))}
               </S.List>
             ) : (
-              <Typography tag="h2" variant={TagVariant.h2}>
+              <Typography tag="h2" variant="h2">
                 {t("pages.home.products.empty")}
               </Typography>
             )}

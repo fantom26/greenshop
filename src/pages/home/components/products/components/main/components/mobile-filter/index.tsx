@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 
+import { ICONS } from "@/utils/constants";
 import { animated, useTransition } from "react-spring";
 
 import { Drawer } from "@components/common";
 import { Button } from "@components/ui";
-import { ICONS } from "@/utils/constants";
 import { useScrollLock } from "@hooks";
-import { ButtonVariant } from "@utils/enums/components";
 
 import { Categories, PriceRange, Sizes } from "../../../sidebar/components";
 import { Sort } from "../sort";
@@ -71,7 +70,7 @@ export const MobileFilter = () => {
         ) : null
       )}
       <S.WrapperBtn>
-        <Button onClick={toggleFilters} startIcon={ICONS.filter} variant={ButtonVariant.outline} />
+        <Button onClick={toggleFilters} startIcon={ICONS.filter} />
       </S.WrapperBtn>
     </>
   );

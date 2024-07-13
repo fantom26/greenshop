@@ -1,12 +1,10 @@
+import { StyledVariants } from "@/utils/declarations";
 import { AdaptiveFont } from "@/utils/helpers";
 import styled, { css } from "styled-components";
 
-import { StyledVariants } from "@/utils/declarations";
-import { ColorVariant, TagVariant } from "@utils/enums/components";
+import { TypographyColors, TypographyProps, TypographyVariant } from ".";
 
-import { TypographyProps } from ".";
-
-const variants: StyledVariants<TagVariant> = {
+const variants: StyledVariants<TypographyVariant> = {
   h1: css`
     font-weight: 900;
     ${AdaptiveFont({ pcSize: 70, mobSize: 40 })};
@@ -38,7 +36,7 @@ const variants: StyledVariants<TagVariant> = {
   `
 };
 
-const colors: StyledVariants<ColorVariant> = {
+const colors: StyledVariants<TypographyColors> = {
   black: css`
     color: var(--clr-dark);
   `,

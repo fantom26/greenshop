@@ -1,13 +1,10 @@
+import { StyledVariants } from "@/utils/declarations";
 import Link from "next/link";
-
 import styled, { css } from "styled-components";
 
-import { StyledVariants } from "@/utils/declarations";
-import { ButtonVariant } from "@utils/enums/components";
+import { BtnVariant, ButtonProps } from ".";
 
-import { ButtonProps } from ".";
-
-const variants: StyledVariants<ButtonVariant> = {
+const variants: StyledVariants<BtnVariant> = {
   solid: css`
     color: var(--clr-light);
     background-color: var(--clr-accent-400);
@@ -32,7 +29,7 @@ const CommonStyles = css`
 `;
 
 // TODO dublicated styles. Search solution
-export const Button = styled.button<Partial<ButtonProps>>`
+export const Button = styled.button<ButtonProps>`
   ${CommonStyles}
 
   ${({ variant }) => variants[variant]}
@@ -57,7 +54,7 @@ export const Button = styled.button<Partial<ButtonProps>>`
   `}
 `;
 
-export const Hyperlink = styled(Link)<Partial<ButtonProps>>`
+export const Hyperlink = styled(Link)<ButtonProps>`
   ${CommonStyles}
 
   ${({ variant }) => variants[variant]}

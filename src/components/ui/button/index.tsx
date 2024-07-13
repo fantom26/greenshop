@@ -1,11 +1,11 @@
 import { FC, HTMLAttributes, ReactNode } from "react";
 
-import { ButtonVariant } from "@utils/enums/components";
-
 import * as S from "./button.styled";
 
+export type BtnVariant = "solid" | "outline";
+
 export interface ButtonProps extends HTMLAttributes<HTMLElement> {
-  variant: ButtonVariant;
+  variant: BtnVariant;
   path: string;
   uppercase: boolean;
   isLoading: boolean;
@@ -16,7 +16,7 @@ export interface ButtonProps extends HTMLAttributes<HTMLElement> {
 }
 
 export const Button: FC<Partial<ButtonProps>> = (props) => {
-  const { variant = ButtonVariant.solid, endIcon = null, startIcon = null, isLoading, path, children, ...rest } = props;
+  const { variant = "outline", endIcon = null, startIcon = null, isLoading, path, children, ...rest } = props;
 
   if (path && endIcon) {
     return (

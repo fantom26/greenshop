@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { ProductCard } from "@components/cards";
 import { Container, Typography } from "@components/ui";
 import { useInterestedInQuery } from "@store/api";
-import { ColorVariant, TagVariant } from "@utils/enums/components";
 
 import * as S from "./interested-in.styled";
 
@@ -44,7 +43,7 @@ export const InterestedIn: FC<{ title: string }> = ({ title }) => {
     <S.Section>
       <Container>
         <S.Top>
-          <Typography color={ColorVariant.green} variant={TagVariant.h4} tag="h2">
+          <Typography color="green" variant="h4" tag="h2">
             {title}
           </Typography>
         </S.Top>

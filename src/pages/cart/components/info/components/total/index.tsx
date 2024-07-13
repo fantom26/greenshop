@@ -5,7 +5,6 @@ import { useTranslation } from "next-i18next";
 
 import { Button, Typography } from "@components/ui";
 import { useCart } from "@hooks";
-import { TagVariant } from "@utils/enums/components";
 
 import * as S from "./total.styled";
 
@@ -18,26 +17,26 @@ export const Total = () => {
   return (
     <S.Total>
       <S.Header>
-        <Typography variant={TagVariant.h4} tag="h2">
+        <Typography variant="h4" tag="h2">
           {t("pages.cart.cartTotal")}
         </Typography>
       </S.Header>
       <S.List>
         <S.Item>
           <p>{t("pages.cart.subtotal")}</p>
-          <Typography variant={TagVariant.h4} tag="h3">
+          <Typography variant="h4" tag="h3">
             {`$${sumOfOrder.toFixed(2)}`}
           </Typography>
         </S.Item>
         <S.Item>
           <p>{t("pages.cart.shipping")}</p>
-          <Typography variant={TagVariant.h4} tag="h3">
+          <Typography variant="h4" tag="h3">
             {`$${SHIPPING_PRICE.toFixed(2)}`}
           </Typography>
         </S.Item>
         <S.Item titleBold>
           <p>{t("pages.cart.total")}</p>
-          <Typography variant={TagVariant.h4} tag="h3">
+          <Typography variant="h4" tag="h3">
             {`$${total.toFixed(2)}`}
           </Typography>
         </S.Item>

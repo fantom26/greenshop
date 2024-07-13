@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 
 import { FILTER_KEYS, ICONS, SORT_KEYS } from "@/utils/constants";
-import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 import { Typography } from "@components/ui";
-import { TagVariant } from "@utils/enums/components";
 
 import * as S from "./sort.styled";
 
@@ -77,7 +76,7 @@ export const Sort = () => {
 
   return (
     <S.Sort>
-      <Typography tag="h3" variant={TagVariant.h4}>
+      <Typography tag="h3" variant="h4">
         {t("pages.home.products.sortBy")}
       </Typography>
       <S.Wrapper>

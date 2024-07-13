@@ -1,7 +1,6 @@
 import { useTranslation } from "next-i18next";
 
 import { Typography } from "@components/ui";
-import { TagVariant } from "@utils/enums/components";
 
 import * as S from "./links.styled";
 
@@ -15,7 +14,7 @@ export const Links = () => {
       {links.map(({ title, list }) => (
         <li key={title}>
           <>
-            <Typography tag="h2" variant={TagVariant.h4}>
+            <Typography tag="h2" variant="h4">
               {title}
             </Typography>
             <S.Links>

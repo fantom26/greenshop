@@ -6,7 +6,6 @@ import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Button, Container, Typography } from "@components/ui";
-import { ColorVariant, TagVariant } from "@utils/enums/components";
 
 import * as S from "./hero.styled";
 
@@ -40,8 +39,8 @@ export const Hero = () => {
                 <S.Slide>
                   <S.Info>
                     <S.Suptitle>{supTitle}</S.Suptitle>
-                    <S.Title tag="h1" variant={TagVariant.h1} dangerouslySetInnerHTML={{ __html: title }} uppercase />
-                    <Typography tag="p" variant={TagVariant.paragraph1} color={ColorVariant.grey}>
+                    <S.Title tag="h1" variant="h1" dangerouslySetInnerHTML={{ __html: title }} uppercase />
+                    <Typography tag="p" variant="paragraph1" color="grey">
                       {description}
                     </Typography>
                     <S.ButtonWrapper>
