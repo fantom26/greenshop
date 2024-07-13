@@ -108,7 +108,7 @@
     "newsLettersDesc": "Generalmente publicamos ofertas y desafíos en el boletín. Somos tu destino en línea para plantas de interior. Ofrecemos una amplia gama de plantas de interior y accesorios enviados directamente de nuestra (verde) casa a la tuya!",
     "social": "Redes Sociales",
     "accept": "Aceptamos",
-    "copyright": "© 2023 GreenShop. Todos los Derechos Reservados.",
+    "copyright": "© {{year}} GreenShop. Todos los Derechos Reservados.",
     "advantages": {
       "garden": {
         "title": "Cuidado del Jardín",
