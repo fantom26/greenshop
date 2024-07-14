@@ -47,6 +47,10 @@
   "forms": {
     "email": {
       "placeholder": "Enter your email address"
+    },
+    "searchPlant": {
+      "placeholder": "Search plant...",
+      "noOptions": "No matching plant"
     }
   },
   "btn": {

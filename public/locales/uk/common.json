@@ -47,6 +47,10 @@
   "forms": {
     "email": {
       "placeholder": "Введіть свою електронну адресу"
+    },
+    "searchPlant": {
+      "placeholder": "Пошук рослини...",
+      "noOptions": "Рослину не знайдено"
     }
   },
   "btn": {

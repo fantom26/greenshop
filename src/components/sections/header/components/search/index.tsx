@@ -10,6 +10,7 @@ import { ICONS, NEXT_PUBLIC_APP_URL } from "@/utils/constants";
 import * as S from "./search.styled";
 import { useProductsSearchQuery } from "@store/api";
 import { skipToken } from "@reduxjs/toolkit/query";
+import { useTranslation } from "next-i18next";
 
 const DropdownIndicator = (props: any) =>
   components.DropdownIndicator && (
@@ -122,14 +123,15 @@ const customStyles = {
 
 export const Search = () => {
   const [inputText, setInputText] = useState("");
-  const [searchTerm] = useDebounce(inputText, 300)
+  const [searchTerm] = useDebounce(inputText, 300);
+  const { t } = useTranslation("common");
   const {data, isFetching} = useProductsSearchQuery(searchTerm || skipToken)
 
   const noOptionsMessage = (obj: { inputValue: string }) => {
     if (obj.inputValue.trim().length === 0) {
       return null;
     }
-    return "No matching plant";
+    return t("forms.searchPlant.noOptions");
   };
 
   const handleInputChange = (inputText: string, meta: InputActionMeta) => {
@@ -147,11 +149,11 @@ export const Search = () => {
         DropdownIndicator
       }}
       instanceId={useId()}
-      placeholder="Search plant..."
+      placeholder={t("forms.searchPlant.placeholder")}
       isSearchable={true}
       styles={customStyles}
       formatOptionLabel={formatOptionLabel}
-      options={data}
+      options={inputText.trim() ? data : []}
       onInputChange={handleInputChange}
       isLoading={isFetching}
       filterOption={null}

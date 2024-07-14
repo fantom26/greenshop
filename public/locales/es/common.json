@@ -47,6 +47,10 @@
   "forms": {
     "email": {
       "placeholder": "Ingresa tu dirección de correo electrónico"
+    },
+    "searchPlant": {
+      "placeholder": "Buscar planta...",
+      "noOptions": "No hay ninguna planta coincidente"
     }
   },
   "btn": {
