@@ -20,8 +20,3 @@ export interface IProduct extends IProductBase {
   stars: number;
   reviews: IReview[];
 }
-
-export interface IProductSearchOption extends IProductBase {
-  value: string;
-  label: string;
-}

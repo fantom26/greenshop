@@ -1,15 +1,15 @@
-import { useId, useRef, useState } from "react";
+import { useId, useState } from "react";
 
 import Image from "next/image";
+import { useDebounce } from 'use-debounce';
 
-import debounce from "lodash.debounce";
 import Select, { InputActionMeta, components } from "react-select";
 
 import { ICONS, NEXT_PUBLIC_APP_URL } from "@/utils/constants";
-import { IProduct, IProductSearchOption } from "@/utils/declarations";
-import { ProductService } from "@services";
 
 import * as S from "./search.styled";
+import { useProductsSearchQuery } from "@store/api";
+import { skipToken } from "@reduxjs/toolkit/query";
 
 const DropdownIndicator = (props: any) =>
   components.DropdownIndicator && (
@@ -18,7 +18,7 @@ const DropdownIndicator = (props: any) =>
     </components.DropdownIndicator>
   );
 
-const formatOptionLabel = (option: IProductSearchOption, restFields: any) => {
+const formatOptionLabel = (option: any, restFields: any) => {
   const { poster, name, value: optionValue } = option;
   const { url, meta } = poster;
   const { selectValue } = restFields;
@@ -121,36 +121,9 @@ const customStyles = {
 };
 
 export const Search = () => {
-  const [inputText, setInputText] = useState<string>("");
-  const [plants, setPlants] = useState<IProductSearchOption[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-
-  const handleSearch = async (searchQuery: string) => {
-    if (searchQuery.trim().length === 0) {
-      setPlants([]);
-      return;
-    }
-
-    setIsLoading(true);
-
-    let plants: IProduct[] = [];
-    try {
-      plants = await ProductService.getAll({ q: searchQuery });
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setPlants(
-        plants.map((plant) => ({
-          ...plant,
-          label: plant.name,
-          value: plant.name
-        }))
-      );
-      setIsLoading(false);
-    }
-  };
-
-  const handleSearchDebounced = useRef(debounce((searchText) => handleSearch(searchText), 300)).current;
+  const [inputText, setInputText] = useState("");
+  const [searchTerm] = useDebounce(inputText, 300)
+  const {data, isFetching} = useProductsSearchQuery(searchTerm || skipToken)
 
   const noOptionsMessage = (obj: { inputValue: string }) => {
     if (obj.inputValue.trim().length === 0) {
@@ -162,8 +135,6 @@ export const Search = () => {
   const handleInputChange = (inputText: string, meta: InputActionMeta) => {
     if (meta.action !== "input-blur" && meta.action !== "menu-close") {
       setInputText(inputText);
-
-      handleSearchDebounced(inputText);
     }
   };
 
@@ -180,9 +151,9 @@ export const Search = () => {
       isSearchable={true}
       styles={customStyles}
       formatOptionLabel={formatOptionLabel}
-      options={plants}
+      options={data}
       onInputChange={handleInputChange}
-      isLoading={isLoading}
+      isLoading={isFetching}
       filterOption={null}
       noOptionsMessage={noOptionsMessage}
     />
