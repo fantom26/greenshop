@@ -28,7 +28,7 @@ export const ProductCard: FC<IProduct> = (props) => {
       <S.Product>
         {discountPercentage > 0 ? <S.Sale>{discountPercentage}% OFF</S.Sale> : null}
         <S.ImageWrapper>
-          <Image src={`${NEXT_PUBLIC_APP_URL}${url}`} width="250" height="250" alt={meta.alt} />
+          <Image src={`${NEXT_PUBLIC_APP_URL}${url}`} width="250" height="250" alt={meta.alt || "Product preview"} />
           <S.Controls>
             <S.Control onClick={() => increaseCartQuantity(transformProduct(props))}>
               {ICONS.cart}

@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-import { NextPageWithLayout, PageProps } from "@/utils/declarations";
+import { PageProps } from "@/utils/declarations";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { Breadcrumbs } from "@components/ui";
@@ -10,7 +10,7 @@ import { Cart } from "@pages";
 import { wrapper } from "@store";
 import { getPageInfo, getRunningQueriesThunk } from "@store/api";
 
-const CartPage: NextPageWithLayout<PageProps> = ({ meta, breadcrumbs }) => (
+const CartPage: PageProps = ({ meta, breadcrumbs }) => (
   <Page meta={meta}>
     <Breadcrumbs items={breadcrumbs} />
     <Cart />

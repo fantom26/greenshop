@@ -10,7 +10,7 @@ export interface TypographyProps extends HTMLAttributes<HTMLOrSVGElement> {
   variant: TypographyVariant;
   uppercase?: boolean;
   center?: boolean;
-  color: TypographyColors;
+  color?: TypographyColors;
   classNames?: string;
   children?: string;
 }

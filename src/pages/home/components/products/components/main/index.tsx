@@ -24,6 +24,28 @@ export const Main = () => {
 
   const { data, isFetching } = useProductsQuery({ ...query, _page: page, _limit: LIMIT });
 
+  let content;
+
+  if (data) {
+    if (data.products.length > 0) {
+      content = (
+        <S.List>
+          {data?.products?.map((product) => (
+            <ProductCard key={product._id} {...product} />
+          ))}
+        </S.List>
+      );
+    } else {
+      content = (
+        <Typography tag="h2" variant="h2">
+          {t("products.empty")}
+        </Typography>
+      );
+    }
+  } else if (isFetching) {
+    content = <Loader />;
+  }
+
   return (
     <S.Main>
       <S.Top>
@@ -34,25 +56,7 @@ export const Main = () => {
       <S.WrapperQueries>
         <Queries />
       </S.WrapperQueries>
-      <S.Content>
-        {isFetching ? (
-          <Loader />
-        ) : (
-          <>
-            {data?.products?.length > 0 ? (
-              <S.List>
-                {data?.products?.map((product) => (
-                  <ProductCard key={product._id} {...product} />
-                ))}
-              </S.List>
-            ) : (
-              <Typography tag="h2" variant="h2">
-                {t("products.empty")}
-              </Typography>
-            )}
-          </>
-        )}
-      </S.Content>
+      <S.Content>{content}</S.Content>
       {data?.links && (
         <S.Bottom>
           <Pagination

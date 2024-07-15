@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import { CART_LIST, LOADER_CLASSNAME } from "@/utils/constants";
 import { CartProvider } from "@/utils/contexts";
-import { ICartItem, NextPageWithLayout } from "@/utils/declarations";
+import { ICartItem } from "@/utils/declarations";
 import { getCookie } from "cookies-next";
 import { appWithTranslation } from "next-i18next";
 import NextApp, { AppContext } from "next/app";
@@ -16,7 +16,6 @@ import { makeStore } from "@store";
 import { GlobalStyles } from "@styles";
 
 interface AppProps extends NextAppProps {
-  Component: NextPageWithLayout;
   defaultCart?: ICartItem[];
 }
 
@@ -30,7 +29,6 @@ const Wrapper = styled.div`
 `;
 
 const App = ({ Component, pageProps, defaultCart = [] }: AppProps) => {
-  const getLayout = Component.getLayout || ((page) => page);
   const router = useRouter();
 
   useEffect(() => {
@@ -73,7 +71,9 @@ const App = ({ Component, pageProps, defaultCart = [] }: AppProps) => {
       <Provider store={makeStore()}>
         <CartProvider defaultCart={defaultCart}>
           <GlobalStyles />
-          <Wrapper>{getLayout(<Component {...pageProps} />)}</Wrapper>
+          <Wrapper>
+            <Component {...pageProps} />
+          </Wrapper>
         </CartProvider>
       </Provider>
     </>

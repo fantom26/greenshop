@@ -9,7 +9,6 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   placeholder?: string;
   helperText?: string;
   withLabel?: boolean;
-  borderRadius?: string;
   widthBtn?: ReactNode;
 }
 
@@ -18,23 +17,23 @@ export interface ControlledInputProps extends InputProps {
 }
 
 export const Input: FC<InputProps> = (props) => {
-  const { placeholder, error, helperText, withLabel, widthBtn, borderRadius, ...rest } = props;
+  const { placeholder, error, helperText, withLabel, widthBtn, ...rest } = props;
   const id = useId();
 
   return (
-    <S.Wrapper error={error}>
+    <S.Wrapper error={!!error}>
       {withLabel && <S.Label htmlFor={id}>{placeholder}</S.Label>}
       <S.InputWrapper widthBtn={widthBtn}>
-        <S.Input type="text" id={id} placeholder={withLabel ? "" : placeholder} borderRadius={borderRadius} {...rest} />
+        <S.Input type="text" id={id} placeholder={withLabel ? "" : placeholder} {...rest} />
         {widthBtn && widthBtn}
       </S.InputWrapper>
-      {helperText && <S.InputTextHelper error={error}>{helperText}</S.InputTextHelper>}
+      {helperText && <S.InputTextHelper error={!!error}>{helperText}</S.InputTextHelper>}
     </S.Wrapper>
   );
 };
 
 export const ControlledInput: FC<ControlledInputProps> = (props) => {
-  const { name, defaultValue = "", helperText = "", widthBtn = null, borderRadius = null, placeholder = "", withLabel = true, ...rest } = props;
+  const { name, defaultValue = "", helperText = "", widthBtn = null, placeholder = "", withLabel = true, ...rest } = props;
 
   const { control } = useFormContext();
 
@@ -49,7 +48,6 @@ export const ControlledInput: FC<ControlledInputProps> = (props) => {
           onChange={field.onChange}
           error={!!error}
           withLabel={withLabel}
-          borderRadius={borderRadius}
           widthBtn={widthBtn}
           helperText={error?.message || helperText}
           placeholder={placeholder}

@@ -4,25 +4,27 @@ import { useRouter } from "next/router";
 
 import * as S from "./queries.styled";
 
+// TODO rethink the logic for this component. In my view, I made here a lot of mistakes and unnecessary moves
 export const Queries = () => {
-  const { query, push, asPath } = useRouter();
+  const { query, push } = useRouter();
   const { t } = useTranslation("home");
   const entries = Object.entries(query);
 
   const formatQueries = () => {
-    if (asPath.includes("_gte") && asPath.includes("_lte")) {
-      const _gteValue = entries.find(([key]) => key.includes("_gte")).at(1);
-      const _lteValue = entries.find(([key]) => key.includes("_lte")).at(1);
+    const entriesMap = new Map(entries);
+    if (entriesMap.has("price_gte") && entriesMap.has("price_lte")) {
+      const _gteValue = entriesMap.get("price_gte");
+      const _lteValue = entriesMap.get("price_lte");
 
       //remove _gte and _lte parameters from object
-      const queries = entries.filter(([key]) => !key.includes("_gte") && !key.includes("_lte") && SORT_KEYS.includes(key)).map(([_, value]) => value);
+      const queries = entries.filter(([key]) => !key.includes("_gte") && !key.includes("_lte") && SORT_KEYS.includes(key)).map(([, value]) => value);
 
       queries.push(`$${_gteValue} - $${_lteValue}`);
 
       return queries;
     }
 
-    return entries.filter(([key]) => SORT_KEYS.includes(key)).map(([_, value]) => value);
+    return entries.filter(([key]) => SORT_KEYS.includes(key)).map(([, value]) => value);
   };
 
   const deleteParam = (param: string) => {
@@ -44,7 +46,7 @@ export const Queries = () => {
     push(
       {
         query: {
-          ...Object.fromEntries(entries.filter(([_, queryParam]) => !param.includes(queryParam as string)))
+          ...Object.fromEntries(entries.filter(([, queryParam]) => !param.includes(queryParam as string)))
         }
       },
       "",

@@ -1,12 +1,13 @@
-import { FC, useMemo } from "react";
+import { FC } from "react";
 
+import { IProduct } from "@/utils/declarations";
 import { useRouter } from "next/router";
 
 import { Typography } from "@components/ui";
-import { IProduct } from "@/utils/declarations";
 import { useProductsQuery } from "@store/api";
 
 import * as S from "./filter-list.styled";
+import { getSizeLetter } from "./helper";
 
 interface FilterProps {
   title: string;
@@ -14,73 +15,70 @@ interface FilterProps {
   queryName: string;
 }
 
-const getSizeLetter = (name: string) =>
-  name
-    .match(/\((\w+)\)/g)
-    .map((match) => match.substring(1, match.length - 1))
-    .join("");
-
 export const Filter: FC<FilterProps> = ({ title, items, queryName }) => {
   const router = useRouter();
 
-  const { data } = useProductsQuery();
+  const { data } = useProductsQuery({});
 
-  const optionsWithCount = useMemo(
-    () =>
-      items?.reduce((options, item) => {
-        const count = data?.products.filter((product) =>
-          queryName === "size" ? product[queryName].includes(getSizeLetter(item)) : product[queryName as keyof IProduct] === item
-        ).length;
-        return [...options, { name: item, count }];
-      }, []),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [data?.products, items]
-  );
+  let content = null;
 
-  const onClick = (filterOption: string) => {
-    if (queryName === "size") {
-      router.push(
-        {
-          query: {
-            ...router.query,
-            // eslint-disable-next-line camelcase
-            size_like: getSizeLetter(filterOption)
-          }
-        },
-        "",
-        { scroll: false }
-      );
-    } else {
-      router.push(
-        {
-          query: {
-            ...router.query,
-            [queryName]: filterOption
-          }
-        },
-        "",
-        { scroll: false }
-      );
-    }
-  };
+  if (data) {
+    const optionsWithCount = items.reduce<{ name: string; count: number }[]>((options, item) => {
+      const count = data.products.filter((product) =>
+        queryName === "size" ? product[queryName].includes(getSizeLetter(item)) : product[queryName as keyof IProduct] === item
+      ).length;
 
-  return (
-    <>
-      <Typography tag="h3" variant="h4">
-        {title}
-      </Typography>
-      <S.List>
-        {optionsWithCount?.map(({ name, count }, index) => (
-          <S.Item
-            key={index}
-            selected={queryName === "size" ? name.includes(`(${router.query.size_like})`) : router.query[queryName] === name}
-            onClick={() => onClick(name)}
-          >
-            <span>{name}</span>
-            <span>({count})</span>
-          </S.Item>
-        ))}
-      </S.List>
-    </>
-  );
+      options.push({ name: item, count });
+      return options;
+    }, []);
+
+    const onClick = (filterOption: string) => {
+      if (queryName === "size") {
+        router.push(
+          {
+            query: {
+              ...router.query,
+              // eslint-disable-next-line camelcase
+              size_like: getSizeLetter(filterOption)
+            }
+          },
+          "",
+          { scroll: false }
+        );
+      } else {
+        router.push(
+          {
+            query: {
+              ...router.query,
+              [queryName]: filterOption
+            }
+          },
+          "",
+          { scroll: false }
+        );
+      }
+    };
+
+    content = (
+      <>
+        <Typography tag="h3" variant="h4">
+          {title}
+        </Typography>
+        <S.List>
+          {optionsWithCount.map(({ name, count }, index) => (
+            <S.Item
+              key={index}
+              selected={queryName === "size" ? name.includes(`(${router.query.size_like})`) : router.query[queryName] === name}
+              onClick={() => onClick(name)}
+            >
+              <span>{name}</span>
+              <span>({count})</span>
+            </S.Item>
+          ))}
+        </S.List>
+      </>
+    );
+  }
+
+  return content;
 };

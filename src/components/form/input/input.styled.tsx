@@ -17,7 +17,7 @@ export const InputWrapper = styled.div<{ widthBtn: ReactNode }>`
   `}
 `;
 
-export const Input = styled.input<{ borderRadius: string }>`
+export const Input = styled.input`
   display: flex;
   align-items: center;
   width: 100%;
@@ -25,7 +25,7 @@ export const Input = styled.input<{ borderRadius: string }>`
   padding-right: 1.6rem;
   padding-left: 1.6rem;
   border: 0.1rem solid #eaeaea;
-  border-radius: ${({ borderRadius }) => (borderRadius ? borderRadius : "0.3rem")};
+  border-radius: "0.3rem";
   color: var(--clr-black);
   background-color: none;
 

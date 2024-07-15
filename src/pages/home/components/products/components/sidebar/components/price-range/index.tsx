@@ -11,10 +11,10 @@ import * as S from "./price-range.styled";
 
 export const PriceRange: FC<{ mobileHandler?: () => void }> = ({ mobileHandler }) => {
   const { t } = useTranslation("home");
-  const [prices, setPrices] = useState([]);
+  const [prices, setPrices] = useState<string[]>(["00.00", "00.00"]);
   const { push, query } = useRouter();
-  const { data } = useProductsQuery();
-  const rangeRef = useRef(null);
+  const { data } = useProductsQuery({});
+  const rangeRef = useRef<any | null>(null);
 
   const boundaryValues = useMemo(() => {
     const prices = data?.products.map((product) => product.price);
@@ -49,11 +49,7 @@ export const PriceRange: FC<{ mobileHandler?: () => void }> = ({ mobileHandler }
 
   useEffect(() => {
     if (!prices.length || !prices[1]) {
-      if (boundaryValues?.min) {
-        setPrices([`${boundaryValues?.min}.00`, `${boundaryValues?.max}.00`]);
-      } else {
-        setPrices([boundaryValues?.min, boundaryValues?.max]);
-      }
+      setPrices([`${boundaryValues?.min}.00`, `${boundaryValues?.max}.00`]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [boundaryValues]);
@@ -77,7 +73,7 @@ export const PriceRange: FC<{ mobileHandler?: () => void }> = ({ mobileHandler }
       </Typography>
       <S.SliderWrapper>
         <Nouislider
-          instanceRef={(instance) => {
+          instanceRef={(instance: any) => {
             if (instance && !rangeRef.current) {
               rangeRef.current = instance;
             }

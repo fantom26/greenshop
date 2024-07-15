@@ -86,7 +86,7 @@ export const Sort = () => {
         </S.Current>
         <S.Dropdown>
           {Object.entries(sort)
-            .filter(([_, sortBy]) => sortBy !== current)
+            .filter(([, sortBy]) => sortBy !== current)
             .map(([key, sortBy]) => (
               <S.Item key={key} onClick={() => onClick(key)}>
                 <span>{sortBy}</span>

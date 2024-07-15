@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-import { NextPageWithLayout, PageProps } from "@declarations";
+import { PageProps } from "@declarations";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { Page } from "@components/utils";
@@ -8,7 +8,7 @@ import { MainLayout } from "@layouts";
 import { Home } from "@pages";
 import { wrapper } from "@store";
 
-const HomePage: NextPageWithLayout<Omit<PageProps, "breadcrumbs">> = ({ meta }) => (
+const HomePage: Omit<PageProps, "breadcrumbs"> = ({ meta }) => (
   <Page meta={meta}>
     <Home />
   </Page>
