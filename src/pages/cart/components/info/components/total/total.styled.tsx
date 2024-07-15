@@ -47,7 +47,7 @@ export const Item = styled.li<{ titleBold?: boolean }>`
     `
     margin-top: 2rem;
     p:first-child {
-      font-weight: 700;
+      font-weight: var(--font-weight-bold);
     }
 
     ${Typography} {

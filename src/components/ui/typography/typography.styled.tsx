@@ -6,31 +6,31 @@ import { TypographyColors, TypographyProps, TypographyVariant } from ".";
 
 const variants: StyledVariants<TypographyVariant> = {
   h1: css`
-    font-weight: 900;
+    font-weight: var(--font-weight-black);
     ${AdaptiveFont({ pcSize: 70, mobSize: 40 })};
 
     line-height: 100%;
   `,
   h2: css`
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     ${AdaptiveFont({ pcSize: 30, mobSize: 24 })};
 
     line-height: 85%;
   `,
   h3: css`
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     ${AdaptiveFont({ pcSize: 20, mobSize: 18 })};
 
     line-height: 130%;
   `,
   h4: css`
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     ${AdaptiveFont({ pcSize: 18, mobSize: 16 })};
 
     line-height: 90%;
   `,
   paragraph1: css`
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     font-size: 1.4rem;
     line-height: 155%;
   `

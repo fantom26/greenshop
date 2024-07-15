@@ -53,7 +53,7 @@ export const Product = styled.li`
 
 export const Name = styled.h3`
   margin-top: 1rem;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
 `;
 
 export const Prices = styled.div`
@@ -65,7 +65,7 @@ export const Prices = styled.div`
 
 export const Price = styled.p`
   color: var(--clr-accent-400);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   font-size: 1.8rem;
   line-height: 90%;
 `;
@@ -85,7 +85,7 @@ export const Sale = styled.div`
   z-index: 2;
   padding: 0.8rem;
   color: var(--clr-light);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   background-color: var(--clr-accent-400);
 `;
 
@@ -132,7 +132,7 @@ export const Quantity = styled.span<{ shown: boolean }>`
   height: 1.8rem;
   border-radius: 50%;
   color: var(--clr-light);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-size: 1rem;
   background-color: var(--clr-accent-400);
   visibility: ${(props) => (props.shown ? "visible" : "hidden")};

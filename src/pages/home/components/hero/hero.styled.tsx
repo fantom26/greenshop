@@ -22,7 +22,7 @@ export const Info = styled.div`
 
 export const Suptitle = styled.p`
   margin-bottom: 1rem;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-size: 1.4rem;
   line-height: 115%;
   letter-spacing: 0.1em;

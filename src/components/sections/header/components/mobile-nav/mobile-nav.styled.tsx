@@ -35,7 +35,7 @@ export const List = styled(animated.ul)`
 `;
 
 export const Link = styled.a<{ pathname: string }>`
-  font-weight: ${({ href, pathname }) => (href === pathname ? 700 : 400)};
+  font-weight: ${({ href, pathname }) => (href === pathname ? "var(--font-weight-bold)" : "var(--font-weight-regular)")};
   font-size: 3.4rem;
 `;
 

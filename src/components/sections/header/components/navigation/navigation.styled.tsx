@@ -32,7 +32,7 @@ export const Link = styled.a<{ pathname: string }>`
   display: flex;
   align-items: center;
   align-self: stretch;
-  font-weight: ${({ href, pathname }) => (href === pathname ? 700 : 400)};
+  font-weight: ${({ href, pathname }) => (href === pathname ? 700 : var(--font-weight-regular))};
 
   &::before {
     position: absolute;

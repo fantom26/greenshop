@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Header = styled.li`
   color: var(--clr-dark);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   line-height: 100%;
   text-align: left;
   padding-block: 1rem;
@@ -133,7 +133,7 @@ export const Control = styled.button`
 
 export const Price = styled.p`
   color: var(--clr-grey);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 `;
 
 export const Count = styled.p`
@@ -143,7 +143,7 @@ export const Count = styled.p`
 
 export const Name = styled(Link)`
   color: var(--clr-dark);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-size: 1.6rem;
   word-wrap: break-all;
 `;

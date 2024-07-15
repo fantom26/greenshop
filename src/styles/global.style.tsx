@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
 
   :root {
     --font-family: "CeraPro", sans-serif;
-    --font-weight: 400;
+    --font-weight: var(--font-weight-regular);
     --content-width: 120rem;
     --container-offset: 1.5rem;
     --container-width: calc(
@@ -34,6 +34,11 @@ export const GlobalStyles = createGlobalStyle`
     --clr-grey: #727272;
     --clr-dark: #3d3d3d;
     --clr-ui-error: #ff3549;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
   }
 
   body {

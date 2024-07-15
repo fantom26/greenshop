@@ -42,7 +42,7 @@ export const Quantity = styled.span<{ shown: boolean }>`
   border: 0.2rem solid var(--clr-light);
   border-radius: 50%;
   color: var(--clr-light);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-size: 1rem;
   background-color: var(--clr-accent-400);
   visibility: ${({ shown }) => (shown ? "visible" : "hidden")};

@@ -19,6 +19,6 @@ export const List = styled.ul`
   align-items: center;
 
   ${Item}:first-child a {
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
   }
 `;
