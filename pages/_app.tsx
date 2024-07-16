@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { ReactElement, ReactNode, useEffect } from "react";
 
 import { CART_LIST, LOADER_CLASSNAME } from "@/utils/constants";
 import { CartProvider } from "@/utils/contexts";
@@ -9,13 +9,20 @@ import NextApp, { AppContext } from "next/app";
 import type { AppProps as NextAppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { NextPage } from "next/types";
 import { Provider } from "react-redux";
 import styled from "styled-components";
 
 import { makeStore } from "@store";
 import { GlobalStyles } from "@styles";
 
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
 interface AppProps extends NextAppProps {
+  Component: NextPageWithLayout;
   defaultCart?: ICartItem[];
 }
 
@@ -29,6 +36,7 @@ const Wrapper = styled.div`
 `;
 
 const App = ({ Component, pageProps, defaultCart = [] }: AppProps) => {
+  const getLayout = Component.getLayout || ((page) => page);
   const router = useRouter();
 
   useEffect(() => {
@@ -71,9 +79,7 @@ const App = ({ Component, pageProps, defaultCart = [] }: AppProps) => {
       <Provider store={makeStore()}>
         <CartProvider defaultCart={defaultCart}>
           <GlobalStyles />
-          <Wrapper>
-            <Component {...pageProps} />
-          </Wrapper>
+          <Wrapper>{getLayout(<Component {...pageProps} />)}</Wrapper>
         </CartProvider>
       </Provider>
     </>
