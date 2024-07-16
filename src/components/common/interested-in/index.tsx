@@ -3,7 +3,7 @@ import { FC } from "react";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { ProductCard } from "@components/cards";
+import { ProductCard } from "@components/common";
 import { Container, Typography } from "@components/ui";
 import { useInterestedInQuery } from "@store/api";
 

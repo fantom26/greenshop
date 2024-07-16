@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 
-import { Footer, Header } from "@components/sections";
+import { Footer, Header } from "@components/common";
 
 export const MainLayout: FC<{ children: ReactNode }> = ({ children }) => (
   <>

@@ -7,3 +7,5 @@ export * from "./loader";
 export * from "./breadcrumbs";
 export * from "./global-loader";
 export * from "./lang";
+export * from "./pagination";
+export * from "./drawer";

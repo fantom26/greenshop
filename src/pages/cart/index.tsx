@@ -1,6 +1,6 @@
 import { useTranslation } from "next-i18next";
 
-import { InterestedIn } from "@components/sections";
+import { InterestedIn } from "@components/common";
 
 import { Info } from "./components/info";
 
