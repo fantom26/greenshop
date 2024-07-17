@@ -1,9 +1,8 @@
 import { FC } from "react";
 
-import { ICONS } from "@/utils/constants";
-import { useTranslation } from "next-i18next";
-
+import { ICONS } from "@/shared/svgs";
 import { Typography } from "@/shared/ui";
+import { useTranslation } from "next-i18next";
 
 import * as S from "./socials.styled";
 

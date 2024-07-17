@@ -1,11 +1,11 @@
 import { FC } from "react";
 
-import { ICONS, NEXT_PUBLIC_APP_URL } from "@/utils/constants";
+import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
+import { ICONS } from "@/shared/svgs";
+import { Typography } from "@/shared/ui";
 import { IArticle } from "@/utils/declarations";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
-
-import { Typography } from "@/shared/ui";
 
 import * as S from "./article.styled";
 

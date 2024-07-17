@@ -1,7 +1,8 @@
 import { useId, useState } from "react";
 
+import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
+import { ICONS } from "@/shared/svgs";
 import { useProductsSearchQuery } from "@/store/api";
-import { ICONS, NEXT_PUBLIC_APP_URL } from "@/utils/constants";
 import { skipToken } from "@reduxjs/toolkit/query";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";

@@ -42,8 +42,6 @@
       "@/managers/*": ["managers/*"],
       "@/shared/*": ["shared/*"],
       "@/widgets/*": ["widgets/*"],
-      "@/styles": ["styles/index"],
-      "@/styles/*": ["styles/*"],
       "@/utils": ["utils/index"],
       "@/utils/*": ["utils/*"]
     },

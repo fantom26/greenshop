@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-import { Home } from "@/pages";
+import { Home } from "@/pages/home";
 import { wrapper } from "@/store";
 import { PageProps } from "@/utils/declarations";
 import { MainLayout, Page } from "@/widgets/layouts";

@@ -1,12 +1,10 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { createApi } from "@reduxjs/toolkit/query/react";
 
-import { NEXT_PUBLIC_API_URL } from "@/utils/constants";
+import { baseQuery } from "./fetch";
 
 export const categoriesApi = createApi({
   reducerPath: "categoriesApi",
-  baseQuery: fetchBaseQuery({
-    baseUrl: NEXT_PUBLIC_API_URL
-  }),
+  baseQuery,
   endpoints: (builder) => ({
     categories: builder.query<string[], void>({
       query: () => "/categories"

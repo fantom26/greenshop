@@ -1,13 +1,11 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
-import { NEXT_PUBLIC_API_URL } from "@/utils/constants";
 import { IArticle } from "@/utils/declarations";
+import { createApi } from "@reduxjs/toolkit/query/react";
+
+import { baseQuery } from "./fetch";
 
 export const articlesApi = createApi({
   reducerPath: "articlesApi",
-  baseQuery: fetchBaseQuery({
-    baseUrl: NEXT_PUBLIC_API_URL
-  }),
+  baseQuery,
   endpoints: (builder) => ({
     articles: builder.query<IArticle[], void>({
       query: () => "/articles"

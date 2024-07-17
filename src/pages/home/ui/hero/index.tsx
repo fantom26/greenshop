@@ -1,11 +1,10 @@
-import { NEXT_PUBLIC_APP_URL } from "@/utils/constants";
+import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
+import { Button, Container, Typography } from "@/shared/ui";
 import { IFile } from "@/utils/declarations";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-import { Button, Container, Typography } from "@/shared/ui";
 
 import * as S from "./hero.styled";
 

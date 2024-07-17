@@ -1,8 +1,7 @@
-import { ICONS } from "@/utils/constants";
+import { ICONS } from "@/shared/svgs";
+import { Logo, Typography } from "@/shared/ui";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
-
-import { Logo, Typography } from "@/shared/ui";
 
 import * as S from "./contacts.styled";
 

@@ -1,7 +1,7 @@
 import { ReactElement, ReactNode, useEffect } from "react";
 
 import { Providers } from "@/app/providers";
-import { GlobalStyles } from "@/styles";
+import { GlobalStyles } from "@/app/styles";
 import { CART_LIST, LOADER_CLASSNAME } from "@/utils/constants";
 import { ICartItem } from "@/utils/declarations";
 import { getCookie } from "cookies-next";

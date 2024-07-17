@@ -1,14 +1,14 @@
 import { FC, useMemo, useState } from "react";
 
-import { ICONS, NEXT_PUBLIC_APP_URL } from "@/utils/constants";
+import { useCart } from "@/hooks";
+import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
+import { ICONS } from "@/shared/svgs";
 import { IProduct } from "@/utils/declarations";
 import { transformProduct } from "@/utils/helpers";
 import FsLightbox from "fslightbox-react";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import Link from "next/link";
-
-import { useCart } from "@/hooks";
 
 import * as S from "./product.styled";
 

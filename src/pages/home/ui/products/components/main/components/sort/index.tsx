@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-import { FILTER_KEYS, ICONS, SORT_KEYS } from "@/utils/constants";
+import { ICONS } from "@/shared/svgs";
+import { Typography } from "@/shared/ui";
+import { FILTER_KEYS, SORT_KEYS } from "@/utils/constants";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
-
-import { Typography } from "@/shared/ui";
 
 import * as S from "./sort.styled";
 

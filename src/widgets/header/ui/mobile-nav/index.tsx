@@ -1,7 +1,7 @@
 import { FC } from "react";
 
+import { ICONS } from "@/shared/svgs";
 import { Button, Drawer } from "@/shared/ui";
-import { ICONS } from "@/utils/constants";
 import { animated, useTransition } from "@react-spring/web";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";

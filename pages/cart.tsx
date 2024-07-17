@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-import { Cart } from "@/pages";
+import { Cart } from "@/pages/cart";
 import { Breadcrumbs } from "@/shared/ui";
 import { wrapper } from "@/store";
 import { getPageInfo, getRunningQueriesThunk } from "@/store/api";

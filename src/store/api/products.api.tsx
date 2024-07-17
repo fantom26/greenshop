@@ -1,6 +1,7 @@
-import { NEXT_PUBLIC_API_URL } from "@/utils/constants";
 import { IProduct } from "@/utils/declarations";
-import { FetchBaseQueryMeta, createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { FetchBaseQueryMeta, createApi } from "@reduxjs/toolkit/query/react";
+
+import { baseQuery } from "./fetch";
 
 interface IProductsParams {
   _limit: number;
@@ -9,9 +10,7 @@ interface IProductsParams {
 
 export const productsApi = createApi({
   reducerPath: "productsApi",
-  baseQuery: fetchBaseQuery({
-    baseUrl: NEXT_PUBLIC_API_URL
-  }),
+  baseQuery,
   endpoints: (builder) => ({
     products: builder.query<{ products: IProduct[]; links: string; totalCount: number }, Partial<IProductsParams>>({
       query: (params) => ({

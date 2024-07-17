@@ -1,14 +1,12 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { IPage } from "@/utils/declarations";
+import { createApi } from "@reduxjs/toolkit/query/react";
 import { HYDRATE } from "next-redux-wrapper";
 
-import { NEXT_PUBLIC_API_URL } from "@/utils/constants";
-import { IPage } from "@/utils/declarations";
+import { baseQuery } from "./fetch";
 
 export const pagesApi = createApi({
   reducerPath: "pagesApi",
-  baseQuery: fetchBaseQuery({
-    baseUrl: NEXT_PUBLIC_API_URL
-  }),
+  baseQuery,
   extractRehydrationInfo(action, { reducerPath }) {
     if (action.type === HYDRATE) {
       return action.payload[reducerPath];
