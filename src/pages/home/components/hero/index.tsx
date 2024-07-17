@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Button, Container, Typography } from "@components/ui";
+import { Button, Container, Typography } from "@/shared/ui";
 
 import * as S from "./hero.styled";
 

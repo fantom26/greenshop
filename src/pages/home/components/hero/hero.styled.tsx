@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Typography } from "@components/ui/typography/typography.styled";
+import { Typography } from "@/shared/ui/typography/typography.styled";
 
 export const Hero = styled.section`
   padding-top: 3rem;

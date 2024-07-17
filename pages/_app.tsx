@@ -1,7 +1,8 @@
 import { ReactElement, ReactNode, useEffect } from "react";
 
+import { Providers } from "@/app/providers";
+import { GlobalStyles } from "@/styles";
 import { CART_LIST, LOADER_CLASSNAME } from "@/utils/constants";
-import { CartProvider } from "@/utils/contexts";
 import { ICartItem } from "@/utils/declarations";
 import { getCookie } from "cookies-next";
 import { appWithTranslation } from "next-i18next";
@@ -10,11 +11,7 @@ import type { AppProps as NextAppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { NextPage } from "next/types";
-import { Provider } from "react-redux";
 import styled from "styled-components";
-
-import { makeStore } from "@store";
-import { GlobalStyles } from "@styles";
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -76,12 +73,10 @@ const App = ({ Component, pageProps, defaultCart = [] }: AppProps) => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Provider store={makeStore()}>
-        <CartProvider defaultCart={defaultCart}>
-          <GlobalStyles />
-          <Wrapper>{getLayout(<Component {...pageProps} />)}</Wrapper>
-        </CartProvider>
-      </Provider>
+      <Providers defaultCart={defaultCart}>
+        <GlobalStyles />
+        <Wrapper>{getLayout(<Component {...pageProps} />)}</Wrapper>
+      </Providers>
     </>
   );
 };

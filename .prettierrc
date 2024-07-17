@@ -2,7 +2,7 @@
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "trailingComma": "none",
   "printWidth": 160,
-  "importOrder": ["^react(/.*)?$", "<THIRD_PARTY_MODULES>", "^(@lib|@api|@pages|@layouts|@components|@store|@hooks|@utils|@styles)(/.*|$)", "^[./|~/]"],
+  "importOrder": ["^react(/.*)?$", "<THIRD_PARTY_MODULES>", "^(@api|@pages|@widgets|@shared|@store|@hooks|@utils|@styles)(/.*|$)", "^[./|~/]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true
 }

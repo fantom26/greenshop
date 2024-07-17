@@ -5,7 +5,7 @@ import { IArticle } from "@/utils/declarations";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 
-import { Typography } from "@components/ui";
+import { Typography } from "@/shared/ui";
 
 import * as S from "./article.styled";
 

@@ -1,12 +1,11 @@
 import { useEffect } from "react";
 
+import { useCart } from "@/hooks";
+import { Typography } from "@/shared/ui";
 import { ICONS, NEXT_PUBLIC_APP_URL } from "@/utils/constants";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { useRouter } from "next/router";
-
-import { Typography } from "@components/ui";
-import { useCart } from "@hooks";
 
 import * as S from "./products.styled";
 
@@ -36,7 +35,13 @@ export const Products = () => {
           <S.Item key={item._id}>
             <S.Wrapper>
               <S.Poster href={`/product/${item._id}`}>
-                <Image src={`${NEXT_PUBLIC_APP_URL}/${item.poster.url}`} width="70" height="70" alt={item.poster.meta?.alt} title={item.poster.meta?.title} />
+                <Image
+                  src={`${NEXT_PUBLIC_APP_URL}/${item.poster.url}`}
+                  width="70"
+                  height="70"
+                  alt={item.poster.meta?.alt || "Product poster"}
+                  title={item.poster.meta?.title}
+                />
               </S.Poster>
               <div>
                 <S.Name href={`/product/${item._id}`}>{item.name}</S.Name>

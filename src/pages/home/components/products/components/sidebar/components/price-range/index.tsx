@@ -4,8 +4,8 @@ import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import Nouislider from "nouislider-react";
 
-import { Button, Typography } from "@components/ui";
-import { useProductsQuery } from "@store/api";
+import { Button, Typography } from "@/shared/ui";
+import { useProductsQuery } from "@/store/api";
 
 import * as S from "./price-range.styled";
 

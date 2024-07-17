@@ -1,4 +1,4 @@
-import { Container } from "@components/ui";
+import { Container } from "@/shared/ui";
 
 import { Main } from "./components/main";
 import { Sidebar } from "./components/sidebar";

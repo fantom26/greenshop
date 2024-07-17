@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Typography } from "@components/ui/typography/typography.styled";
+import { Typography } from "@/shared/ui/typography/typography.styled";
 
 export const Blog = styled.section`
   padding-top: 14rem;

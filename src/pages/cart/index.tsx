@@ -1,6 +1,6 @@
+import { InterestedIn } from "@/widgets/interested-in";
 import { useTranslation } from "next-i18next";
-
-import { InterestedIn } from "@components/common";
+import { ErrorBoundary } from "react-error-boundary";
 
 import { Info } from "./components/info";
 
@@ -8,8 +8,12 @@ const Cart = () => {
   const { t } = useTranslation("common");
   return (
     <>
-      <Info />
-      <InterestedIn title={t("interestedIn")} />
+      <ErrorBoundary fallback={<div>Something went wrong</div>}>
+        <Info />
+      </ErrorBoundary>
+      <ErrorBoundary fallback={<div>Something went wrong</div>}>
+        <InterestedIn title={t("interestedIn")} />
+      </ErrorBoundary>
     </>
   );
 };

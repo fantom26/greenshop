@@ -4,7 +4,7 @@ import { FILTER_KEYS, ICONS, SORT_KEYS } from "@/utils/constants";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 
-import { Typography } from "@components/ui";
+import { Typography } from "@/shared/ui";
 
 import * as S from "./sort.styled";
 

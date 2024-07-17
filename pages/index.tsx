@@ -1,14 +1,12 @@
 import { ReactElement } from "react";
 
-import { PageProps } from "@declarations";
+import { Home } from "@/pages";
+import { wrapper } from "@/store";
+import { PageProps } from "@/utils/declarations";
+import { MainLayout, Page } from "@/widgets/layouts";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import { Page } from "@components/utils";
-import { MainLayout } from "@layouts";
-import { Home } from "@pages";
-import { wrapper } from "@store";
-
-const HomePage: Omit<PageProps, "breadcrumbs"> = ({ meta }) => (
+const HomePage = ({ meta }: Omit<PageProps, "breadcrumbs">) => (
   <Page meta={meta}>
     <Home />
   </Page>
@@ -17,7 +15,7 @@ const HomePage: Omit<PageProps, "breadcrumbs"> = ({ meta }) => (
 HomePage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 
 export const getServerSideProps = wrapper.getServerSideProps(() => async ({ locale }) => {
-  const translations = await serverSideTranslations(locale, ["common", "footer", "home", "validation"]);
+  const translations = await serverSideTranslations(locale as string, ["common", "footer", "home", "validation"]);
 
   return {
     props: {

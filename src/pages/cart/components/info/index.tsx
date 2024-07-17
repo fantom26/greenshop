@@ -1,4 +1,4 @@
-import { Container } from "@components/ui";
+import { Container } from "@/shared/ui";
 
 import { Products, Total } from "./components";
 import * as S from "./info.styled";

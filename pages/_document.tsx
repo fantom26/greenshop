@@ -1,15 +1,11 @@
+import { GlobalLoader, loaderStyles } from "@/shared/ui/global-loader";
 import { Head, Html, Main, NextScript } from "next/document";
-
-import { GlobalLoader } from "@/components/ui";
-import { loaderStyles } from "@/components/ui/global-loader/global-loader.styled";
 
 const Document = () => (
   <Html lang="en">
     <Head>
       <link rel="preload" href="/fonts/CeraPro-Black.woff2" as="font" type="font/woff2" crossOrigin="" />
       <link rel="preload" href="/fonts/CeraPro-Bold.woff2" as="font" type="font/woff2" crossOrigin="" />
-      <link rel="preload" href="/fonts/CeraPro-Light.woff2" as="font" type="font/woff2" crossOrigin="" />
-      <link rel="preload" href="/fonts/CeraPro-Thin.woff2" as="font" type="font/woff2" crossOrigin="" />
       <link rel="preload" href="/fonts/CeraPro-Medium.woff2" as="font" type="font/woff2" crossOrigin="" />
       <link rel="preload" href="/fonts/CeraPro-Regular.woff2" as="font" type="font/woff2" crossOrigin="" />
       <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />

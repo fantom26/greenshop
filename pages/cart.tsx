@@ -1,16 +1,14 @@
 import { ReactElement } from "react";
 
+import { Cart } from "@/pages";
+import { Breadcrumbs } from "@/shared/ui";
+import { wrapper } from "@/store";
+import { getPageInfo, getRunningQueriesThunk } from "@/store/api";
 import { PageProps } from "@/utils/declarations";
+import { MainLayout, Page } from "@/widgets/layouts";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import { Breadcrumbs } from "@components/ui";
-import { Page } from "@components/utils";
-import { MainLayout } from "@layouts";
-import { Cart } from "@pages";
-import { wrapper } from "@store";
-import { getPageInfo, getRunningQueriesThunk } from "@store/api";
-
-const CartPage: PageProps = ({ meta, breadcrumbs }) => (
+const CartPage = ({ meta, breadcrumbs }: PageProps) => (
   <Page meta={meta}>
     <Breadcrumbs items={breadcrumbs} />
     <Cart />
@@ -27,7 +25,7 @@ export const getServerSideProps = wrapper.getServerSideProps((store) => async ({
   const [homeData] = home.data as any;
   const [cartData] = cart.data as any;
 
-  const translations = await serverSideTranslations(locale, ["common", "footer", "cart", "validation"]);
+  const translations = await serverSideTranslations(locale as string, ["common", "footer", "cart", "validation"]);
 
   return {
     props: {

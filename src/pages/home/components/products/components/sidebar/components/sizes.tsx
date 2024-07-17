@@ -1,7 +1,7 @@
+import { Filter } from "@/widgets/filter-list";
 import { useTranslation } from "next-i18next";
 
-import { Filter } from "@components/common";
-import { useSizeQuery } from "@store/api";
+import { useSizeQuery } from "@/store/api";
 
 export const Sizes = () => {
   const { t } = useTranslation("home");
