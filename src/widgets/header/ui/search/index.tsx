@@ -5,11 +5,11 @@ import { ICONS } from "@/shared/svgs";
 import { useProductsSearchQuery } from "@/store/api";
 import { skipToken } from "@reduxjs/toolkit/query";
 import { useTranslation } from "next-i18next";
-import Image from "next/image";
 import Select, { InputActionMeta, components } from "react-select";
 import { useDebounce } from "use-debounce";
 
 import * as S from "./search.styled";
+import { CustomImage } from "@/shared/ui";
 
 const DropdownIndicator = (props: any) =>
   components.DropdownIndicator && (
@@ -53,7 +53,7 @@ const formatOptionLabel = (option: any, restFields: any) => {
       }}
     >
       <div>
-        <Image src={`${NEXT_PUBLIC_APP_URL}${url}`} alt={meta.alt} width={40} height={40} loading="lazy" />
+        <CustomImage src={`${NEXT_PUBLIC_APP_URL}${url}`} alt={meta.alt} width={40} height={40} loading="lazy" />
       </div>
       <div
         style={{

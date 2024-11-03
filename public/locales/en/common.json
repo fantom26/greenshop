@@ -55,5 +55,6 @@
   },
   "btn": {
     "join": "Join"
-  }
+  },
+  "defaultAlt": "Description text for the image"
 }

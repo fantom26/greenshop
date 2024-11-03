@@ -1,8 +1,7 @@
 import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
-import { Button, Container, Typography } from "@/shared/ui";
+import { Button, Container, CustomImage, Typography } from "@/shared/ui";
 import { IFile } from "@/utils/declarations";
 import { useTranslation } from "next-i18next";
-import Image from "next/image";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -47,7 +46,7 @@ export const Hero = () => {
                     </S.ButtonWrapper>
                   </S.Info>
                   <S.ImageWrapper>
-                    <Image src={`${NEXT_PUBLIC_APP_URL}${poster.url}`} width="518" height="518" alt={poster.meta.alt} />
+                    <CustomImage src={`${NEXT_PUBLIC_APP_URL}${poster.url}`} width="518" height="518" alt={poster.meta.alt} />
                   </S.ImageWrapper>
                 </S.Slide>
               </SwiperSlide>

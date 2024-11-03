@@ -15,3 +15,4 @@ export * from "./textarea";
 export * from "./select";
 export * from "./phone";
 export * from "./product-card";
+export * from "./image";

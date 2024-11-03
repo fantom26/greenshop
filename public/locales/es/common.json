@@ -55,5 +55,6 @@
   },
   "btn": {
     "join": "Unirse"
-  }
+  },
+  "defaultAlt": "Texto descriptivo para la imagen"
 }

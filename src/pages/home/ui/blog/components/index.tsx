@@ -2,10 +2,9 @@ import { FC } from "react";
 
 import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
 import { ICONS } from "@/shared/svgs";
-import { Typography } from "@/shared/ui";
+import { CustomImage, Typography } from "@/shared/ui";
 import { IArticle } from "@/utils/declarations";
 import { useTranslation } from "next-i18next";
-import Image from "next/image";
 
 import * as S from "./article.styled";
 
@@ -18,7 +17,7 @@ export const ArticleCard: FC<IArticle> = (props) => {
   return (
     <li>
       <S.Image>
-        <Image src={`${NEXT_PUBLIC_APP_URL}${url}`} width="270" height="195" alt={meta.alt ?? "Default alt text"} quality={85} />
+        <CustomImage src={`${NEXT_PUBLIC_APP_URL}${url}`} width="270" height="195" alt={meta.alt} quality={85} />
       </S.Image>
       <S.ArticleWrapper>
         <S.Info>
