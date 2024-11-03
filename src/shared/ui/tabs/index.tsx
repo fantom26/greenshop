@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 
 import { animated, easings, useSpring, useTransition } from "react-spring";
 
-import { Tab } from "@/hooks";
-
 import * as S from "./tabs.styled";
+
+export type Tab = { label: string; id: string; children?: ReactNode };
 
 type Props = {
   selectedTabIndex: number;
