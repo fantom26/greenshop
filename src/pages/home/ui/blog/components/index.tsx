@@ -14,10 +14,11 @@ export const ArticleCard: FC<IArticle> = (props) => {
   const { url, meta } = poster;
 
   const { t } = useTranslation("home");
+
   return (
     <li>
       <S.Image>
-        <Image src={`${NEXT_PUBLIC_APP_URL}${url}`} width="270" height="195" alt={meta.alt} quality={85} />
+        <Image src={`${NEXT_PUBLIC_APP_URL}${url}`} width="270" height="195" alt={meta.alt ?? "Default alt text"} quality={85} />
       </S.Image>
       <S.ArticleWrapper>
         <S.Info>
