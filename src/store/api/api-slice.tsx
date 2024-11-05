@@ -1,5 +1,5 @@
 import { IArticle, IPage, IProduct } from "@/utils/declarations";
-import { createApi } from "@reduxjs/toolkit/query/react";
+import { createApi, FetchBaseQueryMeta } from "@reduxjs/toolkit/query/react";
 import { HYDRATE } from "next-redux-wrapper";
 
 import { baseQuery } from "./fetch";
@@ -64,7 +64,6 @@ export const apiSlice = createApi({
 export const {
   useArticlesQuery,
   useCategoriesQuery,
-  useGetPageInfoQuery,
   useProductsQuery,
   useProductsSearchQuery,
   useInterestedInQuery,

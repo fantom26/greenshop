@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { IBreadcrumb } from "@/utils/declarations";
 
-import { Container } from "../container";
+import { Container } from "@/shared/ui";
 import * as S from "./breadcrumbs.styled";
 import { BreadcrumbItem } from "./item";
 
