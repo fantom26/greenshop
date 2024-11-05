@@ -14,15 +14,13 @@ const initialState: CartContextProps = {
   increaseCartQuantity: () => {},
   decreaseCartQuantity: () => {},
   removeFromCart: () => {},
-  countPriceByQuantity: () => {},
+  countPriceByQuantity: () => 0,
   resetCart: () => {}
 };
 
 export const CartContext = createContext(initialState);
 
-export const CartProvider: FC<CartProviderProps> = (props) => {
-  const { defaultCart = [], children } = props;
-
+export const CartProvider: FC<CartProviderProps> = ({ defaultCart = [], children }) => {
   const [cartItems, setCartItems] = useState<ICartItem[]>(defaultCart);
 
   const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0);
@@ -66,7 +64,7 @@ export const CartProvider: FC<CartProviderProps> = (props) => {
   const countPriceByQuantity = (id: string) => {
     const currentItem = cartItems.find((item) => item._id === id);
 
-    return currentItem.price * currentItem.quantity;
+    return currentItem ? currentItem.price * currentItem.quantity : 0;
   };
 
   const removeFromCart = (id: string) => setCartItems((currItems) => currItems.filter((item) => item._id !== id));

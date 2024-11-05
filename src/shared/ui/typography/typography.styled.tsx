@@ -56,7 +56,7 @@ export const Typography = styled.div<TypographyProps>`
   `}
 
   ${({ variant }) => variants[variant]}
-  ${({ color }) => colors[color]}
+  ${({ color = "black" }) => colors[color]}
 
   ${({ center }) =>
     center &&

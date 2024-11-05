@@ -8,7 +8,7 @@ export interface ICartItem {
   name: string;
   sku: string;
   _id: string;
-  quantity?: number;
+  quantity: number;
 }
 
 export interface CartProviderProps {

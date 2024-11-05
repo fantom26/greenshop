@@ -35,7 +35,6 @@ export const EmailForm = () => {
         <Form.Input
           name="email"
           withLabel={false}
-          borderRadius="0.6rem 0 0 0.6rem"
           placeholder={t("common:forms.email.placeholder")}
           widthBtn={
             <S.Button variant="solid" isLoading={isSubmitting}>
