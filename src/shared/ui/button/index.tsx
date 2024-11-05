@@ -6,18 +6,15 @@ export type BtnVariant = "solid" | "outline";
 
 export interface ButtonProps extends HTMLAttributes<HTMLElement> {
   variant: BtnVariant;
-  path: string;
-  uppercase: boolean;
-  isLoading: boolean;
-  endIcon: ReactNode;
-  startIcon: ReactNode;
+  path?: string;
+  uppercase?: boolean;
+  isLoading?: boolean;
+  endIcon?: ReactNode;
+  startIcon?: ReactNode;
   children: ReactNode;
-  target: string;
 }
 
-export const Button: FC<Partial<ButtonProps>> = (props) => {
-  const { variant = "outline", endIcon = null, startIcon = null, isLoading, path, children, ...rest } = props;
-
+export const Button: FC<Partial<ButtonProps>> = ({ variant = "outline", endIcon = null, startIcon = null, isLoading, path, children, ...rest }) => {
   if (path && endIcon) {
     return (
       <S.Hyperlink variant={variant} endIcon href={path} {...rest}>
