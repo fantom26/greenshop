@@ -1,8 +1,6 @@
-import Link from "next/link";
-
-import styled from "styled-components";
-
 import { Typography } from "@/shared/ui/typography/typography.styled";
+import Link from "next/link";
+import styled from "styled-components";
 
 export const Total = styled.div`
   width: 100%;

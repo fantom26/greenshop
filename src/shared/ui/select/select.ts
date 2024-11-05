@@ -1,7 +1,6 @@
+import { TSelectOption } from "@/utils/declarations";
 import { CSSObject } from "@emotion/react";
 import { StylesConfig } from "react-select";
-
-import { TSelectOption } from "@/utils/declarations";
 
 export type CSSObjectWithLabel = CSSObject & {
   label?: string;

@@ -1,10 +1,9 @@
 import { FC } from "react";
 
-import { IProduct } from "@/utils/declarations";
-import { useRouter } from "next/router";
-
 import { Typography } from "@/shared/ui";
 import { useProductsQuery } from "@/store/api";
+import { IProduct } from "@/utils/declarations";
+import { useRouter } from "next/router";
 
 import * as S from "./filter-list.styled";
 import { getSizeLetter } from "./helper";

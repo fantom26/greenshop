@@ -71,7 +71,6 @@ export const Price = styled.p`
 `;
 
 export const OldPrice = styled.p`
-
   color: #a5a5a5;
   font-size: 1.8rem;
   line-height: 90%;

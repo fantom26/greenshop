@@ -1,9 +1,8 @@
 import { forwardRef } from "react";
 
+import { TSelectOption } from "@/utils/declarations";
 import ReactSelect, { StylesConfig } from "react-select";
 import type { Props as SelectProps } from "react-select";
-
-import { TSelectOption } from "@/utils/declarations";
 
 import { customStyles } from "./select";
 

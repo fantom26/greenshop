@@ -1,10 +1,9 @@
 import { useState } from "react";
 
 import { Loader, Pagination, ProductCard, Typography } from "@/shared/ui";
+import { useProductsQuery } from "@/store/api";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
-
-import { useProductsQuery } from "@/store/api";
 
 import { Queries } from "../sidebar/components";
 import { Filter } from "./components/filter";

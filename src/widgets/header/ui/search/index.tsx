@@ -2,6 +2,7 @@ import { useId, useState } from "react";
 
 import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
 import { ICONS } from "@/shared/svgs";
+import { CustomImage } from "@/shared/ui";
 import { useProductsSearchQuery } from "@/store/api";
 import { skipToken } from "@reduxjs/toolkit/query";
 import { useTranslation } from "next-i18next";
@@ -9,7 +10,6 @@ import Select, { InputActionMeta, components } from "react-select";
 import { useDebounce } from "use-debounce";
 
 import * as S from "./search.styled";
-import { CustomImage } from "@/shared/ui";
 
 const DropdownIndicator = (props: any) =>
   components.DropdownIndicator && (

@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 
 import { useCart } from "@/hooks";
+import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
 import { ICONS } from "@/shared/svgs";
 import { CustomImage, Typography } from "@/shared/ui";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 
 import * as S from "./products.styled";
-import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
 
 export const Products = () => {
   const { t } = useTranslation("cart");

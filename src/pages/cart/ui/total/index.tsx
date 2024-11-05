@@ -1,10 +1,9 @@
 import { useMemo } from "react";
 
+import { useCart } from "@/hooks";
+import { Button, Typography } from "@/shared/ui";
 import { SHIPPING_PRICE } from "@/utils/constants";
 import { useTranslation } from "next-i18next";
-
-import { Button, Typography } from "@/shared/ui";
-import { useCart } from "@/hooks";
 
 import * as S from "./total.styled";
 

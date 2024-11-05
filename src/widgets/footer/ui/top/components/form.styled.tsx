@@ -1,6 +1,5 @@
-import styled from "styled-components";
-
 import { Button as StyledButton } from "@/shared/ui/button/button.styled";
+import styled from "styled-components";
 
 export const FormWrapper = styled.div`
   margin-top: 1.5rem;

@@ -1,6 +1,5 @@
-import { useTranslation } from "next-i18next";
-
 import { Typography } from "@/shared/ui";
+import { useTranslation } from "next-i18next";
 
 import * as S from "./links.styled";
 

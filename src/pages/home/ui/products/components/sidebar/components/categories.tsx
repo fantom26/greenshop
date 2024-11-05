@@ -1,9 +1,8 @@
 import { FC } from "react";
 
+import { useCategoriesQuery } from "@/store/api";
 import { Filter } from "@/widgets/filter-list";
 import { useTranslation } from "next-i18next";
-
-import { useCategoriesQuery } from "@/store/api";
 
 export const Categories: FC = () => {
   const { t } = useTranslation("home");

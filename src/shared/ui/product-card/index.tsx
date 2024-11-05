@@ -3,6 +3,7 @@ import { FC, useMemo, useState } from "react";
 import { useCart } from "@/hooks";
 import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
 import { ICONS } from "@/shared/svgs";
+import { CustomImage } from "@/shared/ui";
 import { IProduct } from "@/utils/declarations";
 import { transformProduct } from "@/utils/helpers";
 import FsLightbox from "fslightbox-react";
@@ -10,7 +11,6 @@ import { useTranslation } from "next-i18next";
 import Link from "next/link";
 
 import * as S from "./product.styled";
-import { CustomImage } from "@/shared/ui";
 
 export const ProductCard: FC<IProduct> = (props) => {
   const { _id: id, poster, name, price, discountPercentage } = props;

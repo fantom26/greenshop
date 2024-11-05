@@ -1,8 +1,9 @@
+import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
+import { CustomImage } from "@/shared/ui";
+
 import { Categories, PriceRange, Queries, Sizes } from "./components";
 import * as S from "./sidebar.styled";
 
-import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
-import { CustomImage } from "@/shared/ui";
 export const Sidebar = () => (
   <>
     <S.Sidebar>

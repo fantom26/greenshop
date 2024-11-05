@@ -1,8 +1,7 @@
-import { useTranslation } from "next-i18next";
-import { useRouter } from "next/router";
-
 import { Select } from "@/shared/ui/select";
 import { TSelectOption } from "@/utils/declarations";
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 const LANGS = ["es", "en", "uk"];
 

@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { FC, createContext, useEffect, useState } from "react";
 
-import { generateDays } from "@/utils/helpers";
-import { setCookie } from "cookies-next";
-
 import { CART_LIST } from "@/utils/constants";
 import { CartContextProps, CartProviderProps, ICartItem } from "@/utils/declarations";
+import { generateDays } from "@/utils/helpers";
+import { setCookie } from "cookies-next";
 
 const initialState: CartContextProps = {
   cartItems: [],

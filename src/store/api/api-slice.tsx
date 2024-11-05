@@ -1,5 +1,5 @@
 import { IArticle, IPage, IProduct } from "@/utils/declarations";
-import { createApi, FetchBaseQueryMeta } from "@reduxjs/toolkit/query/react";
+import { FetchBaseQueryMeta, createApi } from "@reduxjs/toolkit/query/react";
 import { HYDRATE } from "next-redux-wrapper";
 
 import { baseQuery } from "./fetch";
