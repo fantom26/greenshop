@@ -2,7 +2,11 @@
 import { FC, createContext, useEffect, useState } from "react";
 
 import { CART_LIST } from "@/utils/constants";
-import { CartContextProps, CartProviderProps, ICartItem } from "@/utils/declarations";
+import {
+  CartContextProps,
+  CartProviderProps,
+  ICartItem
+} from "@/utils/declarations";
 import { generateDays } from "@/utils/helpers";
 import { setCookie } from "cookies-next";
 
@@ -20,14 +24,24 @@ const initialState: CartContextProps = {
 
 export const CartContext = createContext(initialState);
 
-export const CartProvider: FC<CartProviderProps> = ({ defaultCart = [], children }) => {
+export const CartProvider: FC<CartProviderProps> = ({
+  defaultCart = [],
+  children
+}) => {
   const [cartItems, setCartItems] = useState<ICartItem[]>(defaultCart);
 
-  const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0);
+  const cartQuantity = cartItems.reduce(
+    (quantity, item) => item.quantity + quantity,
+    0
+  );
 
-  const sumOfOrder = cartItems.reduce((sum, item) => +item.price * item.quantity + sum, 0);
+  const sumOfOrder = cartItems.reduce(
+    (sum, item) => +item.price * item.quantity + sum,
+    0
+  );
 
-  const getProductQuantity = (id: string) => cartItems.find((item) => item._id === id)?.quantity || 0;
+  const getProductQuantity = (id: string) =>
+    cartItems.find((item) => item._id === id)?.quantity || 0;
 
   const increaseCartQuantity = (product: ICartItem) => {
     setCartItems((currItems) => {
@@ -67,7 +81,8 @@ export const CartProvider: FC<CartProviderProps> = ({ defaultCart = [], children
     return currentItem ? currentItem.price * currentItem.quantity : 0;
   };
 
-  const removeFromCart = (id: string) => setCartItems((currItems) => currItems.filter((item) => item._id !== id));
+  const removeFromCart = (id: string) =>
+    setCartItems((currItems) => currItems.filter((item) => item._id !== id));
 
   const resetCart = () => setCartItems([]);
 

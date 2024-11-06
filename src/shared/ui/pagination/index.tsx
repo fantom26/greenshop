@@ -1,6 +1,7 @@
 import { FC, MouseEvent } from "react";
 
 import { usePagination } from "@/hooks";
+
 import { ICONS } from "@/shared/svgs";
 
 import * as S from "./pagination.styled";
@@ -11,7 +12,11 @@ interface PaginationProps {
   handleChangePage: (page: number) => void;
 }
 
-export const Pagination: FC<PaginationProps> = ({ totalPages, currentPage, handleChangePage }) => {
+export const Pagination: FC<PaginationProps> = ({
+  totalPages,
+  currentPage,
+  handleChangePage
+}) => {
   const buttonConst = 3;
 
   const paginationRange = usePagination({
@@ -27,7 +32,10 @@ export const Pagination: FC<PaginationProps> = ({ totalPages, currentPage, handl
 
   return (
     <S.List>
-      <S.Button disabled={currentPage === 1} onClick={() => handleChangePage(currentPage - 1)}>
+      <S.Button
+        disabled={currentPage === 1}
+        onClick={() => handleChangePage(currentPage - 1)}
+      >
         {ICONS.arrowLeft}
       </S.Button>
 
@@ -40,12 +48,19 @@ export const Pagination: FC<PaginationProps> = ({ totalPages, currentPage, handl
           );
         }
         return (
-          <S.Button key={index} onClick={onChangePage} actived={+currentPage === +item}>
+          <S.Button
+            key={index}
+            onClick={onChangePage}
+            actived={+currentPage === +item}
+          >
             {item}
           </S.Button>
         );
       })}
-      <S.Button disabled={currentPage === totalPages} onClick={() => handleChangePage(currentPage + 1)}>
+      <S.Button
+        disabled={currentPage === totalPages}
+        onClick={() => handleChangePage(currentPage + 1)}
+      >
         {ICONS.arrowRight}
       </S.Button>
     </S.List>

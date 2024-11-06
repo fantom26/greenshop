@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 
-import { ICONS } from "@/shared/svgs";
-import { Typography } from "@/shared/ui";
 import { FILTER_KEYS, SORT_KEYS } from "@/utils/constants";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
+
+import { ICONS } from "@/shared/svgs";
+import { Typography } from "@/shared/ui";
 
 import * as S from "./sort.styled";
 
@@ -22,7 +23,11 @@ export const Sort = () => {
         push(
           {
             query: {
-              ...Object.fromEntries(Object.entries(query).filter(([key]) => [...SORT_KEYS, ...FILTER_KEYS].includes(key)))
+              ...Object.fromEntries(
+                Object.entries(query).filter(([key]) =>
+                  [...SORT_KEYS, ...FILTER_KEYS].includes(key)
+                )
+              )
             }
           },
           "",

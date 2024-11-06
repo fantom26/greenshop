@@ -1,7 +1,8 @@
-import { Container } from "@/shared/ui";
-import { InterestedIn } from "@/widgets/interested-in";
 import { useTranslation } from "next-i18next";
 import { ErrorBoundary } from "react-error-boundary";
+
+import { Container } from "@/shared/ui";
+import { InterestedIn } from "@/widgets/interested-in";
 
 import * as S from "./info.styled";
 import { Products } from "./products";

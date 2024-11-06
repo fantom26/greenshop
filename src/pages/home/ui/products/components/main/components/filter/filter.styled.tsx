@@ -15,7 +15,8 @@ export const Tab = styled.button<{ selected: boolean }>`
   position: relative;
   display: flex;
   align-items: center;
-  color: ${({ selected }) => (selected ? "var(--clr-accent-400)" : "var(--clr-dark)")};
+  color: ${({ selected }) =>
+    selected ? "var(--clr-accent-400)" : "var(--clr-dark)"};
   font-size: 1.8rem;
   cursor: pointer;
   user-select: none;

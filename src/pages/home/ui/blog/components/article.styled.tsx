@@ -1,6 +1,7 @@
-import { Typography } from "@/shared/ui/typography/typography.styled";
 import Link from "next/link";
 import styled from "styled-components";
+
+import { Typography } from "@/shared/ui/typography/typography.styled";
 
 export const ArticleWrapper = styled.div`
   padding: 1rem 1.5rem;

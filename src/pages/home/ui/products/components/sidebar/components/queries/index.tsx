@@ -17,14 +17,23 @@ export const Queries = () => {
       const _lteValue = entriesMap.get("price_lte");
 
       //remove _gte and _lte parameters from object
-      const queries = entries.filter(([key]) => !key.includes("_gte") && !key.includes("_lte") && SORT_KEYS.includes(key)).map(([, value]) => value);
+      const queries = entries
+        .filter(
+          ([key]) =>
+            !key.includes("_gte") &&
+            !key.includes("_lte") &&
+            SORT_KEYS.includes(key)
+        )
+        .map(([, value]) => value);
 
       queries.push(`$${_gteValue} - $${_lteValue}`);
 
       return queries;
     }
 
-    return entries.filter(([key]) => SORT_KEYS.includes(key)).map(([, value]) => value);
+    return entries
+      .filter(([key]) => SORT_KEYS.includes(key))
+      .map(([, value]) => value);
   };
 
   const deleteParam = (param: string) => {
@@ -33,7 +42,9 @@ export const Queries = () => {
       push(
         {
           query: {
-            ...Object.fromEntries(entries.filter(([key]) => !SORT_KEYS.includes(key)))
+            ...Object.fromEntries(
+              entries.filter(([key]) => !SORT_KEYS.includes(key))
+            )
           }
         },
         "",
@@ -46,7 +57,11 @@ export const Queries = () => {
     push(
       {
         query: {
-          ...Object.fromEntries(entries.filter(([, queryParam]) => !param.includes(queryParam as string)))
+          ...Object.fromEntries(
+            entries.filter(
+              ([, queryParam]) => !param.includes(queryParam as string)
+            )
+          )
         }
       },
       "",
@@ -61,7 +76,9 @@ export const Queries = () => {
           {formatQueries()?.map((param, index) => (
             <S.FilterParam key={index}>
               <span>{param}</span>
-              <S.FilterParamButton onClick={() => deleteParam(param as string)} />
+              <S.FilterParamButton
+                onClick={() => deleteParam(param as string)}
+              />
             </S.FilterParam>
           ))}
           {formatQueries().length > 1 && (

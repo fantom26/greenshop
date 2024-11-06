@@ -27,7 +27,9 @@
       "category": "Potter Plants",
       "tags": ["Home", "Garden", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "2",
@@ -56,7 +58,9 @@
       "category": "House Plants",
       "tags": ["House", "Garden", "Plants"],
       "stars": 5,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "3",
@@ -85,7 +89,9 @@
       "category": "Seeds",
       "tags": ["Seeds", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "4",
@@ -114,7 +120,9 @@
       "category": "Small Plants",
       "tags": ["Small", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "5",
@@ -143,7 +151,9 @@
       "category": "Big Plants",
       "tags": ["Big", "Garden", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "6",
@@ -172,7 +182,9 @@
       "category": "Succulents",
       "tags": ["Succulents", "Garden", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "7",
@@ -201,7 +213,9 @@
       "category": "Trerrariums",
       "tags": ["Trerrariums", "Garden", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "8",
@@ -230,7 +244,9 @@
       "category": "Gardening",
       "tags": ["Gardening", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "9",
@@ -259,7 +275,9 @@
       "category": "Accessories",
       "tags": ["Accessories", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "10",
@@ -288,7 +306,9 @@
       "category": "Potter Plants",
       "tags": ["Home", "Garden", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
 
     {
@@ -318,7 +338,9 @@
       "category": "Small Plants",
       "tags": ["Small", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
 
     {
@@ -348,7 +370,9 @@
       "category": "Trerrariums",
       "tags": ["Trerrariums", "Garden", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "11",
@@ -377,7 +401,9 @@
       "category": "House Plants",
       "tags": ["House", "Garden", "Plants"],
       "stars": 5,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "12",
@@ -406,7 +432,9 @@
       "category": "Seeds",
       "tags": ["Seeds", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "17",
@@ -435,7 +463,9 @@
       "category": "Gardening",
       "tags": ["Gardening", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "18",
@@ -464,7 +494,9 @@
       "category": "Accessories",
       "tags": ["Accessories", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "14",
@@ -493,7 +525,9 @@
       "category": "Big Plants",
       "tags": ["Big", "Garden", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "15",
@@ -522,11 +556,23 @@
       "category": "Succulents",
       "tags": ["Succulents", "Garden", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     }
   ],
   "size": ["Small (S)", "Medium (M)", "Large (L)"],
-  "categories": ["House Plants", "Potter Plants", "Seeds", "Small Plants", "Big Plants", "Succulents", "Trerrariums", "Gardening", "Accessories"],
+  "categories": [
+    "House Plants",
+    "Potter Plants",
+    "Seeds",
+    "Small Plants",
+    "Big Plants",
+    "Succulents",
+    "Trerrariums",
+    "Gardening",
+    "Accessories"
+  ],
   "articles": [
     {
       "_id": 1,
@@ -598,9 +644,24 @@
     }
   ],
   "pages": [
-    { "title": "Home", "description": "description", "noIndex": false, "breadcrumb": "Home" },
-    { "title": "Cart", "description": "description", "noIndex": false, "breadcrumb": "Cart" },
-    { "title": "Product", "description": "description", "noIndex": false, "breadcrumb": "Product" }
+    {
+      "title": "Home",
+      "description": "description",
+      "noIndex": false,
+      "breadcrumb": "Home"
+    },
+    {
+      "title": "Cart",
+      "description": "description",
+      "noIndex": false,
+      "breadcrumb": "Cart"
+    },
+    {
+      "title": "Product",
+      "description": "description",
+      "noIndex": false,
+      "breadcrumb": "Product"
+    }
   ],
 
   "interestedIn": [
@@ -631,7 +692,9 @@
       "category": "Potter Plants",
       "tags": ["Home", "Garden", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "2",
@@ -660,7 +723,9 @@
       "category": "House Plants",
       "tags": ["House", "Garden", "Plants"],
       "stars": 5,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "3",
@@ -689,7 +754,9 @@
       "category": "Seeds",
       "tags": ["Seeds", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "4",
@@ -718,7 +785,9 @@
       "category": "Small Plants",
       "tags": ["Small", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "5",
@@ -747,7 +816,9 @@
       "category": "Big Plants",
       "tags": ["Big", "Garden", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "6",
@@ -776,7 +847,9 @@
       "category": "Succulents",
       "tags": ["Succulents", "Garden", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "7",
@@ -805,7 +878,9 @@
       "category": "Trerrariums",
       "tags": ["Trerrariums", "Garden", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     },
     {
       "_id": "8",
@@ -834,7 +909,9 @@
       "category": "Gardening",
       "tags": ["Gardening", "Plants"],
       "stars": 4,
-      "reviews": [{ "_id": "1", "name": "Yehor", "text": "I do love this plant!" }]
+      "reviews": [
+        { "_id": "1", "name": "Yehor", "text": "I do love this plant!" }
+      ]
     }
   ]
 }

@@ -31,12 +31,18 @@ export const apiSlice = createApi({
         url: `/pages?title=${title}`
       })
     }),
-    products: builder.query<{ products: IProduct[]; links: string; totalCount: number }, Partial<IProductsParams>>({
+    products: builder.query<
+      { products: IProduct[]; links: string; totalCount: number },
+      Partial<IProductsParams>
+    >({
       query: (params) => ({
         url: "/products",
         params
       }),
-      transformResponse: (products: IProduct[], meta: Required<FetchBaseQueryMeta>) => ({
+      transformResponse: (
+        products: IProduct[],
+        meta: Required<FetchBaseQueryMeta>
+      ) => ({
         products,
         links: meta.response.headers.get("Link") || "",
         totalCount: Number(meta.response.headers.get("X-Total-Count"))
@@ -47,7 +53,8 @@ export const apiSlice = createApi({
         url: "/products",
         params: { q }
       }),
-      transformResponse: (products: IProduct[]) => products.map((p) => ({ ...p, label: p.name, value: p._id }))
+      transformResponse: (products: IProduct[]) =>
+        products.map((p) => ({ ...p, label: p.name, value: p._id }))
     }),
     interestedIn: builder.query<IProduct[], void>({
       query: () => ({

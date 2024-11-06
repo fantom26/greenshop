@@ -21,7 +21,8 @@ export const Item = styled.li<{ selected: boolean }>`
   padding: 0 0.25rem;
   box-shadow: inset 0 0 0 0 var(--clr-accent-400);
   cursor: pointer;
-  transition: color var(--transition) ease-in-out, box-shadow var(--transition) ease-in-out;
+  transition: color var(--transition) ease-in-out,
+    box-shadow var(--transition) ease-in-out;
 
   ${({ selected }) =>
     selected &&
@@ -33,7 +34,8 @@ export const Item = styled.li<{ selected: boolean }>`
     &:hover {
       color: var(--clr-light);
       box-shadow: inset 800px 0 0 0 var(--clr-accent-400);
-      transition: color var(--transition) ease-in-out, box-shadow var(--transition) ease-in-out;
+      transition: color var(--transition) ease-in-out,
+        box-shadow var(--transition) ease-in-out;
     }
   }
 `;

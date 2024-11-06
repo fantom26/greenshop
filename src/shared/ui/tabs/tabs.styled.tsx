@@ -18,7 +18,8 @@ export const Tab = styled.button<{ selected: boolean; hovered: boolean }>`
   height: 2rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  color: ${({ selected }) => (selected ? "var(--clr-accent-400)" : "var(--clr-dark)")};
+  color: ${({ selected }) =>
+    selected ? "var(--clr-accent-400)" : "var(--clr-dark)"};
   font-weight: ${({ selected }) => (selected ? "700" : "400")};
   font-size: 1.8rem;
   background-color: transparent;

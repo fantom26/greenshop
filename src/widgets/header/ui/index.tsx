@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 
 import { useScrollLock } from "@/hooks";
+
 import { Logo } from "@/shared/ui";
 
 import { Burger } from "./burger";

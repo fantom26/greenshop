@@ -1,14 +1,22 @@
 import { FC } from "react";
 
-import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
-import { ICONS } from "@/shared/svgs";
-import { CustomImage, Typography } from "@/shared/ui";
 import { IArticle } from "@/utils/declarations";
 import { useTranslation } from "next-i18next";
 
+import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
+import { ICONS } from "@/shared/svgs";
+import { CustomImage, Typography } from "@/shared/ui";
+
 import * as S from "./article.styled";
 
-export const ArticleCard: FC<IArticle> = ({ _id: id, createdAt, poster, minutesForReading, title, desc }) => {
+export const ArticleCard: FC<IArticle> = ({
+  _id: id,
+  createdAt,
+  poster,
+  minutesForReading,
+  title,
+  desc
+}) => {
   const { url, meta } = poster;
 
   const { t } = useTranslation("home");
@@ -16,7 +24,13 @@ export const ArticleCard: FC<IArticle> = ({ _id: id, createdAt, poster, minutesF
   return (
     <li>
       <S.Image>
-        <CustomImage src={`${NEXT_PUBLIC_APP_URL}${url}`} width="270" height="195" alt={meta.alt} quality={85} />
+        <CustomImage
+          src={`${NEXT_PUBLIC_APP_URL}${url}`}
+          width="270"
+          height="195"
+          alt={meta.alt}
+          quality={85}
+        />
       </S.Image>
       <S.ArticleWrapper>
         <S.Info>

@@ -1,6 +1,7 @@
+import { useTranslation } from "next-i18next";
+
 import { IMAGES } from "@/shared/svgs";
 import { Typography } from "@/shared/ui";
-import { useTranslation } from "next-i18next";
 
 import { Email } from "./components/email";
 import * as S from "./top.styled";

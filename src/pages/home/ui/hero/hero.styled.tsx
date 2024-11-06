@@ -1,5 +1,6 @@
-import { Typography } from "@/shared/ui/typography/typography.styled";
 import styled from "styled-components";
+
+import { Typography } from "@/shared/ui/typography/typography.styled";
 
 export const Hero = styled.section`
   padding-top: 3rem;
@@ -7,7 +8,11 @@ export const Hero = styled.section`
 `;
 
 export const HeroWrapper = styled.div`
-  background-image: linear-gradient(97.77deg, rgb(245 245 245 / 50%) -23.46%, rgb(245 245 245 / 50%) 107.51%);
+  background-image: linear-gradient(
+    97.77deg,
+    rgb(245 245 245 / 50%) -23.46%,
+    rgb(245 245 245 / 50%) 107.51%
+  );
 `;
 
 export const Info = styled.div`

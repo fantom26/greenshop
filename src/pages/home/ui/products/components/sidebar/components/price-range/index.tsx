@@ -1,14 +1,17 @@
 import { FC, useEffect, useMemo, useRef, useState } from "react";
 
-import { Button, Typography } from "@/shared/ui";
 import { useProductsQuery } from "@/store/api";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import Nouislider from "nouislider-react";
 
+import { Button, Typography } from "@/shared/ui";
+
 import * as S from "./price-range.styled";
 
-export const PriceRange: FC<{ mobileHandler?: () => void }> = ({ mobileHandler }) => {
+export const PriceRange: FC<{ mobileHandler?: () => void }> = ({
+  mobileHandler
+}) => {
   const { t } = useTranslation("home");
   const [prices, setPrices] = useState<string[]>(["00.00", "00.00"]);
   const { push, query } = useRouter();
@@ -78,7 +81,10 @@ export const PriceRange: FC<{ mobileHandler?: () => void }> = ({ mobileHandler }
             }
           }}
           onSlide={onChangeSlide}
-          range={{ min: boundaryValues?.min || 0, max: boundaryValues?.max || 1000 }}
+          range={{
+            min: boundaryValues?.min || 0,
+            max: boundaryValues?.max || 1000
+          }}
           start={[boundaryValues?.min || 0, boundaryValues?.max || 1000]}
           connect
         />

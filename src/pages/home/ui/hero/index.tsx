@@ -1,9 +1,10 @@
-import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
-import { Button, Container, CustomImage, Typography } from "@/shared/ui";
 import { IFile } from "@/utils/declarations";
 import { useTranslation } from "next-i18next";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
+import { Button, Container, CustomImage, Typography } from "@/shared/ui";
 
 import * as S from "./hero.styled";
 
@@ -17,7 +18,7 @@ interface ISlide {
 export const Hero = () => {
   const { t } = useTranslation("home");
 
-  const slides = t("hero", { returnObjects: true }) as Array<ISlide> || [];
+  const slides = (t("hero", { returnObjects: true }) as Array<ISlide>) || [];
 
   return (
     <S.Hero>
@@ -37,7 +38,12 @@ export const Hero = () => {
                 <S.Slide>
                   <S.Info>
                     <S.Suptitle>{supTitle}</S.Suptitle>
-                    <S.Title tag="h1" variant="h1" dangerouslySetInnerHTML={{ __html: title }} uppercase />
+                    <S.Title
+                      tag="h1"
+                      variant="h1"
+                      dangerouslySetInnerHTML={{ __html: title }}
+                      uppercase
+                    />
                     <Typography tag="p" variant="paragraph1" color="grey">
                       {description}
                     </Typography>
@@ -46,7 +52,12 @@ export const Hero = () => {
                     </S.ButtonWrapper>
                   </S.Info>
                   <S.ImageWrapper>
-                    <CustomImage src={`${NEXT_PUBLIC_APP_URL}${poster.url}`} width="518" height="518" alt={poster.meta.alt} />
+                    <CustomImage
+                      src={`${NEXT_PUBLIC_APP_URL}${poster.url}`}
+                      width="518"
+                      height="518"
+                      alt={poster.meta.alt}
+                    />
                   </S.ImageWrapper>
                 </S.Slide>
               </SwiperSlide>

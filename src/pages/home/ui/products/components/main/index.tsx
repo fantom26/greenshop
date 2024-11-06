@@ -1,9 +1,10 @@
 import { useState } from "react";
 
-import { Loader, Pagination, ProductCard, Typography } from "@/shared/ui";
 import { useProductsQuery } from "@/store/api";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
+
+import { Loader, Pagination, ProductCard, Typography } from "@/shared/ui";
 
 import { Queries } from "../sidebar/components";
 import { Filter } from "./components/filter";
@@ -19,7 +20,11 @@ export const Main = () => {
 
   const { query } = useRouter();
 
-  const { data, isFetching } = useProductsQuery({ ...query, _page: page, _limit: LIMIT });
+  const { data, isFetching } = useProductsQuery({
+    ...query,
+    _page: page,
+    _limit: LIMIT
+  });
 
   let content;
 

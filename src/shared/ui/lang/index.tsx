@@ -1,11 +1,15 @@
-import { Select } from "@/shared/ui/select";
 import { TSelectOption } from "@/utils/declarations";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 
+import { Select } from "@/shared/ui/select";
+
 const LANGS = ["es", "en", "uk"];
 
-const options = LANGS.map((lang) => ({ label: lang.toUpperCase(), value: lang }));
+const options = LANGS.map((lang) => ({
+  label: lang.toUpperCase(),
+  value: lang
+}));
 
 export const Langs = () => {
   const {
@@ -28,5 +32,12 @@ export const Langs = () => {
     await changeLanguage(newLocale);
   };
 
-  return <Select id="lang-select" options={options} onChange={changeLang} value={options.find((option) => option.value === locale)} />;
+  return (
+    <Select
+      id="lang-select"
+      options={options}
+      onChange={changeLang}
+      value={options.find((option) => option.value === locale)}
+    />
+  );
 };

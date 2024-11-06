@@ -1,6 +1,7 @@
-import { Container, Typography } from "@/shared/ui";
 import { useArticlesQuery } from "@/store/api";
 import { useTranslation } from "next-i18next";
+
+import { Container, Typography } from "@/shared/ui";
 
 import * as S from "./blog.styled";
 import { ArticleCard } from "./components";

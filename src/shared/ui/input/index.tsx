@@ -16,23 +16,44 @@ export interface ControlledInputProps extends InputProps {
   name: string;
 }
 
-export const Input: FC<InputProps> = ({ placeholder, error, helperText, withLabel, widthBtn, ...rest }) => {
+export const Input: FC<InputProps> = ({
+  placeholder,
+  error,
+  helperText,
+  withLabel,
+  widthBtn,
+  ...rest
+}) => {
   const id = useId();
 
   return (
     <S.Wrapper error={!!error}>
       {withLabel && <S.Label htmlFor={id}>{placeholder}</S.Label>}
       <S.InputWrapper widthBtn={widthBtn}>
-        <S.Input type="text" id={id} placeholder={withLabel ? "" : placeholder} {...rest} />
+        <S.Input
+          type="text"
+          id={id}
+          placeholder={withLabel ? "" : placeholder}
+          {...rest}
+        />
         {widthBtn && widthBtn}
       </S.InputWrapper>
-      {helperText && <S.InputTextHelper error={!!error}>{helperText}</S.InputTextHelper>}
+      {helperText && (
+        <S.InputTextHelper error={!!error}>{helperText}</S.InputTextHelper>
+      )}
     </S.Wrapper>
   );
 };
 
-export const ControlledInput: FC<ControlledInputProps> = ({ name, defaultValue = "", helperText = "", widthBtn = null, placeholder = "", withLabel = true, ...rest }) => {
-
+export const ControlledInput: FC<ControlledInputProps> = ({
+  name,
+  defaultValue = "",
+  helperText = "",
+  widthBtn = null,
+  placeholder = "",
+  withLabel = true,
+  ...rest
+}) => {
   const { control } = useFormContext();
 
   return (

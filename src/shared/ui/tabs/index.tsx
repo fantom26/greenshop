@@ -12,8 +12,14 @@ type Props = {
   setSelectedTab: (input: [number, number]) => void;
 };
 
-export const Tabs = ({ tabs, selectedTabIndex, setSelectedTab }: Props): JSX.Element => {
-  const [buttonRefs, setButtonRefs] = useState<Array<HTMLButtonElement | null>>([]);
+export const Tabs = ({
+  tabs,
+  selectedTabIndex,
+  setSelectedTab
+}: Props): JSX.Element => {
+  const [buttonRefs, setButtonRefs] = useState<Array<HTMLButtonElement | null>>(
+    []
+  );
 
   useEffect(() => {
     setButtonRefs((prev) => prev.slice(0, tabs.length));
@@ -25,7 +31,8 @@ export const Tabs = ({ tabs, selectedTabIndex, setSelectedTab }: Props): JSX.Ele
   const selectedRect = buttonRefs[selectedTabIndex]?.getBoundingClientRect();
 
   const [hoveredTabIndex, setHoveredTabIndex] = useState<number | null>(null);
-  const hoveredRect = buttonRefs[hoveredTabIndex ?? -1]?.getBoundingClientRect();
+  const hoveredRect =
+    buttonRefs[hoveredTabIndex ?? -1]?.getBoundingClientRect();
 
   const onLeaveTabs = () => {
     setHoveredTabIndex(null);
@@ -42,7 +49,9 @@ export const Tabs = ({ tabs, selectedTabIndex, setSelectedTab }: Props): JSX.Ele
   const stylesChangingOnUpdate =
     hoveredRect && navRect
       ? {
-          transform: `translate3d(${hoveredRect.left - navRect.left}px,${hoveredRect.top - navRect.top}px,0px)`,
+          transform: `translate3d(${hoveredRect.left - navRect.left}px,${
+            hoveredRect.top - navRect.top
+          }px,0px)`,
           width: hoveredRect.width,
           height: hoveredRect.height
         }
@@ -70,7 +79,9 @@ export const Tabs = ({ tabs, selectedTabIndex, setSelectedTab }: Props): JSX.Ele
       selectedRect && navRect
         ? {
             width: selectedRect.width * 0.8,
-            transform: `translateX(calc(${selectedRect.left - navRect.left}px + 10%))`,
+            transform: `translateX(calc(${
+              selectedRect.left - navRect.left
+            }px + 10%))`,
             opacity: 1
           }
         : { opacity: 0 },
@@ -121,12 +132,16 @@ const Content = ({
     keys: null,
     from: {
       opacity: 0,
-      transform: `translate3d(${direction > 0 ? "100" : "-100"}px,0,0) scale(0.8)`
+      transform: `translate3d(${
+        direction > 0 ? "100" : "-100"
+      }px,0,0) scale(0.8)`
     },
     enter: { opacity: 1, transform: "translate3d(0px,0,0) scale(1)" },
     leave: {
       opacity: 0,
-      transform: `translate3d(${direction > 0 ? "-100" : "100"}px,0,0) scale(0.8)`,
+      transform: `translate3d(${
+        direction > 0 ? "-100" : "100"
+      }px,0,0) scale(0.8)`,
       position: "absolute"
     },
     config: {

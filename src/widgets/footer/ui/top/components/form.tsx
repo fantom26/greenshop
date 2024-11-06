@@ -1,8 +1,9 @@
-import { Form } from "@/shared/ui/form";
 import { NewslettersObject, NewslettersSchema } from "@/utils/schemas";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useTranslation } from "next-i18next";
 import { useForm } from "react-hook-form";
+
+import { Form } from "@/shared/ui/form";
 
 import * as S from "./form.styled";
 

@@ -43,8 +43,10 @@ export const FilterParam = styled.li<{ reset?: boolean }>`
   border-radius: 0.5rem;
   padding: 0.5rem 2rem 0.5rem 0.5rem;
   font-weight: var(--font-weight-medium);
-  color: ${({ reset }) => (reset ? "var(--clr-accent-400)" : "var(--clr-light)")};
-  background-color: ${({ reset }) => (reset ? "var(--clr-light)" : " var(--clr-accent-400)")};
+  color: ${({ reset }) =>
+    reset ? "var(--clr-accent-400)" : "var(--clr-light)"};
+  background-color: ${({ reset }) =>
+    reset ? "var(--clr-light)" : " var(--clr-accent-400)"};
 
   ${({ reset }) =>
     reset &&

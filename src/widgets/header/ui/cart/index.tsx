@@ -1,6 +1,7 @@
 import { useCart } from "@/hooks";
-import { ICONS } from "@/shared/svgs";
 import Link from "next/link";
+
+import { ICONS } from "@/shared/svgs";
 
 import * as S from "./cart.styled";
 

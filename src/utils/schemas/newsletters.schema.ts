@@ -9,4 +9,6 @@ export const NewslettersObject = object({
     .required()
 });
 
-export type NewslettersSchema = ReturnType<typeof NewslettersObject.validateSync>;
+export type NewslettersSchema = ReturnType<
+  typeof NewslettersObject.validateSync
+>;

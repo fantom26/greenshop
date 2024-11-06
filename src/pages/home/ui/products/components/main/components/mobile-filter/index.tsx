@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
 import { useScrollLock } from "@/hooks";
+import { animated, useTransition } from "react-spring";
+
 import { ICONS } from "@/shared/svgs";
 import { Button, Drawer } from "@/shared/ui";
-import { animated, useTransition } from "react-spring";
 
 import { Categories, PriceRange, Sizes } from "../../../sidebar/components";
 import { Sort } from "../sort";

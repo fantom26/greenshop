@@ -1,7 +1,5 @@
 import { ReactElement, ReactNode, useEffect } from "react";
 
-import { Providers } from "@/app/providers";
-import { GlobalStyles } from "@/app/styles";
 import { CART_LIST, LOADER_CLASSNAME } from "@/utils/constants";
 import { ICartItem } from "@/utils/declarations";
 import { getCookie } from "cookies-next";
@@ -12,6 +10,9 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { NextPage } from "next/types";
 import styled from "styled-components";
+
+import { Providers } from "@/app/providers";
+import { GlobalStyles } from "@/app/styles";
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -85,7 +86,9 @@ App.getInitialProps = async (ctx: AppContext) => {
   try {
     const appProps = await NextApp.getInitialProps(ctx);
 
-    const defaultCart = JSON.parse(getCookie(CART_LIST, { req: ctx.ctx.req, res: ctx.ctx.res }) as string);
+    const defaultCart = JSON.parse(
+      getCookie(CART_LIST, { req: ctx.ctx.req, res: ctx.ctx.res }) as string
+    );
 
     return {
       ...appProps,

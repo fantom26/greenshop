@@ -13,7 +13,12 @@ export interface ControlledTextareaProps extends TextareaProps {
   name: string;
 }
 
-export const TextArea: FC<TextareaProps> = ({ disabled = false, error, helperText, ...rest }) => {
+export const TextArea: FC<TextareaProps> = ({
+  disabled = false,
+  error,
+  helperText,
+  ...rest
+}) => {
   const getClasses = () => {
     let className = "form-textarea";
 
@@ -38,7 +43,11 @@ export const TextArea: FC<TextareaProps> = ({ disabled = false, error, helperTex
   );
 };
 
-export const ControlledTextarea: FC<ControlledTextareaProps> = ({ name, defaultValue, ...rest }) => {
+export const ControlledTextarea: FC<ControlledTextareaProps> = ({
+  name,
+  defaultValue,
+  ...rest
+}) => {
   const { t } = useTranslation("validation");
 
   const { control } = useFormContext();
@@ -49,7 +58,13 @@ export const ControlledTextarea: FC<ControlledTextareaProps> = ({ name, defaultV
       control={control}
       defaultValue={defaultValue}
       render={({ field, fieldState: { error } }) => (
-        <TextArea value={field.value || ""} onChange={field.onChange} error={!!error} helperText={t(error?.message || "")} {...rest} />
+        <TextArea
+          value={field.value || ""}
+          onChange={field.onChange}
+          error={!!error}
+          helperText={t(error?.message || "")}
+          {...rest}
+        />
       )}
     />
   );

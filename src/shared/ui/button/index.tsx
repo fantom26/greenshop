@@ -14,7 +14,15 @@ export interface ButtonProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode;
 }
 
-export const Button: FC<Partial<ButtonProps>> = ({ variant = "outline", endIcon = null, startIcon = null, isLoading, path, children, ...rest }) => {
+export const Button: FC<Partial<ButtonProps>> = ({
+  variant = "outline",
+  endIcon = null,
+  startIcon = null,
+  isLoading,
+  path,
+  children,
+  ...rest
+}) => {
   if (path && endIcon) {
     return (
       <S.Hyperlink variant={variant} endIcon href={path} {...rest}>

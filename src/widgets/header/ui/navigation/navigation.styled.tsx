@@ -32,7 +32,10 @@ export const Link = styled.a<{ pathname: string }>`
   display: flex;
   align-items: center;
   align-self: stretch;
-  font-weight: ${({ href, pathname }) => (href === pathname ? "var(--font-weight-bold)" : "var(--font-weight-regular)")};
+  font-weight: ${({ href, pathname }) =>
+    href === pathname
+      ? "var(--font-weight-bold)"
+      : "var(--font-weight-regular)"};
 
   &::before {
     position: absolute;
@@ -41,7 +44,8 @@ export const Link = styled.a<{ pathname: string }>`
     width: 100%;
     height: 0.3rem;
     background-color: var(--clr-accent-400);
-    visibility: ${({ href, pathname }) => (href === pathname ? "visible" : "hidden")};
+    visibility: ${({ href, pathname }) =>
+      href === pathname ? "visible" : "hidden"};
     opacity: ${({ href, pathname }) => (href === pathname ? 1 : 0)};
     content: "";
   }

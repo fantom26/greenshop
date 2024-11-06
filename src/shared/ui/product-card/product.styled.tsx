@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Controls = styled.div`
   position: absolute;
   top: 50%;
@@ -136,5 +135,5 @@ export const Quantity = styled.span<{ shown: boolean }>`
   font-size: 1rem;
   background-color: var(--clr-accent-400);
   visibility: ${({ shown }) => (shown ? "visible" : "hidden")};
-  opacity: ${({shown}) => (shown ? 1 : 0)};
+  opacity: ${({ shown }) => (shown ? 1 : 0)};
 `;

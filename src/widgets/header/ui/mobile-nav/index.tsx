@@ -1,11 +1,12 @@
 import { FC } from "react";
 
-import { ICONS } from "@/shared/svgs";
-import { Button, Drawer } from "@/shared/ui";
 import { animated, useTransition } from "@react-spring/web";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
+import { ICONS } from "@/shared/svgs";
+import { Button, Drawer } from "@/shared/ui";
 
 import { Search } from "../search";
 import * as S from "./mobile-nav.styled";

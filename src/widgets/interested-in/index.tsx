@@ -1,9 +1,10 @@
 import { FC } from "react";
 
-import { Container, ProductCard, Typography } from "@/shared/ui";
 import { useInterestedInQuery } from "@/store/api";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Container, ProductCard, Typography } from "@/shared/ui";
 
 import * as S from "./interested-in.styled";
 

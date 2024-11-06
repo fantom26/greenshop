@@ -39,7 +39,9 @@ export const Filter = () => {
         push(
           {
             query: {
-              ...Object.fromEntries(entriesQuery.filter(([param]) => param !== "sale")),
+              ...Object.fromEntries(
+                entriesQuery.filter(([param]) => param !== "sale")
+              ),
               new: true
             }
           },
@@ -51,7 +53,9 @@ export const Filter = () => {
         push(
           {
             query: {
-              ...Object.fromEntries(entriesQuery.filter(([param]) => param !== "new")),
+              ...Object.fromEntries(
+                entriesQuery.filter(([param]) => param !== "new")
+              ),
               sale: true
             }
           },
@@ -63,7 +67,11 @@ export const Filter = () => {
         push(
           {
             query: {
-              ...Object.fromEntries(entriesQuery.filter(([param]) => param !== "new" && param !== "sale"))
+              ...Object.fromEntries(
+                entriesQuery.filter(
+                  ([param]) => param !== "new" && param !== "sale"
+                )
+              )
             }
           },
           "",
@@ -93,7 +101,11 @@ export const Filter = () => {
   return (
     <S.Tabs>
       {tabs.map(({ label, id }) => (
-        <S.Tab key={id} selected={id === selectedTab} onClick={() => onClick(id)}>
+        <S.Tab
+          key={id}
+          selected={id === selectedTab}
+          onClick={() => onClick(id)}
+        >
           {label}
         </S.Tab>
       ))}

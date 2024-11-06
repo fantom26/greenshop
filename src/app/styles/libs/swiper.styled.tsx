@@ -189,8 +189,12 @@ export const SwiperStyles = css`
     }
   }
 
-  .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
-  :host(.swiper-horizontal.swiper-rtl) .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  .swiper-horizontal.swiper-rtl
+    > .swiper-pagination-bullets-dynamic
+    .swiper-pagination-bullet,
+  :host(.swiper-horizontal.swiper-rtl)
+    .swiper-pagination-bullets-dynamic
+    .swiper-pagination-bullet {
     transition: 200ms transform, 200ms right;
   }
 

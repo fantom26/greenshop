@@ -69,12 +69,14 @@ export const control = (provided: CSSObjectWithLabel) =>
     fontFamily: "var(--font-family)",
     lineHeight: "var(--medium-line-height)",
     borderRadius: "var(--radius)",
-    transition: "border-color var(--transition), outline-color var(--transition)",
+    transition:
+      "border-color var(--transition), outline-color var(--transition)",
     "&:hover": {
       cursor: "pointer",
       borderColor: "var(--purple-400)",
       outlineColor: "var(--purple-400)",
-      transition: "border-color var(--transition), outline-color var(--transition)"
+      transition:
+        "border-color var(--transition), outline-color var(--transition)"
     }
   } as CSSObjectWithLabel);
 
@@ -84,7 +86,10 @@ export const singleValue = (provided: CSSObjectWithLabel) =>
     color: "var(--dark-800)"
   } as CSSObjectWithLabel);
 
-export const option = (provided: CSSObjectWithLabel, { isSelected }: { isSelected: boolean }) =>
+export const option = (
+  provided: CSSObjectWithLabel,
+  { isSelected }: { isSelected: boolean }
+) =>
   ({
     ...provided,
     backgroundColor: isSelected ? "var(--purple-400)" : "var(--white-100)",

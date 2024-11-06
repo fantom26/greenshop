@@ -16,7 +16,12 @@ const range = (start: number, end: number) => {
 
 export const usePagination = (options: UsePaginationProps) => {
   // **Props
-  const { currentPage, totalPages, buttonConst = 3, siblingCount = 1 } = options;
+  const {
+    currentPage,
+    totalPages,
+    buttonConst = 3,
+    siblingCount = 1
+  } = options;
 
   const paginationRange = useMemo(() => {
     // Pages count is determined as siblingCount + buttonConst(firstPage + lastPage + currentPage) + 2*DOTS

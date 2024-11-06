@@ -1,5 +1,6 @@
-import { Container } from "@/shared/ui/container/container.styled";
 import styled from "styled-components";
+
+import { Container } from "@/shared/ui/container/container.styled";
 
 export const Header = styled.header<{ menuIsOpen: boolean }>`
   z-index: 21;

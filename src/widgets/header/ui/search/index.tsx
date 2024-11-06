@@ -1,13 +1,14 @@
 import { useState } from "react";
 
-import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
-import { CustomImage } from "@/shared/ui";
 import { useProductsSearchQuery } from "@/store/api";
-import * as S from "@/widgets/header/ui/search/search.styled";
 import { skipToken } from "@reduxjs/toolkit/query";
 import { useTranslation } from "next-i18next";
 import Select, { InputActionMeta } from "react-select";
 import { useDebounce } from "use-debounce";
+
+import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
+import { CustomImage } from "@/shared/ui";
+import * as S from "@/widgets/header/ui/search/search.styled";
 
 import { DropdownIndicator } from "./dropdown-indicator";
 
@@ -22,7 +23,13 @@ const formatOptionLabel = (option: any, restFields: any) => {
     <S.Option>
       {isPreviewShown && (
         <div>
-          <CustomImage src={`${NEXT_PUBLIC_APP_URL}${url}`} alt={meta.alt} width={40} height={40} loading="lazy" />
+          <CustomImage
+            src={`${NEXT_PUBLIC_APP_URL}${url}`}
+            alt={meta.alt}
+            width={40}
+            height={40}
+            loading="lazy"
+          />
         </div>
       )}
       <S.OptionName>{name}</S.OptionName>
@@ -34,7 +41,9 @@ const customStyles = {
   control: (baseStyles: any, state: any) => ({
     ...baseStyles,
     flexDirection: "row-reverse",
-    boxShadow: state.isFocused ? "0 0 0 1px #46a358" : "0px 0px 20px rgba(0, 0, 0, 0.06)",
+    boxShadow: state.isFocused
+      ? "0 0 0 1px #46a358"
+      : "0px 0px 20px rgba(0, 0, 0, 0.06)",
     borderColor: state.isFocused ? "#46a358" : "#d1cfcf",
     borderRadius: "6px",
 

@@ -1,23 +1,34 @@
 import { FC, useMemo, useState } from "react";
 
 import { useCart } from "@/hooks";
-import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
-import { ICONS } from "@/shared/svgs";
-import { CustomImage } from "@/shared/ui";
 import { IProduct } from "@/utils/declarations";
 import FsLightbox from "fslightbox-react";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 
+import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
+import { ICONS } from "@/shared/svgs";
+import { CustomImage } from "@/shared/ui";
+
 import * as S from "./product.styled";
 
-export const ProductCard: FC<IProduct> = ({ _id: id, poster, name, sku, price, discountPercentage }) => {
+export const ProductCard: FC<IProduct> = ({
+  _id: id,
+  poster,
+  name,
+  sku,
+  price,
+  discountPercentage
+}) => {
   const { url, meta } = poster;
   const { t } = useTranslation("common");
 
   const [toggler, setToggler] = useState(false);
 
-  const oldPrice = useMemo(() => Math.ceil(price + (price * discountPercentage) / 100).toFixed(2), [price, discountPercentage]);
+  const oldPrice = useMemo(
+    () => Math.ceil(price + (price * discountPercentage) / 100).toFixed(2),
+    [price, discountPercentage]
+  );
 
   const { getProductQuantity, increaseCartQuantity } = useCart();
 
@@ -35,13 +46,22 @@ export const ProductCard: FC<IProduct> = ({ _id: id, poster, name, sku, price, d
   return (
     <>
       <S.Product>
-        {discountPercentage > 0 ? <S.Sale>{discountPercentage}% OFF</S.Sale> : null}
+        {discountPercentage > 0 ? (
+          <S.Sale>{discountPercentage}% OFF</S.Sale>
+        ) : null}
         <S.ImageWrapper>
-          <CustomImage src={`${NEXT_PUBLIC_APP_URL}${url}`} width="250" height="250" alt={meta.alt} />
+          <CustomImage
+            src={`${NEXT_PUBLIC_APP_URL}${url}`}
+            width="250"
+            height="250"
+            alt={meta.alt}
+          />
           <S.Controls>
             <S.Control onClick={addToCart}>
               {ICONS.cart}
-              <S.Quantity shown={getProductQuantity(id) > 0}>{getProductQuantity(id)}</S.Quantity>
+              <S.Quantity shown={getProductQuantity(id) > 0}>
+                {getProductQuantity(id)}
+              </S.Quantity>
             </S.Control>
             {/* <S.Control>{ICONS.like}</S.Control> */}
             <S.Control onClick={() => setToggler(!toggler)} title={t("scale")}>
@@ -57,7 +77,11 @@ export const ProductCard: FC<IProduct> = ({ _id: id, poster, name, sku, price, d
           {discountPercentage > 0 ? <S.OldPrice>${oldPrice}</S.OldPrice> : null}
         </S.Prices>
       </S.Product>
-      <FsLightbox toggler={toggler} sources={[`${NEXT_PUBLIC_APP_URL}${url}`.replace("@1x", "@2x")]} type="image" />
+      <FsLightbox
+        toggler={toggler}
+        sources={[`${NEXT_PUBLIC_APP_URL}${url}`.replace("@1x", "@2x")]}
+        type="image"
+      />
     </>
   );
 };
