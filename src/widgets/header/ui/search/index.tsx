@@ -1,71 +1,32 @@
-import { useId, useState } from "react";
+import { useState } from "react";
 
 import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
-import { ICONS } from "@/shared/svgs";
 import { CustomImage } from "@/shared/ui";
 import { useProductsSearchQuery } from "@/store/api";
+import * as S from "@/widgets/header/ui/search/search.styled";
 import { skipToken } from "@reduxjs/toolkit/query";
 import { useTranslation } from "next-i18next";
-import Select, { InputActionMeta, components } from "react-select";
+import Select, { InputActionMeta } from "react-select";
 import { useDebounce } from "use-debounce";
 
-import * as S from "./search.styled";
-
-const DropdownIndicator = (props: any) =>
-  components.DropdownIndicator && (
-    <components.DropdownIndicator {...props}>
-      <S.Icon>{ICONS.search}</S.Icon>
-    </components.DropdownIndicator>
-  );
+import { DropdownIndicator } from "./dropdown-indicator";
 
 const formatOptionLabel = (option: any, restFields: any) => {
   const { poster, name, value: optionValue } = option;
   const { url, meta } = poster;
   const { selectValue } = restFields;
-  if (selectValue?.[0]?.value === optionValue) {
-    return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between"
-        }}
-      >
-        <div
-          style={{
-            flexGrow: "1",
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap",
-            overflow: "hidden"
-          }}
-        >
-          {name}
-        </div>
-      </div>
-    );
-  }
+
+  const isPreviewShown = selectValue?.[0]?.value !== optionValue;
+
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between"
-      }}
-    >
-      <div>
-        <CustomImage src={`${NEXT_PUBLIC_APP_URL}${url}`} alt={meta.alt} width={40} height={40} loading="lazy" />
-      </div>
-      <div
-        style={{
-          flexGrow: "1",
-          textOverflow: "ellipsis",
-          whiteSpace: "nowrap",
-          overflow: "hidden"
-        }}
-      >
-        {name}
-      </div>
-    </div>
+    <S.Option>
+      {isPreviewShown && (
+        <div>
+          <CustomImage src={`${NEXT_PUBLIC_APP_URL}${url}`} alt={meta.alt} width={40} height={40} loading="lazy" />
+        </div>
+      )}
+      <S.OptionName>{name}</S.OptionName>
+    </S.Option>
   );
 };
 
@@ -147,7 +108,6 @@ export const Search = () => {
         IndicatorSeparator: () => null,
         DropdownIndicator
       }}
-      instanceId={useId()}
       placeholder={t("forms.searchPlant.placeholder")}
       isSearchable={true}
       styles={customStyles}
