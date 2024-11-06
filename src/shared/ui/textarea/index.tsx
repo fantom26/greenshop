@@ -13,10 +13,7 @@ export interface ControlledTextareaProps extends TextareaProps {
   name: string;
 }
 
-export const TextArea: FC<TextareaProps> = (props) => {
-  // **Props
-  const { disabled = false, error, helperText, ...rest } = props;
-
+export const TextArea: FC<TextareaProps> = ({ disabled = false, error, helperText, ...rest }) => {
   const getClasses = () => {
     let className = "form-textarea";
 

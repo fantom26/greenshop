@@ -7,9 +7,9 @@ interface ICustomImageProps extends Omit<ImageProps, "alt"> {
   alt: string | undefined;
 }
 
-export const CustomImage: FC<ICustomImageProps> = ({ alt, ...props }) => {
+export const CustomImage: FC<ICustomImageProps> = ({ alt, ...rest }) => {
   const { t } = useTranslation("common");
   const defaultImageAlt = alt ?? t("defaultAlt");
 
-  return <Image alt={defaultImageAlt} {...props} />;
+  return <Image alt={defaultImageAlt} {...rest} />;
 };

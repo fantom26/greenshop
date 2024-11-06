@@ -10,8 +10,7 @@ interface DrawerProps {
   children: ReactNode;
 }
 
-export const Drawer: FC<DrawerProps> = (props) => {
-  const { visible, tag: Tag, children } = props;
+export const Drawer: FC<DrawerProps> = ({ visible, tag: Tag, children }) => {
 
   const [isBrowser, setIsBrowser] = useState<boolean>(false);
 

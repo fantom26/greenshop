@@ -8,9 +8,7 @@ export interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string | ReactNode;
 }
 
-export const Checkbox: FC<CheckboxProps> = (props) => {
-  const { label, name, value, ...rest } = props;
-
+export const Checkbox: FC<CheckboxProps> = ({ label, name, value, ...rest }) => {
   const { register } = useFormContext();
 
   return (

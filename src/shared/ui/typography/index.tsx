@@ -15,9 +15,7 @@ export interface TypographyProps extends HTMLAttributes<HTMLOrSVGElement> {
   children?: string;
 }
 
-export const Typography: FC<TypographyProps> = (props) => {
-  const { tag: Tag = "div", variant = "div", color = "black", uppercase = false, center = false, children, ...rest } = props;
-
+export const Typography: FC<TypographyProps> = ({ tag: Tag = "div", variant = "div", color = "black", uppercase = false, center = false, children, ...rest }) => {
   return (
     <S.Typography as={Tag} variant={variant} color={color} uppercase={uppercase} center={center} {...rest}>
       {children}

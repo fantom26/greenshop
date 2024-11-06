@@ -14,10 +14,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   setCountryCode?: (code: string) => void;
 }
 
-export const Phone: FC<InputProps> = (props) => {
-  // **Props
-  const { disabled = false, error, helperText, placeholder = "", value = "", onChange, setCountryCode = null } = props;
-
+export const Phone: FC<InputProps> = ({ disabled = false, error, helperText, placeholder = "", value = "", onChange, setCountryCode = null }) => {
   const [countryName, setCountryName] = useState<string>("");
 
   const getClasses = () => {
@@ -67,10 +64,7 @@ export const Phone: FC<InputProps> = (props) => {
 export const ControlledPhone: FC<{
   name: string;
   setCountryCode?: (code: string) => void;
-}> = (props) => {
-  // **Props
-  const { name, setCountryCode } = props;
-
+}> = ({ name, setCountryCode }) => {
   const { t } = useTranslation("validation");
 
   // **Form

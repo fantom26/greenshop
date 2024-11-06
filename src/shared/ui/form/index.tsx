@@ -9,9 +9,7 @@ export interface FormProps {
   onSubmit: VoidFunction;
 }
 
-export const Form = (props: FormProps) => {
-  const { methods, children, onSubmit } = props;
-
+export const Form = ({ methods, children, onSubmit }: FormProps) => {
   return (
     <FormProvider {...methods}>
       <form onSubmit={onSubmit}>{children}</form>

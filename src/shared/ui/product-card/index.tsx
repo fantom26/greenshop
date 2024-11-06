@@ -5,15 +5,13 @@ import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
 import { ICONS } from "@/shared/svgs";
 import { CustomImage } from "@/shared/ui";
 import { IProduct } from "@/utils/declarations";
-import { transformProduct } from "@/utils/helpers";
 import FsLightbox from "fslightbox-react";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 
 import * as S from "./product.styled";
 
-export const ProductCard: FC<IProduct> = (props) => {
-  const { _id: id, poster, name, price, discountPercentage } = props;
+export const ProductCard: FC<IProduct> = ({ _id: id, poster, name, sku, price, discountPercentage }) => {
   const { url, meta } = poster;
   const { t } = useTranslation("common");
 
@@ -23,6 +21,17 @@ export const ProductCard: FC<IProduct> = (props) => {
 
   const { getProductQuantity, increaseCartQuantity } = useCart();
 
+  const addToCart = () => {
+    increaseCartQuantity({
+      poster,
+      price,
+      quantity: 1,
+      name,
+      sku,
+      _id: id
+    });
+  };
+
   return (
     <>
       <S.Product>
@@ -30,7 +39,7 @@ export const ProductCard: FC<IProduct> = (props) => {
         <S.ImageWrapper>
           <CustomImage src={`${NEXT_PUBLIC_APP_URL}${url}`} width="250" height="250" alt={meta.alt} />
           <S.Controls>
-            <S.Control onClick={() => increaseCartQuantity(transformProduct(props))}>
+            <S.Control onClick={addToCart}>
               {ICONS.cart}
               <S.Quantity shown={getProductQuantity(id) > 0}>{getProductQuantity(id)}</S.Quantity>
             </S.Control>

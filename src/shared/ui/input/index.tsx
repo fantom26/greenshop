@@ -16,8 +16,7 @@ export interface ControlledInputProps extends InputProps {
   name: string;
 }
 
-export const Input: FC<InputProps> = (props) => {
-  const { placeholder, error, helperText, withLabel, widthBtn, ...rest } = props;
+export const Input: FC<InputProps> = ({ placeholder, error, helperText, withLabel, widthBtn, ...rest }) => {
   const id = useId();
 
   return (
@@ -32,8 +31,7 @@ export const Input: FC<InputProps> = (props) => {
   );
 };
 
-export const ControlledInput: FC<ControlledInputProps> = (props) => {
-  const { name, defaultValue = "", helperText = "", widthBtn = null, placeholder = "", withLabel = true, ...rest } = props;
+export const ControlledInput: FC<ControlledInputProps> = ({ name, defaultValue = "", helperText = "", widthBtn = null, placeholder = "", withLabel = true, ...rest }) => {
 
   const { control } = useFormContext();
 

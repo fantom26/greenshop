@@ -8,8 +8,7 @@ import { useTranslation } from "next-i18next";
 
 import * as S from "./article.styled";
 
-export const ArticleCard: FC<IArticle> = (props) => {
-  const { _id: id, createdAt, poster, minutesForReading, title, desc } = props;
+export const ArticleCard: FC<IArticle> = ({ _id: id, createdAt, poster, minutesForReading, title, desc }) => {
   const { url, meta } = poster;
 
   const { t } = useTranslation("home");
