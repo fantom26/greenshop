@@ -5,7 +5,6 @@ import { FormProvider, UseFormReturn } from "react-hook-form";
 import {
   Checkbox,
   ControlledInput,
-  ControlledPhone,
   ControlledTextarea
 } from "@/shared/ui";
 
@@ -25,5 +24,4 @@ export function Form({ methods, children, onSubmit }: FormProps) {
 
 Form.Input = ControlledInput;
 Form.TextArea = ControlledTextarea;
-Form.Phone = ControlledPhone;
 Form.Checkbox = Checkbox;
