@@ -6,7 +6,7 @@ import {
   useState
 } from "react";
 
-import { CART_LIST } from "@/utils/constants";
+import { CART_LIST, SHIPPING_PRICE } from "@/utils/constants";
 import {
   CartContextProps,
   CartProviderProps,
@@ -17,13 +17,17 @@ import { setCookie } from "cookies-next";
 
 const initialState: CartContextProps = {
   cartItems: [],
-  cartQuantity: 0,
-  sumOfOrder: 0,
+  cartSummary: {
+    total: 0,
+    sum: 0,
+    quantity: SHIPPING_PRICE,
+    shippingPrice: SHIPPING_PRICE
+  },
   getProductQuantity: () => 0,
   increaseCartQuantity: () => {},
   decreaseCartQuantity: () => {},
   removeFromCart: () => {},
-  countPriceByQuantity: () => 0,
+  countPriceByQuantity: () => 0
 };
 
 export const CartContext = createContext(initialState);
@@ -42,13 +46,18 @@ export function CartProvider({
 }: CartProviderProps) {
   const [cartItems, setCartItems] = useState<ICartItem[]>(defaultCart);
 
-  const cartQuantity = useMemo(
-    () => cartItems.reduce((quantity, item) => item.quantity + quantity, 0),
-    [cartItems]
-  );
+  const cartSummary = useMemo(
+    () =>
+      cartItems.reduce((acc, item) => {
+        const sumPart = +item.price * item.quantity;
 
-  const sumOfOrder = useMemo(
-    () => cartItems.reduce((sum, item) => +item.price * item.quantity + sum, 0),
+        return {
+          ...acc,
+          quantity: acc.quantity + item.quantity,
+          sum: acc.sum + sumPart,
+          total: acc.total + sumPart
+        };
+      }, initialState.cartSummary),
     [cartItems]
   );
 
@@ -77,7 +86,7 @@ export function CartProvider({
   );
 
   const removeFromCart = useCallback(
-    (id: string) =>
+    (id: ICartItem["_id"]) =>
       setCartItems((currItems) => removeProductById(currItems, id)),
     [setCartItems]
   );
@@ -112,7 +121,10 @@ export function CartProvider({
   );
 
   useEffect(() => {
-    if (!setCookie) return;
+    if (!setCookie) {
+      return;
+    }
+
     setCookie(CART_LIST, JSON.stringify(cartItems), {
       expires: generateDays(7)
     });
@@ -121,23 +133,21 @@ export function CartProvider({
   const value = useMemo(
     () => ({
       cartItems,
-      cartQuantity,
-      sumOfOrder,
       getProductQuantity,
       increaseCartQuantity,
       decreaseCartQuantity,
       removeFromCart,
       countPriceByQuantity,
+      cartSummary
     }),
     [
       cartItems,
-      cartQuantity,
-      sumOfOrder,
       getProductQuantity,
       increaseCartQuantity,
       decreaseCartQuantity,
       removeFromCart,
       countPriceByQuantity,
+      cartSummary
     ]
   );
 

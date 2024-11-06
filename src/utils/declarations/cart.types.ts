@@ -18,8 +18,12 @@ export interface CartProviderProps {
 
 export interface CartContextProps {
   cartItems: ICartItem[];
-  cartQuantity: number;
-  sumOfOrder: number;
+  cartSummary: {
+    total: number;
+    sum: number;
+    quantity: number;
+    shippingPrice: number;
+  }
   getProductQuantity: (id: string) => number;
   increaseCartQuantity: (product: ICartItem) => void;
   decreaseCartQuantity: (product: ICartItem) => void;

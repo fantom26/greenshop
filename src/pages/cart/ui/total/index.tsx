@@ -1,7 +1,4 @@
-import { useMemo } from "react";
-
 import { useCartContext } from "@/hooks";
-import { SHIPPING_PRICE } from "@/utils/constants";
 import { useTranslation } from "next-i18next";
 
 import { Button, Typography } from "@/shared/ui";
@@ -10,9 +7,9 @@ import * as S from "./total.styled";
 
 export function Total() {
   const { t } = useTranslation("cart");
-  const { sumOfOrder } = useCartContext();
-
-  const total = useMemo(() => sumOfOrder + SHIPPING_PRICE, [sumOfOrder]);
+  const {
+    cartSummary: { sum, total, shippingPrice }
+  } = useCartContext();
 
   return (
     <S.Total>
@@ -25,13 +22,13 @@ export function Total() {
         <S.Item>
           <p>{t("subtotal")}</p>
           <Typography variant="h4" tag="h3">
-            {`$${sumOfOrder.toFixed(2)}`}
+            {`$${sum.toFixed(2)}`}
           </Typography>
         </S.Item>
         <S.Item>
           <p>{t("shipping")}</p>
           <Typography variant="h4" tag="h3">
-            {`$${SHIPPING_PRICE.toFixed(2)}`}
+            {`$${shippingPrice.toFixed(2)}`}
           </Typography>
         </S.Item>
         <S.Item titleBold>

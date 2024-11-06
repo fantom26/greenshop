@@ -20,17 +20,17 @@ export function Products() {
     countPriceByQuantity,
     increaseCartQuantity,
     removeFromCart,
-    cartQuantity
+    cartSummary: { quantity }
   } = useCartContext();
 
   const headers = t("headers", { returnObjects: true }) as string[];
 
   useEffect(() => {
-    if (!cartQuantity) {
+    if (!quantity) {
       push("/");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cartQuantity]);
+  }, [quantity]);
 
   return (
     <S.Products>

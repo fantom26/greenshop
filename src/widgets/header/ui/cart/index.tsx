@@ -6,12 +6,12 @@ import { ICONS } from "@/shared/svgs";
 import * as S from "./cart.styled";
 
 function Cart() {
-  const { cartQuantity } = useCartContext();
+  const { cartSummary: {quantity} } = useCartContext();
 
   return (
-    <S.Wrapper disabled={cartQuantity === 0}>
+    <S.Wrapper disabled={quantity === 0}>
       <Link href="/cart">{ICONS.cart}</Link>
-      <S.Quantity shown={cartQuantity > 0}>{cartQuantity}</S.Quantity>
+      <S.Quantity shown={quantity > 0}>{quantity}</S.Quantity>
     </S.Wrapper>
   );
 }
