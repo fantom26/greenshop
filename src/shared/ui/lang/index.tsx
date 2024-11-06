@@ -35,6 +35,7 @@ export function Langs() {
   return (
     <Select
       id="lang-select"
+      isSearchable={false}
       options={options}
       onChange={changeLang}
       value={options.find((option) => option.value === locale)}
