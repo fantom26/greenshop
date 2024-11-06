@@ -12,11 +12,11 @@ type Props = {
   setSelectedTab: (input: [number, number]) => void;
 };
 
-export const Tabs = ({
+export function Tabs({
   tabs,
   selectedTabIndex,
   setSelectedTab
-}: Props): JSX.Element => {
+}: Props): JSX.Element {
   const [buttonRefs, setButtonRefs] = useState<Array<HTMLButtonElement | null>>(
     []
   );
@@ -113,7 +113,7 @@ export const Tabs = ({
       <S.Underline style={underlineStyles} />
     </S.Tabs>
   );
-};
+}
 
 const Content = ({
   selectedTabIndex,

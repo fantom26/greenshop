@@ -15,7 +15,7 @@ interface ISlide {
   poster: IFile;
 }
 
-export const Hero = () => {
+export function Hero() {
   const { t } = useTranslation("home");
 
   const slides = (t("hero", { returnObjects: true }) as Array<ISlide>) || [];
@@ -67,4 +67,4 @@ export const Hero = () => {
       </Container>
     </S.Hero>
   );
-};
+}

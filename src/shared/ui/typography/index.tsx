@@ -29,8 +29,7 @@ export const Typography: FC<TypographyProps> = ({
   center = false,
   children,
   ...rest
-}) => {
-  return (
+}) => (
     <S.Typography
       as={Tag}
       variant={variant}
@@ -42,4 +41,3 @@ export const Typography: FC<TypographyProps> = ({
       {children}
     </S.Typography>
   );
-};

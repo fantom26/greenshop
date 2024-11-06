@@ -9,7 +9,7 @@ import { Typography } from "@/shared/ui";
 
 import * as S from "./sort.styled";
 
-export const Sort = () => {
+export function Sort() {
   const { t } = useTranslation(["common", "home"]);
   const [current, setCurrent] = useState(t("sort.default"));
 
@@ -101,4 +101,4 @@ export const Sort = () => {
       </S.Wrapper>
     </S.Sort>
   );
-};
+}

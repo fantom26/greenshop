@@ -6,7 +6,7 @@ import { Container, Typography } from "@/shared/ui";
 import * as S from "./blog.styled";
 import { ArticleCard } from "./components";
 
-export const Blog = () => {
+export function Blog() {
   const { t } = useTranslation("home");
 
   const { data: articles } = useArticlesQuery();
@@ -28,4 +28,4 @@ export const Blog = () => {
       </Container>
     </S.Blog>
   );
-};
+}

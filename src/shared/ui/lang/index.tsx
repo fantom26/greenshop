@@ -11,7 +11,7 @@ const options = LANGS.map((lang) => ({
   value: lang
 }));
 
-export const Langs = () => {
+export function Langs() {
   const {
     i18n: { changeLanguage }
   } = useTranslation();
@@ -40,4 +40,4 @@ export const Langs = () => {
       value={options.find((option) => option.value === locale)}
     />
   );
-};
+}

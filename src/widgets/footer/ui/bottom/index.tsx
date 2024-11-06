@@ -5,8 +5,8 @@ import { Copyright } from "./components/copyright";
 import { Links } from "./components/links";
 import { Socials } from "./components/socials";
 
-export const Bottom = () => (
-  <S.Bottom>
+export function Bottom() {
+  return <S.Bottom>
     <S.BottomWrapper>
       <Links />
       <Socials />
@@ -14,4 +14,4 @@ export const Bottom = () => (
     </S.BottomWrapper>
     <Copyright />
   </S.Bottom>
-);
+}

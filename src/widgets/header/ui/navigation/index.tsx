@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import * as S from "./navigation.styled";
 
-export const Navigation = () => {
+export function Navigation() {
   const { t } = useTranslation("common");
   const { pathname } = useRouter();
   const navigation = t("navigation", { returnObjects: true });
@@ -22,4 +22,4 @@ export const Navigation = () => {
       </S.List>
     </S.Nav>
   );
-};
+}

@@ -4,7 +4,7 @@ import { Typography } from "@/shared/ui";
 
 import * as S from "./links.styled";
 
-export const Links = () => {
+export function Links() {
   const { t } = useTranslation("footer");
 
   const links = t("links", { returnObjects: true }) as Array<{
@@ -16,8 +16,7 @@ export const Links = () => {
     <S.Groups>
       {links.map(({ title, list }) => (
         <li key={title}>
-          <>
-            <Typography tag="h2" variant="h4">
+          <Typography tag="h2" variant="h4">
               {title}
             </Typography>
             <S.Links>
@@ -27,9 +26,8 @@ export const Links = () => {
                 </li>
               ))}
             </S.Links>
-          </>
         </li>
       ))}
     </S.Groups>
   );
-};
+}

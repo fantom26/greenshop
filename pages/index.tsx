@@ -7,11 +7,11 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Home } from "@/pages/home";
 import { MainLayout, Page } from "@/widgets/layouts";
 
-const HomePage = ({ meta }: Omit<PageProps, "breadcrumbs">) => (
-  <Page meta={meta}>
+function HomePage({ meta }: Omit<PageProps, "breadcrumbs">) {
+  return <Page meta={meta}>
     <Home />
   </Page>
-);
+}
 
 HomePage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 

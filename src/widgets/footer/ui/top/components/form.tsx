@@ -7,7 +7,7 @@ import { Form } from "@/shared/ui/form";
 
 import * as S from "./form.styled";
 
-export const EmailForm = () => {
+export function EmailForm() {
   const { t } = useTranslation("common");
 
   const methods = useForm<NewslettersSchema>({
@@ -46,4 +46,4 @@ export const EmailForm = () => {
       </S.FormWrapper>
     </Form>
   );
-};
+}

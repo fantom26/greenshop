@@ -5,7 +5,7 @@ import { ICONS } from "@/shared/svgs";
 
 import * as S from "./cart.styled";
 
-export const Cart = () => {
+export function Cart() {
   const { cartQuantity } = useCart();
 
   return (
@@ -14,4 +14,4 @@ export const Cart = () => {
       <S.Quantity shown={cartQuantity > 0}>{cartQuantity}</S.Quantity>
     </S.Wrapper>
   );
-};
+}

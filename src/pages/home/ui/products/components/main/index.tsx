@@ -12,7 +12,7 @@ import { MobileFilter } from "./components/mobile-filter";
 import { Sort } from "./components/sort";
 import * as S from "./main.styled";
 
-export const Main = () => {
+export function Main() {
   const { t } = useTranslation("home");
 
   const LIMIT = 9;
@@ -72,4 +72,4 @@ export const Main = () => {
       )}
     </S.Main>
   );
-};
+}

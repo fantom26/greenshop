@@ -9,12 +9,12 @@ import { Cart } from "@/pages/cart";
 import { Breadcrumbs } from "@/shared/ui";
 import { MainLayout, Page } from "@/widgets/layouts";
 
-const CartPage = ({ meta, breadcrumbs }: PageProps) => (
-  <Page meta={meta}>
+function CartPage({ meta, breadcrumbs }: PageProps) {
+  return <Page meta={meta}>
     <Breadcrumbs items={breadcrumbs} />
     <Cart />
   </Page>
-);
+}
 
 CartPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 

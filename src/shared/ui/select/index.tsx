@@ -12,8 +12,7 @@ interface ISelectProps<OptionType>
 }
 
 export const Select = forwardRef<any, ISelectProps<any>>(
-  ({ id, styles, components, ...rest }, ref) => {
-    return (
+  ({ id, styles, components, ...rest }, ref) => (
       <ReactSelect
         ref={ref}
         instanceId={id}
@@ -26,6 +25,5 @@ export const Select = forwardRef<any, ISelectProps<any>>(
         }}
         {...rest}
       />
-    );
-  }
+    )
 );

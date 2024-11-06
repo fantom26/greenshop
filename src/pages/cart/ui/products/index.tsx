@@ -10,7 +10,7 @@ import { CustomImage, Typography } from "@/shared/ui";
 
 import * as S from "./products.styled";
 
-export const Products = () => {
+export function Products() {
   const { t } = useTranslation("cart");
   const { push } = useRouter();
   const {
@@ -91,4 +91,4 @@ export const Products = () => {
       </S.List>
     </S.Products>
   );
-};
+}

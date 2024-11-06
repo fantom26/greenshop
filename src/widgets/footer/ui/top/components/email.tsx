@@ -5,7 +5,7 @@ import { Typography } from "@/shared/ui";
 import * as S from "./email.styled";
 import { EmailForm } from "./form";
 
-export const Email = () => {
+export function Email() {
   const { t } = useTranslation("footer");
 
   return (
@@ -20,4 +20,4 @@ export const Email = () => {
       </Typography>
     </S.EmailWrapper>
   );
-};
+}

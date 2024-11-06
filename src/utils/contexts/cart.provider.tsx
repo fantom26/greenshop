@@ -47,15 +47,15 @@ export const CartProvider: FC<CartProviderProps> = ({
     setCartItems((currItems) => {
       if (!currItems.find((item) => item._id === product._id)) {
         return [...currItems, product];
-      } else {
+      } 
         return currItems.map((item) => {
           if (item._id === product._id) {
             return { ...item, quantity: item.quantity + 1 };
-          } else {
+          } 
             return item;
-          }
+          
         });
-      }
+      
     });
   };
 
@@ -63,15 +63,15 @@ export const CartProvider: FC<CartProviderProps> = ({
     setCartItems((currItems) => {
       if (currItems.find((item) => item._id === product._id)?.quantity === 1) {
         return currItems.filter((item) => item._id !== product._id);
-      } else {
+      } 
         return currItems.map((item) => {
           if (item._id === product._id) {
             return { ...item, quantity: item.quantity - 1 };
-          } else {
+          } 
             return item;
-          }
+          
         });
-      }
+      
     });
   };
 

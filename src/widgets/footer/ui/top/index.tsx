@@ -6,7 +6,7 @@ import { Typography } from "@/shared/ui";
 import { Email } from "./components/email";
 import * as S from "./top.styled";
 
-export const Top = () => {
+export function Top() {
   const { t } = useTranslation("footer");
 
   const advantages = t("advantages", { returnObjects: true });
@@ -29,4 +29,4 @@ export const Top = () => {
       <Email />
     </S.Top>
   );
-};
+}

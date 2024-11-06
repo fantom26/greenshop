@@ -90,7 +90,7 @@ const customStyles = {
   })
 };
 
-export const Search = () => {
+export function Search() {
   const [inputText, setInputText] = useState("");
   const [searchTerm] = useDebounce(inputText, 300);
   const { t } = useTranslation("common");
@@ -112,13 +112,13 @@ export const Search = () => {
   return (
     <Select
       inputValue={inputText}
-      isClearable={true}
+      isClearable
       components={{
         IndicatorSeparator: () => null,
         DropdownIndicator
       }}
       placeholder={t("forms.searchPlant.placeholder")}
-      isSearchable={true}
+      isSearchable
       styles={customStyles}
       formatOptionLabel={formatOptionLabel}
       options={inputText.trim() ? data : []}
@@ -128,4 +128,4 @@ export const Search = () => {
       noOptionsMessage={noOptionsMessage}
     />
   );
-};
+}

@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 import * as S from "./filter.styled";
 
-export const Filter = () => {
+export function Filter() {
   const {
     t,
     i18n: { language }
@@ -111,4 +111,4 @@ export const Filter = () => {
       ))}
     </S.Tabs>
   );
-};
+}

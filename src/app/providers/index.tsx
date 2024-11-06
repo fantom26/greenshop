@@ -5,14 +5,14 @@ import { CartProvider } from "@/utils/contexts";
 import { ICartItem } from "@/utils/declarations";
 import { Provider as ReduxProvider } from "react-redux";
 
-export const Providers = ({
+export function Providers({
   defaultCart,
   children
 }: {
   defaultCart: ICartItem[];
   children: ReactNode;
-}) => (
-  <ReduxProvider store={makeStore()}>
+}) {
+  return <ReduxProvider store={makeStore()}>
     <CartProvider defaultCart={defaultCart}>{children}</CartProvider>
   </ReduxProvider>
-);
+}

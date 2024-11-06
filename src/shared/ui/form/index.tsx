@@ -15,13 +15,13 @@ export interface FormProps {
   onSubmit: VoidFunction;
 }
 
-export const Form = ({ methods, children, onSubmit }: FormProps) => {
+export function Form({ methods, children, onSubmit }: FormProps) {
   return (
     <FormProvider {...methods}>
       <form onSubmit={onSubmit}>{children}</form>
     </FormProvider>
   );
-};
+}
 
 Form.Input = ControlledInput;
 Form.TextArea = ControlledTextarea;

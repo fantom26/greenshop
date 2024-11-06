@@ -4,8 +4,8 @@ import { Main } from "./components/main";
 import { Sidebar } from "./components/sidebar";
 import * as S from "./products.styled";
 
-export const Products = () => (
-  <S.Products>
+export function Products() {
+  return <S.Products>
     <Container>
       <S.ProductsWrapper>
         <Sidebar />
@@ -13,4 +13,4 @@ export const Products = () => (
       </S.ProductsWrapper>
     </Container>
   </S.Products>
-);
+}

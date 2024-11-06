@@ -6,7 +6,7 @@ import { Logo, Typography } from "@/shared/ui";
 
 import * as S from "./contacts.styled";
 
-export const Contacts = () => {
+export function Contacts() {
   const { t } = useTranslation("common");
 
   return (
@@ -38,4 +38,4 @@ export const Contacts = () => {
       </S.List>
     </S.Contacts>
   );
-};
+}

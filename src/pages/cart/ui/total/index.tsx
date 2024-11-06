@@ -8,7 +8,7 @@ import { Button, Typography } from "@/shared/ui";
 
 import * as S from "./total.styled";
 
-export const Total = () => {
+export function Total() {
   const { t } = useTranslation("cart");
   const { sumOfOrder } = useCart();
 
@@ -47,4 +47,4 @@ export const Total = () => {
       </S.LinkWrapper>
     </S.Total>
   );
-};
+}

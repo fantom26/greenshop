@@ -2,8 +2,8 @@ import { Head, Html, Main, NextScript } from "next/document";
 
 import { GlobalLoader, loaderStyles } from "@/shared/ui/global-loader";
 
-const Document = () => (
-  <Html lang="en">
+function Document() {
+  return <Html lang="en">
     <Head>
       <link
         rel="preload"
@@ -61,6 +61,6 @@ const Document = () => (
       <NextScript />
     </body>
   </Html>
-);
+}
 
 export default Document;

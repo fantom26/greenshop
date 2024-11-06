@@ -5,7 +5,7 @@ import { Typography } from "@/shared/ui";
 
 import * as S from "./copyright.styled";
 
-export const Copyright = () => {
+export function Copyright() {
   const { t } = useTranslation("footer");
 
   return (
@@ -15,4 +15,4 @@ export const Copyright = () => {
       </Typography>
     </S.Copyright>
   );
-};
+}

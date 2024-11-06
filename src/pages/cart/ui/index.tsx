@@ -8,7 +8,7 @@ import * as S from "./info.styled";
 import { Products } from "./products";
 import { Total } from "./total";
 
-export const Cart = () => {
+export function Cart() {
   const { t } = useTranslation("common");
   return (
     <>
@@ -27,4 +27,4 @@ export const Cart = () => {
       </ErrorBoundary>
     </>
   );
-};
+}

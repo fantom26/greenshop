@@ -4,9 +4,8 @@ import { CustomImage } from "@/shared/ui";
 import { Categories, PriceRange, Queries, Sizes } from "./components";
 import * as S from "./sidebar.styled";
 
-export const Sidebar = () => (
-  <>
-    <S.Sidebar>
+export function Sidebar() {
+  return <S.Sidebar>
       <S.Filter>
         <Queries />
         <Categories />
@@ -22,5 +21,4 @@ export const Sidebar = () => (
         />
       </S.Banner>
     </S.Sidebar>
-  </>
-);
+}

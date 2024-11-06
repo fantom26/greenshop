@@ -10,7 +10,7 @@ import { Categories, PriceRange, Sizes } from "../../../sidebar/components";
 import { Sort } from "../sort";
 import * as S from "./mobile-filtration.styled";
 
-export const MobileFilter = () => {
+export function MobileFilter() {
   const { lockScroll, unlockScroll } = useScrollLock();
 
   const [filtersIsOpen, setFiltersIsOpen] = useState(false);
@@ -73,4 +73,4 @@ export const MobileFilter = () => {
       </S.WrapperBtn>
     </>
   );
-};
+}

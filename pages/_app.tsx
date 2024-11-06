@@ -33,7 +33,7 @@ const Wrapper = styled.div`
   min-height: 100%;
 `;
 
-const App = ({ Component, pageProps, defaultCart = [] }: AppProps) => {
+function App({ Component, pageProps, defaultCart = [] }: AppProps) {
   const getLayout = Component.getLayout || ((page) => page);
   const router = useRouter();
 
@@ -80,7 +80,7 @@ const App = ({ Component, pageProps, defaultCart = [] }: AppProps) => {
       </Providers>
     </>
   );
-};
+}
 
 App.getInitialProps = async (ctx: AppContext) => {
   try {

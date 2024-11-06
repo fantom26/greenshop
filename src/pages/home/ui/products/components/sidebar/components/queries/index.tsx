@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import * as S from "./queries.styled";
 
 // TODO rethink the logic for this component. In my view, I made here a lot of mistakes and unnecessary moves
-export const Queries = () => {
+export function Queries() {
   const { query, push } = useRouter();
   const { t } = useTranslation("home");
   const entries = Object.entries(query);
@@ -16,7 +16,7 @@ export const Queries = () => {
       const _gteValue = entriesMap.get("price_gte");
       const _lteValue = entriesMap.get("price_lte");
 
-      //remove _gte and _lte parameters from object
+      // remove _gte and _lte parameters from object
       const queries = entries
         .filter(
           ([key]) =>
@@ -91,4 +91,4 @@ export const Queries = () => {
       ) : null}
     </>
   );
-};
+}
