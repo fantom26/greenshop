@@ -18,9 +18,9 @@ import { setCookie } from "cookies-next";
 const initialState: CartContextProps = {
   cartItems: [],
   cartSummary: {
-    total: 0,
+    total: SHIPPING_PRICE,
     sum: 0,
-    quantity: SHIPPING_PRICE,
+    quantity: 0,
     shippingPrice: SHIPPING_PRICE
   },
   getProductQuantity: () => 0,
