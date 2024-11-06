@@ -19,7 +19,6 @@ export function Products() {
     decreaseCartQuantity,
     countPriceByQuantity,
     increaseCartQuantity,
-    removeFromCart,
     cartSummary: { quantity }
   } = useCartContext();
 
@@ -82,7 +81,10 @@ export function Products() {
               <Typography variant="h4" color="green">
                 {`$${countPriceByQuantity(item._id)}`}
               </Typography>
-              <S.Delete type="button" onClick={() => removeFromCart(item._id)}>
+              <S.Delete
+                type="button"
+                onClick={() => decreaseCartQuantity(item)}
+              >
                 {ICONS.recycleBin}
               </S.Delete>
             </S.Wrapper>

@@ -26,7 +26,6 @@ const initialState: CartContextProps = {
   getProductQuantity: () => 0,
   increaseCartQuantity: () => {},
   decreaseCartQuantity: () => {},
-  removeFromCart: () => {},
   countPriceByQuantity: () => 0
 };
 
@@ -85,12 +84,6 @@ export function CartProvider({
     [setCartItems]
   );
 
-  const removeFromCart = useCallback(
-    (id: ICartItem["_id"]) =>
-      setCartItems((currItems) => removeProductById(currItems, id)),
-    [setCartItems]
-  );
-
   const decreaseCartQuantity = useCallback(
     (product: ICartItem) => {
       setCartItems((currItems) => {
@@ -136,7 +129,6 @@ export function CartProvider({
       getProductQuantity,
       increaseCartQuantity,
       decreaseCartQuantity,
-      removeFromCart,
       countPriceByQuantity,
       cartSummary
     }),
@@ -145,7 +137,6 @@ export function CartProvider({
       getProductQuantity,
       increaseCartQuantity,
       decreaseCartQuantity,
-      removeFromCart,
       countPriceByQuantity,
       cartSummary
     ]
