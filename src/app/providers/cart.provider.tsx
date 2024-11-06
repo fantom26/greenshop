@@ -24,7 +24,6 @@ const initialState: CartContextProps = {
   decreaseCartQuantity: () => {},
   removeFromCart: () => {},
   countPriceByQuantity: () => 0,
-  resetCart: () => {}
 };
 
 export const CartContext = createContext(initialState);
@@ -112,8 +111,6 @@ export function CartProvider({
     [cartItems]
   );
 
-  const resetCart = useCallback(() => setCartItems([]), []);
-
   useEffect(() => {
     if (!setCookie) return;
     setCookie(CART_LIST, JSON.stringify(cartItems), {
@@ -131,7 +128,6 @@ export function CartProvider({
       decreaseCartQuantity,
       removeFromCart,
       countPriceByQuantity,
-      resetCart
     }),
     [
       cartItems,
@@ -142,7 +138,6 @@ export function CartProvider({
       decreaseCartQuantity,
       removeFromCart,
       countPriceByQuantity,
-      resetCart
     ]
   );
 
