@@ -33,8 +33,8 @@ export function Hero() {
             wrapperTag="ul"
             slidesPerView={1}
           >
-            {slides.map(({ supTitle, title, description, poster }, index) => (
-              <SwiperSlide key={index} tag="li">
+            {slides.map(({ supTitle, title, description, poster }) => (
+              <SwiperSlide key={title} tag="li">
                 <S.Slide>
                   <S.Info>
                     <S.Suptitle>{supTitle}</S.Suptitle>

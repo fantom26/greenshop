@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useScrollLock } from "@/hooks";
 
@@ -11,7 +11,7 @@ import { MobileNav } from "./mobile-nav";
 import { Navigation } from "./navigation";
 import { Search } from "./search";
 
-export const Header: FC = () => {
+export function Header() {
   const { lockScroll, unlockScroll } = useScrollLock();
 
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -53,4 +53,4 @@ export const Header: FC = () => {
       </S.Header>
     </>
   );
-};
+}

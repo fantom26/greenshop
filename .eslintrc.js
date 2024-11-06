@@ -24,6 +24,7 @@ module.exports = {
   },
   rules: {
     "no-console": "error",
+    "no-underscore-dangle": "off",
     "react/require-default-props": "off",
     "react/prop-types": "off", // If you're using TypeScript, prop-types are not needed
     "react/jsx-filename-extension": [1, { extensions: [".tsx"] }], // Only .tsx files for JSX

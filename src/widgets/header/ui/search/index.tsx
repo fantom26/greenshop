@@ -103,9 +103,9 @@ export function Search() {
     return t("forms.searchPlant.noOptions");
   };
 
-  const handleInputChange = (inputText: string, meta: InputActionMeta) => {
+  const handleInputChange = (newValue: string, meta: InputActionMeta) => {
     if (meta.action !== "input-blur" && meta.action !== "menu-close") {
-      setInputText(inputText);
+      setInputText(newValue);
     }
   };
 

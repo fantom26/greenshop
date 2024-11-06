@@ -1,4 +1,4 @@
-import { FC, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 import { useCart } from "@/hooks";
 import { IProduct } from "@/utils/declarations";
@@ -8,18 +8,18 @@ import Link from "next/link";
 
 import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
 import { ICONS } from "@/shared/svgs";
-import { CustomImage } from "@/shared/ui";
 
+import { CustomImage } from "../image";
 import * as S from "./product.styled";
 
-export const ProductCard: FC<IProduct> = ({
+export function ProductCard({
   _id: id,
   poster,
   name,
   sku,
   price,
   discountPercentage
-}) => {
+}: IProduct) {
   const { url, meta } = poster;
   const { t } = useTranslation("common");
 
@@ -84,4 +84,4 @@ export const ProductCard: FC<IProduct> = ({
       />
     </>
   );
-};
+}

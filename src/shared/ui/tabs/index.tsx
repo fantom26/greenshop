@@ -16,7 +16,7 @@ export function Tabs({
   tabs,
   selectedTabIndex,
   setSelectedTab
-}: Props): JSX.Element {
+}: Props): ReactNode {
   const [buttonRefs, setButtonRefs] = useState<Array<HTMLButtonElement | null>>(
     []
   );
@@ -95,10 +95,12 @@ export function Tabs({
     <S.Tabs ref={navRef} onPointerLeave={onLeaveTabs}>
       {tabs.map((item, i) => (
         <S.Tab
-          key={i}
+          key={item.id}
           selected={selectedTabIndex === i}
           hovered={hoveredTabIndex === i}
-          ref={(el) => (buttonRefs[i] = el)}
+          ref={(el) => {
+            buttonRefs[i] = el;
+          }}
           onPointerEnter={() => onEnterTab(i)}
           onFocus={() => onEnterTab(i)}
           onClick={() => onSelectTab(i)}
@@ -126,7 +128,7 @@ const Content = ({
   tabs: Tab[];
 
   className?: string;
-}): JSX.Element => {
+}): ReactNode => {
   const transitions = useTransition(selectedTabIndex, {
     exitBeforeEnter: false,
     keys: null,
