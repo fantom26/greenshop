@@ -32,6 +32,11 @@ export const CartContext = createContext(initialState);
 const getProductById = (products: ICartItem[], productId: ICartItem["_id"]) =>
   products.find((item) => item._id === productId);
 
+const removeProductById = (
+  products: ICartItem[],
+  productId: ICartItem["_id"]
+) => products.filter((item) => item._id !== productId);
+
 export function CartProvider({
   defaultCart = [],
   children
@@ -72,6 +77,12 @@ export function CartProvider({
     [setCartItems]
   );
 
+  const removeFromCart = useCallback(
+    (id: string) =>
+      setCartItems((currItems) => removeProductById(currItems, id)),
+    [setCartItems]
+  );
+
   const decreaseCartQuantity = useCallback(
     (product: ICartItem) => {
       setCartItems((currItems) => {
@@ -79,7 +90,7 @@ export function CartProvider({
 
         if (!currItem) return currItems;
         if (currItem.quantity === 1) {
-          return currItems.filter((item) => item._id !== product._id);
+          return removeProductById(currItems, product._id);
         }
 
         return currItems.map((item) =>
@@ -99,12 +110,6 @@ export function CartProvider({
       return currentItem ? currentItem.price * currentItem.quantity : 0;
     },
     [cartItems]
-  );
-
-  const removeFromCart = useCallback(
-    (id: string) =>
-      setCartItems((currItems) => currItems.filter((item) => item._id !== id)),
-    [setCartItems]
   );
 
   const resetCart = useCallback(() => setCartItems([]), []);
