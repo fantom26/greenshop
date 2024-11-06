@@ -2,7 +2,7 @@ import { StyledVariants } from "@/utils/declarations";
 import Link from "next/link";
 import styled, { css } from "styled-components";
 
-import { BtnVariant, ButtonProps } from ".";
+import { BtnVariant, ButtonProps } from "./types";
 
 const variants: StyledVariants<BtnVariant> = {
   solid: css`
@@ -34,7 +34,7 @@ export const Button = styled.button<ButtonProps>`
 
   ${({ variant }) => variants[variant]}
 
-  ${({ uppercase }) => uppercase && "text-transform: uppercase;"};
+    ${({ uppercase }) => uppercase && "text-transform: uppercase;"};
   ${({ endIcon, startIcon }) => (endIcon || startIcon) && "gap: 0.5rem"};
 
   ${({ endIcon }) =>
@@ -59,7 +59,7 @@ export const Hyperlink = styled(Link)<ButtonProps>`
 
   ${({ variant }) => variants[variant]}
 
-  ${({ uppercase }) => uppercase && "text-transform: uppercase;"};
+    ${({ uppercase }) => uppercase && "text-transform: uppercase;"};
   ${({ endIcon, startIcon }) => (endIcon || startIcon) && "gap: 0.5rem"};
 
   ${({ endIcon }) =>

@@ -1,20 +1,8 @@
-import { FC, HTMLAttributes, ReactNode } from "react";
+import { ButtonProps } from "@/shared/ui/button/types";
 
 import * as S from "./button.styled";
 
-export type BtnVariant = "solid" | "outline";
-
-export interface ButtonProps extends HTMLAttributes<HTMLElement> {
-  variant: BtnVariant;
-  path?: string;
-  uppercase?: boolean;
-  isLoading?: boolean;
-  endIcon?: ReactNode;
-  startIcon?: ReactNode;
-  children: ReactNode;
-}
-
-export const Button: FC<Partial<ButtonProps>> = ({
+export function Button({
   variant = "outline",
   endIcon = null,
   startIcon = null,
@@ -22,7 +10,7 @@ export const Button: FC<Partial<ButtonProps>> = ({
   path,
   children,
   ...rest
-}) => {
+}: Partial<ButtonProps>) {
   if (path && endIcon) {
     return (
       <S.Hyperlink variant={variant} endIcon href={path} {...rest}>
@@ -62,4 +50,4 @@ export const Button: FC<Partial<ButtonProps>> = ({
       <span>{children}</span>
     </S.Button>
   );
-};
+}

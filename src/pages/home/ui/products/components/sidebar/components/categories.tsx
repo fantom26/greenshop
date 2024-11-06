@@ -1,11 +1,9 @@
-import { FC } from "react";
-
 import { useCategoriesQuery } from "@/store/api";
 import { useTranslation } from "next-i18next";
 
 import { Filter } from "@/widgets/filter-list";
 
-export const Categories: FC = () => {
+export function Categories () {
   const { t } = useTranslation("home");
   const { data: categories = [] } = useCategoriesQuery();
 

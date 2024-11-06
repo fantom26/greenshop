@@ -1,4 +1,4 @@
-import { FC, MouseEvent } from "react";
+import { MouseEvent } from "react";
 
 import { usePagination } from "@/hooks";
 
@@ -12,11 +12,11 @@ interface PaginationProps {
   handleChangePage: (page: number) => void;
 }
 
-export const Pagination: FC<PaginationProps> = ({
+export function Pagination({
   totalPages,
   currentPage,
   handleChangePage
-}) => {
+}: PaginationProps) {
   const buttonConst = 3;
 
   const paginationRange = usePagination({
@@ -65,4 +65,4 @@ export const Pagination: FC<PaginationProps> = ({
       </S.Button>
     </S.List>
   );
-};
+}

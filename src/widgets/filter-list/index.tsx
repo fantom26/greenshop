@@ -1,5 +1,3 @@
-import { FC } from "react";
-
 import { useProductsQuery } from "@/store/api";
 import { IProduct } from "@/utils/declarations";
 import { useRouter } from "next/router";
@@ -15,7 +13,7 @@ interface FilterProps {
   queryName: string;
 }
 
-export const Filter: FC<FilterProps> = ({ title, items, queryName }) => {
+export function Filter({ title, items, queryName }: FilterProps) {
   const router = useRouter();
 
   const { data } = useProductsQuery({});
@@ -89,4 +87,4 @@ export const Filter: FC<FilterProps> = ({ title, items, queryName }) => {
   }
 
   return content;
-};
+}

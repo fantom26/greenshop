@@ -1,9 +1,7 @@
-import { FC } from "react";
-
-import { animated, useTransition } from "react-spring";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { animated, useTransition } from "react-spring";
 
 import { ICONS } from "@/shared/svgs";
 import { Button, Drawer } from "@/shared/ui";
@@ -11,7 +9,7 @@ import { Button, Drawer } from "@/shared/ui";
 import { Search } from "../search";
 import * as S from "./mobile-nav.styled";
 
-export const MobileNav: FC<{ open: boolean }> = ({ open }) => {
+export function MobileNav({ open }: { open: boolean }) {
   const { t } = useTranslation("common");
   const { pathname } = useRouter();
 
@@ -60,4 +58,4 @@ export const MobileNav: FC<{ open: boolean }> = ({ open }) => {
       </Drawer>
     ) : null
   );
-};
+}

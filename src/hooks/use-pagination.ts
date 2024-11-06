@@ -14,15 +14,12 @@ const range = (start: number, end: number) => {
   return Array.from({ length }, (_, index) => index + start);
 };
 
-export const usePagination = (options: UsePaginationProps) => {
-  // **Props
-  const {
-    currentPage,
-    totalPages,
-    buttonConst = 3,
-    siblingCount = 1
-  } = options;
-
+export const usePagination = ({
+  currentPage,
+  totalPages,
+  buttonConst = 3,
+  siblingCount = 1
+}: UsePaginationProps) => {
   const paginationRange = useMemo(() => {
     // Pages count is determined as siblingCount + buttonConst(firstPage + lastPage + currentPage) + 2*DOTS
     const totalPageNumbers = buttonConst + 2 + siblingCount;

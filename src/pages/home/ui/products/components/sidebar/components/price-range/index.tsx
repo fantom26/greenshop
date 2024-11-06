@@ -1,4 +1,4 @@
-import { FC, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import { useProductsQuery } from "@/store/api";
 import { useTranslation } from "next-i18next";
@@ -9,9 +9,7 @@ import { Button, Typography } from "@/shared/ui";
 
 import * as S from "./price-range.styled";
 
-export const PriceRange: FC<{ mobileHandler?: () => void }> = ({
-  mobileHandler
-}) => {
+export function PriceRange({ mobileHandler }: { mobileHandler?: () => void }) {
   const { t } = useTranslation("home");
   const [prices, setPrices] = useState<string[]>(["00.00", "00.00"]);
   const { push, query } = useRouter();
@@ -101,4 +99,4 @@ export const PriceRange: FC<{ mobileHandler?: () => void }> = ({
       </S.ButtonWrapper>
     </S.PriceRange>
   );
-};
+}

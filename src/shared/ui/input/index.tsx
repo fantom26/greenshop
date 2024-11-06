@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes, ReactNode, useId } from "react";
+import { InputHTMLAttributes, ReactNode, useId } from "react";
 
 import { Controller, useFormContext } from "react-hook-form";
 
@@ -16,14 +16,14 @@ export interface ControlledInputProps extends InputProps {
   name: string;
 }
 
-export const Input: FC<InputProps> = ({
+export function Input({
   placeholder,
   error,
   helperText,
   withLabel,
   widthBtn,
   ...rest
-}) => {
+}: InputProps) {
   const id = useId();
 
   return (
@@ -43,9 +43,9 @@ export const Input: FC<InputProps> = ({
       )}
     </S.Wrapper>
   );
-};
+}
 
-export const ControlledInput: FC<ControlledInputProps> = ({
+export function ControlledInput({
   name,
   defaultValue = "",
   helperText = "",
@@ -53,7 +53,7 @@ export const ControlledInput: FC<ControlledInputProps> = ({
   placeholder = "",
   withLabel = true,
   ...rest
-}) => {
+}: ControlledInputProps) {
   const { control } = useFormContext();
 
   return (
@@ -75,4 +75,4 @@ export const ControlledInput: FC<ControlledInputProps> = ({
       )}
     />
   );
-};
+}

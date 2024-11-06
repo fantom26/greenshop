@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes, useState } from "react";
+import { InputHTMLAttributes, useState } from "react";
 
 import { useTranslation } from "next-i18next";
 import { Controller, useFormContext } from "react-hook-form";
@@ -13,7 +13,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   setCountryCode?: (code: string) => void;
 }
 
-export const Phone: FC<InputProps> = ({
+export function Phone({
   disabled = false,
   error,
   helperText,
@@ -21,7 +21,7 @@ export const Phone: FC<InputProps> = ({
   value = "",
   onChange,
   setCountryCode = null
-}) => {
+}: InputProps) {
   const [countryName, setCountryName] = useState<string>("");
 
   const getClasses = () => {
@@ -66,12 +66,15 @@ export const Phone: FC<InputProps> = ({
       {helperText && error && <span className="form-error">{helperText}</span>}
     </div>
   );
-};
+}
 
-export const ControlledPhone: FC<{
+export function ControlledPhone({
+  name,
+  setCountryCode
+}: {
   name: string;
   setCountryCode?: (code: string) => void;
-}> = ({ name, setCountryCode }) => {
+}) {
   const { t } = useTranslation("validation");
 
   // **Form
@@ -93,4 +96,4 @@ export const ControlledPhone: FC<{
       )}
     />
   );
-};
+}

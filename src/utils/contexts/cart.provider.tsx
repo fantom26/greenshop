@@ -1,4 +1,4 @@
-import { FC, createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 import { CART_LIST } from "@/utils/constants";
 import {
@@ -23,10 +23,10 @@ const initialState: CartContextProps = {
 
 export const CartContext = createContext(initialState);
 
-export const CartProvider: FC<CartProviderProps> = ({
+export function CartProvider({
   defaultCart = [],
   children
-}) => {
+}: CartProviderProps) {
   const [cartItems, setCartItems] = useState<ICartItem[]>(defaultCart);
 
   const cartQuantity = cartItems.reduce(
@@ -46,15 +46,13 @@ export const CartProvider: FC<CartProviderProps> = ({
     setCartItems((currItems) => {
       if (!currItems.find((item) => item._id === product._id)) {
         return [...currItems, product];
-      } 
-        return currItems.map((item) => {
-          if (item._id === product._id) {
-            return { ...item, quantity: item.quantity + 1 };
-          } 
-            return item;
-          
-        });
-      
+      }
+      return currItems.map((item) => {
+        if (item._id === product._id) {
+          return { ...item, quantity: item.quantity + 1 };
+        }
+        return item;
+      });
     });
   };
 
@@ -62,15 +60,13 @@ export const CartProvider: FC<CartProviderProps> = ({
     setCartItems((currItems) => {
       if (currItems.find((item) => item._id === product._id)?.quantity === 1) {
         return currItems.filter((item) => item._id !== product._id);
-      } 
-        return currItems.map((item) => {
-          if (item._id === product._id) {
-            return { ...item, quantity: item.quantity - 1 };
-          } 
-            return item;
-          
-        });
-      
+      }
+      return currItems.map((item) => {
+        if (item._id === product._id) {
+          return { ...item, quantity: item.quantity - 1 };
+        }
+        return item;
+      });
     });
   };
 
@@ -109,4 +105,4 @@ export const CartProvider: FC<CartProviderProps> = ({
       {children}
     </CartContext.Provider>
   );
-};
+}

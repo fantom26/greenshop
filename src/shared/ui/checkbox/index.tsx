@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes, ReactNode } from "react";
+import { InputHTMLAttributes, ReactNode } from "react";
 
 import { useFormContext } from "react-hook-form";
 
@@ -8,12 +8,7 @@ export interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string | ReactNode;
 }
 
-export const Checkbox: FC<CheckboxProps> = ({
-  label,
-  name,
-  value,
-  ...rest
-}) => {
+export function Checkbox({ label, name, value, ...rest }: CheckboxProps) {
   const { register } = useFormContext();
 
   return (
@@ -30,4 +25,4 @@ export const Checkbox: FC<CheckboxProps> = ({
       </label>
     </div>
   );
-};
+}

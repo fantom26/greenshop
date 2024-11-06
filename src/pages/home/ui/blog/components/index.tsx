@@ -1,5 +1,3 @@
-import { FC } from "react";
-
 import { IArticle } from "@/utils/declarations";
 import { useTranslation } from "next-i18next";
 
@@ -9,14 +7,14 @@ import { CustomImage, Typography } from "@/shared/ui";
 
 import * as S from "./article.styled";
 
-export const ArticleCard: FC<IArticle> = ({
+export function ArticleCard({
   _id: id,
   createdAt,
   poster,
   minutesForReading,
   title,
   desc
-}) => {
+}: IArticle) {
   const { url, meta } = poster;
 
   const { t } = useTranslation("home");
@@ -49,4 +47,4 @@ export const ArticleCard: FC<IArticle> = ({
       </S.ArticleWrapper>
     </li>
   );
-};
+}

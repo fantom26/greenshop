@@ -1,4 +1,4 @@
-import { ElementType, FC, ReactNode, useEffect, useState } from "react";
+import { ElementType, ReactNode, useEffect, useState } from "react";
 
 import { createPortal } from "react-dom";
 
@@ -10,7 +10,7 @@ interface DrawerProps {
   children: ReactNode;
 }
 
-export const Drawer: FC<DrawerProps> = ({ visible, tag: Tag, children }) => {
+export function Drawer({ visible, tag: Tag, children }: DrawerProps) {
   const [isBrowser, setIsBrowser] = useState<boolean>(false);
 
   useEffect(() => {
@@ -29,4 +29,4 @@ export const Drawer: FC<DrawerProps> = ({ visible, tag: Tag, children }) => {
     </S.Drawer>,
     document?.body
   );
-};
+}

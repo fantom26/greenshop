@@ -1,7 +1,7 @@
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 
 import * as S from "./container.styled";
 
-export const Container: FC<{ children: ReactNode }> = ({ children }) => (
-  <S.Container>{children}</S.Container>
-);
+export function Container({ children }: { children: ReactNode }) {
+  return <S.Container>{children}</S.Container>;
+}

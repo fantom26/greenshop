@@ -1,11 +1,9 @@
-import { FC } from "react";
-
 import { IBreadcrumb } from "@/utils/declarations";
 import Link from "next/link";
 
 import * as S from "./breadcrumbs.styled";
 
-export const BreadcrumbItem: FC<{ item: IBreadcrumb }> = ({ item }) => {
+export function BreadcrumbItem ({ item }: { item: IBreadcrumb }) {
   const isLast = !item.route;
   const content = isLast ? (
     item.t
