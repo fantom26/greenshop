@@ -29,6 +29,9 @@ const initialState: CartContextProps = {
 
 export const CartContext = createContext(initialState);
 
+const getProductById = (products: ICartItem[], productId: ICartItem["_id"]) =>
+  products.find((item) => item._id === productId);
+
 export function CartProvider({
   defaultCart = [],
   children
@@ -46,14 +49,14 @@ export function CartProvider({
   );
 
   const getProductQuantity = useCallback(
-    (id: string) => cartItems.find((item) => item._id === id)?.quantity || 0,
+    (id: ICartItem["_id"]) => getProductById(cartItems, id)?.quantity || 0,
     [cartItems]
   );
 
   const increaseCartQuantity = useCallback(
     (product: ICartItem) => {
       setCartItems((currItems) => {
-        const currItem = currItems.find((item) => item._id === product._id);
+        const currItem = getProductById(currItems, product._id);
 
         if (!currItem) {
           return [...currItems, product];
@@ -72,7 +75,7 @@ export function CartProvider({
   const decreaseCartQuantity = useCallback(
     (product: ICartItem) => {
       setCartItems((currItems) => {
-        const currItem = currItems.find((item) => item._id === product._id);
+        const currItem = getProductById(currItems, product._id);
 
         if (!currItem) return currItems;
         if (currItem.quantity === 1) {
@@ -90,8 +93,8 @@ export function CartProvider({
   );
 
   const countPriceByQuantity = useCallback(
-    (id: string) => {
-      const currentItem = cartItems.find((item) => item._id === id);
+    (id: ICartItem["_id"]) => {
+      const currentItem = getProductById(cartItems, id);
 
       return currentItem ? currentItem.price * currentItem.quantity : 0;
     },
