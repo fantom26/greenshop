@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, ReactNode } from "react";
+import { InputHTMLAttributes, ReactNode, useId } from "react";
 
 import { useFormContext } from "react-hook-form";
 
@@ -9,12 +9,14 @@ export interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export function Checkbox({ label, name, value, ...rest }: CheckboxProps) {
+  const id = useId();
   const { register } = useFormContext();
 
   return (
     <div className="form-checkbox">
-      <label className="form-checkbox__label">
+      <label htmlFor={id} className="form-checkbox__label">
         <input
+          id={id}
           className="form-checkbox__input"
           type="checkbox"
           value={value}
