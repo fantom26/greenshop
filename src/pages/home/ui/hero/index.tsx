@@ -17,7 +17,7 @@ interface ISlide {
 export const Hero = () => {
   const { t } = useTranslation("home");
 
-  const slides = t("hero", { returnObjects: true }) as Array<ISlide>;
+  const slides = t("hero", { returnObjects: true }) as Array<ISlide> || [];
 
   return (
     <S.Hero>
