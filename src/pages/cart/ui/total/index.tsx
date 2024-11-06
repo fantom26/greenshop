@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-import { useCart } from "@/hooks";
+import { useCartContext } from "@/hooks";
 import { SHIPPING_PRICE } from "@/utils/constants";
 import { useTranslation } from "next-i18next";
 
@@ -10,7 +10,7 @@ import * as S from "./total.styled";
 
 export function Total() {
   const { t } = useTranslation("cart");
-  const { sumOfOrder } = useCart();
+  const { sumOfOrder } = useCartContext();
 
   const total = useMemo(() => sumOfOrder + SHIPPING_PRICE, [sumOfOrder]);
 

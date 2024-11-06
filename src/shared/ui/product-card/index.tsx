@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-import { useCart } from "@/hooks";
+import { useCartContext } from "@/hooks";
 import { IProduct } from "@/utils/declarations";
 import FsLightbox from "fslightbox-react";
 import { useTranslation } from "next-i18next";
@@ -30,7 +30,7 @@ export function ProductCard({
     [price, discountPercentage]
   );
 
-  const { getProductQuantity, increaseCartQuantity } = useCart();
+  const { getProductQuantity, increaseCartQuantity } = useCartContext();
 
   const addToCart = () => {
     increaseCartQuantity({

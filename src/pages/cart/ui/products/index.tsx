@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { useCart } from "@/hooks";
+import { useCartContext } from "@/hooks";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 
@@ -21,7 +21,7 @@ export function Products() {
     increaseCartQuantity,
     removeFromCart,
     cartQuantity
-  } = useCart();
+  } = useCartContext();
 
   const headers = t("headers", { returnObjects: true }) as string[];
 

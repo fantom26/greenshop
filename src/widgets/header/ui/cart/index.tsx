@@ -1,4 +1,4 @@
-import { useCart } from "@/hooks";
+import { useCartContext } from "@/hooks";
 import Link from "next/link";
 
 import { ICONS } from "@/shared/svgs";
@@ -6,7 +6,7 @@ import { ICONS } from "@/shared/svgs";
 import * as S from "./cart.styled";
 
 function Cart() {
-  const { cartQuantity } = useCart();
+  const { cartQuantity } = useCartContext();
 
   return (
     <S.Wrapper disabled={cartQuantity === 0}>
