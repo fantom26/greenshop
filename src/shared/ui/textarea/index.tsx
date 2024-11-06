@@ -1,5 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-import { FC, InputHTMLAttributes } from "react";
+import { InputHTMLAttributes, useId } from "react";
 
 import { useTranslation } from "next-i18next";
 import { Controller, useFormContext } from "react-hook-form";
@@ -13,12 +12,14 @@ export interface ControlledTextareaProps extends TextareaProps {
   name: string;
 }
 
-export const TextArea: FC<TextareaProps> = ({
+export function TextArea({
   disabled = false,
   error,
   helperText,
   ...rest
-}) => {
+}: TextareaProps) {
+  const id = useId();
+
   const getClasses = () => {
     let className = "form-textarea";
 
@@ -35,19 +36,19 @@ export const TextArea: FC<TextareaProps> = ({
 
   return (
     <div className={getClasses()}>
-      <label className="form-textarea__wrapper">
-        <textarea disabled={disabled} {...rest} />
+      <label htmlFor={id} className="form-textarea__wrapper">
+        <textarea id={id} disabled={disabled} {...rest} />
       </label>
       {helperText && <span className="form-error">{helperText}</span>}
     </div>
   );
-};
+}
 
-export const ControlledTextarea: FC<ControlledTextareaProps> = ({
+export function ControlledTextarea({
   name,
   defaultValue,
   ...rest
-}) => {
+}: ControlledTextareaProps) {
   const { t } = useTranslation("validation");
 
   const { control } = useFormContext();
@@ -68,4 +69,4 @@ export const ControlledTextarea: FC<ControlledTextareaProps> = ({
       )}
     />
   );
-};
+}

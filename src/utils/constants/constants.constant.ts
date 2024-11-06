@@ -1,4 +1,3 @@
-/* eslint-disable prefer-destructuring */
 export const SORT_KEYS = ["price_gte", "price_lte", "category", "size_like"];
 export const FILTER_KEYS = ["sale", "new"];
 

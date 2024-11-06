@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { FC, InputHTMLAttributes, useState } from "react";
 
 import { useTranslation } from "next-i18next";

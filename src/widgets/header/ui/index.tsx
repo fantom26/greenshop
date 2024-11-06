@@ -4,8 +4,8 @@ import { useScrollLock } from "@/hooks";
 
 import { Logo } from "@/shared/ui";
 
-import { Burger } from "./burger";
-import { Cart } from "./cart";
+import Burger from "./burger";
+import Cart from "./cart";
 import * as S from "./header.styled";
 import { MobileNav } from "./mobile-nav";
 import { Navigation } from "./navigation";

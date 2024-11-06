@@ -1,5 +1,3 @@
-import { FC } from "react";
-
 import { useInterestedInQuery } from "@/store/api";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -35,7 +33,7 @@ const breakpoints = {
   }
 };
 
-export const InterestedIn: FC<{ title: string }> = ({ title }) => {
+function InterestedIn({ title }: { title: string }) {
   const { data: products } = useInterestedInQuery();
 
   return (
@@ -65,4 +63,6 @@ export const InterestedIn: FC<{ title: string }> = ({ title }) => {
       </Container>
     </S.Section>
   );
-};
+}
+
+export default InterestedIn;

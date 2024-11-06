@@ -1,12 +1,16 @@
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 
 import { Footer } from "@/widgets/footer";
 import { Header } from "@/widgets/header";
 
-export const MainLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <>
-    <Header />
-    <main>{children}</main>
-    <Footer />
-  </>
-);
+function MainLayout({ children }: { children: ReactNode }) {
+  return (
+    <>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </>
+  );
+}
+
+export default MainLayout;

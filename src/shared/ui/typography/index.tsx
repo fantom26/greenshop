@@ -1,27 +1,7 @@
-import { ElementType, FC, HTMLAttributes } from "react";
-
+import { TypographyProps } from "./types";
 import * as S from "./typography.styled";
 
-export type TypographyColors = "black" | "grey" | "green";
-export type TypographyVariant =
-  | "h1"
-  | "h2"
-  | "h3"
-  | "h4"
-  | "paragraph1"
-  | "div";
-
-export interface TypographyProps extends HTMLAttributes<HTMLOrSVGElement> {
-  tag?: ElementType;
-  variant: TypographyVariant;
-  uppercase?: boolean;
-  center?: boolean;
-  color?: TypographyColors;
-  classNames?: string;
-  children?: string;
-}
-
-export const Typography: FC<TypographyProps> = ({
+export function Typography({
   tag: Tag = "div",
   variant = "div",
   color = "black",
@@ -29,7 +9,8 @@ export const Typography: FC<TypographyProps> = ({
   center = false,
   children,
   ...rest
-}) => (
+}: TypographyProps) {
+  return (
     <S.Typography
       as={Tag}
       variant={variant}
@@ -41,3 +22,4 @@ export const Typography: FC<TypographyProps> = ({
       {children}
     </S.Typography>
   );
+}

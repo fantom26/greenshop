@@ -1,5 +1,3 @@
-import { FC } from "react";
-
 import { animated, useSpring } from "react-spring";
 
 import * as S from "./burger.styled";
@@ -9,7 +7,7 @@ interface IBurger {
   toggler: () => void;
 }
 
-export const Burger: FC<IBurger> = ({ active, toggler }) => {
+function Burger({ active, toggler }: IBurger) {
   const first = useSpring({
     transform: active
       ? "translate(5px, 32px) rotate(-45deg)"
@@ -41,4 +39,6 @@ export const Burger: FC<IBurger> = ({ active, toggler }) => {
       </svg>
     </S.Burger>
   );
-};
+}
+
+export default Burger;

@@ -5,7 +5,7 @@ import { ICONS } from "@/shared/svgs";
 
 import * as S from "./cart.styled";
 
-export function Cart() {
+function Cart() {
   const { cartQuantity } = useCart();
 
   return (
@@ -15,3 +15,5 @@ export function Cart() {
     </S.Wrapper>
   );
 }
+
+export default Cart;

@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { animated, useTransition } from "@react-spring/web";
+import { animated, useTransition } from "react-spring";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { useRouter } from "next/router";

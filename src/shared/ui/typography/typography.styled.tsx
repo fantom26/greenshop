@@ -2,7 +2,7 @@ import { StyledVariants } from "@/utils/declarations";
 import { AdaptiveFont } from "@/utils/helpers";
 import styled, { css } from "styled-components";
 
-import { TypographyColors, TypographyProps, TypographyVariant } from ".";
+import { TypographyColors, TypographyProps, TypographyVariant } from "./types";
 
 const variants: StyledVariants<TypographyVariant> = {
   h1: css`
@@ -56,9 +56,9 @@ export const Typography = styled.div<TypographyProps>`
   `}
 
   ${({ variant }) => variants[variant]}
-  ${({ color = "black" }) => colors[color]}
+    ${({ color = "black" }) => colors[color]}
 
-  ${({ center }) =>
+    ${({ center }) =>
     center &&
     `
     text-align: center;

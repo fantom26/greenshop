@@ -37,7 +37,6 @@ export const PriceRange: FC<{ mobileHandler?: () => void }> = ({
     const [min, max] = prices;
     push(
       {
-        // eslint-disable-next-line camelcase
         query: { ...query, price_gte: min, price_lte: max }
       },
       "",

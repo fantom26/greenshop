@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode, useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 
 import { CART_LIST, LOADER_CLASSNAME } from "@/utils/constants";
 import { ICartItem } from "@/utils/declarations";
@@ -14,9 +14,8 @@ import styled from "styled-components";
 import { Providers } from "@/app/providers";
 import { GlobalStyles } from "@/app/styles";
 
-// eslint-disable-next-line @typescript-eslint/ban-types
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode;
+  getLayout?: () => ReactNode;
 };
 
 interface AppProps extends NextAppProps {

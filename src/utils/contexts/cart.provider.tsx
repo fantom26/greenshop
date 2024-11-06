@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import { FC, createContext, useEffect, useState } from "react";
 
 import { CART_LIST } from "@/utils/constants";

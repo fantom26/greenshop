@@ -43,7 +43,6 @@ export const Filter: FC<FilterProps> = ({ title, items, queryName }) => {
           {
             query: {
               ...router.query,
-              // eslint-disable-next-line camelcase
               size_like: getSizeLetter(filterOption)
             }
           },
@@ -70,9 +69,9 @@ export const Filter: FC<FilterProps> = ({ title, items, queryName }) => {
           {title}
         </Typography>
         <S.List>
-          {optionsWithCount.map(({ name, count }, index) => (
+          {optionsWithCount.map(({ name, count }) => (
             <S.Item
-              key={index}
+              key={name}
               selected={
                 queryName === "size"
                   ? name.includes(`(${router.query.size_like})`)
