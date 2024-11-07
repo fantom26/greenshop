@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 
 import { IProduct } from "@/utils/declarations";
 import { useTranslation } from "next-i18next";
@@ -97,6 +97,7 @@ export function Search() {
   const [inputText, setInputText] = useState("");
   const [searchTerm] = useDebounce(inputText, 300);
   const { t } = useTranslation("common");
+  const id = useId();
   const { data = [], isLoading } = useSWR<IProduct[]>(
     searchTerm ? `/products?q=${searchTerm}` : null
   );
@@ -122,6 +123,7 @@ export function Search() {
         IndicatorSeparator: () => null,
         DropdownIndicator
       }}
+      instanceId={id}
       placeholder={t("forms.searchPlant.placeholder")}
       isSearchable
       styles={customStyles}
