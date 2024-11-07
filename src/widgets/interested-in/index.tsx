@@ -1,6 +1,7 @@
-import { useInterestedInQuery } from "@/store/api";
+import { IProduct } from "@/utils/declarations";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import useSWR from "swr";
 
 import { Container, ProductCard, Typography } from "@/shared/ui";
 
@@ -34,7 +35,7 @@ const breakpoints = {
 };
 
 function InterestedIn({ title }: { title: string }) {
-  const { data: products } = useInterestedInQuery();
+  const { data: products = [] } = useSWR<IProduct[]>("/interestedIn");
 
   return (
     <S.Section>
@@ -54,7 +55,7 @@ function InterestedIn({ title }: { title: string }) {
           spaceBetween={30}
           breakpoints={breakpoints}
         >
-          {products?.map((product) => (
+          {products.map((product) => (
             <SwiperSlide key={product._id}>
               <ProductCard {...product} />
             </SwiperSlide>

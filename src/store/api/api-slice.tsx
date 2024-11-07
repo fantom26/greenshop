@@ -47,11 +47,6 @@ export const apiSlice = createApi({
       }),
       transformResponse: (products: IProduct[]) =>
         products.map((p) => ({ ...p, label: p.name, value: p._id }))
-    }),
-    interestedIn: builder.query<IProduct[], void>({
-      query: () => ({
-        url: "/interestedIn"
-      })
     })
   })
 });
@@ -60,7 +55,6 @@ export const apiSlice = createApi({
 export const {
   useProductsQuery,
   useProductsSearchQuery,
-  useInterestedInQuery,
   util: { getRunningQueriesThunk }
 } = apiSlice;
 
