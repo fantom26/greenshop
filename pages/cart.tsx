@@ -1,53 +1,49 @@
 import { ReactElement } from "react";
 
-import { wrapper } from "@/store";
-import { getPageInfo, getRunningQueriesThunk } from "@/store/api";
-import { PageProps } from "@/utils/declarations";
+import { IPage, PageProps } from "@/utils/declarations";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import { fetcher } from "@/app/providers/swr.provider";
 import { Cart } from "@/pages/cart";
 import { Breadcrumbs } from "@/shared/ui";
 import { MainLayout, Page } from "@/widgets/layouts";
 
 function CartPage({ meta, breadcrumbs }: PageProps) {
-  return <Page meta={meta}>
-    <Breadcrumbs items={breadcrumbs} />
-    <Cart />
-  </Page>
+  return (
+    <Page meta={meta}>
+      <Breadcrumbs items={breadcrumbs} />
+      <Cart />
+    </Page>
+  );
 }
 
 CartPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 
-export const getServerSideProps = wrapper.getServerSideProps(
-  (store) =>
-    async ({ locale }) => {
-      store.dispatch(getPageInfo.initiate("Home"));
-      store.dispatch(getPageInfo.initiate("Cart"));
+export async function getServerSideProps({ locale }: { locale: string }) {
+  const translations = await serverSideTranslations(locale as string, [
+    "common",
+    "footer",
+    "cart",
+    "validation"
+  ]);
 
-      const [home, cart] = await Promise.all(
-        store.dispatch(getRunningQueriesThunk())
-      );
-      const [homeData] = home.data as any;
-      const [cartData] = cart.data as any;
+  const [home, cart] = await Promise.all([
+    fetcher<[IPage]>("/pages?title=Home"),
+    fetcher<[IPage]>("/pages?title=Cart")
+  ]);
+  const [homeData] = home;
+  const [cartData] = cart;
 
-      const translations = await serverSideTranslations(locale as string, [
-        "common",
-        "footer",
-        "cart",
-        "validation"
-      ]);
-
-      return {
-        props: {
-          ...translations,
-          meta: cartData.breadcrumb,
-          breadcrumbs: [
-            { t: homeData?.breadcrumb || "", route: "/" },
-            { t: cartData?.breadcrumb || "" }
-          ]
-        }
-      };
+  return {
+    props: {
+      ...translations,
+      meta: cartData.breadcrumb,
+      breadcrumbs: [
+        { t: homeData.breadcrumb || "", route: "/" },
+        { t: cartData.breadcrumb || "" }
+      ]
     }
-);
+  };
+}
 
 export default CartPage;
