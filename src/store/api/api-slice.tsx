@@ -1,4 +1,4 @@
-import { IArticle, IPage, IProduct } from "@/utils/declarations";
+import { IPage, IProduct } from "@/utils/declarations";
 import { FetchBaseQueryMeta, createApi } from "@reduxjs/toolkit/query/react";
 import { HYDRATE } from "next-redux-wrapper";
 
@@ -18,10 +18,6 @@ export const apiSlice = createApi({
     }
   },
   endpoints: (builder) => ({
-    articles: builder.query<IArticle[], void>({
-      query: () => "/articles"
-    }),
-
     getPageInfo: builder.query<IPage, string>({
       query: (title = "Home") => ({
         url: `/pages?title=${title}`
@@ -65,7 +61,6 @@ export const apiSlice = createApi({
 
 // Export hooks for usage in functional components
 export const {
-  useArticlesQuery,
   useProductsQuery,
   useProductsSearchQuery,
   useInterestedInQuery,

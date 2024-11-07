@@ -1,5 +1,6 @@
-import { useArticlesQuery } from "@/store/api";
+import { IArticle } from "@/utils/declarations";
 import { useTranslation } from "next-i18next";
+import useSWR from "swr";
 
 import { Container, Typography } from "@/shared/ui";
 
@@ -9,7 +10,7 @@ import { ArticleCard } from "./components";
 export function Blog() {
   const { t } = useTranslation("home");
 
-  const { data: articles } = useArticlesQuery();
+  const { data: articles = [] } = useSWR<IArticle[]>("/articles");
 
   return (
     <S.Blog>
