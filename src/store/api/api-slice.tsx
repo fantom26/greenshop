@@ -52,9 +52,6 @@ export const apiSlice = createApi({
       query: () => ({
         url: "/interestedIn"
       })
-    }),
-    size: builder.query<string[], void>({
-      query: () => "/size"
     })
   })
 });
@@ -64,7 +61,6 @@ export const {
   useProductsQuery,
   useProductsSearchQuery,
   useInterestedInQuery,
-  useSizeQuery,
   util: { getRunningQueriesThunk }
 } = apiSlice;
 
