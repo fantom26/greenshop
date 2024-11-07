@@ -22,10 +22,6 @@ export const apiSlice = createApi({
       query: () => "/articles"
     }),
 
-    categories: builder.query<string[], void>({
-      query: () => "/categories"
-    }),
-
     getPageInfo: builder.query<IPage, string>({
       query: (title = "Home") => ({
         url: `/pages?title=${title}`
@@ -70,7 +66,6 @@ export const apiSlice = createApi({
 // Export hooks for usage in functional components
 export const {
   useArticlesQuery,
-  useCategoriesQuery,
   useProductsQuery,
   useProductsSearchQuery,
   useInterestedInQuery,
