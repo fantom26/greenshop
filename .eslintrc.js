@@ -7,7 +7,8 @@ module.exports = {
     "next/core-web-vitals",
     "plugin:react/recommended",
     "airbnb",
-    "prettier"
+    "prettier",
+    "plugin:@typescript-eslint/recommended"
   ],
   overrides: [
     {

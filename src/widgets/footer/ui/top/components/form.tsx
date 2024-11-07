@@ -22,7 +22,8 @@ export function EmailForm() {
   const onSubmit = async (data: NewslettersSchema) => {
     try {
       const { email } = data;
-      alert(email);
+      // eslint-disable-next-line no-console
+      console.log(email);
       reset();
     } catch (err) {
       // eslint-disable-next-line no-console
