@@ -14,7 +14,7 @@ import styled from "styled-components";
 import { Providers } from "@/app/providers";
 import { GlobalStyles } from "@/app/styles";
 
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+export type NextPageWithLayout<P = Record<string, never>, IP = P> = NextPage<P, IP> & {
   getLayout?: () => ReactNode;
 };
 
@@ -36,7 +36,7 @@ function App({ Component, pageProps, defaultCart = [] }: AppProps) {
   const getLayout = Component.getLayout || ((page) => page);
   const router = useRouter();
 
-  useEffect(() => {
+  useEffect(() =>  {
     if (typeof window !== "undefined") {
       const loader = document.getElementById(LOADER_CLASSNAME);
 

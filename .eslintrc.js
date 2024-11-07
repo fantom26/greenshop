@@ -27,7 +27,9 @@ module.exports = {
     "no-console": "error",
     "no-underscore-dangle": "off",
     "react/require-default-props": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
     "react/prop-types": "off", // If you're using TypeScript, prop-types are not needed
+    "@typescript-eslint/explicit-module-boundary-types": "off", // Allows you to skip explicit return types in TypeScript
     "react/jsx-filename-extension": [1, { extensions: [".tsx"] }], // Only .tsx files for JSX
     "import/extensions": [
       "error",
