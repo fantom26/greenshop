@@ -39,14 +39,6 @@ export const apiSlice = createApi({
         links: meta.response.headers.get("Link") || "",
         totalCount: Number(meta.response.headers.get("X-Total-Count"))
       })
-    }),
-    productsSearch: builder.query<IProduct[], string>({
-      query: (q) => ({
-        url: "/products",
-        params: { q }
-      }),
-      transformResponse: (products: IProduct[]) =>
-        products.map((p) => ({ ...p, label: p.name, value: p._id }))
     })
   })
 });
