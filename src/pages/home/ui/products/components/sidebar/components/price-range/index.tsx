@@ -9,6 +9,7 @@ import { Button, Typography } from "@/shared/ui";
 
 import * as S from "./price-range.styled";
 
+// TODO refactor this component
 export function PriceRange({ mobileHandler }: { mobileHandler?: () => void }) {
   const { t } = useTranslation("home");
   const [prices, setPrices] = useState<string[]>(["00.00", "00.00"]);
@@ -19,12 +20,14 @@ export function PriceRange({ mobileHandler }: { mobileHandler?: () => void }) {
   const boundaryValues = useMemo(() => {
     const priceRange = data?.products.map((product) => product.price) || [];
 
-    if (priceRange) {
+    if (priceRange.length > 0) {
       const max = Math.max(...priceRange);
       const min = Math.min(...priceRange);
 
       return { min, max };
     }
+
+    return { min: 0, max: 1000 };
   }, [data?.products]);
 
   const onChangeSlide = (newRangeValue: string[]) => {
@@ -79,10 +82,10 @@ export function PriceRange({ mobileHandler }: { mobileHandler?: () => void }) {
           }}
           onSlide={onChangeSlide}
           range={{
-            min: boundaryValues?.min || 0,
-            max: boundaryValues?.max || 1000
+            min: boundaryValues.min,
+            max: boundaryValues.max
           }}
-          start={[boundaryValues?.min || 0, boundaryValues?.max || 1000]}
+          start={[boundaryValues.min, boundaryValues.max]}
           connect
         />
       </S.SliderWrapper>
