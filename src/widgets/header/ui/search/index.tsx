@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import { useProductsSearchQuery } from "@/store/api";
-import { skipToken } from "@reduxjs/toolkit/query";
+import { IProduct } from "@/utils/declarations";
 import { useTranslation } from "next-i18next";
 import Select, { InputActionMeta } from "react-select";
+import useSWR from "swr";
 import { useDebounce } from "use-debounce";
 
 import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
@@ -90,11 +90,16 @@ const customStyles = {
   })
 };
 
+const transformToSelectFormat = (options: IProduct[]) =>
+  options.map((p) => ({ ...p, label: p.name, value: p._id }));
+
 export function Search() {
   const [inputText, setInputText] = useState("");
   const [searchTerm] = useDebounce(inputText, 300);
   const { t } = useTranslation("common");
-  const { data, isFetching } = useProductsSearchQuery(searchTerm || skipToken);
+  const { data = [], isLoading } = useSWR<IProduct[]>(
+    searchTerm ? `/products?q=${searchTerm}` : null
+  );
 
   const noOptionsMessage = (obj: { inputValue: string }) => {
     if (obj.inputValue.trim().length === 0) {
@@ -121,9 +126,9 @@ export function Search() {
       isSearchable
       styles={customStyles}
       formatOptionLabel={formatOptionLabel}
-      options={inputText.trim() ? data : []}
+      options={inputText.trim() ? transformToSelectFormat(data) : []}
       onInputChange={handleInputChange}
-      isLoading={isFetching}
+      isLoading={isLoading}
       filterOption={null}
       noOptionsMessage={noOptionsMessage}
     />

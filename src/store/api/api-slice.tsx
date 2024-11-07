@@ -54,7 +54,6 @@ export const apiSlice = createApi({
 // Export hooks for usage in functional components
 export const {
   useProductsQuery,
-  useProductsSearchQuery,
   util: { getRunningQueriesThunk }
 } = apiSlice;
 
