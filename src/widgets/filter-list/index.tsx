@@ -1,4 +1,4 @@
-import { useProductsQuery } from "@/store/api";
+import { useFetchProducts } from "@/hooks";
 import { IProduct } from "@/utils/declarations";
 import { useRouter } from "next/router";
 
@@ -16,7 +16,7 @@ interface FilterProps {
 export function Filter({ title, items, queryName }: FilterProps) {
   const router = useRouter();
 
-  const { data } = useProductsQuery({});
+  const { data } = useFetchProducts({});
 
   let content = null;
 

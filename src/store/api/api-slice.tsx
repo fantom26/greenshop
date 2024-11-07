@@ -1,13 +1,8 @@
-import { IPage, IProduct } from "@/utils/declarations";
-import { FetchBaseQueryMeta, createApi } from "@reduxjs/toolkit/query/react";
+import { IPage } from "@/utils/declarations";
+import { createApi } from "@reduxjs/toolkit/query/react";
 import { HYDRATE } from "next-redux-wrapper";
 
 import { baseQuery } from "./fetch";
-
-interface IProductsParams {
-  _limit: number;
-  _page: number;
-}
 
 export const apiSlice = createApi({
   reducerPath: "api",
@@ -22,30 +17,12 @@ export const apiSlice = createApi({
       query: (title = "Home") => ({
         url: `/pages?title=${title}`
       })
-    }),
-    products: builder.query<
-      { products: IProduct[]; links: string; totalCount: number },
-      Partial<IProductsParams>
-    >({
-      query: (params) => ({
-        url: "/products",
-        params
-      }),
-      transformResponse: (
-        products: IProduct[],
-        meta: Required<FetchBaseQueryMeta>
-      ) => ({
-        products,
-        links: meta.response.headers.get("Link") || "",
-        totalCount: Number(meta.response.headers.get("X-Total-Count"))
-      })
     })
   })
 });
 
 // Export hooks for usage in functional components
 export const {
-  useProductsQuery,
   util: { getRunningQueriesThunk }
 } = apiSlice;
 

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import { useProductsQuery } from "@/store/api";
+import { useFetchProducts } from "@/hooks";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import Nouislider from "nouislider-react";
@@ -13,22 +13,22 @@ export function PriceRange({ mobileHandler }: { mobileHandler?: () => void }) {
   const { t } = useTranslation("home");
   const [prices, setPrices] = useState<string[]>(["00.00", "00.00"]);
   const { push, query } = useRouter();
-  const { data } = useProductsQuery({});
+  const { data } = useFetchProducts({});
   const rangeRef = useRef<any | null>(null);
 
   const boundaryValues = useMemo(() => {
-    const prices = data?.products.map((product) => product.price);
+    const priceRange = data?.products.map((product) => product.price) || [];
 
-    if (prices) {
-      const max = Math.max(...prices);
-      const min = Math.min(...prices);
+    if (priceRange) {
+      const max = Math.max(...priceRange);
+      const min = Math.min(...priceRange);
 
       return { min, max };
     }
   }, [data?.products]);
 
-  const onChangeSlide = (data: string[]) => {
-    setPrices(data);
+  const onChangeSlide = (newRangeValue: string[]) => {
+    setPrices(newRangeValue);
   };
 
   const onFilter = () => {
