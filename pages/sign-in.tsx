@@ -4,7 +4,7 @@ import { PageProps } from "@/utils/declarations";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { SignIn } from "@/pages/sign-in";
-import { MainLayout, Page } from "@/widgets/layouts";
+import { AuthLayout, Page } from "@/widgets/layouts";
 
 function SignPage({ meta }: Omit<PageProps, "breadcrumbs">) {
   return (
@@ -14,7 +14,7 @@ function SignPage({ meta }: Omit<PageProps, "breadcrumbs">) {
   );
 }
 
-SignPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
+SignPage.getLayout = (page: ReactElement) => <AuthLayout>{page}</AuthLayout>;
 
 export async function getServerSideProps({ locale }: { locale: string }) {
   const translations = await serverSideTranslations(locale, [

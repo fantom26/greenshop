@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { useScrollLock } from "@/hooks";
 
-import { Logo } from "@/shared/ui";
+import { Container, Divider, Logo } from "@/shared/ui";
 
 import Burger from "./burger";
 import Cart from "./cart";
@@ -34,7 +34,7 @@ export function Header() {
     <>
       <MobileNav open={menuIsOpen} />
       <S.Header menuIsOpen>
-        <S.HeaderContainer>
+        <Container>
           <S.HeaderWrapper>
             <Logo />
             <Navigation />
@@ -49,7 +49,8 @@ export function Header() {
             </S.ButtonWrapper> */}
             <Burger toggler={toggleMenu} active={menuIsOpen} />
           </S.HeaderWrapper>
-        </S.HeaderContainer>
+          <Divider />
+        </Container>
       </S.Header>
     </>
   );

@@ -1,7 +1,7 @@
 import { DateManager } from "@/managers";
 import { useTranslation } from "next-i18next";
 
-import { Typography } from "@/shared/ui";
+import { Typography } from "@/shared/ui/typography";
 
 import * as S from "./copyright.styled";
 

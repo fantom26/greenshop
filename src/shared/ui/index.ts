@@ -15,3 +15,5 @@ export * from "./textarea";
 export * from "./select";
 export * from "./product-card";
 export * from "./image";
+export * from "./copyright";
+export * from "./divider";

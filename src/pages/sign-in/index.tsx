@@ -1,3 +1,9 @@
+import { Container } from "@/shared/ui";
+
 export function SignIn() {
-  return <div>SignIn Page</div>;
+  return (
+    <div>
+      <Container>SignIn Page</Container>
+    </div>
+  );
 }

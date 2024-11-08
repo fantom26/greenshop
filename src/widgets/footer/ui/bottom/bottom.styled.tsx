@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Bottom = styled.div`
   padding-top: 3rem;
-  padding-bottom: 1.5rem;
 `;
 
 export const BottomWrapper = styled.div`
@@ -10,6 +9,7 @@ export const BottomWrapper = styled.div`
   gap: 17rem;
   padding-right: 2.5rem;
   padding-left: 2.5rem;
+  margin-bottom: 2.5rem;
 
   @media (max-width: 1200px) {
     gap: 10rem;
