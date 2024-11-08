@@ -6,7 +6,6 @@ import Select, { InputActionMeta } from "react-select";
 import useSWR from "swr";
 import { useDebounce } from "use-debounce";
 
-import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
 import { CustomImage } from "@/shared/ui";
 import * as S from "@/widgets/header/ui/search/search.styled";
 
@@ -24,7 +23,7 @@ const formatOptionLabel = (option: any, restFields: any) => {
       {isPreviewShown && (
         <div>
           <CustomImage
-            src={`${NEXT_PUBLIC_APP_URL}${url}`}
+            src={url}
             alt={meta.alt}
             width={40}
             height={40}

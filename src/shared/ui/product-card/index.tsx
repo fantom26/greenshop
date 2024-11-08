@@ -6,7 +6,6 @@ import FsLightbox from "fslightbox-react";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 
-import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
 import { ICONS } from "@/shared/svgs";
 
 import { CustomImage } from "../image";
@@ -51,7 +50,7 @@ export function ProductCard({
         ) : null}
         <S.ImageWrapper>
           <CustomImage
-            src={`${NEXT_PUBLIC_APP_URL}${url}`}
+            src={url}
             width="250"
             height="250"
             alt={meta.alt}
@@ -79,7 +78,7 @@ export function ProductCard({
       </S.Product>
       <FsLightbox
         toggler={toggler}
-        sources={[`${NEXT_PUBLIC_APP_URL}${url}`.replace("@1x", "@2x")]}
+        sources={[`${url}`.replace("@1x", "@2x")]}
         type="image"
       />
     </>

@@ -5,9 +5,9 @@ interface ICustomImageProps extends Omit<ImageProps, "alt"> {
   alt: string | undefined;
 }
 
-export function CustomImage({ alt, ...rest }: ICustomImageProps) {
+export function CustomImage({ src, alt, ...rest }: ICustomImageProps) {
   const { t } = useTranslation("common");
   const defaultImageAlt = alt ?? t("defaultAlt");
 
-  return <Image alt={defaultImageAlt} {...rest} />;
+  return <Image src={`${process.env.NEXT_PUBLIC_APP_URL}/${src}`} alt={defaultImageAlt} {...rest} />;
 }

@@ -1,4 +1,3 @@
-import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
 import { CustomImage } from "@/shared/ui";
 
 import { Categories, PriceRange, Queries, Sizes } from "./components";
@@ -14,7 +13,7 @@ export function Sidebar() {
       </S.Filter>
       <S.Banner>
         <CustomImage
-          src={`${NEXT_PUBLIC_APP_URL}/images/mock/sale@1x.jpg`}
+          src="images/mock/sale@1x.jpg"
           width="310"
           height="470"
           alt="sale"

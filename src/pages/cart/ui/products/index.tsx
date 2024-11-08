@@ -4,7 +4,6 @@ import { useCartContext } from "@/hooks";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 
-import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
 import { ICONS } from "@/shared/svgs";
 import { CustomImage, Typography } from "@/shared/ui";
 
@@ -44,7 +43,7 @@ export function Products() {
             <S.Wrapper>
               <S.Poster href={`/product/${item._id}`}>
                 <CustomImage
-                  src={`${NEXT_PUBLIC_APP_URL}/${item.poster.url}`}
+                  src={item.poster.url}
                   width="70"
                   height="70"
                   alt={item.poster.meta?.alt}

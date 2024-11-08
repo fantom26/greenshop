@@ -1,10 +1,9 @@
 import { ReactNode } from "react";
 
 import { SWRConfig } from "swr";
-import { NEXT_PUBLIC_API_URL } from "@/shared/config";
 
 export async function fetcher<T>(url: string, options?: RequestInit): Promise<T> {
-  const res = await fetch(`${NEXT_PUBLIC_API_URL}${url}`, options);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${url}`, options);
 
   if (!res.ok) {
     const errorDetails = await res.json();

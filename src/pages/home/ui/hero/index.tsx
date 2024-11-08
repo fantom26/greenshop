@@ -3,7 +3,6 @@ import { useTranslation } from "next-i18next";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
 import { Button, Container, CustomImage, Typography } from "@/shared/ui";
 
 import * as S from "./hero.styled";
@@ -53,7 +52,7 @@ export function Hero() {
                   </S.Info>
                   <S.ImageWrapper>
                     <CustomImage
-                      src={`${NEXT_PUBLIC_APP_URL}${poster.url}`}
+                      src={poster.url}
                       width="518"
                       height="518"
                       alt={poster.meta.alt}

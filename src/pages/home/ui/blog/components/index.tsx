@@ -1,7 +1,6 @@
 import { IArticle } from "@/utils/declarations";
 import { useTranslation } from "next-i18next";
 
-import { NEXT_PUBLIC_APP_URL } from "@/shared/config";
 import { ICONS } from "@/shared/svgs";
 import { CustomImage, Typography } from "@/shared/ui";
 
@@ -23,7 +22,7 @@ export function ArticleCard({
     <li>
       <S.Image>
         <CustomImage
-          src={`${NEXT_PUBLIC_APP_URL}${url}`}
+          src={url}
           width="270"
           height="195"
           alt={meta.alt}
