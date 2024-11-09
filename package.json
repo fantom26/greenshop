@@ -12,7 +12,7 @@
     "stylelint": "stylelint '**/*.styled.tsx'",
     "stylelint:fix": "stylelint --fix '**/*.styled.tsx'",
     "server": "json-server -p 4000 db.json",
-    "postinstall": "husky"
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
@@ -21,10 +21,10 @@
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
-      "eslint -c .eslintrc src --ext .js,.jsx,.ts,.tsx --fix",
-      "prettier --write"
+      "yarn lint:fix",
+      "yarn prettier"
     ],
-    "*.styled.tsx": "stylelint --fix '**/*.styled.tsx'"
+    "*.styled.tsx": "yarn stylelint:fix"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.11",
