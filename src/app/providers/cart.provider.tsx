@@ -6,13 +6,13 @@ import {
   useState
 } from "react";
 
+import { DateManager } from "@/managers";
 import { CART_LIST, SHIPPING_PRICE } from "@/utils/constants";
 import {
   CartContextProps,
   CartProviderProps,
   ICartItem
 } from "@/utils/declarations";
-import { generateDays } from "@/utils/helpers";
 import { setCookie } from "cookies-next";
 
 const initialState: CartContextProps = {
@@ -119,7 +119,7 @@ export function CartProvider({
     }
 
     setCookie(CART_LIST, JSON.stringify(cartItems), {
-      expires: generateDays(7)
+      expires: DateManager.generateDays(7)
     });
   }, [cartItems]);
 
