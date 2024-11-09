@@ -12,10 +12,9 @@ export function Queries() {
 
   const formatQueries = () => {
     const entriesMap = new Map(entries);
-    if (entriesMap.has("price_gte") && entriesMap.has("price_lte")) {
-      const _gteValue = entriesMap.get("price_gte");
-      const _lteValue = entriesMap.get("price_lte");
-
+    const _gteValue = entriesMap.get("price_gte");
+    const _lteValue = entriesMap.get("price_lte");
+    if (_gteValue && _lteValue) {
       // remove _gte and _lte parameters from object
       const queries = entries
         .filter(
@@ -37,58 +36,48 @@ export function Queries() {
   };
 
   const deleteParam = (param: string) => {
-    // Removing all queries from sidebar
-    if (param === "ALL") {
-      push(
-        {
-          query: {
+    const newQueryOptions =
+      param === "ALL"
+        ? {
             ...Object.fromEntries(
               entries.filter(([key]) => !SORT_KEYS.includes(key))
             )
           }
-        },
-        "",
-        { scroll: false }
-      );
-
-      return;
-    }
+        : {
+            ...Object.fromEntries(
+              entries.filter(
+                ([, queryParam]) => !param.includes(queryParam as string)
+              )
+            )
+          };
 
     push(
       {
-        query: {
-          ...Object.fromEntries(
-            entries.filter(
-              ([, queryParam]) => !param.includes(queryParam as string)
-            )
-          )
-        }
+        query: newQueryOptions
       },
       "",
       { scroll: false }
     );
   };
 
-  return (
-    <>
-      {formatQueries().length > 0 ? (
-        <S.FilterParams>
-          {formatQueries()?.map((param, index) => (
-            <S.FilterParam key={index}>
-              <span>{param}</span>
-              <S.FilterParamButton
-                onClick={() => deleteParam(param as string)}
-              />
-            </S.FilterParam>
-          ))}
-          {formatQueries().length > 1 && (
-            <S.FilterParam reset>
-              <span>{t("products.resetAll")}</span>
-              <S.FilterParamButton onClick={() => deleteParam("ALL")} />
-            </S.FilterParam>
-          )}
-        </S.FilterParams>
-      ) : null}
-    </>
-  );
+  if (formatQueries().length > 0) {
+    return (
+      <S.FilterParams>
+        {formatQueries()?.map((param) => (
+          <S.FilterParam key={param as string}>
+            <span>{param}</span>
+            <S.FilterParamButton onClick={() => deleteParam(param as string)} />
+          </S.FilterParam>
+        ))}
+        {formatQueries().length > 1 && (
+          <S.FilterParam reset>
+            <span>{t("products.resetAll")}</span>
+            <S.FilterParamButton onClick={() => deleteParam("ALL")} />
+          </S.FilterParam>
+        )}
+      </S.FilterParams>
+    );
+  }
+
+  return null;
 }

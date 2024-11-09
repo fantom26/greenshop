@@ -14,7 +14,10 @@ import styled from "styled-components";
 import { Providers } from "@/app/providers";
 import { GlobalStyles } from "@/app/styles";
 
-export type NextPageWithLayout<P = Record<string, never>, IP = P> = NextPage<P, IP> & {
+export type NextPageWithLayout<P = Record<string, never>, IP = P> = NextPage<
+  P,
+  IP
+> & {
   getLayout?: () => ReactNode;
 };
 
@@ -33,10 +36,10 @@ const Wrapper = styled.div`
 `;
 
 function App({ Component, pageProps, defaultCart = [] }: AppProps) {
-  const getLayout = Component.getLayout || ((page) => page);
+  const getLayout = Component.getLayout || ((page: any) => page);
   const router = useRouter();
 
-  useEffect(() =>  {
+  useEffect(() => {
     if (typeof window !== "undefined") {
       const loader = document.getElementById(LOADER_CLASSNAME);
 
@@ -58,6 +61,8 @@ function App({ Component, pageProps, defaultCart = [] }: AppProps) {
         router.events.off("routeChangeError", handleStop);
       };
     }
+
+    return undefined;
   }, [router]);
 
   // Hide splash screen shen we are server side

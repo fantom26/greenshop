@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import { useFetchProducts } from "@/hooks";
 import { useTranslation } from "next-i18next";
+import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/router";
 import Nouislider from "nouislider-react";
 
@@ -9,11 +10,12 @@ import { Button, Typography } from "@/shared/ui";
 
 import * as S from "./price-range.styled";
 
-// TODO refactor this component
+// TODO refactor this component. What about replacing query to searchParams?
 export function PriceRange({ mobileHandler }: { mobileHandler?: () => void }) {
   const { t } = useTranslation("home");
   const [prices, setPrices] = useState<string[]>(["00.00", "00.00"]);
   const { push, query } = useRouter();
+  const searchParams = useSearchParams();
   const { data } = useFetchProducts({});
   const rangeRef = useRef<any | null>(null);
 
@@ -57,7 +59,7 @@ export function PriceRange({ mobileHandler }: { mobileHandler?: () => void }) {
   }, [boundaryValues]);
 
   useEffect(() => {
-    if (!query.hasOwnProperty("price_gte")) {
+    if (!searchParams.has("price_gte")) {
       if (rangeRef.current) {
         rangeRef.current.noUiSlider.reset();
         if (boundaryValues?.min) {
