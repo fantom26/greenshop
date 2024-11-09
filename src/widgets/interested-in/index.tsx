@@ -1,7 +1,6 @@
 import { IProduct } from "@/utils/declarations";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import useSWR from "swr";
 
 import { Container, ProductCard, Typography } from "@/shared/ui";
 
@@ -34,9 +33,12 @@ const breakpoints = {
   }
 };
 
-function InterestedIn({ title }: { title: string }) {
-  const { data: products = [] } = useSWR<IProduct[]>("/interestedIn");
+interface InterestedInProps {
+  title: string;
+  products: IProduct[];
+}
 
+function InterestedIn({ title, products }: InterestedInProps) {
   return (
     <S.Section>
       <Container>

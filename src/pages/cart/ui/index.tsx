@@ -1,5 +1,7 @@
+import { IProduct } from "@/utils/declarations";
 import { useTranslation } from "next-i18next";
 import { ErrorBoundary } from "react-error-boundary";
+import useSWR from "swr";
 
 import { Container } from "@/shared/ui";
 import InterestedIn from "@/widgets/interested-in";
@@ -10,6 +12,7 @@ import { Total } from "./total";
 
 export function Cart() {
   const { t } = useTranslation("common");
+  const { data: products = [] } = useSWR<IProduct[]>("/interestedIn");
   return (
     <>
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
@@ -23,7 +26,7 @@ export function Cart() {
         </S.Section>
       </ErrorBoundary>
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
-        <InterestedIn title={t("interestedIn")} />
+        <InterestedIn title={t("interestedIn")} products={products} />
       </ErrorBoundary>
     </>
   );
