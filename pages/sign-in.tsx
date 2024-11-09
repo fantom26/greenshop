@@ -3,8 +3,8 @@ import { ReactElement } from "react";
 import { PageProps } from "@/utils/declarations";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import { AuthLayout, Page } from "@/app/layouts";
 import { SignIn } from "@/pages/sign-in";
-import { AuthLayout, Page } from "@/widgets/layouts";
 
 function SignPage({ meta }: Omit<PageProps, "breadcrumbs">) {
   return (

@@ -3,8 +3,8 @@ import { ReactElement } from "react";
 import { PageProps } from "@/utils/declarations";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import { MainLayout, Page } from "@/app/layouts";
 import { Home } from "@/pages/home";
-import { MainLayout, Page } from "@/widgets/layouts";
 
 function HomePage({ meta }: Omit<PageProps, "breadcrumbs">) {
   return (

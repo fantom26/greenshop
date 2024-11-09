@@ -3,10 +3,10 @@ import { ReactElement } from "react";
 import { IPage, PageProps } from "@/utils/declarations";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import { MainLayout, Page } from "@/app/layouts";
 import { fetcher } from "@/app/providers/swr.provider";
 import { Cart } from "@/pages/cart";
 import { Breadcrumbs } from "@/shared/ui";
-import { MainLayout, Page } from "@/widgets/layouts";
 
 function CartPage({ meta, breadcrumbs }: PageProps) {
   return (
