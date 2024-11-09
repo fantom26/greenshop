@@ -12,7 +12,7 @@
     "stylelint": "stylelint '**/*.styled.tsx'",
     "stylelint:fix": "stylelint --fix '**/*.styled.tsx'",
     "server": "json-server -p 4000 db.json",
-    "prepare": "husky install"
+    "postinstall": "husky"
   },
   "husky": {
     "hooks": {
