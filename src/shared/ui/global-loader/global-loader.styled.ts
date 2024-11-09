@@ -18,8 +18,8 @@ export const loaderStyles = `
   }
 
   .leafs {
-    width: 60px;
-    height: 60px;
+    width: 6rem;
+    height: 6rem;
     position: relative;
     transform-origin: center;
     animation: spin 3s infinite linear;

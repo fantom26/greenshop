@@ -23,8 +23,7 @@
     "*.{js,ts,jsx,tsx}": [
       "yarn lint:fix",
       "yarn format"
-    ],
-    "*.styled.tsx": "yarn stylelint:fix"
+    ]
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.11",

@@ -16,6 +16,7 @@ export function Products() {
     cartItems,
     getProductQuantity,
     decreaseCartQuantity,
+    removedProductFromCart,
     countPriceByQuantity,
     increaseCartQuantity,
     cartSummary: { quantity }
@@ -82,7 +83,7 @@ export function Products() {
               </Typography>
               <S.Delete
                 type="button"
-                onClick={() => decreaseCartQuantity(item)}
+                onClick={() => removedProductFromCart(item)}
               >
                 {ICONS.recycleBin}
               </S.Delete>

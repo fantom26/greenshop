@@ -39,7 +39,7 @@ module.exports = {
         "empty-line-between-groups": true
       }
     ],
-    ignoreFiles: ["src/styles/libs/**.styled.tsx"],
+    ignoreFiles: ["src/app/styles/libs/**.styled.tsx"],
     overrides: [
       {
         files: ["src/*/**.styled.tsx"]

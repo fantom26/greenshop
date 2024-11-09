@@ -26,6 +26,7 @@ const initialState: CartContextProps = {
   },
   getProductQuantity: () => 0,
   increaseCartQuantity: () => {},
+  removedProductFromCart: () => {},
   decreaseCartQuantity: () => {},
   countPriceByQuantity: () => 0
 };
@@ -85,6 +86,13 @@ export function CartProvider({
     [setCartItems]
   );
 
+  const removedProductFromCart = useCallback(
+    (product: ICartItem) => {
+      setCartItems((currItems) => removeProductById(currItems, product._id));
+    },
+    [setCartItems]
+  );
+
   const decreaseCartQuantity = useCallback(
     (product: ICartItem) => {
       setCartItems((currItems) => {
@@ -131,6 +139,7 @@ export function CartProvider({
       increaseCartQuantity,
       decreaseCartQuantity,
       countPriceByQuantity,
+      removedProductFromCart,
       cartSummary
     }),
     [
@@ -139,6 +148,7 @@ export function CartProvider({
       increaseCartQuantity,
       decreaseCartQuantity,
       countPriceByQuantity,
+      removedProductFromCart,
       cartSummary
     ]
   );

@@ -27,5 +27,6 @@ export interface CartContextProps {
   getProductQuantity: (id: string) => number;
   increaseCartQuantity: (product: ICartItem) => void;
   decreaseCartQuantity: (product: ICartItem) => void;
+  removedProductFromCart: (product: ICartItem) => void;
   countPriceByQuantity: (id: string) => number;
 }
