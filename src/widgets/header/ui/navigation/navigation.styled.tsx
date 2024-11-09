@@ -27,15 +27,13 @@ export const Li = styled.li`
   align-self: stretch;
 `;
 
-export const Link = styled.a<{ pathname: string }>`
+export const Link = styled.a<{ isActive: boolean }>`
   position: relative;
   display: flex;
   align-items: center;
   align-self: stretch;
-  font-weight: ${({ href, pathname }) =>
-    href === pathname
-      ? "var(--font-weight-bold)"
-      : "var(--font-weight-regular)"};
+  font-weight: ${({ isActive }) =>
+    isActive ? "var(--font-weight-bold)" : "var(--font-weight-regular)"};
 
   &::before {
     position: absolute;
@@ -44,9 +42,8 @@ export const Link = styled.a<{ pathname: string }>`
     width: 100%;
     height: 0.3rem;
     background-color: var(--clr-accent-400);
-    visibility: ${({ href, pathname }) =>
-      href === pathname ? "visible" : "hidden"};
-    opacity: ${({ href, pathname }) => (href === pathname ? 1 : 0)};
+    visibility: ${({ isActive }) => (isActive ? "visible" : "hidden")};
+    opacity: ${({ isActive }) => (isActive ? 1 : 0)};
     content: "";
   }
 `;

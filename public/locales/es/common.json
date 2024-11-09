@@ -2,7 +2,7 @@
   "scale": "Escalar imagen",
   "interestedIn": "Te puede interesar",
   "navigation": {
-    "/": "Inicio",
+    "home": "Inicio",
     "shop": "Tienda",
     "care": "Cuidado de Plantas",
     "blogs": "Blogs"
