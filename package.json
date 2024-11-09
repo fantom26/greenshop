@@ -14,11 +14,6 @@
     "server": "json-server -p 4000 db.json",
     "prepare": "husky"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
       "yarn lint:fix",
