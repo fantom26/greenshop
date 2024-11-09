@@ -1,5 +1,5 @@
-import { DateManager } from "shared/managers";
 import { useTranslation } from "next-i18next";
+import { DateManager } from "shared/managers";
 
 import { Typography } from "@/shared/ui/typography";
 

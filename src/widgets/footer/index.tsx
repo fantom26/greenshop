@@ -5,11 +5,13 @@ import { Contacts } from "./ui/contacts";
 import { Top } from "./ui/top";
 
 export function Footer() {
-  return <footer>
-    <Container>
-      <Top />
-      <Contacts />
-      <Bottom />
-    </Container>
-  </footer>
+  return (
+    <footer>
+      <Container>
+        <Top />
+        <Contacts />
+        <Bottom />
+      </Container>
+    </footer>
+  );
 }

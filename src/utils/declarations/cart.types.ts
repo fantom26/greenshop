@@ -23,7 +23,7 @@ export interface CartContextProps {
     sum: number;
     quantity: number;
     shippingPrice: number;
-  }
+  };
   getProductQuantity: (id: string) => number;
   increaseCartQuantity: (product: ICartItem) => void;
   decreaseCartQuantity: (product: ICartItem) => void;

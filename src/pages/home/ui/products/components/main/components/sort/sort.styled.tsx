@@ -25,7 +25,9 @@ export const Dropdown = styled.ul`
   background-color: var(--clr-light);
   visibility: hidden;
   opacity: 0;
-  transition: opacity var(--transition), visibility var(--transition);
+  transition:
+    opacity var(--transition),
+    visibility var(--transition);
 `;
 
 export const Sort = styled.div`
@@ -52,7 +54,9 @@ export const Wrapper = styled.div`
   &:focus ${Dropdown}, &:hover ${Dropdown} {
     visibility: visible;
     opacity: 1;
-    transition: opacity var(--transition), visibility var(--transition);
+    transition:
+      opacity var(--transition),
+      visibility var(--transition);
   }
 
   &:focus ${Current}, &:hover ${Current} {

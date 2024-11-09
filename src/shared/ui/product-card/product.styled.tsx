@@ -13,7 +13,9 @@ export const Controls = styled.div`
   transform: translate(-50%, -50%);
   visibility: hidden;
   opacity: 0;
-  transition: opacity var(--transition), visibility var(--transition);
+  transition:
+    opacity var(--transition),
+    visibility var(--transition);
 `;
 
 export const ImageWrapper = styled.div`
@@ -26,7 +28,9 @@ export const ImageWrapper = styled.div`
     background-color: rgb(226 231 225 / 50%);
     visibility: hidden;
     opacity: 0;
-    transition: opacity var(--transition), visibility var(--transition);
+    transition:
+      opacity var(--transition),
+      visibility var(--transition);
     content: "";
     inset: 0;
   }
@@ -45,7 +49,9 @@ export const Product = styled.li`
       ${Controls}, ${ImageWrapper}::before {
         visibility: visible;
         opacity: 1;
-        transition: opacity var(--transition), visibility var(--transition);
+        transition:
+          opacity var(--transition),
+          visibility var(--transition);
       }
     }
   }
@@ -100,7 +106,9 @@ export const Control = styled.button`
   }
 
   svg {
-    transition: fill var(--transition), stroke var(--transition);
+    transition:
+      fill var(--transition),
+      stroke var(--transition);
     fill: var(--clr-dark);
   }
 
@@ -113,7 +121,9 @@ export const Control = styled.button`
       }
 
       svg {
-        transition: fill var(--transition), stroke var(--transition);
+        transition:
+          fill var(--transition),
+          stroke var(--transition);
         fill: var(--clr-accent-400);
       }
     }

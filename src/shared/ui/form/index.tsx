@@ -2,11 +2,7 @@ import { ReactNode } from "react";
 
 import { FormProvider, UseFormReturn } from "react-hook-form";
 
-import {
-  Checkbox,
-  ControlledInput,
-  ControlledTextarea
-} from "@/shared/ui";
+import { Checkbox, ControlledInput, ControlledTextarea } from "@/shared/ui";
 
 export interface FormProps {
   children: ReactNode;

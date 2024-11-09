@@ -86,7 +86,9 @@ export const option = (
   transition: "color var(--transition), background-color var(--transition)",
 
   "&:hover": {
-    backgroundColor: isSelected ? "var(--clr-accent-400)" : "var(--clr-accent-100)",
+    backgroundColor: isSelected
+      ? "var(--clr-accent-400)"
+      : "var(--clr-accent-100)",
     transition: "background-color var(--transition)",
     cursor: "pointer"
   }

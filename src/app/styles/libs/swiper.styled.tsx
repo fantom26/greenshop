@@ -184,7 +184,9 @@ export const SwiperStyles = css`
       transform: translateX(-50%);
 
       .swiper-pagination-bullet {
-        transition: 200ms transform, 200ms left;
+        transition:
+          200ms transform,
+          200ms left;
       }
     }
   }
@@ -195,7 +197,9 @@ export const SwiperStyles = css`
   :host(.swiper-horizontal.swiper-rtl)
     .swiper-pagination-bullets-dynamic
     .swiper-pagination-bullet {
-    transition: 200ms transform, 200ms right;
+    transition:
+      200ms transform,
+      200ms right;
   }
 
   .swiper-pagination-lock {

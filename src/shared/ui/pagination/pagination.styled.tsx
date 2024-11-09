@@ -17,7 +17,9 @@ export const Button = styled.button<{ actived?: boolean; withDots?: boolean }>`
   padding: 1rem;
   width: 3.5rem;
   height: 3.5rem;
-  transition: font-weight var(--transition), color var(--transition),
+  transition:
+    font-weight var(--transition),
+    color var(--transition),
     background-color var(--transition);
 
   ${({ actived }) =>

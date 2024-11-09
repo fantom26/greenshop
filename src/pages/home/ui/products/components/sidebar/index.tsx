@@ -4,7 +4,8 @@ import { Categories, PriceRange, Queries, Sizes } from "./components";
 import * as S from "./sidebar.styled";
 
 export function Sidebar() {
-  return <S.Sidebar>
+  return (
+    <S.Sidebar>
       <S.Filter>
         <Queries />
         <Categories />
@@ -20,4 +21,5 @@ export function Sidebar() {
         />
       </S.Banner>
     </S.Sidebar>
+  );
 }

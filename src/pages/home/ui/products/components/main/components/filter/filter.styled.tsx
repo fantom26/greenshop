@@ -30,7 +30,9 @@ export const Tab = styled.button<{ selected: boolean }>`
     background-color: var(--clr-accent-400);
     visibility: ${({ selected }) => (selected ? "visible" : "hidden")};
     opacity: ${({ selected }) => (selected ? "1" : "0")};
-    transition: opacity var(--transition), visibility var(--transition);
+    transition:
+      opacity var(--transition),
+      visibility var(--transition);
     content: "";
   }
 `;

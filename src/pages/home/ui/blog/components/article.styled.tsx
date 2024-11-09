@@ -51,7 +51,9 @@ export const Button = styled(Link)`
   transition: color var(--transition);
 
   svg {
-    transition: fill var(--transition), transform var(--transition);
+    transition:
+      fill var(--transition),
+      transform var(--transition);
     fill: var(--clr-dark);
   }
 
@@ -62,7 +64,9 @@ export const Button = styled(Link)`
 
       svg {
         transform: translateX(0.5rem);
-        transition: fill var(--transition), transform var(--transition);
+        transition:
+          fill var(--transition),
+          transform var(--transition);
         fill: var(--clr-accent-400);
       }
     }

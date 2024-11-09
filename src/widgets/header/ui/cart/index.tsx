@@ -6,7 +6,9 @@ import { ICONS } from "@/shared/svgs";
 import * as S from "./cart.styled";
 
 function Cart() {
-  const { cartSummary: {quantity} } = useCartContext();
+  const {
+    cartSummary: { quantity }
+  } = useCartContext();
 
   return (
     <S.Wrapper disabled={quantity === 0}>

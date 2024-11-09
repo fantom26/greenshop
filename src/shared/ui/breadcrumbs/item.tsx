@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import * as S from "./breadcrumbs.styled";
 
-export function BreadcrumbItem ({ item }: { item: IBreadcrumb }) {
+export function BreadcrumbItem({ item }: { item: IBreadcrumb }) {
   const isLast = !item.route;
   const content = isLast ? (
     item.t
@@ -15,4 +15,4 @@ export function BreadcrumbItem ({ item }: { item: IBreadcrumb }) {
   );
 
   return <S.Item last={isLast}>{content}</S.Item>;
-};
+}

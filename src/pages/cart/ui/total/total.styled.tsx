@@ -67,14 +67,16 @@ export const NextLink = styled(Link)`
   padding: 0 0.25rem;
   color: var(--clr-accent-400);
   box-shadow: inset 0 0 0 0 var(--clr-accent-400);
-  transition: color var(--transition) ease-in-out,
+  transition:
+    color var(--transition) ease-in-out,
     box-shadow var(--transition) ease-in-out;
 
   @media (hover) {
     &:hover {
       color: var(--clr-light);
       box-shadow: inset 200px 0 0 0 var(--clr-accent-400);
-      transition: color var(--transition) ease-in-out,
+      transition:
+        color var(--transition) ease-in-out,
         box-shadow var(--transition) ease-in-out;
     }
   }

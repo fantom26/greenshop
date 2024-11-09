@@ -17,15 +17,15 @@ export function Links() {
       {links.map(({ title, list }) => (
         <li key={title}>
           <Typography tag="h2" variant="h4">
-              {title}
-            </Typography>
-            <S.Links>
-              {list.map(({ label, link }) => (
-                <li key={label}>
-                  <S.NextLink href={link}>{label}</S.NextLink>
-                </li>
-              ))}
-            </S.Links>
+            {title}
+          </Typography>
+          <S.Links>
+            {list.map(({ label, link }) => (
+              <li key={label}>
+                <S.NextLink href={link}>{label}</S.NextLink>
+              </li>
+            ))}
+          </S.Links>
         </li>
       ))}
     </S.Groups>

@@ -6,7 +6,6 @@ import {
   useState
 } from "react";
 
-import { DateManager } from "@/shared/managers";
 import { CART_LIST, SHIPPING_PRICE } from "@/utils/constants";
 import {
   CartContextProps,
@@ -14,6 +13,8 @@ import {
   ICartItem
 } from "@/utils/declarations";
 import { setCookie } from "cookies-next";
+
+import { DateManager } from "@/shared/managers";
 
 const initialState: CartContextProps = {
   cartItems: [],

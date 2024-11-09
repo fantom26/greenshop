@@ -49,12 +49,7 @@ export function ProductCard({
           <S.Sale>{discountPercentage}% OFF</S.Sale>
         ) : null}
         <S.ImageWrapper>
-          <CustomImage
-            src={url}
-            width="250"
-            height="250"
-            alt={meta.alt}
-          />
+          <CustomImage src={url} width="250" height="250" alt={meta.alt} />
           <S.Controls>
             <S.Control onClick={addToCart}>
               {ICONS.cart}

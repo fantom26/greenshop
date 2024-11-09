@@ -13,17 +13,17 @@ interface ISelectProps<OptionType>
 
 export const Select = forwardRef<any, ISelectProps<any>>(
   ({ id, styles, components, ...rest }, ref) => (
-      <ReactSelect
-        ref={ref}
-        instanceId={id}
-        styles={styles ? { ...customStyles, ...styles } : customStyles}
-        menuPlacement="auto"
-        className="select"
-        components={{
-          IndicatorSeparator: () => null,
-          ...components
-        }}
-        {...rest}
-      />
-    )
+    <ReactSelect
+      ref={ref}
+      instanceId={id}
+      styles={styles ? { ...customStyles, ...styles } : customStyles}
+      menuPlacement="auto"
+      className="select"
+      components={{
+        IndicatorSeparator: () => null,
+        ...components
+      }}
+      {...rest}
+    />
+  )
 );

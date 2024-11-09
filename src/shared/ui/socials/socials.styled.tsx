@@ -15,7 +15,9 @@ export const Link = styled.a`
   transition: background-color var(--transition);
 
   svg {
-    transition: fill var(--transition), fill-opacity var(--transition);
+    transition:
+      fill var(--transition),
+      fill-opacity var(--transition);
     fill: var(--clr-accent-400);
     fill-opacity: 0.6;
   }
@@ -26,7 +28,9 @@ export const Link = styled.a`
       transition: background-color var(--transition);
 
       svg {
-        transition: fill var(--transition), fill-opacity var(--transition);
+        transition:
+          fill var(--transition),
+          fill-opacity var(--transition);
         fill: var(--clr-light);
         fill-opacity: 1;
       }
