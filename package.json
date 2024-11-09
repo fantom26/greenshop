@@ -21,8 +21,8 @@
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
-      "next lint --fix",
-      "prettier -w ."
+      "eslint -c .eslintrc src --ext .js,.jsx,.ts,.tsx --fix",
+      "prettier --write"
     ],
     "*.styled.tsx": "stylelint --fix '**/*.styled.tsx'"
   },
