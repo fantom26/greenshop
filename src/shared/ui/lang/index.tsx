@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 
 import { Select } from "@/shared/ui/select";
 
+import * as S from "./lang.styled";
+
 const LANGS = ["es", "en", "uk"];
 
 const options = LANGS.map((lang) => ({
@@ -33,12 +35,14 @@ export function Langs() {
   };
 
   return (
-    <Select
-      id="lang-select"
-      isSearchable={false}
-      options={options}
-      onChange={changeLang}
-      value={options.find((option) => option.value === locale)}
-    />
+    <S.LangWrapper>
+      <Select
+        id="lang-select"
+        isSearchable={false}
+        options={options}
+        onChange={changeLang}
+        value={options.find((option) => option.value === locale)}
+      />
+    </S.LangWrapper>
   );
 }

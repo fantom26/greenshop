@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { useScrollLock } from "@/hooks";
 
-import { Container, Divider, Logo } from "@/shared/ui";
+import { Container, Divider, Langs, Logo } from "@/shared/ui";
 
 import Burger from "./burger";
 import Cart from "./cart";
@@ -42,6 +42,7 @@ export function Header() {
               <Search />
             </S.SearchWrapper>
             <Cart />
+            <Langs />
             {/* <S.ButtonWrapper>
               <Button path="/login" startIcon={ICONS.login}>
                 {t.btn.login}

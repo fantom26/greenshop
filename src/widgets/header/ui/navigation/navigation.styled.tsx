@@ -39,7 +39,7 @@ export const Link = styled.a<{ pathname: string }>`
 
   &::before {
     position: absolute;
-    bottom: -2.5rem;
+    bottom: -2rem;
     left: 0;
     width: 100%;
     height: 0.3rem;

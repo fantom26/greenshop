@@ -25,18 +25,18 @@ export const menuList = (provided: CSSObjectWithLabel) => ({
 
   "&::-webkit-scrollbar-track": {
     borderRadius: "var(--radius)",
-    backgroundColor: "var(--purple-100)",
+    backgroundColor: "var(--clr-accent-100)",
     cursor: "pointer"
   },
 
   "&::-webkit-scrollbar-thumb": {
     borderRadius: "var(--radius)",
-    backgroundColor: "var(--purple-400)",
+    backgroundColor: "var(--clr-accent-200)",
     cursor: "pointer"
   },
 
   "&::-webkit-scrollbar-thumb:hover": {
-    backgroundColor: "var(--purple-900)",
+    backgroundColor: "var(--clr-accent-200)",
     cursor: "pointer"
   }
 });
@@ -53,9 +53,9 @@ export const placeholder = (
 export const control = (provided: CSSObjectWithLabel) => ({
   ...provided,
   boxShadow: "initial",
-  backgroundColor: "var(--white-100)",
+  backgroundColor: "var(--clr-light)",
   borderColor: "var(--gray-100)",
-  color: "var(--dark-800)",
+  color: "var(--clr-dark)",
   minHeight: "var(--input-height)",
   fontFamily: "var(--font-family)",
   lineHeight: "var(--medium-line-height)",
@@ -63,8 +63,8 @@ export const control = (provided: CSSObjectWithLabel) => ({
   transition: "border-color var(--transition), outline-color var(--transition)",
   "&:hover": {
     cursor: "pointer",
-    borderColor: "var(--purple-400)",
-    outlineColor: "var(--purple-400)",
+    borderColor: "var(--clr-accent-400)",
+    outlineColor: "var(--clr-accent-400)",
     transition:
       "border-color var(--transition), outline-color var(--transition)"
   }
@@ -72,7 +72,7 @@ export const control = (provided: CSSObjectWithLabel) => ({
 
 export const singleValue = (provided: CSSObjectWithLabel) => ({
   ...provided,
-  color: "var(--dark-800)"
+  color: "var(--clr-dark)"
 });
 
 export const option = (
@@ -80,13 +80,13 @@ export const option = (
   { isSelected }: { isSelected: boolean }
 ): CSSObjectWithLabel => ({
   ...provided,
-  backgroundColor: isSelected ? "var(--purple-400)" : "var(--white-100)",
-  color: isSelected ? "var(--white-100)" : "var(--dark-800)",
+  backgroundColor: isSelected ? "var(--clr-accent-400)" : "var(--clr-light)",
+  color: isSelected ? "var(--clr-light)" : "var(--clr-dark)",
   wordBreak: "break-all",
   transition: "color var(--transition), background-color var(--transition)",
 
   "&:hover": {
-    backgroundColor: isSelected ? "var(--purple-400)" : "#f5eaf2",
+    backgroundColor: isSelected ? "var(--clr-accent-400)" : "var(--clr-accent-100)",
     transition: "background-color var(--transition)",
     cursor: "pointer"
   }
