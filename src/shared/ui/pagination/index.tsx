@@ -12,6 +12,7 @@ interface PaginationProps {
   handleChangePage: (page: number) => void;
 }
 
+// TODO maybe rewrite pagination. Do I need dots within the buttons?
 export function Pagination({
   totalPages,
   currentPage,
@@ -42,6 +43,7 @@ export function Pagination({
       {paginationRange?.map((item, index) => {
         if (item === "...") {
           return (
+            // eslint-disable-next-line react/no-array-index-key
             <S.Button key={index} withDots>
               &#8230;
             </S.Button>
@@ -49,6 +51,7 @@ export function Pagination({
         }
         return (
           <S.Button
+            // eslint-disable-next-line react/no-array-index-key
             key={index}
             onClick={onChangePage}
             actived={+currentPage === +item}
