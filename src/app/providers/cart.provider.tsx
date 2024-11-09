@@ -6,7 +6,7 @@ import {
   useState
 } from "react";
 
-import { DateManager } from "@/managers";
+import { DateManager } from "@/shared/managers";
 import { CART_LIST, SHIPPING_PRICE } from "@/utils/constants";
 import {
   CartContextProps,

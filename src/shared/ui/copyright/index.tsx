@@ -1,4 +1,4 @@
-import { DateManager } from "@/managers";
+import { DateManager } from "shared/managers";
 import { useTranslation } from "next-i18next";
 
 import { Typography } from "@/shared/ui/typography";
